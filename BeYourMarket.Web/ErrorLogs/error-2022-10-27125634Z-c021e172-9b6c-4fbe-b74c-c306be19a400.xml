@@ -1,0 +1,194 @@
+﻿<error errorId="c021e172-9b6c-4fbe-b74c-c306be19a400" host="DESKTOP-GJ1QFNP" type="System.InvalidOperationException" message="The current type, Repository.Pattern.Repositories.IRepositoryAsync`1[BeYourMarket.Model.Models.TipoAnimalPecuaria], is an interface and cannot be constructed. Are you missing a type mapping?" source="Microsoft.Practices.Unity" detail="System.InvalidOperationException: An error occurred when trying to create a controller of type 'BeYourMarket.Web.Controllers.ListingController'. Make sure that the controller has a parameterless public constructor. ---&gt; Microsoft.Practices.Unity.ResolutionFailedException: Resolution of the dependency failed, type = &quot;BeYourMarket.Web.Controllers.ListingController&quot;, name = &quot;(none)&quot;.&#xD;&#xA;Exception occurred while: while resolving.&#xD;&#xA;Exception is: InvalidOperationException - The current type, Repository.Pattern.Repositories.IRepositoryAsync`1[BeYourMarket.Model.Models.TipoAnimalPecuaria], is an interface and cannot be constructed. Are you missing a type mapping?&#xD;&#xA;-----------------------------------------------&#xD;&#xA;At the time of the exception, the container was:&#xD;&#xA;&#xD;&#xA;  Resolving BeYourMarket.Web.Controllers.ListingController,(none)&#xD;&#xA;  Resolving parameter &quot;tipoAnimalPecuariaService&quot; of constructor BeYourMarket.Web.Controllers.ListingController(Repository.Pattern.UnitOfWork.IUnitOfWorkAsync unitOfWorkAsync, BeYourMarket.Service.ISettingService settingService, BeYourMarket.Service.ICategoryService categoryService, BeYourMarket.Service.IUnidadesService unidadesService, BeYourMarket.Service.IIntencoesCompraService intencoesCompraService, BeYourMarket.Service.IEmpresaUsuarioService empresaUsuarioService, BeYourMarket.Service.ITiposCadastroService tiposCadastroService, BeYourMarket.Service.IGruposAtividadesService gruposAtividadesService, BeYourMarket.Service.ICidadesService cidadesService, BeYourMarket.Service.ICidadesGeolocalizacaoService cidadesGeolocalizacaoService, BeYourMarket.Service.IEstadoService estadosService, BeYourMarket.Service.IPaisService paisService, BeYourMarket.Service.ICotacaoMasterService cotacaoMasterService, BeYourMarket.Service.IItensCotacaoService itensCotacaoService, BeYourMarket.Service.IFornecedoresCotacaoService fornecedoresCotacaoService, BeYourMarket.Service.IRespostaFornecedoresCotacaoService respostaFornecedoresCotacaoService, BeYourMarket.Service.IModalidadesCompraService modalidadesCompraService, BeYourMarket.Service.ITiposFreteService tiposFreteService, BeYourMarket.Service.IFormasPagamentoService formasPagamentoService, BeYourMarket.Service.IListingService listingService, BeYourMarket.Service.IPictureService pictureService, BeYourMarket.Service.IListingPictureService listingPictureservice, BeYourMarket.Service.IOrderService orderService, BeYourMarket.Service.ICustomFieldService customFieldService, BeYourMarket.Service.ICustomFieldCategoryService customFieldCategoryService, BeYourMarket.Service.ICustomFieldListingService customFieldListingService, BeYourMarket.Service.ISettingDictionaryService settingDictionaryService, BeYourMarket.Service.IListingStatService listingStatservice, BeYourMarket.Service.IListingReviewService listingReviewService, BeYourMarket.Service.IEmailTemplateService emailTemplateService, BeYourMarket.Service.IMessageService messageService, BeYourMarket.Service.IMessageThreadService messageThreadService, BeYourMarket.Service.IMessageParticipantService messageParticipantService, BeYourMarket.Service.IMessageReadStateService messageReadStateService, BeYourMarket.Service.ITipoAnimalPecuariaService tipoAnimalPecuariaService, BeYourMarket.Service.ITiposRacasAnimaisPecuariaService tiposRacasAnimaisService, BeYourMarket.Service.ITipoAnimalProducaoService tipoAnimalProducaoService, BeYourMarket.Service.DataCacheService dataCacheService, BeYourMarket.Service.SqlDbService sqlDbService)&#xD;&#xA;    Resolving BeYourMarket.Service.TipoAnimalPecuariaService,(none) (mapped from BeYourMarket.Service.ITipoAnimalPecuariaService, (none))&#xD;&#xA;    Resolving parameter &quot;repository&quot; of constructor BeYourMarket.Service.TipoAnimalPecuariaService(Repository.Pattern.Repositories.IRepositoryAsync`1[[BeYourMarket.Model.Models.TipoAnimalPecuaria, BeYourMarket.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] repository)&#xD;&#xA;      Resolving Repository.Pattern.Repositories.IRepositoryAsync`1[BeYourMarket.Model.Models.TipoAnimalPecuaria],(none)&#xD;&#xA; ---&gt; System.InvalidOperationException: The current type, Repository.Pattern.Repositories.IRepositoryAsync`1[BeYourMarket.Model.Models.TipoAnimalPecuaria], is an interface and cannot be constructed. Are you missing a type mapping?&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicMethodConstructorStrategy.ThrowForAttemptingToConstructInterface(IBuilderContext context)&#xD;&#xA;   at lambda_method(Closure , IBuilderContext )&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicBuildPlanGenerationContext.&lt;&gt;c__DisplayClass1.&lt;GetBuildMethod&gt;b__0(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.BuilderContext.NewBuildUp(NamedTypeBuildKey newBuildKey)&#xD;&#xA;   at Microsoft.Practices.Unity.ObjectBuilder.NamedTypeDependencyResolverPolicy.Resolve(IBuilderContext context)&#xD;&#xA;   at lambda_method(Closure , IBuilderContext )&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicBuildPlanGenerationContext.&lt;&gt;c__DisplayClass1.&lt;GetBuildMethod&gt;b__0(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.BuilderContext.NewBuildUp(NamedTypeBuildKey newBuildKey)&#xD;&#xA;   at Microsoft.Practices.Unity.ObjectBuilder.NamedTypeDependencyResolverPolicy.Resolve(IBuilderContext context)&#xD;&#xA;   at lambda_method(Closure , IBuilderContext )&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicBuildPlanGenerationContext.&lt;&gt;c__DisplayClass1.&lt;GetBuildMethod&gt;b__0(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainer.Resolve(Type t, String name, ResolverOverride[] resolverOverrides)&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainerExtensions.Resolve(IUnityContainer container, Type t, ResolverOverride[] overrides)&#xD;&#xA;   at Microsoft.Practices.Unity.Mvc.UnityDependencyResolver.GetService(Type serviceType)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController&amp; controller, IControllerFactory&amp; factory)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="eliangelafreitas.ed@gmail.com" time="2022-10-27T12:56:34.9454616Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=TgeUfi0DsJ4D9E66SPJ-VrctxtHNZ96h0wyisBkd3ipv5J45zqpb9DFKSLqrr2e4nimpfNGSEYYvCK7pujCha54hZ5iTPzEbliL8TfUkp0A1; .AspNet.ApplicationCookie=IJ2n-evvRfXyXSstih7ddca-XcIz4BlcprJLzq98YNKxVV4ORMeXGGPdli-fsGNhVHA3OptbNFlkzlh6FUxG9mKdE-1LInfumiypuTkbxCS9o5r5GZ8D8aJWn8RDOiiGCRO48RoW4MEIKA96cToPePXpf_VdGqDhEzZG0yVs54b1hWA2T8u8i_SfhYOkkec8VSBflvUQTbK8NBK26fZj0n5HbjWjxMY19minBFBmIy1BMcK4mq1m5C6Yi6U_MicB5gifUcReLj7XHQgCUA6q263EkRXg9D36Rs-wNOWvw2d1TDIAlh551R8o9FgfzPZIsk63KBB2D7uKbQ47NMBsoe4hDbJDdHamMbYRUcoCc8I8eW2RCAjfmS4nKtXg0NVu4aq0lfQtcAq9rb0n9QbdPWyGbau4Nae3xTvExhT1m3__cQ6KLfVX6NgWBjcJwIYH8uTEkNRBzzlmLtxIWnIvvJZykzfXi9uhh29ETkhMDpfLNrwQrpIa8vWWSfgyUiu_&#xD;&#xA;HTTP_HOST:localhost:59674&#xD;&#xA;HTTP_REFERER:http://localhost:59674/pt/manage/dashboard?oqeq=0&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36&#xD;&#xA;HTTP_SEC_CH_UA:&quot;Chromium&quot;;v=&quot;106&quot;, &quot;Google Chrome&quot;;v=&quot;106&quot;, &quot;Not;A=Brand&quot;;v=&quot;99&quot;&#xD;&#xA;HTTP_SEC_CH_UA_MOBILE:?0&#xD;&#xA;HTTP_SEC_CH_UA_PLATFORM:&quot;Windows&quot;&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=TgeUfi0DsJ4D9E66SPJ-VrctxtHNZ96h0wyisBkd3ipv5J45zqpb9DFKSLqrr2e4nimpfNGSEYYvCK7pujCha54hZ5iTPzEbliL8TfUkp0A1; .AspNet.ApplicationCookie=IJ2n-evvRfXyXSstih7ddca-XcIz4BlcprJLzq98YNKxVV4ORMeXGGPdli-fsGNhVHA3OptbNFlkzlh6FUxG9mKdE-1LInfumiypuTkbxCS9o5r5GZ8D8aJWn8RDOiiGCRO48RoW4MEIKA96cToPePXpf_VdGqDhEzZG0yVs54b1hWA2T8u8i_SfhYOkkec8VSBflvUQTbK8NBK26fZj0n5HbjWjxMY19minBFBmIy1BMcK4mq1m5C6Yi6U_MicB5gifUcReLj7XHQgCUA6q263EkRXg9D36Rs-wNOWvw2d1TDIAlh551R8o9FgfzPZIsk63KBB2D7uKbQ47NMBsoe4hDbJDdHamMbYRUcoCc8I8eW2RCAjfmS4nKtXg0NVu4aq0lfQtcAq9rb0n9QbdPWyGbau4Nae3xTvExhT1m3__cQ6KLfVX6NgWBjcJwIYH8uTEkNRBzzlmLtxIWnIvvJZykzfXi9uhh29ETkhMDpfLNrwQrpIa8vWWSfgyUiu_&#xD;&#xA;Host: localhost:59674&#xD;&#xA;Referer: http://localhost:59674/pt/manage/dashboard?oqeq=0&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36&#xD;&#xA;sec-ch-ua: &quot;Chromium&quot;;v=&quot;106&quot;, &quot;Google Chrome&quot;;v=&quot;106&quot;, &quot;Not;A=Brand&quot;;v=&quot;99&quot;&#xD;&#xA;sec-ch-ua-mobile: ?0&#xD;&#xA;sec-ch-ua-platform: &quot;Windows&quot;&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Sec-Fetch-Site: same-origin&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/listing/listingupdate" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\listing\listingupdate" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="oqeq=0" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="53256" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/listing/listingupdate" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="59674" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/listing/listingupdate" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=TgeUfi0DsJ4D9E66SPJ-VrctxtHNZ96h0wyisBkd3ipv5J45zqpb9DFKSLqrr2e4nimpfNGSEYYvCK7pujCha54hZ5iTPzEbliL8TfUkp0A1; .AspNet.ApplicationCookie=IJ2n-evvRfXyXSstih7ddca-XcIz4BlcprJLzq98YNKxVV4ORMeXGGPdli-fsGNhVHA3OptbNFlkzlh6FUxG9mKdE-1LInfumiypuTkbxCS9o5r5GZ8D8aJWn8RDOiiGCRO48RoW4MEIKA96cToPePXpf_VdGqDhEzZG0yVs54b1hWA2T8u8i_SfhYOkkec8VSBflvUQTbK8NBK26fZj0n5HbjWjxMY19minBFBmIy1BMcK4mq1m5C6Yi6U_MicB5gifUcReLj7XHQgCUA6q263EkRXg9D36Rs-wNOWvw2d1TDIAlh551R8o9FgfzPZIsk63KBB2D7uKbQ47NMBsoe4hDbJDdHamMbYRUcoCc8I8eW2RCAjfmS4nKtXg0NVu4aq0lfQtcAq9rb0n9QbdPWyGbau4Nae3xTvExhT1m3__cQ6KLfVX6NgWBjcJwIYH8uTEkNRBzzlmLtxIWnIvvJZykzfXi9uhh29ETkhMDpfLNrwQrpIa8vWWSfgyUiu_" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:59674" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:59674/pt/manage/dashboard?oqeq=0" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" />
+    </item>
+    <item name="HTTP_SEC_CH_UA">
+      <value string="&quot;Chromium&quot;;v=&quot;106&quot;, &quot;Google Chrome&quot;;v=&quot;106&quot;, &quot;Not;A=Brand&quot;;v=&quot;99&quot;" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_MOBILE">
+      <value string="?0" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_PLATFORM">
+      <value string="&quot;Windows&quot;" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="oqeq">
+      <value string="0" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="TgeUfi0DsJ4D9E66SPJ-VrctxtHNZ96h0wyisBkd3ipv5J45zqpb9DFKSLqrr2e4nimpfNGSEYYvCK7pujCha54hZ5iTPzEbliL8TfUkp0A1" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="IJ2n-evvRfXyXSstih7ddca-XcIz4BlcprJLzq98YNKxVV4ORMeXGGPdli-fsGNhVHA3OptbNFlkzlh6FUxG9mKdE-1LInfumiypuTkbxCS9o5r5GZ8D8aJWn8RDOiiGCRO48RoW4MEIKA96cToPePXpf_VdGqDhEzZG0yVs54b1hWA2T8u8i_SfhYOkkec8VSBflvUQTbK8NBK26fZj0n5HbjWjxMY19minBFBmIy1BMcK4mq1m5C6Yi6U_MicB5gifUcReLj7XHQgCUA6q263EkRXg9D36Rs-wNOWvw2d1TDIAlh551R8o9FgfzPZIsk63KBB2D7uKbQ47NMBsoe4hDbJDdHamMbYRUcoCc8I8eW2RCAjfmS4nKtXg0NVu4aq0lfQtcAq9rb0n9QbdPWyGbau4Nae3xTvExhT1m3__cQ6KLfVX6NgWBjcJwIYH8uTEkNRBzzlmLtxIWnIvvJZykzfXi9uhh29ETkhMDpfLNrwQrpIa8vWWSfgyUiu_" />
+    </item>
+  </cookies>
+</error>

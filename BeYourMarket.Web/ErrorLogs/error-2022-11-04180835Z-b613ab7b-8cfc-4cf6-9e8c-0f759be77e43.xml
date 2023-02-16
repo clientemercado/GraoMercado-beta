@@ -1,0 +1,288 @@
+﻿<error errorId="b613ab7b-8cfc-4cf6-9e8c-0f759be77e43" host="DESKTOP-GJ1QFNP" type="System.Data.SqlClient.SqlException" message="The INSERT statement conflicted with the FOREIGN KEY constraint &quot;FK_id_TipoRacasAnimais&quot;. The conflict occurred in database &quot;sasql&quot;, table &quot;dbo.TiposRacasAnimaisPecuaria&quot;, column 'id_TipoRacasAnimais'.&#xD;&#xA;The statement has been terminated." source=".Net SqlClient Data Provider" detail="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint &quot;FK_id_TipoRacasAnimais&quot;. The conflict occurred in database &quot;sasql&quot;, table &quot;dbo.TiposRacasAnimaisPecuaria&quot;, column 'id_TipoRacasAnimais'.&#xD;&#xA;The statement has been terminated.&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.&lt;&gt;c.&lt;ExecuteDbDataReaderAsync&gt;b__180_0(Task`1 result)&#xD;&#xA;   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()&#xD;&#xA;   at System.Threading.Tasks.Task.Execute()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.&lt;ExecuteAsync&gt;d__8.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__39.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__39.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;ExecuteInTransactionAsync&gt;d__156`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesToStoreAsync&gt;d__154.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;ExecuteAsyncImplementation&gt;d__6`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesInternalAsync&gt;d__151.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at Repository.Pattern.Ef6.DataContext.&lt;SaveChangesAsync&gt;d__10.MoveNext() in E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\Frameworks\Repository.Pattern.Ef6\DataContext.cs:line 159&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Repository.Pattern.Ef6.DataContext.&lt;SaveChangesAsync&gt;d__9.MoveNext() in E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\Frameworks\Repository.Pattern.Ef6\DataContext.cs:line 100&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at BeYourMarket.Web.Controllers.ListingController.&lt;ListingUpdate&gt;d__55.MoveNext() in E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Controllers\ListingController.cs:line 646&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass8_0.&lt;BeginInvokeAsynchronousActionMethod&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_0.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_2.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass7_0.&lt;BeginInvokeActionMethodWithFilters&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__4()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecuteCore&gt;b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecute&gt;b__151_2(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c.&lt;BeginProcessRequest&gt;b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.InvokeEndHandler(IAsyncResult ar)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)" user="eliangelafreitas.ed@gmail.com" time="2022-11-04T18:08:35.8839448Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:76918&#xD;&#xA;HTTP_CONTENT_TYPE:multipart/form-data; boundary=----WebKitFormBoundaryAR1OZlmJaDonUjWe&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=Dz6-fi5fJSTwyyK566ycma7LhAJ4PfNxOEa4_NBXMZeoG6GJvOdHW3diB-3_Oatohj0RNiqojQSbpIrksSiqijyhUDyn2viTsv1AGBUlp8s1; .AspNet.ApplicationCookie=Fr6YCM9xgRg_ColW5XZjPwhDPGIaoK09cj59j677logAImR0AsUbpgS2_wl_YSQ8uIum2p8gX0ka13CEo4TZjx315pAGdSI4fXDamVCw-BYsTIexFuwFa-N06mc8pAC3bmpm_1IF1NhXtasckEnpbM8NB_H9nU89x-C5Qx-hSuzJVF_ck4E4jQWuEVZ0bUhGEy38BS8LJpMU2Xfag-FftDY7EVdM5JESRa1gPb7mdybs_ftpQKqagsqoXmKRlbKSdgUDMyQzVkUVmqdDpLUMcR_yOUeguvJy8vvdge447qsXVWWtryv10cjUC94wZL69HCWukUdSH-d--JhLTEedVzXvEV70sTgbN1NlkTGfm_Ta7vlWVWZv7BCu_aanypWWr7eC3dCZPsqVxwGXsjWB0R0kA7Ymx6Keml3Cv9a-cXir9DpXxpOJ4j_mC0U9CzkxEz-RAbZQLjsdAZHztJsoXk8XurAn6V0NnPMm-rVhXGXOigAti2Gpe5WThUDO2Pg7&#xD;&#xA;HTTP_HOST:localhost:59674&#xD;&#xA;HTTP_REFERER:http://localhost:59674/pt/listing/listingupdate?oqeq=0&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36&#xD;&#xA;HTTP_SEC_CH_UA:&quot;Google Chrome&quot;;v=&quot;107&quot;, &quot;Chromium&quot;;v=&quot;107&quot;, &quot;Not=A?Brand&quot;;v=&quot;24&quot;&#xD;&#xA;HTTP_SEC_CH_UA_MOBILE:?0&#xD;&#xA;HTTP_SEC_CH_UA_PLATFORM:&quot;Windows&quot;&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_ORIGIN:http://localhost:59674&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 76918&#xD;&#xA;Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryAR1OZlmJaDonUjWe&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=Dz6-fi5fJSTwyyK566ycma7LhAJ4PfNxOEa4_NBXMZeoG6GJvOdHW3diB-3_Oatohj0RNiqojQSbpIrksSiqijyhUDyn2viTsv1AGBUlp8s1; .AspNet.ApplicationCookie=Fr6YCM9xgRg_ColW5XZjPwhDPGIaoK09cj59j677logAImR0AsUbpgS2_wl_YSQ8uIum2p8gX0ka13CEo4TZjx315pAGdSI4fXDamVCw-BYsTIexFuwFa-N06mc8pAC3bmpm_1IF1NhXtasckEnpbM8NB_H9nU89x-C5Qx-hSuzJVF_ck4E4jQWuEVZ0bUhGEy38BS8LJpMU2Xfag-FftDY7EVdM5JESRa1gPb7mdybs_ftpQKqagsqoXmKRlbKSdgUDMyQzVkUVmqdDpLUMcR_yOUeguvJy8vvdge447qsXVWWtryv10cjUC94wZL69HCWukUdSH-d--JhLTEedVzXvEV70sTgbN1NlkTGfm_Ta7vlWVWZv7BCu_aanypWWr7eC3dCZPsqVxwGXsjWB0R0kA7Ymx6Keml3Cv9a-cXir9DpXxpOJ4j_mC0U9CzkxEz-RAbZQLjsdAZHztJsoXk8XurAn6V0NnPMm-rVhXGXOigAti2Gpe5WThUDO2Pg7&#xD;&#xA;Host: localhost:59674&#xD;&#xA;Referer: http://localhost:59674/pt/listing/listingupdate?oqeq=0&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36&#xD;&#xA;sec-ch-ua: &quot;Google Chrome&quot;;v=&quot;107&quot;, &quot;Chromium&quot;;v=&quot;107&quot;, &quot;Not=A?Brand&quot;;v=&quot;24&quot;&#xD;&#xA;sec-ch-ua-mobile: ?0&#xD;&#xA;sec-ch-ua-platform: &quot;Windows&quot;&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Origin: http://localhost:59674&#xD;&#xA;Sec-Fetch-Site: same-origin&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="76918" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=----WebKitFormBoundaryAR1OZlmJaDonUjWe" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/listing/listingupdate" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\listing\listingupdate" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="oqeq=0" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="63282" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/listing/listingupdate" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="59674" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/listing/listingupdate" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="76918" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=----WebKitFormBoundaryAR1OZlmJaDonUjWe" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=Dz6-fi5fJSTwyyK566ycma7LhAJ4PfNxOEa4_NBXMZeoG6GJvOdHW3diB-3_Oatohj0RNiqojQSbpIrksSiqijyhUDyn2viTsv1AGBUlp8s1; .AspNet.ApplicationCookie=Fr6YCM9xgRg_ColW5XZjPwhDPGIaoK09cj59j677logAImR0AsUbpgS2_wl_YSQ8uIum2p8gX0ka13CEo4TZjx315pAGdSI4fXDamVCw-BYsTIexFuwFa-N06mc8pAC3bmpm_1IF1NhXtasckEnpbM8NB_H9nU89x-C5Qx-hSuzJVF_ck4E4jQWuEVZ0bUhGEy38BS8LJpMU2Xfag-FftDY7EVdM5JESRa1gPb7mdybs_ftpQKqagsqoXmKRlbKSdgUDMyQzVkUVmqdDpLUMcR_yOUeguvJy8vvdge447qsXVWWtryv10cjUC94wZL69HCWukUdSH-d--JhLTEedVzXvEV70sTgbN1NlkTGfm_Ta7vlWVWZv7BCu_aanypWWr7eC3dCZPsqVxwGXsjWB0R0kA7Ymx6Keml3Cv9a-cXir9DpXxpOJ4j_mC0U9CzkxEz-RAbZQLjsdAZHztJsoXk8XurAn6V0NnPMm-rVhXGXOigAti2Gpe5WThUDO2Pg7" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:59674" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:59674/pt/listing/listingupdate?oqeq=0" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" />
+    </item>
+    <item name="HTTP_SEC_CH_UA">
+      <value string="&quot;Google Chrome&quot;;v=&quot;107&quot;, &quot;Chromium&quot;;v=&quot;107&quot;, &quot;Not=A?Brand&quot;;v=&quot;24&quot;" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_MOBILE">
+      <value string="?0" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_PLATFORM">
+      <value string="&quot;Windows&quot;" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:59674" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="oqeq">
+      <value string="0" />
+    </item>
+  </queryString>
+  <form>
+    <item name="ListingItem.ID">
+      <value string="0" />
+    </item>
+    <item name="CategoryID">
+      <value string="6" />
+    </item>
+    <item name="Title">
+      <value string="Venda de bezerro nelore" />
+    </item>
+    <item name="Description">
+      <value string="Vendo 95 bezerros nelore a 2300,00 cada" />
+    </item>
+    <item name="Active">
+      <value string="true" />
+      <value string="false" />
+    </item>
+    <item name="TiposAnimaisProducao">
+      <value string="1" />
+    </item>
+    <item name="tipoRacaAnimal">
+      <value string="2" />
+    </item>
+    <item name="inTpRacaSelec">
+      <value string="" />
+    </item>
+    <item name="inIdadeAnimais">
+      <value string="8/10 meses" />
+    </item>
+    <item name="inQuantidadeItemSale">
+      <value string="95" />
+    </item>
+    <item name="inPesoKgPorItemSale">
+      <value string="250,00" />
+    </item>
+    <item name="inPesoArrobaPorItemSale">
+      <value string="8.33" />
+    </item>
+    <item name="inPesoTotalLoteKgSale">
+      <value string="23750.00" />
+    </item>
+    <item name="inPesoTotalLoteArrobaSale">
+      <value string="791.67" />
+    </item>
+    <item name="inValorTotalPorAnimalSale">
+      <value string="2.300,00" />
+    </item>
+    <item name="inValorTotalDoLoteSale">
+      <value string="218500.00" />
+    </item>
+    <item name="inValorTotalPorKgSale">
+      <value string="9.20" />
+    </item>
+    <item name="inValorTotalPorArrobaSale">
+      <value string="276.00" />
+    </item>
+    <item name="Linkcam">
+      <value string="&lt;iframe src=&quot;https://www.facebook.com/plugins/video.php?height=308&amp;href=https%3A%2F%2Fwww.facebook.com%2Flucas.belle.9%2Fvideos%2F677964630278233%2F%3Fidorvanity%3D2819124981679573&amp;show_text=false&amp;width=560&amp;t=0&quot; width=&quot;560&quot; height=&quot;308&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share&quot; allowFullScreen=&quot;true&quot;&gt;&lt;/iframe&gt;" />
+    </item>
+    <item name="inLocalRetirada">
+      <value string="Fazenda Santa Fé" />
+    </item>
+    <item name="inCidadeEstadoRetirada">
+      <value string="Pedra Dourada-MG" />
+    </item>
+    <item name="inReferenciaLocalRetirada">
+      <value string="Rod. MG-139, km 26, entrando estrada de chão à esquerda - 2 km a frente" />
+    </item>
+    <item name="ContactName">
+      <value string="Eliangela Freitas " />
+    </item>
+    <item name="ContactPhone">
+      <value string="32984898738" />
+    </item>
+    <item name="ShowPhone">
+      <value string="true" />
+      <value string="false" />
+    </item>
+    <item name="ContactEmail">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="Dz6-fi5fJSTwyyK566ycma7LhAJ4PfNxOEa4_NBXMZeoG6GJvOdHW3diB-3_Oatohj0RNiqojQSbpIrksSiqijyhUDyn2viTsv1AGBUlp8s1" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="Fr6YCM9xgRg_ColW5XZjPwhDPGIaoK09cj59j677logAImR0AsUbpgS2_wl_YSQ8uIum2p8gX0ka13CEo4TZjx315pAGdSI4fXDamVCw-BYsTIexFuwFa-N06mc8pAC3bmpm_1IF1NhXtasckEnpbM8NB_H9nU89x-C5Qx-hSuzJVF_ck4E4jQWuEVZ0bUhGEy38BS8LJpMU2Xfag-FftDY7EVdM5JESRa1gPb7mdybs_ftpQKqagsqoXmKRlbKSdgUDMyQzVkUVmqdDpLUMcR_yOUeguvJy8vvdge447qsXVWWtryv10cjUC94wZL69HCWukUdSH-d--JhLTEedVzXvEV70sTgbN1NlkTGfm_Ta7vlWVWZv7BCu_aanypWWr7eC3dCZPsqVxwGXsjWB0R0kA7Ymx6Keml3Cv9a-cXir9DpXxpOJ4j_mC0U9CzkxEz-RAbZQLjsdAZHztJsoXk8XurAn6V0NnPMm-rVhXGXOigAti2Gpe5WThUDO2Pg7" />
+    </item>
+  </cookies>
+</error>

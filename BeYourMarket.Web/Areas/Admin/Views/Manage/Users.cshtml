@@ -1,0 +1,104 @@
+﻿@model List<BeYourMarket.Web.Models.ApplicationUser>
+
+@section Styles {
+}
+
+@{
+    ViewBag.Title = "[[[Usuários]]]";
+}
+
+@helper DisplayDeleteLink(string id, string title)
+{
+    <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="confirmDelete('@id', '@title');"><i class="fa fa-remove"></i> [[[Delete]]]</a>
+}
+
+<div class="wraper container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">[[[Usuários]]]</h3>
+                </div>
+
+                <div class="panel-body">
+                    @Html.Partial("_UserMessage")
+
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <a class="btn btn-primary" href="@Url.Action("UserUpdate", "Manage")"><i class="fa fa-plus"></i> [[[Adicionar Novo]]]</a>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>[[[Email]]]</th>
+                                        <th>[[[Email Confirmado]]]</th>
+                                        <th>[[[Telefone]]]</th>
+                                        <th>[[[Telefone Confirmado]]]</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @foreach (var user in Model)
+                                    {
+                                        <tr>
+                                            <td>@user.Email</td>
+                                            <td>@RazorHelper.DisplayYesNo(user.EmailConfirmed)</td>
+                                            <td>@user.PhoneNumber</td>
+                                            <td>@RazorHelper.DisplayYesNo(user.PhoneNumberConfirmed)</td>
+                                            <td>
+                                                <a class="btn btn-primary m-b-5" href="@Url.Action("UserUpdate", "Manage", new { id = user.Id })"><i class="fa fa-edit"></i> [[[Alterar]]]</a>
+                                            </td>
+                                            <td>@DisplayDeleteLink(user.Id, user.FullName)</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+<script type="text/javascript">
+        function confirmDelete(id, title) {
+            swal({
+                title: "[[[Confirma a exclusão do item?]]]",
+                text: "[[[You will delete the user and its all listings from ]]] " + title,
+                type: "input",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "[[[Excluir]]]",
+                cancelButtonText: "[[[Cancelar]]]",
+                inputPlaceholder: "[[[Digite DELETE para confirmar a exclusão]]]",
+                closeOnConfirm: false,
+                closeOnCancel: true
+            }, function (inputValue) {
+
+                if (inputValue === false)
+                    return false;
+                if (inputValue === "" || inputValue != "DELETE") {
+                    swal.showInputError("[[[Digite DELETE para confirmar a exclusão]]]"); return false
+                }
+
+                swal.disableButtons();
+
+                post('@Url.Action("UserDelete","Manage")', { id: id });
+
+                swal("Deleted!", "[[[User is deleted.]]]", "success");
+            });
+        }
+</script>
+}
+

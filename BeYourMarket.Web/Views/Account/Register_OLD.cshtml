@@ -1,0 +1,146 @@
+﻿@model BeYourMarket.Web.Models.RegisterViewModel
+@{
+    ViewBag.Title = "[[[Register]]]";
+}
+<head>
+    <link href="~/Content/home.css" rel="stylesheet" />
+</head>
+<!-- Start Main Content -->
+<div class="container-fluid form-custom">
+    <div class=" center-block col-md-6">
+        <div class="panel panel-default mrg-t">
+            <div class="panel-body panel-header bdr-b ">
+                <h4>[[[Criar Conta]]]</h4>
+                <p>
+                    @CacheHelper.Settings.SignupText
+                </p>
+            </div>
+            <div class="panel-body">
+                @if (CacheHelper.Settings.AgreementRequired)
+                {
+                    <div id="agreementModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="agreementModalLabel" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" id="agreementModalLabel">[[[Termos e Condições]]]</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>@CacheHelper.Settings.AgreementLabel</h4>
+                                    <p>@CacheHelper.Settings.AgreementText</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">[[[Fechar]]]</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form", id = "form0" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        <label>[[[Tipo Cadastro]]] <span class="text-red">*</span></label>
+                        @Html.DropDownListFor(m => m.tipoCad, new SelectList(Model.TiposCadastro, "id_TipoCadastro", "Descricao_TipoCadastro", ""), new { @class = "form-control input-lg m-b-10", @id = "tipoCads" })
+                    </div>
+                    @*<div class="form-group">
+                            <label>[[[Empresa Fornecedora]]] </label>
+                            <input type="text" name="Empresa" id="Empresa" class="form-control input-lg" placeholder="[[[Informe Nome Empresa...]]]">
+                        </div>*@
+                    <div class="form-group">
+                        <label>[[[Nome Usuário]]] <span class="text-red">*</span></label>
+                        <input type="text" name="Usuario" id="Usuario" class="form-control input-lg" placeholder="[[[Informe Nome Usuário...]]]" data-rule-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">[[[Email]]] <span class="text-red">*</span></label>
+                        <input type="text" name="Email" id="Email" class="form-control input-lg" placeholder="[[[Informe Email...]]]" data-rule-required="true" data-rule-email="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">[[[Senha]]] <span class="text-red">*</span></label>
+                        <input type="password" name="Password" id="Password" class="form-control input-lg" placeholder="[[[Sua senha...]]]" data-rule-required="true" data-rule-minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="ConfirmPassword">[[[Confirmar Senha]]] <span class="text-red">*</span></label>
+                        <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-control input-lg" placeholder="[[[Confirmar Senha...]]]" data-rule-required="true" data-rule-minlength="6" data-rule-equalto="#Password">
+                    </div>
+
+                    <div class="form-group">
+                        <label>[[[UF (Estado)]]]</label>
+                        @Html.DropDownListFor(m => m.EstadoUF, new SelectList(Model.EstadosUF, "ID", "SIGLA", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "uFs", @required = "required" })
+                    </div>
+                    <div class="form-group">
+                        <label>[[[Informe sua Localização (Cidade)]]]</label>
+                        <select name="selectedCity" id="selectedCity" class="form-control input-lg essencial" disabled required></select>
+                        @*<input type="hidden" id="inCidade" name="inCidade" value="@Model.CidadeUF" />*@
+                        @Html.TextBoxFor(m => m.CidadeUF, new { @class = "form-control hidden", @Value = @Model.CidadeUF })
+                    </div>
+
+                    if (CacheHelper.Settings.AgreementRequired)
+                    {
+                        <div class="form-group">
+                            <input type="checkbox" id="Accept" name="Accept" value="true" data-rule-required="true" />
+                            <label for="Accept">[[[Eu aceito os]]] <a id="agreementModal" data-toggle="modal" data-target="#agreementModal">[[[ Termos e Condições]]]</a></label>
+                        </div>
+                    }
+                    <input type="submit" class="btn btn-primary btn-lg" value="[[[Registrar]]]">
+                }
+            </div>
+            <div class="panel-footer ">
+                <span>[[[Já é um membro?]]] <a href="@Url.Action("Login", "Account")">[[[Entrar]]]</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ./ Main Content -->
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        CarregaCidades();
+        $(".tipocad").change(function () {
+            if ($('#tipoCads').val() == 2) {
+                $('#Empresa').val('').attr('disabled', true);
+            }
+            else {
+                $('#Empresa').val('').attr('disabled', false);
+            }
+        });
+
+        $("#uFs").change(function () {
+            CarregaCidades();
+        });
+
+        $("#selectedCity").change(function () {
+            debugger;
+            var teste = $("#selectedCity").val();
+            $("#CidadeUF").val($("#selectedCity").val());
+        });
+
+        function CarregaCidades() {
+            if (parseFloat($("#uFs").val()) == 28)
+                $('.essencial').val('').attr('disabled', true);
+
+            $.ajax({
+                type: "GET",
+                url: "/Account/CarregaCidadesUF",
+                dataType: 'json',
+                async: true,
+                cache: false,
+                data: {
+                    idUf: $('#uFs').val()
+                },
+                success: function (data) {
+                    var cities = "";
+                    $('.essencial').val('').attr('disabled', false);
+                    $.each(data, function (index, municipios) {
+                        cities = (cities == "") ? "<option value='" + municipios.ID + "'>" + municipios.NOME + "</option>" : (cities + "<option value='" + municipios.ID + "'>" + municipios.NOME + "</option>");
+                    });
+                    $('#selectedCity').empty().append(cities);
+                    $('#selectedCity').val($("#CidadeUF").val());
+                }
+            });
+        }
+    </script>
+}

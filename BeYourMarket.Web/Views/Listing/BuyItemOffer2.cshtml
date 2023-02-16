@@ -1,0 +1,230 @@
+﻿@using Microsoft.Practices.Unity;
+@using Microsoft.Practices.Unity.Configuration;
+@using Microsoft.AspNet.Identity
+
+@model BeYourMarket.Web.Models.ListingItemModel
+
+@{
+    ViewBag.Title = Model.ListingCurrent.Title;
+}
+
+@section Styles {
+    <link href="~/css/formstone/lightbox.css" rel="stylesheet" />
+    <link href="~/js/timepicker/bootstrap-datepicker.min.css" rel="stylesheet" />
+}
+
+<div class="container-fluid body-content" style="margin-top:20px; margin-bottom:20px;">
+
+    <div class="main-section">
+
+        @Html.Partial("_ListingContactModal", Model)
+
+        <div class="row">
+            <div class="container-fluid">
+                <div class="row">
+                    @Html.Partial("_UserMessage")
+
+                    <div class="col-md-4 col-xs-12">
+                        <div id="sidebar" data-spy="affix" data-offset-top="120" class="affix text-center">
+                            @Html.Partial("_ListingPayment", Model.ListingCurrent)
+
+                            <div class="panel panel-default panel-body mrg-t text-center">
+                                <a href="@Url.Action("Profile", "Listing", new { id = Model.User.Id, oqeq = @ViewBag.oqeq })">
+                                    <img class="img-circle profile-picture" src="@Model.Pictures[0].Url" />
+                                </a>
+                                <h4>
+                                    @Model.ListingCurrent.Title @Model.ListingCurrent.Description<br />
+                                    Tipo: @Model.descricaoTipoAnimal / Raça: @Model.descricaoracaAnimal / Idade: @Model.ListingCurrent.IdadeAnimais
+                                </h4>
+                            </div>
+                            <div class="panel panel-default panel-body mrg-t text-center">
+                                <h4>[[[Quantidade: ]]] @Model.quantDesejaComprar</h4><br />
+                                <legend></legend>
+                                <h4>[[[Vlr Produto: R$ ]]] @Model.ListingCurrent.ValorTotalPorAnimalSale</h4><br />
+                                <legend></legend>
+                                <h3>[[[Você pagará: <br />R$ ]]] @Model.valorTotalDaCompra</h3>
+                            </div>
+                            <input type="hidden" id="inVTOffer" name="inVTOffer" value="@Model.valorTotalDaCompra" />
+                            <input type="hidden" id="inQtC" name="inQtC" value="@Model.quantCompraCalc" />
+                            <input type="hidden" id="inRec" name="inRec" value="" />
+                            <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-xs-12">
+                        <div class="section panel-header">
+                            <div class="panel-body bdr-b panel-header">
+                                @*<p class="text-lighten">
+                                    @CacheHelper.Settings.SignupText
+                                </p>*@
+                                <h2>
+                                    Você quer receber ou retirar sua compra?
+                                </h2>
+                                <input type="hidden" id="inIdOf" name="inIdOf" value="@ViewBag.idOferta" />
+                            </div>
+                            <div class="col-md-12">
+                                @*<h2>
+                                    Como você quer receber ou retirar sua compra?
+                                </h2>*@
+                                <br />
+                                <h3>Seu endereço:</h3>
+                                <p class="lead text-lighten">
+                                    <b>@Model.UsuarioComprador.Logradouro_Cidade / Bairro: @Model.UsuarioComprador.Bairro_Cidade</b><br />
+                                    @Model.Cidade_UF_Comprador - CEP: @Model.UsuarioComprador.Cep_Bairro_Cidade<br />
+                                    @Model.UsuarioComprador.FirstName @Model.UsuarioComprador.LastName
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="panel-header bdr-b container-fluid"></div>
+                    </div>
+
+                    <div class="col-md-8 col-xs-12">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="consultShipping(0)">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            <h3>Receber compra</h3>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr class="shipping" style="display:none;">
+                                    <td>
+                                        <h4>[[[Selecione uma Transportadora]]]</h4><br />
+                                        @Html.DropDownListFor(m => m.EmpresaTransportadora, new SelectList(Model.CompanhiasTransporte, "Id_SC", "Nome_Fantasia_SC", Model.EmpresaTransportadora), new { @class = "form-control input-lg m-b-10", @id = "inShipping" })
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  onclick="consultShipping(1)" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            <h3>Retirar compra no local</h3>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        <input type="button" id="inContComp" name="inContComp" class="btn btn-primary mb-3" onclick="contPurchase()" value="Continuar">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script src="~/js/timepicker/bootstrap-datepicker.js"></script>
+    @Html.Partial("_LocalizationDatePicker")
+
+    @Html.Partial("_LocalizationJQueryValidation")
+
+    @{
+        var datesDisabled = new System.Text.StringBuilder();
+        foreach (var fromDate in Model.DatesBooked)
+        {
+            datesDisabled.AppendFormat("'{0}',", fromDate.ToShortDateString());
+        }
+    }
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+                startDate: new Date(),
+                daysOfWeekDisabled: "0",
+                datesDisabled: [@Html.Raw(datesDisabled.ToString())],
+                language: '@Context.GetPrincipalAppLanguageForRequest().ToString()'
+            });
+
+            var $doc = $('html, body');
+            $('.compra').click(function () {
+                $doc.animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 500);
+                return false;
+            });
+        });
+
+        function consultShipping(v) {
+            $(`#inRec`).val(v);
+            if (parseInt(v) == 0) {
+                swal("[[[Atenção!]]]", "Você deverá selecionar uma transportadora que atenda sua região, com seguro para a carga transportada.\n\n Ao fim do faturamento da compra, você será direcionado à área de finalização da contratação do transporte e pagamento do frete correspondente ao produto comprado.", "warning");
+                $('#inShipping').val(0);
+                $('.shipping').show('slow');    // CONTINUAR AQUI <-- INSERIR ACESSO AO FORMULARIO DE CONTRATAR O FRETE
+            }
+            else {
+                $('.shipping').hide('slow');
+            }
+        }
+
+        function contPurchase() {
+            if ((parseInt($(`#inRec`).val()) == 0) && (parseInt($('#inShipping').val()) == 0)) {
+                swal("[[[Atenção!]]]", "Você deve selecionar uma transportadora.", "error");
+                $('#inShipping').val().focus();
+            } else {
+                //CONTINUAR AQUI... <--SEGUIR PRO FATURAMENTO (EMISSÃO DE BOLETO E PIX)
+                window.location.href = "@Url.Action("Invoicing", "Listing", new { })" + "?idOf=" + $('#inIdOf').val() + "&qt=" + $('#inQtC').val() + "&oqeq=0";
+            }
+        }
+</script>
+
+
+    <!-- Include Roller JS -->
+    <script src="~/js/formstone/core.js"></script>
+    <script src="~/js/formstone/touch.js"></script>
+    <script src="~/js/formstone/transition.js"></script>
+    <script src="~/js/formstone/lightbox.js"></script>
+
+    <script>
+        $(".text-swap").on("click", function () {
+            var el = $(this);
+            el.text() == el.data("text-swap")
+              ? el.text(el.data("text-original"))
+              : el.text(el.data("text-swap"));
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(".boxer").lightbox({
+            mobile: true
+        });
+    </script>
+
+    @if (Model.ListingCurrent.Latitude.HasValue && Model.ListingCurrent.Longitude.HasValue)
+    {
+        <text>
+            <script type="text/javascript">
+                function initMap() {
+                    var myLatlng = new google.maps.LatLng(@Model.ListingCurrent.Latitude.Value.ToString(System.Globalization.CultureInfo.InvariantCulture), @Model.ListingCurrent.Longitude.Value.ToString(System.Globalization.CultureInfo.InvariantCulture));
+                    var isDraggable = $(document).width() > 480 ? true : false; // If document (your website) is wider than 480px, isDraggable = true, else isDraggable = false
+
+                    var mapOptions = {
+                        draggable: isDraggable,
+                        scrollwheel: false, // Prevent users to start zooming the map when scrolling down the page
+                        zoom: 14,
+                        center: myLatlng
+                    };
+
+                    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+                    var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        content: '@Model.ListingCurrent.Location'
+                    });
+                }
+            </script>
+        </text>
+    }
+
+    <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initMap" async defer></script>
+}

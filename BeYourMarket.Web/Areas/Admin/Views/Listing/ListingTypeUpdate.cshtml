@@ -1,0 +1,151 @@
+﻿@model BeYourMarket.Model.Models.ListingType
+
+@{
+    ViewBag.Title = "[[[Listing Type Update]]]";
+}
+
+@section Styles {
+    <link href="~/css/select2/select2.css" rel="stylesheet" />
+}
+
+<div class="wraper container-fluid">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title">[[[Tipo de Listagem]]]</h3></div>
+                <div class="panel-body">
+                    <form action="@Url.Action("ListingTypeUpdate", "Listing")" id="listingTypeForm" method="post" class="form-horizontal" role="form">
+
+                        @Html.HiddenFor(x => x.ID)
+
+                        @Html.ValidationSummary(true, string.Empty, new { @class = "alert alert-danger" })
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">ID</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static">@Model.ID</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">[[[Nome]]]</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" placeholder="[[[Ex: Oferta]]]" required>
+                            </div>
+                        </div>
+
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">[[[Texto do botão]]]</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="ButtonLabel" name="ButtonLabel" value="@Model.ButtonLabel" placeholder="[[[Ex: LIvro]]]" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <label class="cr-styled">
+                                        <input checked="@Model.PriceEnabled" id="PriceEnabled" name="PriceEnabled" type="checkbox" value="true" />
+                                        <i class="fa"></i>
+                                        [[[Preço Habilitado]]]
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">[[[Preço Unitário]]]</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="PriceUnitLabel" name="PriceUnitLabel" value="@Model.PriceUnitLabel" placeholder="[[[Ex: Por Dia]]]">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <label class="cr-styled">
+                                    <input checked="@Model.ShippingEnabled" id="ShippingEnabled" name="ShippingEnabled" type="checkbox" value="true" />
+                                    <i class="fa"></i>
+                                    [[[Envio Habilitado]]]
+                                </label>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="col-md-offset-2 col-md-10 alert alert-info">
+                            <h4>[[[Pagamento]]]</h4>
+                            <p>[[[Para configurar o método de pagamento para efetuar pagamentos, configure o plugin de pagamento]]]</p>
+                            <p>
+                                <a class="btn btn-default" href="@Url.Action("Plugins", "Plugin", new { area = "Admin", id = "" })">[[[Configurar Plugins]]]</a>
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <label class="cr-styled">
+                                    <input checked="@Model.PaymentEnabled" id="PaymentEnabled" name="PaymentEnabled" type="checkbox" value="true" />
+                                    <i class="fa"></i>
+                                    [[[Pagamento Ativado]]]
+                                </label>
+                            </div>
+                        </div>
+
+                        <fieldset id="orderTypeFieldSet" @(Model.PaymentEnabled ? "" : "disabled")>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">[[[Tipo de Pedido]]]</label>
+                                <div class="col-md-10">
+                                    @Html.DropDownListFor(m => m.OrderTypeID, EnumHelper.GetSelectList(typeof(BeYourMarket.Model.Enum.Enum_ListingOrderType)), new { @class = "form-control", required = "" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">[[[Etiqueta de tipo de pedido]]]</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="OrderTypeLabel" name="OrderTypeLabel" value="@Model.OrderTypeLabel" placeholder="[[[Ex: Número de Dias]]]">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> [[[Salvar]]]</button>
+                                <a href="@Url.Action("ListingTypes", "Listing")" class="btn btn-default"><i class="fa fa-remove"></i> [[[Cancelar]]]</a>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/css/select2/select2.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.opcoes').hide();
+
+            // Select2
+            $(".select2").select2({
+                width: '100%'
+            });
+
+            // Payment
+            $('#PaymentEnabled').on('change', function () {
+                if (this.checked) {
+                    $("#orderTypeFieldSet").removeAttr("disabled");
+                }
+                else {
+                    $("#orderTypeFieldSet").attr("disabled", "disabled");
+                }
+            });
+        });
+
+    </script>
+}
+

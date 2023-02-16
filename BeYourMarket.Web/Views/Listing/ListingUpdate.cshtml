@@ -1,0 +1,658 @@
+﻿@model BeYourMarket.Web.Models.ListingUpdateModel
+
+@{
+    ViewBag.Title = "[[[Listing Update]]]";
+}
+
+@section Styles {
+    <link href="~/Content/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" />
+}
+
+<div class="main-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="center-block col-md-8">
+                <div class="panel panel-default mrg-t">
+                    <div class="panel-body bdr-b panel-header">
+                        <h4>[[[Publique seu Item a ser vendido nessa plataforma]]]</h4>
+                        <p class="text-lighten">
+                            @CacheHelper.Settings.SignupText
+                        </p>
+                        <a href="@Url.Action("Dashboard", "Manage")"> [[[Início]]]</a>
+                    </div>
+                    <div class="panel-body bdr-b">
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <text>[[[Já é membro?]]]</text>
+                            <a href="@Url.Action("Login", "Account", new { returnUrl = Request.Url.PathAndQuery })" class="m-b-5">[[[Se Logar aqui]]]</a>
+                        }
+                    <form action="@Url.Action("ListingUpdate", "Listing", new { oqeq = @ViewBag.oqeq })" id="listingUpdateForm" method="post" role="form" enctype="multipart/form-data">
+                        @Html.HiddenFor(x => x.ListingItem.ID)
+                        @Html.Partial("_UserMessage")
+                        @Html.ValidationSummary(true, string.Empty, new { @class = "alert alert-danger" })
+
+                        <fieldset>
+                            <legend>[[[Detalhes do Item (Lote)]]]</legend>
+                            <label>[[[Categoria]]]</label>
+                            @Html.DropDownListFor(m => m.CategoryID, new SelectList(Model.Categories, "ID", "Name", Model.ListingItem.CategoryID), new { @class = "form-control input-lg m-b-10", id = "tpProd" })
+
+                            @*<div id="listingTypesPlaceHolder">
+                                @Html.Partial("_ListingTypes", Model)  // Tipo de Listagem
+                            </div>*@
+
+                            <div class="form-group">
+                                <label>[[[Título da Oferta]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Informe o título da oferta]]]" id="Title" name="Title" value="@Model.ListingItem.Title" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>[[[Descrição da Oferta]]] <span class="text-red">*</span></label>
+                                <textarea class="form-control" rows="5" placeholder="[[[Descrição...]]]" id="Description" name="Description" required>@Model.ListingItem.Description</textarea>
+                            </div>
+
+                            @*<div class="form-group">
+                                <label>[[[Quantidade Total do Item para Venda]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Ex: 1,00]]]" id="QuantidadeItensVenda" name="QuantidadeItensVenda" value="@Model.ListingItem.QuantidadeItensVenda" required>
+                            </div>
+
+                            @if (Model.ListingTypes.FirstOrDefault().PriceEnabled)
+                            {
+                                <div class="form-group" id="priceGroup">
+                                    <label>[[[Preço]]]</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@CacheHelper.Settings.Currency</span>
+                                        <input type="number" min="0" class="form-control" id="Price" name="Price" placeholder="[[[Preço]]]" value="@Model.ListingItem.Price" data-rule-number="true" data-rule-min="0">
+                                    </div>
+                                </div>
+                            }*@
+
+                            @*<div class="form-group">
+                                <input type="checkbox" id="Active" name="Active" value="true" @(Model.ListingItem.Active ? "checked" : "") /> <label for="Active">[[[Ativo]]]</label>
+                                <input name="Active" type="hidden" value="false" />
+                            </div>*@
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>[[[Informações do Item (Lote)]]]</legend>
+                            <div class="form-group animals" style="display:none;">
+                                <label>[[[Tipo]]] <span class="text-red">*</span></label>
+                                </br>
+                                @Html.DropDownListFor(m => m.TiposAnimaisProducao, new SelectList(Model.TiposAnimaisProducao, "id_AnimalProducao", "Descricao_TipoAnimalProducao", Model.TiposAnimaisProducao), new { @class = "form-control input-lg m-b-10", @id = "tipoAnimal" })
+                            </div>
+                            <div class="form-group animals" style="display:none;">
+                                <label>[[[Raça]]] <span class="text-red">*</span></label>
+                                </br>
+                                <select name="inTipoRacaAnimal" id="inTipoRacaAnimal" class="form-control input-lg"></select>
+                                <input type="hidden" id="inTpRacaSelec" name="inTpRacaSelec" value="@Model.ListingItem.id_TipoRacasAnimais" />
+                            </div>
+                            <div class="form-group animals" style="display:none;">
+                                <label>[[[Idade]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Informe a idade média dos animais]]]" id="inIdadeAnimais" name="inIdadeAnimais" value="@Model.ListingItem.IdadeAnimais" required>
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Quantidade Total do Item para Venda (Animal / Produto)]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Ex: 1,00]]]" id="inQuantidadeItemSale" name="inQuantidadeItemSale" value="@Model.inQuantidadeItenSale" required>
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Unidade]]] <span class="text-red">*</span></label>
+                                </br>
+                                @Html.DropDownListFor(m => m.UnidadeProduto, new SelectList(Model.Unidades, "descricaoUnidade", "descricaoUnidade", Model.ListingItem.UnidadeProduto), new { @class = "form-control input-lg m-b-10", @id = "inUnidades" })
+                            </div>
+                            <div class="form-group animals" style="display:none;">
+                                <label>[[[Peso por animal (em Kg)]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Informe o peso médio em Kg por animal]]]" id="inPesoKgPorItemSale" name="inPesoKgPorItemSale" value="@Model.inPesoUnitarioKg" onkeyup="k(this);" required>
+                            </div>
+                            <div class="form-group animals" style="display:none;">
+                                <label>[[[Peso por animal (em Arrobas)]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg pesos" placeholder="[[[Peso por médio em arrobas por animal]]]" id="inPesoArrobaPorItemSale" name="inPesoArrobaPorItemSale" value="@Model.inPesoUnitarioArrobas" onkeyup="k(this);" required readonly>
+                            </div>
+                            <div class="form-group animals" style="display:none;">
+                                <label>[[[Peso Total do Lote (em Kg)]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg pesos" placeholder="[[[Peso total em Kg do Lote de animais]]]" id="inPesoTotalLoteKgSale" name="inPesoTotalLoteKgSale" value="@Model.inPesoTotalLoteKg" onkeyup="k(this);" required readonly>
+                            </div>
+                            <div class="form-group animals" style="display:none;">
+                                <label>[[[Peso Total do Lote (em Arrobas)]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg pesos" placeholder="[[[Peso total em Arrobas do Lote de animais]]]" id="inPesoTotalLoteArrobaSale" name="inPesoTotalLoteArrobaSale" value="@Model.inPesoTotalLoteArrobas" onkeyup="k(this);" required readonly>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>[[[Valores]]]</legend>
+                                <div class="form-group">
+                                    <label>[[[Valor por Item (Animal / Produto) (Obs: Oferta do Produtor)]]] <span class="text-red">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@CacheHelper.Settings.Currency</span>
+                                        <input type="text" class="form-control input-lg" placeholder="" id="inValorTotalPorAnimalSale" name="inValorTotalPorAnimalSale" value="@Model.inValorPorAnimal" onkeyup="k(this);">
+                                    </div>
+                                </div>
+                                <div class="form-group" id="priceGroup">
+                                    <label>[[[Valor Total (Conforme Oferta do Produtor) (Obs: Após a venda, este é o valor que o Produtor receberá líquido)]]] <span class="text-red">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@CacheHelper.Settings.Currency</span>
+                                        <input type="text" class="form-control input-lg valor" id="inValorTotalDoLoteSale" name="inValorTotalDoLoteSale" placeholder="[[[0,00]]]" value="@Model.inValorTotalDoLoteSale" onkeyup="k(this);" style="border-color: #f00; color: blue; font-weight: bold;" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="priceGroup">
+                                    <label>[[[Valor Taxa Plataforma (Obs: 1% do Valor de Oferta do Produtor)]]] <span class="text-red">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@CacheHelper.Settings.Currency</span>
+                                        <input type="text" class="form-control input-lg valor" id="inValorTaxa" name="inValorTaxa" placeholder="[[[0,00]]]" value="@Model.inValorTaxaPlataforma" style="border-color: #f00; color: red; font-weight: bold; " readonly>
+                                        <input name="inPctTx" id="inPctTx" type="hidden" value="@Model.inPercentTaxaPlat" />
+                                    </div>
+                                </div>
+                                <div class="form-group" id="priceGroup">
+                                    <label>[[[Valor da Oferta na Plataforma (Obs: (Oferta do Produtor + 1% Taxa Plataforma))]]] <span class="text-red">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@CacheHelper.Settings.Currency</span>
+                                        <input type="text" class="form-control input-lg valor" id="inValorTotalDoLoteMaisTaxaSale" name="inValorTotalDoLoteMaisTaxaSale" placeholder="[[[0,00]]]" value="@Model.inValorTotalMaisTaxa" style="border-color: #f00; color: green; font-weight: bold;" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="form-group animals" style="display:none;">
+                                    <label>[[[Valor por Kg]]] <span class="text-red">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@CacheHelper.Settings.Currency</span>
+                                        <input type="text" class="form-control input-lg valor" placeholder="[[[Peso por animal em arrobas]]]" id="inValorTotalPorKgSale" name="inValorTotalPorKgSale" value="@Model.inValorTotalPorKgSale" onkeyup="k(this);" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group animals" style="display:none;">
+                                    <label>[[[Valor por Arroba]]] <span class="text-red">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@CacheHelper.Settings.Currency</span>
+                                        <input type="text" class="form-control input-lg valor" placeholder="[[[Peso por animal em arrobas]]]" id="inValorTotalPorArrobaSale" name="inValorTotalPorArrobaSale" value="@Model.inValorTotalPorArrobaSale" onkeyup="k(this);" readonly>
+                                    </div>
+                                </div>
+                        </fieldset>
+
+                        <div id="partialPlaceHolder">
+                            @Html.Partial("_CategoryCustomFields", Model.CustomFields)
+                        </div>
+
+                        <fieldset>
+                            <legend>[[[Frete / Outras informações]]]</legend>
+                            <div class="form-group" style="">
+                                <label>[[[Frete (para essa oferta)]]] <span class="text-red">*</span></label>
+                                </br>
+                                @Html.DropDownListFor(m => m.id_TipoFrete, new SelectList(Model.TiposFrete, "id_TipoFrete", "Descricao_TipoFrete", Model.TiposFrete), new { @class = "form-control input-lg m-b-10", @id = "tiposFrete" })
+                            </div>
+                            @*<div class="form-group" style="">
+                                <label>[[[Seguradora]]] <span class="text-red">*</span></label>
+                                </br>
+                                @Html.DropDownListFor(m => m.SeguradoraID, new SelectList(Model.EmpresasSeguradoras, "id_Insurer", "Nome_Insurer", Model.EmpresasSeguradoras), new { @class = "form-control input-lg m-b-10", @id = "empresaSeguradora" })
+                            </div>
+                            <div class="form-group" style="">
+                                <label>[[[Apolice Nº]]] <span class="text-red">*</span></label>
+                                </br>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Nº apólice]]]" id="inNumApolice" name="inNumApolice" value="@Model.inNumApolice" readonly>
+                            </div>*@
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>[[[Enviar Imagens]]]</legend>
+                            <div class="form-group">
+                                <div class="target">
+                                    <input type="file" id="files" name="files" class="file-loading" multiple>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend class="animals" style="display:none;">[[[Link de Vídeo (Tem um vídeo no facebook, Instagram ou Youtube? Copie o link do seu vídeo lá e cole-o aqui) <i class="fa fa-long-arrow-down" aria-hidden="true"></i>]]]</legend>
+                            <div class="form-group animals" style="display:none;">
+                                <div class="target">
+                                    @*<input type="file" id="filesCam" name="filesCam" class="file-loading" multiple>*@
+                                    <input type="text" class="form-control input-lg" placeholder="[[[Cole aqui o link do seu vídeo]]]" id="Linkcam" name="Linkcam" value="@Model.Linkcam">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>[[[Informações sobre o local de Retirada]]]</legend>
+                            <div class="form-group">
+                                <label>[[[Local de retirada do Lote]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Informe o local de retirada (Ex: nome da propriedade como é conhecida...)]]]" id="inLocalRetirada" name="inLocalRetirada" value="@Model.inLocalRetirada" required>
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Cidade]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Informe a cidade e estado (Ex: Pedra Cinza-MG...)]]]" id="inCidadeEstadoRetirada" name="inCidadeEstadoRetirada" value="@Model.inCidadeEstadoRetirada" required>
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Referências (facilitar localização)]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Informe a referência para facilitar encontrar (Ex: Rod X ou Perto de...)]]]" id="inReferenciaLocalRetirada" name="inReferenciaLocalRetirada" value="@Model.inReferenciaLocalRetirada" required>
+                            </div>
+
+                            @*<input type="hidden" id="Longitude" name="Longitude" value="@Model.ListingItem.Longitude" />
+                            <input type="hidden" id="Latitude" name="Latitude" value="@Model.ListingItem.Latitude" />
+
+                            <div class="form-group">
+                                <div id="map-canvas"></div>
+                            </div>*@
+
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>[[[Quem está publicando]]]</legend>
+                            <div class="form-group">
+                                <label>[[[Nome Completo]]] <span class="text-red">*</span></label>
+                                <input type="text" id="ContactName" name="ContactName" class="form-control input-lg" placeholder="[[[Entre com seu nome completo]]]" value="@Model.ListingItem.ContactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Telefone]]] <i class="fa fa-whatsapp" aria-hidden="true"></i></label>
+                                <input type="tel" id="ContactPhone" name="ContactPhone" class="form-control input-lg" placeholder="[[[Seu número de telefone (XX) XXXXX-XXXX (Obs: Preferencia Whatsapp)]]]" value="@Model.ListingItem.ContactPhone" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="ShowPhone" name="ShowPhone" value="true" @(Model.ListingItem.ShowPhone ? "checked" : "") /> <label for="ShowPhone">[[[Mostrar Telefone]]]</label>
+                                <input name="ShowPhone" type="hidden" value="false" />
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Email]]] <span class="text-red">*</span></label>
+                                <input type="email" id="ContactEmail" name="ContactEmail" class="form-control input-lg" placeholder="[[[Enter Email Address]]]" value="@Model.ListingItem.ContactEmail" required data-rule-email="true">
+                            </div>
+                            @if (!User.Identity.IsAuthenticated)
+                            {
+                                <div class="form-group">
+                                    <label for="Password">[[[Password]]] <span class="text-red">*</span></label>
+                                    <input type="password" name="Password" id="Password" class="form-control input-lg" placeholder="[[[Password]]]" data-rule-required="true" data-rule-minlength="6">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ConfirmPassword">[[[Confirm Password]]] <span class="text-red">*</span></label>
+                                    <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-control input-lg" placeholder="[[[Confirm Password]]]" data-rule-required="true" data-rule-minlength="6" data-rule-equalto="#Password">
+                                </div>
+                            }
+                        </fieldset>
+                        <fieldset>
+                            <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> [[[Publicar Item]]]</button>
+                            <a class="btn btn-default" href="@Url.Action("Dashboard", "Manage")"><i class="fa fa-remove"></i> [[[Cancelar]]]</a>
+                        </fieldset>
+                    </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initMap" async defer></script>
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script src="~/Scripts/fileinput.min.js"></script>
+    @Html.Partial("_LocalizationFileInput")
+
+<script>
+        @{
+            var preview = new System.Text.StringBuilder();
+            var previewDelete = new System.Text.StringBuilder();
+
+            foreach (var picture in Model.Pictures)
+	        {
+                preview.AppendFormat(@"'<img src=""{0}"" class=""file-preview-image"">',", picture.Url);
+                previewDelete.AppendFormat(@"{{url: '{0}',key: {1} }},", Url.Action("ListingPhotoDelete", "Listing", new { id = picture.ID }), picture.ID);
+	        }
+        }
+
+        animalform();
+        CarregaRacas($('#tipoAnimal').val());
+        var $input = $("#files");
+/*      var $input2 = $("#filesCam");*/
+
+        if (parseInt($('#ListingItem_ID').val()) == 0) $('#inUnidades').val(0)
+
+        $input.fileinput({
+            uploadAsync: false,
+            showCaption: false,
+            showRemove: false,
+            showUpload: false,
+            maxFileCount: 5,
+            overwriteInitial: false,
+            initialPreview: [
+                    @Html.Raw(preview.ToString())
+            ],
+            initialPreviewConfig: [
+                @Html.Raw(previewDelete.ToString())
+            ],
+            maxFileSize: 10000,
+            browseClass: "btn btn-primary",
+            allowedFileTypes: ["image"],
+            language: '@Context.GetPrincipalAppLanguageForRequest().ToString()'
+        });
+
+        @*$input2.fileinput({
+            uploadAsync: false,
+            showCaption: false,
+            showRemove: false,
+            showUpload: false,
+            maxFileCount: 5,
+            overwriteInitial: false,
+            initialPreview: [
+                    @Html.Raw(preview.ToString())
+            ],
+            initialPreviewConfig: [
+                @Html.Raw(previewDelete.ToString())
+            ],
+            maxFileSize: 11000,
+            browseClass: "btn btn-primary",
+            allowedFileTypes: ["video"],
+            language: '@Context.GetPrincipalAppLanguageForRequest().ToString()'
+        });*@
+
+    $("#tpProd").change(function () {
+        animalform();
+    });
+
+    $("#tipoAnimal").change(function () {
+        CarregaRacas(this.value);
+    });
+
+    $("#CategoryID").change(function () {
+            /* Get the selected value of dropdownlist */
+            var selectedID = $(this).val();
+            var listingID = $("#ListingItem_ID").val();
+
+            /* Request the partial view with get request. */
+            $.get('@Url.Action("ListingPartial", "Listing")?categoryID=' + selectedID, function (data) {
+
+                /* data is the pure html returned from action method, load it to your page */
+                $('#partialPlaceHolder').empty();
+                $('#partialPlaceHolder').html(data);
+                /* little fade in effect */
+                $('#partialPlaceHolder').fadeIn('slow');
+                $('#partialPlaceHolder').addClass('fadeIn animated');
+            });
+
+            $.get('@Url.Action("ListingTypesPartial", "Listing")?categoryID=' + selectedID + '&listingID=' + listingID, function (data) {
+
+                /* data is the pure html returned from action method, load it to your page */
+                $('#listingTypesPlaceHolder').empty();
+                $('#listingTypesPlaceHolder').html(data);
+                /* little fade in effect */
+                $('#listingTypesPlaceHolder').fadeIn('slow');
+                $('#listingTypesPlaceHolder').addClass('fadeIn animated');
+            });
+        });
+
+        // Hide or visible price field if it's enabled
+        $("#ListingTypeID").change(function () {
+            var listingTypeID = $(this).val();
+            $.get('@Url.Action("ListingType", "Listing")?listingTypeID=' + listingTypeID, function (data) {
+
+                if (data.PriceEnabled){
+                    $("#priceGroup").show();
+                }else{
+                    $("#Price").val("");
+                    $("#priceGroup").hide();
+                }
+            });
+        });
+
+    //$("#QuantidadeItensBuy").keyup(function () {
+    //    debugger;
+
+    //    var elemento = document.getElementById('QuantidadeItensBuy');
+    //    var valor = elemento.value;
+
+    //    valor = valor + '';
+    //    valor = parseInt(valor.replace(/[\D]+/g, ''));
+    //    valor = valor + '';
+    //    valor = valor.replace(/([0-9]{2})$/g, ",$1");
+
+    //    if (valor.length > 6) {
+    //        valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+    //    }
+
+    //    elemento.value = valor;
+    //    if (valor == 'NaN') elemento.value = '';
+    //});
+
+    $("#inPesoKgPorItemSale").blur(function () {
+        debugger;
+        if ((parseFloat($("#inPesoKgPorItemSale").val()) > 0) || ($("#inPesoKgPorItemSale").val() != null)) {
+            var pesoUnitArroba = (parseFloat($("#inPesoKgPorItemSale").val().replace('.', '').replace(',', '.')) / 30);
+            $('#inPesoArrobaPorItemSale').val((parseFloat(pesoUnitArroba) > 0) ? pesoUnitArroba.toFixed(2).replace('.', ',') : '');
+            var kgsTotais = (parseFloat($("#inPesoKgPorItemSale").val().replace('.', '').replace(',', '.')) * parseFloat($("#inQuantidadeItemSale").val().replace('.', '').replace(',', '.')));
+            $('#inPesoTotalLoteKgSale').val((parseFloat(kgsTotais) > 0) ? kgsTotais.toFixed(2).replace('.', ',') : '');
+            var arrobasTotais = (parseFloat(kgsTotais) / 30);
+            $('#inPesoTotalLoteArrobaSale').val((parseFloat(kgsTotais) > 0) ? arrobasTotais.toFixed(2).replace('.', ',') : '');
+        }
+        else {
+            $('.pesos').val('');
+        }
+    });
+
+    $("#inValorTotalPorAnimalSale").blur(function () {
+        debugger;
+
+        if ((parseFloat($("#inValorTotalPorAnimalSale").val()) > 0) || ($("#inValorTotalPorAnimalSale").val() != null)) {
+            var vlrTotalLote = (parseFloat($("#inQuantidadeItemSale").val().replace('.', '').replace(',', '.')) * parseFloat($("#inValorTotalPorAnimalSale").val().replace('.', '').replace(',', '.')));
+            $('#inValorTotalDoLoteSale').val((parseFloat(vlrTotalLote) > 0) ? vlrTotalLote.toFixed(2).replace('.', ',') : '');
+            var vlrTaxPlat = ((parseFloat(vlrTotalLote) / 100) * parseFloat($('#inPctTx').val()));
+            $('#inValorTaxa').val((parseFloat(vlrTaxPlat) > 0) ? vlrTaxPlat.toFixed(2).replace('.', ',') : '');
+            var offerProdAddTxPlt = (parseFloat(vlrTotalLote) + parseFloat(vlrTaxPlat));
+            $('#inValorTotalDoLoteMaisTaxaSale').val((parseFloat(offerProdAddTxPlt) > 0) ? offerProdAddTxPlt.toFixed(2).replace('.', ',') : '');
+            /*var vlrTotalPorKg = (vlrTotalLote / (parseFloat($("#inPesoKgPorItemSale").val().replace('.', '').replace(',', '.')) * parseFloat($("#inQuantidadeItemSale").val().replace('.', '').replace(',', '.'))));*/
+            var vlrTotalPorKg = (offerProdAddTxPlt / (parseFloat($("#inPesoKgPorItemSale").val().replace('.', '').replace(',', '.')) * parseFloat($("#inQuantidadeItemSale").val().replace('.', '').replace(',', '.'))));
+            $('#inValorTotalPorKgSale').val((parseFloat(vlrTotalPorKg) > 0) ? vlrTotalPorKg.toFixed(2).replace('.', ',') : '');
+            /*var vlrTotalArroba = (vlrTotalLote / ((parseFloat($("#inPesoKgPorItemSale").val().replace('.', '').replace(',', '.')) * parseFloat($("#inQuantidadeItemSale").val().replace('.', '').replace(',', '.'))) / 30));*/
+            var vlrTotalArroba = (offerProdAddTxPlt / ((parseFloat($("#inPesoKgPorItemSale").val().replace('.', '').replace(',', '.')) * parseFloat($("#inQuantidadeItemSale").val().replace('.', '').replace(',', '.'))) / 30));
+            $('#inValorTotalPorArrobaSale').val((parseFloat(vlrTotalArroba) > 0) ? vlrTotalArroba.toFixed(2).replace('.', ',') : '');
+        }
+        else {
+            $('.valor').val('');
+        }
+    });
+
+    function k(i) {
+        var v = i.value.replace(/\D/g, '');
+        v = (v / 100).toFixed(2) + '';
+        v = v.replace(".", ",");
+        v = v.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+        i.value = v;
+    }
+
+    function animalform() {
+        if (parseFloat($("#tpProd").val()) == 6) {
+/*            $("#Linkcam").val("");*/
+            $(".animals").show('slow');
+        }
+        else {
+/*            $("#Linkcam").val("");*/
+            $(".animals").hide('slow');
+        }
+    }
+
+    function CarregaRacas(idTp) {
+        $.ajax({
+            type: "GET",
+            url: "/Listing/CarregaRacasTp",
+            dataType: 'json',
+            async: false,
+            cache: false,
+            data: {
+                tp: idTp
+            },
+            success: function (data) {
+                var racas = "";
+                $.each(data, function (index, tpsRacas) {
+                    racas = (racas == "") ? "<option value='" + tpsRacas.id_TipoRacasAnimais + "'>" + tpsRacas.Descricao_TipoRacaAnimais + "</option>" : (racas + "<option value='" + tpsRacas.id_TipoRacasAnimais + "'>" + tpsRacas.Descricao_TipoRacaAnimais + "</option>");
+                });
+                $('#inTipoRacaAnimal').empty().append(racas);
+                if (parseFloat($('#inTpRacaSelec').val()) > 0)
+                    $('#inTipoRacaAnimal').val($('#inTpRacaSelec').val());
+            }
+        });
+    }
+</script>
+
+    @*<script>
+        //https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete
+        //https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse
+        $('.opcoes').hide();
+
+        function initMap() {
+            var isDraggable = $(document).width() > 480 ? true : false; // If document (your website) is wider than 480px, isDraggable = true, else isDraggable = false
+
+            var mapOptions = {
+                draggable: isDraggable,
+                scrollwheel: false, // Prevent users to start zooming the map when scrolling down the page
+                zoom: 14,
+                center: new google.maps.LatLng(-33.8688, 151.2195),
+            };
+
+            @{ var hasLatLng = @Model.ListingItem.Latitude.HasValue && @Model.ListingItem.Longitude.HasValue; }
+            var hasLatLng = @hasLatLng.ToString().ToLowerInvariant();
+
+            @if (hasLatLng){
+                <text>
+            mapOptions = {
+                center: new google.maps.LatLng(@Model.ListingItem.Latitude.Value.ToString(System.Globalization.CultureInfo.InvariantCulture), @Model.ListingItem.Longitude.Value.ToString(System.Globalization.CultureInfo.InvariantCulture)),
+                zoom: 14
+            };
+            </text>
+            };
+
+            var map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+
+            @if (hasLatLng){
+                <text>
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(@Model.ListingItem.Latitude.Value.ToString(System.Globalization.CultureInfo.InvariantCulture), @Model.ListingItem.Longitude.Value.ToString(System.Globalization.CultureInfo.InvariantCulture)),
+                map: map
+            });
+
+            marker.setVisible(true);
+            </text>
+            }
+
+            geocoder = new google.maps.Geocoder();
+
+            var input = (document.getElementById('Location'));
+
+            // Try HTML5 geolocation
+            if (@Model.ListingItem.ID == 0){
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        var pos = new google.maps.LatLng(position.coords.latitude,
+                                                         position.coords.longitude);
+
+                        geocoder.geocode({ 'latLng': pos }, function (results, status) {
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                if (results[1]) {
+                                    map.setZoom(14);
+                                    map.setCenter(pos);
+
+                                    marker = new google.maps.Marker({
+                                        position: pos,
+                                        map: map,
+                                        content: results[1].formatted_address
+                                    });
+                                    infowindow.setContent(results[1].formatted_address);
+                                    infowindow.open(map, marker);
+
+                                    $('#Location').val(results[1].formatted_address);
+                                    $('#Latitude').val(pos.lat());
+                                    $('#Longitude').val(pos.lng());
+
+                                } else {
+                                    alert('No results found');
+                                }
+                            } else {
+                                alert('Geocoder failed due to: ' + status);
+                            }
+                        });
+                    }, function () {
+                        handleNoGeolocation(true);
+                    });
+                } else {
+                    // Browser doesn't support Geolocation
+                    handleNoGeolocation(false);
+                }
+            }
+
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.bindTo('bounds', map);
+
+            var infowindow = new google.maps.InfoWindow();
+            var marker = new google.maps.Marker({
+                map: map,
+                anchorPoint: new google.maps.Point(0, -29)
+            });
+
+            google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                infowindow.close();
+                marker.setVisible(false);
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    window.alert("Autocomplete's returned place contains no geometry");
+                    return;
+                }
+
+                // Set lat/long
+                $('#Latitude').val(place.geometry.location.lat());
+                $('#Longitude').val(place.geometry.location.lng());
+
+                // If the place has a geometry, then present it on a map.
+                if (place.geometry.viewport) {
+                    map.fitBounds(place.geometry.viewport);
+                } else {
+                    map.setCenter(place.geometry.location);
+                    map.setZoom(12);
+                }
+                marker.setIcon(({
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(35, 35)
+                }));
+                marker.setPosition(place.geometry.location);
+                marker.setVisible(true);
+
+                var address = '';
+                if (place.address_components) {
+                    address = [
+                      (place.address_components[0] && place.address_components[0].short_name || ''),
+                      (place.address_components[1] && place.address_components[1].short_name || ''),
+                      (place.address_components[2] && place.address_components[2].short_name || '')
+                    ].join(' ');
+                }
+
+                infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+                infowindow.open(map, marker);
+            });
+
+            google.maps.event.addDomListener(input, 'keydown', function (e) {
+                if (e.keyCode == 13) {
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    }
+                    else {
+                        // Since the google event handler framework does not handle
+                        e.cancelBubble = true;
+                        e.returnValue = false;
+                    }
+                }
+            });
+
+        }
+
+        function handleNoGeolocation(errorFlag) {
+            if (errorFlag) {
+                var content = 'Error: The Geolocation service failed.';
+            } else {
+                var content = 'Error: Your browser doesn\'t support geolocation.';
+            }
+
+            var options = {
+                map: map,
+                position: new google.maps.LatLng(60, 105),
+                content: content
+            };
+
+            var infowindow = new google.maps.InfoWindow(options);
+            map.setCenter(options.position);
+        }
+    </script>*@
+
+}

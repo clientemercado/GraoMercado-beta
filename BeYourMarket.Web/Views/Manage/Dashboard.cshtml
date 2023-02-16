@@ -1,0 +1,119 @@
+﻿@model BeYourMarket.Web.Models.ListingModel
+
+@{
+    ViewBag.Title = "[[[Painel Controle]]]";
+}
+
+<div class="body-content container-fluid">
+    <div class="main-section row">
+        <div class="container-fluid mrg-tb">
+            @Html.Partial("_DashBoardSide", "dashboard")
+            <div class=" col-md-9">
+                <div id="myTabContent" class="tab-content ">
+                    <div role="tabpanel" class="tab-pane card-content fade active in" id="listings" aria-labelledby="listings-tab">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                [[[Quero Vender (Minhas ofertas de venda)]]]
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <form class="form-inline" action="@Url.Action("Dashboard", "Manage", new { oqeq = @ViewBag.oqeq })" method="get" role="form">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4 m-b-10">
+                                                <input style="width:100%;" type="text" id="searchText" name="searchText" class="input-sm form-control" placeholder="[[[Pesquisar Item ofertado]]]" value="@Request.QueryString["searchText"]">
+                                            </div>
+                                            <div class="col-sm-12 col-md-4 pull-left m-b-10">
+                                                  <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-search"></i> [[[Procurar]]]</button>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4 m-b-10">
+                                                @*<a class="btn btn-sm btn-default" href="@Url.Action("ListingUpdate", "Listing", new { oqeq = @ViewBag.oqeq })"><i class="mdi-content-add-circle-outline"></i> [[[Publicar novo Item]]]</a>*@
+                                                <a class="btn btn-sm btn-default" onclick="verificarDb()"><i class="mdi-content-add-circle-outline"></i> [[[Publicar novo Item]]]</a>
+                                                <input type="hidden" id="id_CB" name="id_CB" value="@Model.id_CB" />
+                                                <input type="hidden" id="inOqeq" name="inOqeq" value="@ViewBag.oqeq" />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <ul class="media-list list-group">
+                                @foreach (var item in Model.Listings)
+                                {
+                                    <li id="item_@item.ListingCurrent.ID" class="media list-group-item">
+                                        <div class="col col-sm-2 itens">
+                                            <a href="@Url.Action("Listing", "Listing", new { id = item.ListingCurrent.ID, oqeq = @ViewBag.oqeq })">
+                                                <img class="item-thumbnail img-responsive img-rounded" alt="Thumbnail" src="@item.UrlPicture">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-auto itens">
+                                            <h4 class="media-heading"><a href="@Url.Action("Listing", "Listing", new { id = item.ListingCurrent.ID, oqeq = @ViewBag.oqeq })"> @item.ListingCurrent.Title</a></h4>
+                                            <p class="hidden-xs">
+                                                @item.ListingCurrent.Description.PrefixString(150)
+                                            </p>
+                                            @if (@item.listaChatsOferta.Count > 0)
+                                            {
+                                                <h4 class="media-heading"><a href="@Url.Action("Listing", "Listing", new { id = item.ListingCurrent.ID, oqeq = @ViewBag.oqeq })"><font color="#f00;">TEM PERGUNTAS SOBRE A OFERTA</font></a></h4>
+                                            }
+                                        </div>
+                                        <div class="col col-xs-12 itens">
+                                            <div class="pull-right">
+                                                <a class="btn btn-primary btn-sm" href="@Url.Action("ListingUpdate", "Listing", new { id = item.ListingCurrent.ID, oqeq = @ViewBag.oqeq })"><i class="fa fa-edit"></i><span class="hidden-xs">[[[Alterar]]]</span></a>
+                                                <a class="btn btn-default btn-sm" href="javascript:void(0);" onclick="confirmDelete(@item.ListingCurrent.ID, '@item.ListingCurrent.Title');"><i class="fa fa-remove"></i><span class="hidden-xs">[[[Delete]]]</span></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script type="text/javascript">
+        function verificarDb() {
+            if (parseFloat($('#id_CB').val()) > 0) {
+                window.location.href = "@Url.Action("ListingUpdate", "Listing", new { })" + "?id=&oqeq" + $('#inOqeq').val();
+            }
+            else {
+                swal({
+                    title: "Cadastre uma Conta Bancária nessa plataforma.\nIsso é necessário para que você receba o valor dos produtos vendidos aqui.\n\nClique em Configurações e cadastre sua Conta Bancária.",
+                    type: "warning",
+                    confirmButtonColor: "#337ab7"
+                });
+            }
+        }
+
+        function confirmDelete(id, title) {
+            swal({
+                title: "[[[Confirma a exclusão do item?]]]",
+                text: "[[[You will delete]]] " + title,
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "[[[Excluir]]]",
+                cancelButtonText: "[[[Cancelar]]]",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    $.post('@Url.Action("ListingDelete","Listing")', { id: id })
+                    .done(function (result) {
+                        if (result.Success) {
+                            $("#item_" + id).remove();
+                            swal("[[[Deleted!]]]", result.Message, "success");
+                        } else {
+                            swal("[[[Failed!]]]", result.Message, "error");
+                        }
+                    })
+                    .fail(function (xhr, textStatus, errorThrown) {
+                        swal("[[[Failed!]]]", xhr.responseText, "error");
+                    })
+                } else {
+                    swal("[[[Cancelled!]]]", "", "error");
+                }
+            });
+        }
+    </script>
+}

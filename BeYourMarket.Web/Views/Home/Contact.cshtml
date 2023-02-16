@@ -1,0 +1,38 @@
+﻿@model BeYourMarket.Web.Models.ContactModel
+@{
+    ViewBag.Title = "[[[Contato]]]";
+    var imagePath = ImageHelper.GetCommunityImagePath("background-1");
+}
+
+<head>
+    <link href="~/Content/home.css" rel="stylesheet" />
+</head>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 left-content"></div>
+        <div class="col-lg-6 col-md-12 right-content">
+            <h4>[[[Contate-nos]]]</h4>
+
+            <form action="@Url.Action("Contact", "Home", new { oqeq = @ViewBag.oqeq })" id="form0" method="post" role="form" enctype="multipart/form-data" onkeypress="return event.keyCode != 13;">
+
+                @Html.ValidationSummary(true, string.Empty, new { @class = "alert alert-danger" })
+                <fieldset>
+                    <div class="form-group">
+                        <label>[[[Seu Email]]]</label>
+                        <input type="text" class="form-control input-lg" placeholder="[[[Informe Email...]]]" id="Email" name="Email" value="@Model.Email">
+                    </div>
+                    <div class="form-group">
+                        <label>[[[Mensagem]]]</label>
+                        <textarea class="form-control input-lg" rows="4" placeholder="[[[Digite a Mensagem...]]]" id="Message" name="Message">@Model.Message</textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <button class="btn btn-primary" type="submit">[[[Enviar]]]</button>
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+</div>

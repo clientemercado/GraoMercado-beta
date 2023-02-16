@@ -1,0 +1,411 @@
+﻿@model BeYourMarket.Web.Models.PurchaseUpdateModel
+
+@{
+    ViewBag.Title = "[[[Listing Update]]]";
+}
+
+@section Styles {
+    <link href="~/Content/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" />
+}
+
+<div class="main-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="center-block col-md-8">
+                <div class="panel panel-default mrg-t">
+                    <div class="panel-body bdr-b panel-header">
+                        <h4>[[[Publique sua oferta de compra na plataforma]]]</h4>
+                        <p class="text-lighten">
+                            @CacheHelper.Settings.SignupText
+                        </p>
+                        <a href="@Url.Action("ToBuy", "Manage")"> [[[Início]]]</a>
+                    </div>
+                    <div class="panel-body bdr-b">
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <text>[[[Já é membro?]]]</text>
+                            <a href="@Url.Action("Login", "Account", new { returnUrl = Request.Url.PathAndQuery })" class="m-b-5">[[[Se Logar aqui]]]</a>
+                        }
+                        <form action="@Url.Action("PurchaseUpdate", "Purchase", new { oqeq = @ViewBag.oqeq })" id="listingUpdateForm" method="post" role="form" enctype="multipart/form-data">
+                            <input type="hidden" id="idPurchase" name="idPurchase" value="@Model.ICItem.id_IC" />
+                            @Html.Partial("_UserMessage")
+                            @Html.ValidationSummary(true, string.Empty, new { @class = "alert alert-danger" })
+
+                        <fieldset>
+                            <legend>[[[Localização]]]</legend>
+                            <div class="form-group">
+                                <label>[[[Informe sua Localização (Cidade da oferta de Compra)]]]</label>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Informe sua Localização]]]" id="Location" name="Location" value="@Model.ICItem.Location" required>
+                            </div>
+
+                            <input type="hidden" id="Longitude" name="Longitude" value="@Model.ListingItem.Longitude" />
+                            <input type="hidden" id="Latitude" name="Latitude" value="@Model.ListingItem.Latitude" />
+
+                            @*<div class="form-group">
+                                <div id="map-canvas"></div>
+                            </div>*@
+
+                            <legend>[[[Detalhes do Item]]]</legend>
+                            <label>[[[Categoria]]]</label>
+                            @Html.DropDownListFor(m => m.CategoryID, new SelectList(Model.Categories, "ID", "Name", Model.ListingItem.CategoryID), new { @class = "form-control input-lg m-b-10" })
+
+                            @*<div id="listingTypesPlaceHolder">
+                                @Html.Partial("_ListingTypes", Model)
+                            </div>*@
+
+                            <div class="form-group">
+                                <label>[[[Produto que quero comprar]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg" placeholder="[[[Informe o produto a comprar]]]" id="inProdutoCompra" name="inProdutoCompra" value="@Model.ICItem.DescricaoProduto" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>[[[Modalidade]]] <span class="text-red">*</span></label>
+                                </br>
+                                @Html.DropDownListFor(m => m.ModalidadeCompra, new SelectList(Model.ModalidadesCompra, "id_ModalCompra", "Descricao_ModalCompra", Model.ICItem.id_ModalCompra), new { @class = "form-control input-lg m-b-10" })
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Compra em]]] <span class="text-red">*</span></label>
+                                </br>
+                                @Html.DropDownListFor(m => m.UnidadeProduto, new SelectList(Model.Unidades, "descricaoUnidade", "descricaoUnidade", Model.ICItem.UnidadeProduto), new { @class = "form-control input-lg m-b-10" })
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Quantidade Total (Informe a quantidade total que deseja comprar)]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg quant" placeholder="[[[0,00]]]" id="inQuantTotalCompra" name="inQuantTotalCompra" value="@Model.QuantidadeTotalCompra" required>
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Quantidade Mínima (Informe a quantidade mínima que aceita por cada vendedor)]]] <span class="text-red">*</span></label>
+                                <input type="text" class="form-control input-lg quant" placeholder="[[[0,00]]]" id="inQuantMinimaPorVendedor" name="inQuantMinimaPorVendedor" value="@Model.QuantidadeMinimaCompra" required>
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Tipo Frete]]] <span class="text-red">*</span></label>
+                                </br>
+                                @Html.DropDownListFor(m => m.TipoFrete, new SelectList(Model.TiposFrete, "id_TipoFrete", "Descricao_TipoFrete", Model.ICItem.id_TipoFrete), new { @class = "form-control input-lg m-b-10" })
+                            </div>
+
+                            <!-- NOVOS CAMPOS -->
+                            <div class="form-group">
+                                <label>[[[Minha Oferta de Preço (Informe o preço que deseja pagar em caso de compra para Entrega Futura)]]] <span class="text-red"></span></label>
+                                <input type="text" class="form-control input-lg quant" placeholder="[[[0,00]]]" id="inMinhaOfertaPreco" name="inMinhaOfertaPreco" value="@Model.MnhaOfertaDePreco">
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Pagamento do Produto]]] <span class="text-red">*</span></label>
+                                </br>
+                                @Html.DropDownListFor(m => m.FormaPagamento, new SelectList(Model.FormasPagamento, "id_FormaPgto", "Descricao_FormaPgto", Model.ICItem.id_FormaPgto), new { @class = "form-control input-lg m-b-10" })
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Oferta Válida até (Obs: Data limite em que a Oferta permanecerá sendo exibida)]]] <span class="text-red"></span></label>
+                                <input type="text" class="form-control input-lg data" placeholder="[[[00/00/0000]]]" id="inDataValidadeOferta" name="inDataValidadeOferta" value="@Model.OfertaValidaAte" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>[[[Observações Relevantes]]] <span class="text-red"></span></label>
+                                <label>[[[Preencha com informações relevantes para os vendedores como: qualidade / padrão esperado para o produto, tabela de desconto de umidade, cadência de entrega, detalhes sobre pagamento, etc...]]] <span class="text-red"></span></label>
+                                <textarea class="form-control input-lg" placeholder="" id="inObsRelevant" name="inObsRelevant" value="">@Model.ICItem.ObservacoesRelevantes</textarea>
+                            </div>
+                        </fieldset>
+
+                            <div id="partialPlaceHolder">
+                                @Html.Partial("_CategoryCustomFields", Model.CustomFields)
+                            </div>
+
+                            <fieldset>
+                                <legend>[[[Quem está publicando]]]</legend>
+                                <div class="form-group">
+                                    <label>[[[Nome Completo]]] <span class="text-red">*</span></label>
+                                    <input type="text" id="ContactName" name="ContactName" class="form-control input-lg" placeholder="[[[Enter Your Full Name]]]" value="@Model.ListingItem.ContactName" required readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>[[[Telefone]]]</label>
+                                    <input type="tel" id="ContactPhone" name="ContactPhone" class="form-control input-lg" placeholder="[[[Enter Phone Number]]]" value="@Model.ListingItem.ContactPhone" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="ShowPhone" name="ShowPhone" value="true" @(Model.ListingItem.ShowPhone ? "checked" : "") /> <label for="ShowPhone">[[[Mostrar Telefone]]]</label>
+                                    <input name="ShowPhone" type="hidden" value="false" />
+                                </div>
+                                <div class="form-group">
+                                    <label>[[[Email]]] <span class="text-red">*</span></label>
+                                    <input type="email" id="ContactEmail" name="ContactEmail" class="form-control input-lg" placeholder="[[[Enter Email Address]]]" value="@Model.ListingItem.ContactEmail" required data-rule-email="true" readonly>
+                                </div>
+                                @if (!User.Identity.IsAuthenticated)
+                                {
+                                    <div class="form-group">
+                                        <label for="Password">[[[Password]]] <span class="text-red">*</span></label>
+                                        <input type="password" name="Password" id="Password" class="form-control input-lg" placeholder="[[[Password]]]" data-rule-required="true" data-rule-minlength="6" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ConfirmPassword">[[[Confirm Password]]] <span class="text-red">*</span></label>
+                                        <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-control input-lg" placeholder="[[[Confirm Password]]]" data-rule-required="true" data-rule-minlength="6" data-rule-equalto="#Password" readonly>
+                                    </div>
+                                }
+                            </fieldset>
+                            <fieldset>
+                                <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> [[[Publicar Item]]]</button>
+                                <a class="btn btn-default" href="@Url.Action("ToBuy", "Manage")"><i class="fa fa-remove"></i> [[[Cancelar]]]</a>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initMap" async defer></script>
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script src="~/Scripts/fileinput.min.js"></script>
+    @Html.Partial("_LocalizationFileInput")
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script src="~/Scripts/jquery.mask.min.js"></script>
+
+    <script>
+        @{
+            var preview = new System.Text.StringBuilder();
+            var previewDelete = new System.Text.StringBuilder();
+
+            foreach (var picture in Model.Pictures)
+	        {
+                preview.AppendFormat(@"'<img src=""{0}"" class=""file-preview-image"">',", picture.Url);
+                previewDelete.AppendFormat(@"{{url: '{0}',key: {1} }},", Url.Action("ListingPhotoDelete", "Listing", new { id = picture.ID }), picture.ID);
+	        }
+        }
+
+        var $input = $("#files");
+
+        $input.fileinput({
+            uploadAsync: false,
+            showCaption: false,
+            showRemove: false,
+            showUpload: false,
+            maxFileCount: 5,
+            overwriteInitial: false,
+            initialPreview: [
+                    @Html.Raw(preview.ToString())
+            ],
+            initialPreviewConfig: [
+                @Html.Raw(previewDelete.ToString())
+            ],
+            maxFileSize: 10000,
+            browseClass: "btn btn-primary",
+            allowedFileTypes: ["image"],
+            language: '@Context.GetPrincipalAppLanguageForRequest().ToString()'
+        });
+
+        $("#CategoryID").change(function () {
+            /* Get the selected value of dropdownlist */
+            var selectedID = $(this).val();
+            var listingID = $("#ListingItem_ID").val();
+
+            /* Request the partial view with get request. */
+            $.get('@Url.Action("ListingPartial", "Listing")?categoryID=' + selectedID, function (data) {
+
+                /* data is the pure html returned from action method, load it to your page */
+                $('#partialPlaceHolder').empty();
+                $('#partialPlaceHolder').html(data);
+                /* little fade in effect */
+                $('#partialPlaceHolder').fadeIn('slow');
+                $('#partialPlaceHolder').addClass('fadeIn animated');
+            });
+
+            $.get('@Url.Action("ListingTypesPartial", "Listing")?categoryID=' + selectedID + '&listingID=' + listingID, function (data) {
+
+                /* data is the pure html returned from action method, load it to your page */
+                $('#listingTypesPlaceHolder').empty();
+                $('#listingTypesPlaceHolder').html(data);
+                /* little fade in effect */
+                $('#listingTypesPlaceHolder').fadeIn('slow');
+                $('#listingTypesPlaceHolder').addClass('fadeIn animated');
+            });
+        });
+
+        // Hide or visible price field if it's enabled
+        $("#ListingTypeID").change(function () {
+            var listingTypeID = $(this).val();
+
+            $.get('@Url.Action("ListingType", "Listing")?listingTypeID=' + listingTypeID, function (data) {
+
+                if (data.PriceEnabled){
+                    $("#priceGroup").show();
+                }else{
+                    $("#Price").val("");
+                    $("#priceGroup").hide();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        //https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete
+        //https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse
+        $('.opcoes').hide();
+        $('.quant').mask('#.##0,00', { reverse: true });
+        $('.data').mask('00/00/0000');
+
+        function initMap() {
+            var isDraggable = $(document).width() > 480 ? true : false; // If document (your website) is wider than 480px, isDraggable = true, else isDraggable = false
+
+            var mapOptions = {
+                draggable: isDraggable,
+                scrollwheel: false, // Prevent users to start zooming the map when scrolling down the page
+                zoom: 14,
+                center: new google.maps.LatLng(-33.8688, 151.2195),
+            };
+
+            @{ var hasLatLng = @Model.ListingItem.Latitude.HasValue && @Model.ListingItem.Longitude.HasValue; }
+            var hasLatLng = @hasLatLng.ToString().ToLowerInvariant();
+
+            @if (hasLatLng){
+                <text>
+            mapOptions = {
+                center: new google.maps.LatLng(@Model.ListingItem.Latitude.Value.ToString(System.Globalization.CultureInfo.InvariantCulture), @Model.ListingItem.Longitude.Value.ToString(System.Globalization.CultureInfo.InvariantCulture)),
+                zoom: 14
+            };
+            </text>
+            };
+
+            var map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+
+            @if (hasLatLng){
+                <text>
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(@Model.ListingItem.Latitude.Value.ToString(System.Globalization.CultureInfo.InvariantCulture), @Model.ListingItem.Longitude.Value.ToString(System.Globalization.CultureInfo.InvariantCulture)),
+                map: map
+            });
+
+            marker.setVisible(true);
+            </text>
+            }
+
+            geocoder = new google.maps.Geocoder();
+
+            var input = (document.getElementById('Location'));
+
+            // Try HTML5 geolocation
+            if (@Model.ListingItem.ID == 0){
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        var pos = new google.maps.LatLng(position.coords.latitude,
+                                                         position.coords.longitude);
+
+                        geocoder.geocode({ 'latLng': pos }, function (results, status) {
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                if (results[1]) {
+                                    map.setZoom(14);
+                                    map.setCenter(pos);
+
+                                    marker = new google.maps.Marker({
+                                        position: pos,
+                                        map: map,
+                                        content: results[1].formatted_address
+                                    });
+                                    infowindow.setContent(results[1].formatted_address);
+                                    infowindow.open(map, marker);
+
+                                    $('#Location').val(results[1].formatted_address);
+                                    $('#Latitude').val(pos.lat());
+                                    $('#Longitude').val(pos.lng());
+
+                                } else {
+                                    alert('No results found');
+                                }
+                            } else {
+                                alert('Geocoder failed due to: ' + status);
+                            }
+                        });
+                    }, function () {
+                        handleNoGeolocation(true);
+                    });
+                } else {
+                    // Browser doesn't support Geolocation
+                    handleNoGeolocation(false);
+                }
+            }
+
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.bindTo('bounds', map);
+
+            var infowindow = new google.maps.InfoWindow();
+            var marker = new google.maps.Marker({
+                map: map,
+                anchorPoint: new google.maps.Point(0, -29)
+            });
+
+            google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                infowindow.close();
+                marker.setVisible(false);
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    window.alert("Autocomplete's returned place contains no geometry");
+                    return;
+                }
+
+                // Set lat/long
+                $('#Latitude').val(place.geometry.location.lat());
+                $('#Longitude').val(place.geometry.location.lng());
+
+                // If the place has a geometry, then present it on a map.
+                if (place.geometry.viewport) {
+                    map.fitBounds(place.geometry.viewport);
+                } else {
+                    map.setCenter(place.geometry.location);
+                    map.setZoom(12);
+                }
+                marker.setIcon(({
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(35, 35)
+                }));
+                marker.setPosition(place.geometry.location);
+                marker.setVisible(true);
+
+                var address = '';
+                if (place.address_components) {
+                    address = [
+                      (place.address_components[0] && place.address_components[0].short_name || ''),
+                      (place.address_components[1] && place.address_components[1].short_name || ''),
+                      (place.address_components[2] && place.address_components[2].short_name || '')
+                    ].join(' ');
+                }
+
+                infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+                infowindow.open(map, marker);
+            });
+
+            google.maps.event.addDomListener(input, 'keydown', function (e) {
+                if (e.keyCode == 13) {
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                    }
+                    else {
+                        // Since the google event handler framework does not handle
+                        e.cancelBubble = true;
+                        e.returnValue = false;
+                    }
+                }
+            });
+
+        }
+
+        function handleNoGeolocation(errorFlag) {
+            if (errorFlag) {
+                var content = 'Error: The Geolocation service failed.';
+            } else {
+                var content = 'Error: Your browser doesn\'t support geolocation.';
+            }
+
+            var options = {
+                map: map,
+                position: new google.maps.LatLng(60, 105),
+                content: content
+            };
+
+            var infowindow = new google.maps.InfoWindow(options);
+            map.setCenter(options.position);
+        }
+    </script>
+
+}
+

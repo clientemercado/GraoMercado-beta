@@ -1,0 +1,93 @@
+﻿@model BeYourMarket.Web.Models.RegisterCompanyViewModel
+
+@{
+    ViewBag.Title = "[[[Dados Empresa]]]";
+}
+
+<!-- Start Main Content -->
+<div class=" main-section">
+    <div class="container-fluid">
+        <div class=" center-block col-md-6">
+            <div class="panel panel-default mrg-t">
+                <div class="panel-body panel-header bdr-b ">
+                    <h4>[[[Dados Cadastro Empresa]]]</h4>
+                    <p>
+                        @CacheHelper.Settings.SignupText
+                    </p>
+                </div>
+                <div class="panel-body">
+                    @using (Html.BeginForm("CompanyDataUpdate", "Manage", FormMethod.Post, new { role = "form", id = "form0" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group">
+                            <label>[[[Empresa Fornecedora]]]  <span class="text-red">*</span></label>
+                            <input type="text" name="Empresa" id="Empresa" class="form-control input-lg" placeholder="[[[Nome Fantasia Empresa...]]]" data-rule-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label>[[[Razão Social]]] <span class="text-red">*</span></label>
+                            <input type="text" name="RazaoSocial" id="RazaoSocial" class="form-control input-lg" placeholder="[[[Razão Social Empresa...]]]" data-rule-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label>[[[CNPJ]]] <span class="text-red">*</span></label>
+                            <input type="text" name="CnpjEmpresa" id="CnpjEmpresa" maxlength="18" class="form-control input-lg doc1" placeholder="[[[Cnpj Empresa...]]]" data-rule-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label>[[[ENDEREÇO]]] <span class="text-red">*</span></label>
+                            <input type="text" name="EnderecoEmpresa" id="EnderecoEmpresa" class="form-control input-lg" placeholder="[[[Endereço Empresa...]]]" data-rule-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label>[[[COMPLEMENTO]]] <span class="text-red">*</span></label>
+                            <input type="text" name="ComplementoEnderecoEmpresa" id="ComplementoEnderecoEmpresa" class="form-control input-lg" placeholder="[[[Complemento Endereço...]]]" data-rule-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label>[[[BAIRRO]]] <span class="text-red">*</span></label>
+                            <input type="text" name="Bairro" id="Bairro" class="form-control input-lg" placeholder="[[[Bairro...]]]" data-rule-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label>[[[CIDADE]]] <span class="text-red">*</span></label>
+                            <input type="text" name="Cidade" id="Cidade" class="form-control input-lg" placeholder="[[[Cidade...]]]" data-rule-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label>[[[UF / ESTADO]]] <span class="text-red">*</span></label>
+                            <input type="text" name="UF" id="UF" class="form-control input-lg" placeholder="[[[UF/Estado...]]]" data-rule-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label>[[[CEP]]] <span class="text-red">*</span></label>
+                            <input type="text" name="Cep" id="Cep" class="form-control input-lg cep" placeholder="[[[Cep...]]]" data-rule-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label>[[[TELEFONE 1]]] <span class="text-red">*</span></label>
+                            <input type="text" name="Fone1" id="Fone1" class="form-control input-lg fone" placeholder="[[[Telefone...]]]" data-rule-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Email">[[[Email]]] <span class="text-red">*</span></label>
+                            <input type="text" name="Email" id="Email" class="form-control input-lg" placeholder="[[[Informe Email Empresa...]]]" data-rule-required="true" data-rule-email="true">
+                        </div>
+                        <div class="form-group">
+                            <label>[[[Área de Atuação]]] <span class="text-red">*</span></label>
+                            @Html.DropDownListFor(m => m.areaAtuacao, new SelectList(Model.TiposAtividades, "id_GrupoAtividades", "Descricao_Atividades", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "tipoAtividade" })
+                        </div>
+
+                        <input type="submit" class="btn btn-primary btn-lg" value="[[[Registrar]]]">
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- ./ Main Content -->
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script src="~/Scripts/jquery.mask.min.js"></script>
+    <script>
+        $(".doc1").mask("99.999.999/9999-99");
+        $(".cep").mask("99.990-999");
+        $(".fone").mask("(99)99999-9999");
+    </script>
+}

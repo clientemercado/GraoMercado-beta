@@ -1,0 +1,104 @@
+﻿@model BeYourMarket.Web.Models.SettingsUpdateModel
+
+@{
+    ViewBag.Title = "[[[Perfil]]]";
+}
+
+@section Styles {
+    <link href="~/Content/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" />
+}
+
+<div class="body-content container-fluid">
+    <div class="main-section row">
+        <div class="container-fluid mrg-tb">
+
+            @Html.Partial("_DashBoardSide", "settings")
+
+            <div class=" col-md-9">
+                <div id="myTabContent" class="tab-content ">
+                    <div role="tabpanel" class="tab-pane card-content fade active in" id="listings" aria-labelledby="listings-tab">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                [[[Perfil]]]
+                            </div>
+                            <div class="panel-body">
+                                @using (Html.BeginForm("SettingsUpdate", "Settings", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data", oqeq = @ViewBag.oqeq }))
+                                {
+                                    @Html.Partial("_UserMessage")
+                                    @Html.AntiForgeryToken()
+                                        <legend><h4><i class="fa fa-university" aria-hidden="true"></i> [[[Dados Bancários (Obs: Necessário para negociações nesta plataforma)]]]</h4></legend>
+                                        <input type="hidden" id="id_CB" name="id_CB" value="@Model.id_CB" />
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Banco]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                @Html.DropDownListFor(m => m.id_Banco, new SelectList(Model.BancosPais, "id_Bank", "ShortName", ""), new { @class = "form-control input-lg m-b-10", @id = "inBancosPais", @required = "required" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Agência]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control input-lg" placeholder="[[[Informe a Agência]]]" id="inAgencia" name="inAgencia" value="@Model.AgenciaBancaria">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Tipo de Conta]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                @Html.DropDownListFor(m => m.id_TpConta, new SelectList(Model.TpContaBancaria, "id_TipoConta", "Descricao_TipoConta", ""), new { @class = "form-control input-lg m-b-10", @id = "inTpContaBanc", @required = "required" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Nº da Conta]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control input-lg" placeholder="[[[Informe o Nº da Conta]]]" id="inNumeroConta" name="inNumeroConta" value="@Model.NumeroContaBancaria" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Dígito]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control input-lg" placeholder="[[[Informe o dígito da Conta]]]" id="inDigito" name="inDigito" value="@Model.DigContaBancaria" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Sua Chave PIX (Obs: Para recebimento dos valores negociados na plataforma)]]] </label>
+                                            <div class="col-md-10">
+                                                <input type="text" class="form-control input-lg" placeholder="[[[Informe sua chave PIX]]]" id="inChavePix" name="inChavePix" value="@Model.ChavePix">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Tipo de Chave PIX]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                @Html.DropDownListFor(m => m.id_TpChavePix, new SelectList(Model.TpChavesPix, "id_TipoChavePix", "Descricao_TipoChavePix", ""), new { @class = "form-control input-lg m-b-10", @id = "inTpChavePix", @required = "required" })
+                                            </div>
+                                        </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="[[[Salvar]]]" class="btn btn-primary" />
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script src="~/Scripts/fileinput.min.js"></script>
+    @Html.Partial("_LocalizationFileInput")
+
+    <script>
+        var $input = $("#file");
+    </script>
+}

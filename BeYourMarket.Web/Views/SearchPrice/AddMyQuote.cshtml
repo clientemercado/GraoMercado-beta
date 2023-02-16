@@ -1,0 +1,244 @@
+﻿@model BeYourMarket.Web.Models.SearchUpdateModel
+
+@{ ViewBag.Title = "[[[Cotação em Grupo]]]"; }
+
+@section Styles {
+    <link href="~/Content/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" />
+}
+
+<div class="main-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="center-block col-md-8">
+                <div class="panel panel-default mrg-t">
+                    <div class="panel-body bdr-b panel-header">
+                        <h4>[[[Adicionar minha Participação em uma Cotação de COMPRAS em GRUPO na plataforma]]]</h4>
+                        <p class="text-lighten">
+                            @CacheHelper.Settings.SignupText
+                        </p>
+                        <a href="@Url.Action("BestPrice", "Manage")"> [[[Início]]]</a>
+                    </div>
+                    <div class="panel-body bdr-b">
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <text>[[[Já é membro?]]]</text>
+                            <a href="@Url.Action("Login", "Account", new { returnUrl = Request.Url.PathAndQuery })" class="m-b-5">[[[Se Logar aqui]]]</a>}
+                        <form action="@Url.Action("SearchPGroupUpdateAdd", "SearchPrice", new { oqeq = @ViewBag.oqeq })" id="SearchPUpdateForm" method="post" role="form" enctype="multipart/form-data">
+                            <input type="hidden" id="idSearchG" name="idSearchG" value="@Model.idCotacao" />
+                            <input type="hidden" id="inTipoCotacao" name="inTipoCotacao" value="@Model.inTipoCotacao" />
+                            @Html.Partial("_UserMessage")
+                            @Html.ValidationSummary(true, string.Empty, new { @class = "alert alert-danger" })
+
+                            <fieldset>
+                                <legend>[[[Localização]]]</legend>
+                                <div class="form-group">
+                                    <label>[[[UF (Estado)]]]</label>
+                                    @Html.DropDownListFor(m => m.EstadoUF, new SelectList(Model.EstadosUF, "ID", "SIGLA", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "uFs", @required = "required", @disabled = "disabled" })
+                                </div>
+                                <div class="form-group">
+                                    <label>[[[Informe sua Localização (Cidade)]]]</label>
+                                    <select name="selectedCity" id="selectedCity" class="form-control input-lg essencial" readonly required></select>
+                                    <input type="hidden" id="inCidade" name="inCidade" value="@Model.CidadeUF" />
+                                </div>
+
+                                <input type="hidden" id="Longitude" name="Longitude" value="@Model.Longitude" />
+                                <input type="hidden" id="Latitude" name="Latitude" value="@Model.Latitude" />
+
+                                <legend>[[[Detalhes da Cotação]]]</legend>
+                                <div class="form-group">
+                                    <label>[[[Data Encerramento (Obs: A Cotação se encerrará automaticamente nessa data)]]] <span class="text-red"></span></label>
+                                    <input type="text" class="form-control input-lg data" placeholder="[[[00/00/0000]]]" id="DataValidadeCotacao" name="DataValidadeCotacao" value="@Model.DataEncerramento" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>[[[O que vai ser cotado]]] <span class="text-red">*</span></label>
+                                    @Html.DropDownListFor(m => m.areaAtuacao, new SelectList(Model.TiposAtividades, "id_GrupoAtividades", "Descricao_Atividades", ""), new { @class = "form-control input-lg m-b-10", @id = "tipoAtividade", @required = "required", @onchange = "CarregarFornecedores()", @disabled = "disabled" })
+                                </div>
+                                <div class="form-group">
+                                    <label>[[[Produto que deseja comprar]]] <span class="text-red">*</span></label>
+                                    <input type="text" class="form-control input-lg" placeholder="[[[Informe o produto a comprar]]]" id="ProdutoCotado" name="ProdutoCotado" value="@Model.ProdutoCotado" readonly>
+                                    <input type="hidden" id="idIC" name="idIC" value="@Model.id_ItemCotacaoAdd" />
+                                </div>
+                                <div class="form-group">
+                                    <label>[[[Compra em]]] <span class="text-red">*</span></label>
+                                    </br>
+                                    @Html.DropDownListFor(m => m.UnidadeProduto, new SelectList(Model.Unidades, "descricaoUnidade", "descricaoUnidade", Model.UnidadeProduto), new { @class = "form-control input-lg m-b-10", @disabled = "disabled" })
+                                    <input type="hidden" id="inUnidadeProduto" name="inUnidadeProduto" value="@Model.UnidadeProduto" />
+                                </div>
+                                <div class="form-group">
+                                    <label>[[[Observações Relevantes: ]]] <span class="text-red"></span></label>
+                                    <textarea class="form-control input-lg" placeholder="" id="inObsRelevant" name="inObsRelevant" value="" readonly>@Model.ObservacoesRelevantes</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>[[[Quantidade Total: (OBS: Até o momento)]]] <span class="text-red">*</span></label>
+                                    <input type="text" class="form-control input-lg quant" placeholder="[[[0,00]]]" id="inQuantTotalCompra" name="inQuantTotalCompra" value="@Model.QuantidadeTotalCompra" readonly>
+                                </div>
+                                <br />
+                                @if (@Model.FornecedoresCotados.Count == 0)
+                                {
+                                    <legend>[[[Adicionar Meu Pedido]]]</legend>
+                                    <div class="form-group">
+                                        <label>[[[Quantidade Total (Informe a quantidade total que deseja comprar)]]] <span class="text-red">*</span></label>
+                                        <input type="text" class="form-control input-lg quant" placeholder="[[[0,00]]]" id="inQuantMeuPedido" name="inQuantMeuPedido" value="@Model.QuantidadeMeuPedido" required>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <legend>[[[Meu Pedido]]]</legend>
+                                    <div class="form-group">
+                                        <label>[[[Quantidade Solicitada (Quantidade total que deseja comprar)]]] <span class="text-red">*</span></label>
+                                        <input type="text" class="form-control input-lg quant" placeholder="[[[0,00]]]" id="inQuantMeuPedido" name="inQuantMeuPedido" value="@Model.QuantidadeMeuPedido" readonly>
+                                    </div>
+                                }
+                                <br />
+                                    @if (@Model.FornecedoresCotados.Count > 0)
+                                    {
+                                        <div class="form-group" align="center">
+                                            <font color='#3297E0'><h2>Cotação em Andamento</h2></font>
+                                        </div>
+                                        <legend>[[[Fornecedores Cotados]]]</legend>
+                                        <div class="panel-body table-responsive">
+                                            <form action="@Url.Action("SendQuote", "SearchPrice")" id="form0" method="post" role="form">
+                                                <input type="hidden" name="numfor" id="numfor" value="@Model.FornecedoresCotados.Count"/>
+                                                <table class="table table-hover mails" id="gridforncot">
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+                                            </form>
+                                            <hr>
+                                        </div>
+                                     }
+                            </fieldset>
+                            <fieldset>
+                                @if (!User.Identity.IsAuthenticated)
+                                {
+                                    <div class="form-group">
+                                        <label for="Password">[[[Password]]] <span class="text-red">*</span></label>
+                                        <input type="password" name="Password" id="Password" class="form-control input-lg" placeholder="[[[Password]]]" data-rule-required="true" data-rule-minlength="6" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ConfirmPassword">[[[Confirm Password]]] <span class="text-red">*</span></label>
+                                        <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-control input-lg" placeholder="[[[Confirm Password]]]" data-rule-required="true" data-rule-minlength="6" data-rule-equalto="#Password" readonly>
+                                    </div>
+                                }
+                            </fieldset>
+                            <fieldset>
+                                @if (@Model.FornecedoresCotados.Count == 0)
+                                {
+                                    <button class="btn btn-primary" id="addQuote" type="submit" disabled><i class="fa fa-plus"></i> [[[Adicionar Cotação]]]</button>
+                                    <a class="btn btn-default" href="@Url.Action("BestPrice", "Manage")"><i class="fa fa-remove"></i> [[[Cancelar]]]</a>
+                                }
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initMap" async defer></script>
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script src="~/Scripts/fileinput.min.js"></script>
+    @Html.Partial("_LocalizationFileInput")
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <script src="~/Scripts/jquery.mask.min.js"></script>
+
+    <script></script>
+    <script>
+        //https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete
+        //https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse
+
+        $('.opcoes').hide();
+        $('.quant').mask('#.##0,00', { reverse: true });
+        $('.data').mask('00/00/0000');
+        CarregaCidades();
+        (parseFloat($('#inQuantMeuPedido').val()) > 0) ? $('#addQuote').removeAttr('disabled') : $('#addQuote').prop('disabled', true);
+        if (parseFloat($("#numfor").val()) > 0)
+            fCotados();
+
+        function handleNoGeolocation(errorFlag) {
+            if (errorFlag) {
+                var content = 'Error: The Geolocation service failed.';
+            } else {
+                var content = 'Error: Your browser doesn\'t support geolocation.';
+            }
+
+            var options = {
+                map: map,
+                position: new google.maps.LatLng(60, 105),
+                content: content
+            };
+
+            var infowindow = new google.maps.InfoWindow(options);
+            map.setCenter(options.position);
+        }
+
+        $("#inQuantMeuPedido").blur(function () {
+            debugger;
+            if ($("#inQuantMeuPedido").val() != "") {
+                $('#addQuote').removeAttr('disabled');
+            }
+            else {
+                $('#addQuote').prop('disabled', true);
+            }
+        });
+
+        function CarregaCidades() {
+            if (parseFloat($("#uFs").val()) == 28)
+                $('.essencial').val('').attr('disabled', true);
+
+            $('#idLcl').val($('#inLocal').val());
+            $.ajax({
+                type: "GET",
+                url: "/SearchPrice/CarregaCidadesUF",
+                dataType: 'json',
+                async: true,
+                cache: false,
+                data: {
+                    idUf: $('#uFs').val()
+                },
+                success: function (data) {
+                    var cities = "";
+                    $('.essencial').val('').attr('disabled', false);
+                    $.each(data, function (index, municipios) {
+                        cities = (cities == "") ? "<option value='" + municipios.ID + "'>" + municipios.NOME + "</option>" : (cities + "<option value='" + municipios.ID + "'>" + municipios.NOME + "</option>");
+                    });
+                    $('#selectedCity').empty().append(cities);
+                    $('#selectedCity').val(($("#inCidade").val()));
+                }
+            });
+        }
+
+        function fCotados() {
+                $.ajax({
+                    type: "GET",
+                    url: "/SearchPrice/CarregarEmpresasFornCotadas",
+                    dataType: 'json',
+                    async: true,
+                    cache: false,
+                    data: {
+                        idcm: $('#idSearchG').val()
+                    },
+                    success: function (data) {
+                        $("#gridforncot tbody").empty();
+                        if (data.length > 0) {
+                            $.each(data, function (index, chat) {
+                                var linha = '<tr>' +
+                                    '<td align="left"><font color="#3297E0">' + data[index].Fantasia_Empresa + '</font></td>' +
+                                    '<td><font color="#3297E0">' + data[index].Fone1_Empresa + '</font></td>' +
+                                    '<td><font color="#3297E0">' + data[index].Email1_Empresa + '</font></td>' +
+                                    '<td><font color="#3297E0">' + data[index].localizacaoEmpresaFornecedor + '</font></td>' +
+                                    '<td align="right"><font color="#3297E0">' + data[index].quantidadeQuePodeAtender + '</font></td>' +
+                                    '<td align="right"><font color="#3297E0">' + data[index].valorRespondidoPorUnidade + '</font></td>' +
+                                    '<td align="right"><font color="#3297E0">' + data[index].valorTotalCotado + '</font></td></tr>';
+                                $("#gridforncot").append(linha);
+                            });
+                        }
+                    }
+                });
+        }
+    </script>
+
+}

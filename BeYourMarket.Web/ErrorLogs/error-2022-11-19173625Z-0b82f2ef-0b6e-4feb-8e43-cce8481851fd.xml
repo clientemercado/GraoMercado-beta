@@ -1,0 +1,186 @@
+﻿<error errorId="0b82f2ef-0b6e-4feb-8e43-cce8481851fd" host="DESKTOP-GJ1QFNP" type="System.Data.Entity.ModelConfiguration.ModelValidationException" message="One or more validation errors were detected during model generation:&#xD;&#xA;&#xD;&#xA;UserBankDetails_TiposChavePix_Target_UserBankDetails_TiposChavePix_Source: : The types of all properties in the Dependent Role of a referential constraint must be the same as the corresponding property types in the Principal Role. The type of property 'id_TipoChavePix' on entity 'UserBankDetails' does not match the type of property 'id_TipoChavePix' on entity 'TiposChavePix' in the referential constraint 'UserBankDetails_TiposChavePix'.&#xD;&#xA;" source="EntityFramework" detail="Microsoft.Practices.Unity.ResolutionFailedException: Resolution of the dependency failed, type = &quot;BeYourMarket.Service.DataCacheService&quot;, name = &quot;(none)&quot;.&#xD;&#xA;Exception occurred while: Calling constructor BeYourMarket.Service.DataCacheService(Microsoft.Practices.Unity.IUnityContainer container).&#xD;&#xA;Exception is: ModelValidationException - One or more validation errors were detected during model generation:&#xD;&#xA;&#xD;&#xA;UserBankDetails_TiposChavePix_Target_UserBankDetails_TiposChavePix_Source: : The types of all properties in the Dependent Role of a referential constraint must be the same as the corresponding property types in the Principal Role. The type of property 'id_TipoChavePix' on entity 'UserBankDetails' does not match the type of property 'id_TipoChavePix' on entity 'TiposChavePix' in the referential constraint 'UserBankDetails_TiposChavePix'.&#xD;&#xA;&#xD;&#xA;-----------------------------------------------&#xD;&#xA;At the time of the exception, the container was:&#xD;&#xA;&#xD;&#xA;  Resolving BeYourMarket.Service.DataCacheService,(none)&#xD;&#xA;  Calling constructor BeYourMarket.Service.DataCacheService(Microsoft.Practices.Unity.IUnityContainer container)&#xD;&#xA; ---&gt; System.Data.Entity.ModelConfiguration.ModelValidationException: One or more validation errors were detected during model generation:&#xD;&#xA;&#xD;&#xA;UserBankDetails_TiposChavePix_Target_UserBankDetails_TiposChavePix_Source: : The types of all properties in the Dependent Role of a referential constraint must be the same as the corresponding property types in the Principal Role. The type of property 'id_TipoChavePix' on entity 'UserBankDetails' does not match the type of property 'id_TipoChavePix' on entity 'TiposChavePix' in the referential constraint 'UserBankDetails_TiposChavePix'.&#xD;&#xA;&#xD;&#xA;   at System.Data.Entity.Core.Metadata.Edm.EdmModel.Validate()&#xD;&#xA;   at System.Data.Entity.DbModelBuilder.Build(DbProviderManifest providerManifest, DbProviderInfo providerInfo)&#xD;&#xA;   at System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)&#xD;&#xA;   at System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)&#xD;&#xA;   at System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)&#xD;&#xA;   at System.Data.Entity.Internal.LazyInternalContext.InitializeContext()&#xD;&#xA;   at System.Data.Entity.Internal.InternalContext.Initialize()&#xD;&#xA;   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)&#xD;&#xA;   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()&#xD;&#xA;   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()&#xD;&#xA;   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()&#xD;&#xA;   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source)&#xD;&#xA;   at BeYourMarket.Service.DataCacheService.GetCachedItem(CacheKeys CacheKeyName) in E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Service\DataCacheService.cs:line 230&#xD;&#xA;   at BeYourMarket.Service.DataCacheService..ctor(IUnityContainer container) in E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Service\DataCacheService.cs:line 200&#xD;&#xA;   at lambda_method(Closure , IBuilderContext )&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicBuildPlanGenerationContext.&lt;&gt;c__DisplayClass1.&lt;GetBuildMethod&gt;b__0(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainer.Resolve(Type t, String name, ResolverOverride[] resolverOverrides)&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainerExtensions.Resolve[T](IUnityContainer container, ResolverOverride[] overrides)&#xD;&#xA;   at BeYourMarket.Service.CacheHelper.get_Settings() in E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Service\Helpers\CacheHelper.cs:line 20&#xD;&#xA;   at BeYourMarket.Web.MvcApplication.Application_BeginRequest(Object sender, EventArgs e) in E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Global.asax.cs:line 121&#xD;&#xA;   at System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" time="2022-11-19T17:36:25.2987435Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=jG9EW3IeeS0gpU1ZMj8KCDslb8TJfG5MSygPWSJXnhOXOK8ZeMmpG6YOuSPtO-DNncSJMHtbn9MDxcBFKi3OG3thffGhJTqS6PKVe7254M01; .AspNet.ApplicationCookie=pz-XqjCN8D9LlDvAbCUbAZozUP5SW0WmWCeJkyYgZwkh5WeOhFafJqi1Ltc3zv6oabK3LpJFPwZWJc14uFy-NwS0yOAfCecS55IMDeYdsL0N2Bs0OgsQW0ksaDx1j40XpRCLTMrdCjstRZXxU7zPmMBSFIVBRDtAq_9FQwvYwMGld0ggX6mimZho1XicP3t1URVUiAxaKxuuvo4-Z4PsULravWbKWUq8pio68ihLnqT4RlJfLBJXpb_elT9pbi2PPLOGQgNzb-mbXBxVa67yRALw0rQ6-kpn7li7REjpwtHOF-1AiyuRbUe8TYJVMH9oE6goo74reNOXFtfR7UA3yuVkbqnk9XGKijgR68KoJzgZVEbSbJqfH45XvUU7V2g1vVweex8Acj7t685Xp5f63YIQJol7Qbn8Pnr-6y7N8z3b5Pm3mZC0Qd913efADC6opMXeWZKkWMqZv2yTWk48anDOc5WyAiKsYiqavwnhrx2aKQJL2YAab-mQNAvf3bjq&#xD;&#xA;HTTP_HOST:localhost:59674&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_SEC_FETCH_SITE:none&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;HTTP_SEC_CH_UA:&quot;Google Chrome&quot;;v=&quot;107&quot;, &quot;Chromium&quot;;v=&quot;107&quot;, &quot;Not=A?Brand&quot;;v=&quot;24&quot;&#xD;&#xA;HTTP_SEC_CH_UA_MOBILE:?0&#xD;&#xA;HTTP_SEC_CH_UA_PLATFORM:&quot;Windows&quot;&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=jG9EW3IeeS0gpU1ZMj8KCDslb8TJfG5MSygPWSJXnhOXOK8ZeMmpG6YOuSPtO-DNncSJMHtbn9MDxcBFKi3OG3thffGhJTqS6PKVe7254M01; .AspNet.ApplicationCookie=pz-XqjCN8D9LlDvAbCUbAZozUP5SW0WmWCeJkyYgZwkh5WeOhFafJqi1Ltc3zv6oabK3LpJFPwZWJc14uFy-NwS0yOAfCecS55IMDeYdsL0N2Bs0OgsQW0ksaDx1j40XpRCLTMrdCjstRZXxU7zPmMBSFIVBRDtAq_9FQwvYwMGld0ggX6mimZho1XicP3t1URVUiAxaKxuuvo4-Z4PsULravWbKWUq8pio68ihLnqT4RlJfLBJXpb_elT9pbi2PPLOGQgNzb-mbXBxVa67yRALw0rQ6-kpn7li7REjpwtHOF-1AiyuRbUe8TYJVMH9oE6goo74reNOXFtfR7UA3yuVkbqnk9XGKijgR68KoJzgZVEbSbJqfH45XvUU7V2g1vVweex8Acj7t685Xp5f63YIQJol7Qbn8Pnr-6y7N8z3b5Pm3mZC0Qd913efADC6opMXeWZKkWMqZv2yTWk48anDOc5WyAiKsYiqavwnhrx2aKQJL2YAab-mQNAvf3bjq&#xD;&#xA;Host: localhost:59674&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Sec-Fetch-Site: none&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;sec-ch-ua: &quot;Google Chrome&quot;;v=&quot;107&quot;, &quot;Chromium&quot;;v=&quot;107&quot;, &quot;Not=A?Brand&quot;;v=&quot;24&quot;&#xD;&#xA;sec-ch-ua-mobile: ?0&#xD;&#xA;sec-ch-ua-platform: &quot;Windows&quot;&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="60773" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="59674" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=jG9EW3IeeS0gpU1ZMj8KCDslb8TJfG5MSygPWSJXnhOXOK8ZeMmpG6YOuSPtO-DNncSJMHtbn9MDxcBFKi3OG3thffGhJTqS6PKVe7254M01; .AspNet.ApplicationCookie=pz-XqjCN8D9LlDvAbCUbAZozUP5SW0WmWCeJkyYgZwkh5WeOhFafJqi1Ltc3zv6oabK3LpJFPwZWJc14uFy-NwS0yOAfCecS55IMDeYdsL0N2Bs0OgsQW0ksaDx1j40XpRCLTMrdCjstRZXxU7zPmMBSFIVBRDtAq_9FQwvYwMGld0ggX6mimZho1XicP3t1URVUiAxaKxuuvo4-Z4PsULravWbKWUq8pio68ihLnqT4RlJfLBJXpb_elT9pbi2PPLOGQgNzb-mbXBxVa67yRALw0rQ6-kpn7li7REjpwtHOF-1AiyuRbUe8TYJVMH9oE6goo74reNOXFtfR7UA3yuVkbqnk9XGKijgR68KoJzgZVEbSbJqfH45XvUU7V2g1vVweex8Acj7t685Xp5f63YIQJol7Qbn8Pnr-6y7N8z3b5Pm3mZC0Qd913efADC6opMXeWZKkWMqZv2yTWk48anDOc5WyAiKsYiqavwnhrx2aKQJL2YAab-mQNAvf3bjq" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:59674" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="none" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+    <item name="HTTP_SEC_CH_UA">
+      <value string="&quot;Google Chrome&quot;;v=&quot;107&quot;, &quot;Chromium&quot;;v=&quot;107&quot;, &quot;Not=A?Brand&quot;;v=&quot;24&quot;" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_MOBILE">
+      <value string="?0" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_PLATFORM">
+      <value string="&quot;Windows&quot;" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="jG9EW3IeeS0gpU1ZMj8KCDslb8TJfG5MSygPWSJXnhOXOK8ZeMmpG6YOuSPtO-DNncSJMHtbn9MDxcBFKi3OG3thffGhJTqS6PKVe7254M01" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="pz-XqjCN8D9LlDvAbCUbAZozUP5SW0WmWCeJkyYgZwkh5WeOhFafJqi1Ltc3zv6oabK3LpJFPwZWJc14uFy-NwS0yOAfCecS55IMDeYdsL0N2Bs0OgsQW0ksaDx1j40XpRCLTMrdCjstRZXxU7zPmMBSFIVBRDtAq_9FQwvYwMGld0ggX6mimZho1XicP3t1URVUiAxaKxuuvo4-Z4PsULravWbKWUq8pio68ihLnqT4RlJfLBJXpb_elT9pbi2PPLOGQgNzb-mbXBxVa67yRALw0rQ6-kpn7li7REjpwtHOF-1AiyuRbUe8TYJVMH9oE6goo74reNOXFtfR7UA3yuVkbqnk9XGKijgR68KoJzgZVEbSbJqfH45XvUU7V2g1vVweex8Acj7t685Xp5f63YIQJol7Qbn8Pnr-6y7N8z3b5Pm3mZC0Qd913efADC6opMXeWZKkWMqZv2yTWk48anDOc5WyAiKsYiqavwnhrx2aKQJL2YAab-mQNAvf3bjq" />
+    </item>
+  </cookies>
+</error>

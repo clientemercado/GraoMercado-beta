@@ -1,0 +1,126 @@
+﻿@using GridMvc.Html
+@model BeYourMarket.Web.Models.ListingTypeModel
+
+@section Styles {
+    <link href="~/Content/Gridmvc.css" rel="stylesheet" />
+    <link href="~/Content/gridmvc.datepicker.min.css" rel="stylesheet" />
+}
+
+@{
+    ViewBag.Title = "[[[Tipos de Listagem]]]";
+}
+
+@helper DisplayUpdateLink(int id)
+{
+    <a class="btn btn-primary btn-sm" href="@Url.Action("ListingTypeUpdate", "Listing", new { id = id })"><i class="fa fa-edit"></i> [[[Alterar]]]</a>
+}
+
+@helper DisplayDeleteLink(int id, string title)
+{
+    <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="confirmDelete(@id, '@title');"><i class="fa fa-remove"></i> [[[Delete]]]</a>
+}
+
+@helper GetOrderTypeName(int id)
+{
+    var orderType = (BeYourMarket.Model.Enum.Enum_ListingOrderType)id;
+    <span>@orderType.ToString()</span>
+}
+
+
+<div class="wraper container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">[[[Tipos de Listagem]]]</h3>
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_UserMessage")
+
+                    <div class="alert alert-info">
+                        <p>[[[Aqui você pode definir os tipos de listagem como oferta, solicitação, etc. Isso será suportado e configurado em diferentes categorias.]]]</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <a class="btn btn-primary" href="@Url.Action("ListingTypeUpdate", "Listing")"><i class="fa fa-plus"></i> [[[Adicionar Novo]]]</a>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            @Html.Grid(Model.Grid).SetLanguage(Context.GetPrincipalAppLanguageForRequest().ToString()).EmptyText("[[[Não há itens a exibir.]]]").Columns(columns =>
+                       {
+                           columns.Add()
+                             .Encoded(false)
+                             .Sanitized(false)
+                             .RenderValueAs(x => DisplayUpdateLink(x.ID));
+
+                           columns.Add()
+                             .Encoded(false)
+                             .Sanitized(false)
+                             .RenderValueAs(x => DisplayDeleteLink(x.ID, x.Name));
+                           
+                           columns.Add(x => x.ID);
+                           columns.Add(x => x.Name).Titled("[[[Nome]]]");
+
+                           columns.Add(x => x.ButtonLabel).Titled("[[[Texto do botão]]]");
+                           columns.Add(x => x.PriceUnitLabel).Titled("[[[Preço Unitário]]]");
+                           
+                           columns.Add(x => x.OrderTypeID)
+                               .Encoded(false)
+                               .Sanitized(false)
+                               .RenderValueAs(x => GetOrderTypeName(x.OrderTypeID)).Titled("[[[Tipo de Pedido]]]");
+
+                           columns.Add(x => x.OrderTypeLabel).Titled("[[[Etiqueta de tipo de pedido]]]");
+                                                      
+
+                           columns.Add(x => x.PaymentEnabled).Titled("[[[Pagamento Ativado]]]");
+                           columns.Add(x => x.ShippingEnabled).Titled("[[[Envio Habilitado]]]");
+
+
+                       }).Sortable().Filterable().WithPaging(10).Selectable(false)
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/gridmvc.min.js"></script>
+    @Html.Partial("_LocalizationGridMvc")
+
+    <script type="text/javascript">
+        function confirmDelete(id, title) {
+            swal({
+                title: "[[[Confirma a exclusão do item?]]]",
+                text: "[[[Você irá deletar todas as listagens com o tipo de listagem ]]] " + title,
+                type: "input",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "[[[Excluir]]]",
+                cancelButtonText: "[[[Cancelar]]]",
+                inputPlaceholder: "[[[Digite DELETE para confirmar a exclusão]]]",
+                closeOnConfirm: false,
+                closeOnCancel: true
+            }, function (inputValue) {
+
+                if (inputValue === false)
+                    return false;
+                if (inputValue === "" || inputValue != "DELETE") {
+                    swal.showInputError("[[[Digite DELETE para confirmar a exclusão]]]"); return false
+                }
+
+                post('@Url.Action("ListingTypeDelete","Listing")', { id: id });
+
+                swal("Deleted!", "[[[Listing type is deleted.]]]", "success");                
+            });
+        }
+    </script>
+}

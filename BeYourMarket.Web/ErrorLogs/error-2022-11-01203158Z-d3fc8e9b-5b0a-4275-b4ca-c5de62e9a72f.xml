@@ -1,0 +1,280 @@
+﻿<error errorId="d3fc8e9b-5b0a-4275-b4ca-c5de62e9a72f" host="DESKTOP-GJ1QFNP" type="System.FormatException" message="Input string was not in a correct format." source="mscorlib" detail="System.FormatException: Input string was not in a correct format.&#xD;&#xA;   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer&amp; number, NumberFormatInfo info, Boolean parseDecimal)&#xD;&#xA;   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)&#xD;&#xA;   at System.Convert.ToDecimal(String value)&#xD;&#xA;   at BeYourMarket.Web.Controllers.ListingController.&lt;ListingUpdate&gt;d__55.MoveNext() in E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Controllers\ListingController.cs:line 544&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass8_0.&lt;BeginInvokeAsynchronousActionMethod&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_0.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_2.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass7_0.&lt;BeginInvokeActionMethodWithFilters&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__4()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecuteCore&gt;b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecute&gt;b__151_2(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c.&lt;BeginProcessRequest&gt;b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="eliangelafreitas.ed@gmail.com" time="2022-11-01T20:31:58.3270794Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:76622&#xD;&#xA;HTTP_CONTENT_TYPE:multipart/form-data; boundary=----WebKitFormBoundaryPnqT5yBEDNM8wWkG&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=kyb_T0d6_9gsQ4G9c23J-J0yE_FbRDla9wlquU98EjKkzd2WhjOeVQsrIukDI0y97VX5LIbHr1X6vvhPVVUwy2g-Lx5jiRkAwlKjqGSn7eQ1; .AspNet.ApplicationCookie=tpE4XD5h73ZXgxBluJ4DA7LTOohLtd9PayWesM9Ty91Xv3VrnH_xO5LTfKxmVJ_Jl3PtrUW6OtPXCD_Q3DYO_0N-1j-oWAP8cFCRcPi0gEnZhLjQ1IXLSXz580hsarwx6jH92oVf2qcrH-BICIwGgAvBt5S35Lg4iI-TZ0oB0sxXY42MGrissPWEb9C0hWs08rGu2QizRSa-zr6y4LyuLS-0K0OnKsPOdNMf2pYBjiMsvOUe1oJK34qpb4IjgEcVzQtPf5KAP9qTF_48R9lth4cYvx8w2Vhxf9bhZfJ2yR3tTpEC2va3xRLFgTvJzBOZBthVJOWelDdVbNidUs0TEILsTHXTz37jFbCSJSJgWCRJbzgd6gALV41ABsBwJXpH4ww8tiNmFGoosuEkK08HS8cXLeiP2l_0uv2bBXF3LDzX1qCU3EItcPeEVNJI0cN970UwxdG2eS3qFt271WFnoiG4MWQJA1xU0GyD6wKW4LVSobUIXZ1utFQi4NbLMvlg&#xD;&#xA;HTTP_HOST:localhost:59674&#xD;&#xA;HTTP_REFERER:http://localhost:59674/pt/listing/listingupdate?oqeq=0&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36&#xD;&#xA;HTTP_SEC_CH_UA:&quot;Chromium&quot;;v=&quot;106&quot;, &quot;Google Chrome&quot;;v=&quot;106&quot;, &quot;Not;A=Brand&quot;;v=&quot;99&quot;&#xD;&#xA;HTTP_SEC_CH_UA_MOBILE:?0&#xD;&#xA;HTTP_SEC_CH_UA_PLATFORM:&quot;Windows&quot;&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_ORIGIN:http://localhost:59674&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 76622&#xD;&#xA;Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryPnqT5yBEDNM8wWkG&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=kyb_T0d6_9gsQ4G9c23J-J0yE_FbRDla9wlquU98EjKkzd2WhjOeVQsrIukDI0y97VX5LIbHr1X6vvhPVVUwy2g-Lx5jiRkAwlKjqGSn7eQ1; .AspNet.ApplicationCookie=tpE4XD5h73ZXgxBluJ4DA7LTOohLtd9PayWesM9Ty91Xv3VrnH_xO5LTfKxmVJ_Jl3PtrUW6OtPXCD_Q3DYO_0N-1j-oWAP8cFCRcPi0gEnZhLjQ1IXLSXz580hsarwx6jH92oVf2qcrH-BICIwGgAvBt5S35Lg4iI-TZ0oB0sxXY42MGrissPWEb9C0hWs08rGu2QizRSa-zr6y4LyuLS-0K0OnKsPOdNMf2pYBjiMsvOUe1oJK34qpb4IjgEcVzQtPf5KAP9qTF_48R9lth4cYvx8w2Vhxf9bhZfJ2yR3tTpEC2va3xRLFgTvJzBOZBthVJOWelDdVbNidUs0TEILsTHXTz37jFbCSJSJgWCRJbzgd6gALV41ABsBwJXpH4ww8tiNmFGoosuEkK08HS8cXLeiP2l_0uv2bBXF3LDzX1qCU3EItcPeEVNJI0cN970UwxdG2eS3qFt271WFnoiG4MWQJA1xU0GyD6wKW4LVSobUIXZ1utFQi4NbLMvlg&#xD;&#xA;Host: localhost:59674&#xD;&#xA;Referer: http://localhost:59674/pt/listing/listingupdate?oqeq=0&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36&#xD;&#xA;sec-ch-ua: &quot;Chromium&quot;;v=&quot;106&quot;, &quot;Google Chrome&quot;;v=&quot;106&quot;, &quot;Not;A=Brand&quot;;v=&quot;99&quot;&#xD;&#xA;sec-ch-ua-mobile: ?0&#xD;&#xA;sec-ch-ua-platform: &quot;Windows&quot;&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Origin: http://localhost:59674&#xD;&#xA;Sec-Fetch-Site: same-origin&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="76622" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=----WebKitFormBoundaryPnqT5yBEDNM8wWkG" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/listing/listingupdate" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="E:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\listing\listingupdate" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="oqeq=0" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="56103" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/listing/listingupdate" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="59674" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/listing/listingupdate" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="76622" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=----WebKitFormBoundaryPnqT5yBEDNM8wWkG" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=kyb_T0d6_9gsQ4G9c23J-J0yE_FbRDla9wlquU98EjKkzd2WhjOeVQsrIukDI0y97VX5LIbHr1X6vvhPVVUwy2g-Lx5jiRkAwlKjqGSn7eQ1; .AspNet.ApplicationCookie=tpE4XD5h73ZXgxBluJ4DA7LTOohLtd9PayWesM9Ty91Xv3VrnH_xO5LTfKxmVJ_Jl3PtrUW6OtPXCD_Q3DYO_0N-1j-oWAP8cFCRcPi0gEnZhLjQ1IXLSXz580hsarwx6jH92oVf2qcrH-BICIwGgAvBt5S35Lg4iI-TZ0oB0sxXY42MGrissPWEb9C0hWs08rGu2QizRSa-zr6y4LyuLS-0K0OnKsPOdNMf2pYBjiMsvOUe1oJK34qpb4IjgEcVzQtPf5KAP9qTF_48R9lth4cYvx8w2Vhxf9bhZfJ2yR3tTpEC2va3xRLFgTvJzBOZBthVJOWelDdVbNidUs0TEILsTHXTz37jFbCSJSJgWCRJbzgd6gALV41ABsBwJXpH4ww8tiNmFGoosuEkK08HS8cXLeiP2l_0uv2bBXF3LDzX1qCU3EItcPeEVNJI0cN970UwxdG2eS3qFt271WFnoiG4MWQJA1xU0GyD6wKW4LVSobUIXZ1utFQi4NbLMvlg" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:59674" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:59674/pt/listing/listingupdate?oqeq=0" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" />
+    </item>
+    <item name="HTTP_SEC_CH_UA">
+      <value string="&quot;Chromium&quot;;v=&quot;106&quot;, &quot;Google Chrome&quot;;v=&quot;106&quot;, &quot;Not;A=Brand&quot;;v=&quot;99&quot;" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_MOBILE">
+      <value string="?0" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_PLATFORM">
+      <value string="&quot;Windows&quot;" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:59674" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="oqeq">
+      <value string="0" />
+    </item>
+  </queryString>
+  <form>
+    <item name="ListingItem.ID">
+      <value string="0" />
+    </item>
+    <item name="CategoryID">
+      <value string="6" />
+    </item>
+    <item name="Title">
+      <value string="Venda de bezerros nelore e anelorados" />
+    </item>
+    <item name="Description">
+      <value string="Venda de 95 bezerros a 2300,00 cada" />
+    </item>
+    <item name="Active">
+      <value string="true" />
+      <value string="false" />
+    </item>
+    <item name="TiposAnimaisProducao">
+      <value string="1" />
+    </item>
+    <item name="RacasAnimais">
+      <value string="2" />
+    </item>
+    <item name="inIdadeAnimais">
+      <value string="8/10 meses" />
+    </item>
+    <item name="inQuantidadeItemSale">
+      <value string="95" />
+    </item>
+    <item name="inPesoKgPorItemSale">
+      <value string="250,00" />
+    </item>
+    <item name="inPesoArrobaPorItemSale">
+      <value string="8,33" />
+    </item>
+    <item name="inPesoTotalLoteKgSale">
+      <value string="23750.00" />
+    </item>
+    <item name="inPesoTotalLoteArrobaSale">
+      <value string="791.67" />
+    </item>
+    <item name="inValorTotalPorAnimalSale">
+      <value string="2.300,00" />
+    </item>
+    <item name="inValorTotalDoLoteSale">
+      <value string="218500.00" />
+    </item>
+    <item name="inValorTotalPorKgSale">
+      <value string="9.20" />
+    </item>
+    <item name="inValorTotalPorArrobaSale">
+      <value string="276.00" />
+    </item>
+    <item name="Linkcam">
+      <value string="&lt;iframe src=&quot;https://www.facebook.com/plugins/video.php?height=308&amp;href=https%3A%2F%2Fwww.facebook.com%2Flucas.belle.9%2Fvideos%2F677964630278233%2F%3Fidorvanity%3D2819124981679573&amp;show_text=false&amp;width=560&amp;t=0&quot; width=&quot;560&quot; height=&quot;308&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share&quot; allowFullScreen=&quot;true&quot;&gt;&lt;/iframe&gt;" />
+    </item>
+    <item name="Location">
+      <value string="Fazenda Santa Fé" />
+      <value string="Pedra Dourada-MG" />
+      <value string="Rod. MG-139, km 26" />
+    </item>
+    <item name="ContactName">
+      <value string="Eliangela Freitas " />
+    </item>
+    <item name="ContactPhone">
+      <value string="" />
+    </item>
+    <item name="ShowPhone">
+      <value string="false" />
+    </item>
+    <item name="ContactEmail">
+      <value string="eliangelafreitas.ed@gmail.com" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="kyb_T0d6_9gsQ4G9c23J-J0yE_FbRDla9wlquU98EjKkzd2WhjOeVQsrIukDI0y97VX5LIbHr1X6vvhPVVUwy2g-Lx5jiRkAwlKjqGSn7eQ1" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="tpE4XD5h73ZXgxBluJ4DA7LTOohLtd9PayWesM9Ty91Xv3VrnH_xO5LTfKxmVJ_Jl3PtrUW6OtPXCD_Q3DYO_0N-1j-oWAP8cFCRcPi0gEnZhLjQ1IXLSXz580hsarwx6jH92oVf2qcrH-BICIwGgAvBt5S35Lg4iI-TZ0oB0sxXY42MGrissPWEb9C0hWs08rGu2QizRSa-zr6y4LyuLS-0K0OnKsPOdNMf2pYBjiMsvOUe1oJK34qpb4IjgEcVzQtPf5KAP9qTF_48R9lth4cYvx8w2Vhxf9bhZfJ2yR3tTpEC2va3xRLFgTvJzBOZBthVJOWelDdVbNidUs0TEILsTHXTz37jFbCSJSJgWCRJbzgd6gALV41ABsBwJXpH4ww8tiNmFGoosuEkK08HS8cXLeiP2l_0uv2bBXF3LDzX1qCU3EItcPeEVNJI0cN970UwxdG2eS3qFt271WFnoiG4MWQJA1xU0GyD6wKW4LVSobUIXZ1utFQi4NbLMvlg" />
+    </item>
+  </cookies>
+</error>

@@ -1,0 +1,181 @@
+﻿@model BeYourMarket.Web.Models.ListingCotacaoesModel
+
+@{
+    ViewBag.Title = "BestPrice";
+}
+
+<div class="body-content container-fluid">
+    <div class="main-section row">
+
+        <div class="container-fluid mrg-tb">
+
+            @Html.Partial("_DashBoardSide", "bestprice")
+
+            <div class=" col-md-9">
+                <div id="myTabContent" class="tab-content ">
+                    <div role="tabpanel" class="tab-pane card-content fade active in" id="listings" aria-labelledby="listings-tab">
+                        <div class="panel panel-default">
+                            @if (ViewBag.EhEmpresa)
+                            {
+                                <div class="panel-heading">
+                                    [[[Cotações Recebidas]]]
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="panel-heading">
+                                    [[[Cotação de Itens (Minhas buscas de preços / Cotações em Grupo)]]]
+                                </div>
+                            }
+                            <div class="panel-body">
+                                <div class="pull-left">
+                                    <form class="form-inline" action="@Url.Action("BestPrice", "Manage", new { oqeq = @ViewBag.oqeq })" method="get" role="form">
+                                        <input type="text" id="searchText" name="searchText" class="input-sm form-control" placeholder="[[[Pesquisar Nº Cotação...]]]" value="@Request.QueryString["searchText"]">
+                                        <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-search"></i> [[[Pesquisar]]]</button>
+                                    </form>
+                                </div>
+                                <div class="pull-right">
+                                    @if (ViewBag.EhEmpresa == false)
+                                    {
+                                        <a class="btn btn-default btn-sm hidden-sm hidden-xs" href="javascript:void(0);" onclick="confirmCriarCotacaoGrupo(@ViewBag.oqeq);"><i class="mdi-content-add-circle-outline"></i> [[[Criar Cotação em Grupo]]]</a>
+                                        <a class="btn btn-default btn-sm hidden-sm hidden-xs" href="javascript:void(0);" onclick="confirmCriarCotacaoIndivdual(@ViewBag.oqeq);"><i class="mdi-content-add-circle-outline"></i> [[[Criar Cotação Individual]]]</a>
+                                    }
+                                </div>
+                            </div>
+
+                            <ul class="media-list list-group">
+                                @if (ViewBag.EhEmpresa)
+                                {
+                                    foreach (var item in Model.ListaCotacoesRecebidas)
+                                    {
+                                        <li id="item_@item.identificadorCM" class="media list-group-item">
+                                            <div class="col-xs-8">
+                                                <h4 class="media-heading"><a href="@Url.Action("ReplyQuoteUpdate", "SearchPrice", new { id = item.idCM, oqeq = @ViewBag.oqeq, tpC = @item.tpCotacao, iE = item.idEmpresaReccebeu })"> @item.identificadorCM - @item.grupoAtividadade</a></h4>
+                                                <p class="hidden-xs">
+                                                    <b>Categoria:</b> @item.tipoCotacao - <b>Região:</b> @item.regiaoCotacao - <b>Cadastrado em:</b> @item.cadastradoEm - <b>Encerra em:</b> @item.EncerraEm
+                                                </p>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="pull-right">
+                                                    <a class="btn btn-primary btn-sm" href="@Url.Action("ReplyQuoteUpdate", "SearchPrice", new { id = item.idCM, oqeq = @ViewBag.oqeq, tpC = @item.tpCotacao, iE = item.idEmpresaReccebeu })"><i class="fa fa-edit"></i><span class="hidden-xs">[[[Responder]]]</span></a>
+                                                    <a class="btn btn-default btn-sm" href="javascript:void(0);" onclick="confirmDelete(@item.idCM, '@item.identificadorCM');"><i class="fa fa-remove"></i><span class="hidden-xs">[[[Não Cotar]]]</span></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    }
+                                }
+                                else
+                                {
+                                    foreach (var item in Model.ListaCotacoesEnviadas)
+                                    {
+                                        var metodo = (item.tpCotacao == 1) ? "SearchPGroupUpdate" : "SearchPInIndividualUpdate";
+                                        <li id="item_@item.identificadorCM" class="media list-group-item">
+                                            <div class="col-xs-8">
+                                                <h4 class="media-heading"><a href="@Url.Action(metodo, "SearchPrice", new { id = item.idCM, oqeq = @ViewBag.oqeq })"> @item.identificadorCM - @item.grupoAtividadade</a></h4> <b>Criado por:</b> @item.nomeUserCriou
+                                                <p class="hidden-xs">
+                                                    <b>Categoria:</b> @item.tipoCotacao - <b>Região:</b> @item.regiaoCotacao - <b>Cadastrado em:</b> @item.cadastradoEm - <b>Encerra em:</b> @item.EncerraEm 
+                                                </p>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="pull-right">
+                                                    @if (item.idUserCriou == item.idUserLogado)
+                                                    {
+                                                        <a class="btn btn-primary btn-sm" href="@Url.Action(metodo, "SearchPrice", new { id = item.idCM, oqeq = @ViewBag.oqeq })"><i class="fa fa-edit"></i><span class="hidden-xs">[[[Alterar]]]</span></a>
+                                                        <a class="btn btn-default btn-sm" href="javascript:void(0);" onclick="confirmDelete(@item.idCM, '@item.identificadorCM');"><i class="fa fa-remove"></i><span class="hidden-xs">[[[Delete]]]</span></a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a class="btn btn-warning btn-sm" href="@Url.Action(metodo, "SearchPrice", new { id = item.idCM, oqeq = @ViewBag.oqeq })"><i class="fa fa-edit"></i><span class="hidden-xs">[[[Entrar ]]]</span></a>
+                                                        <a class="btn btn-default btn-sm" href="javascript:void(0);" onclick="confirmDelete(@item.idCM, '@item.identificadorCM');"><i class="fa fa-remove"></i><span class="hidden-xs">[[[Delete]]]</span></a>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        function confirmDelete(id, title) {
+            swal({
+                title: "[[[Confirma a exclusão do item?]]]",
+                text: "[[[Você está prestes a excluir a Cotação: ]]] " + title,
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "[[[Excluir]]]",
+                cancelButtonText: "[[[Cancelar]]]",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    $.post('@Url.Action("SearchPriceDelete", "SearchPrice")', { id: id })
+                    .done(function (result) {
+                        if (result.Success) {
+                            $("#item_" + id).remove();
+                            swal("[[[Excluído com sucesso!]]]", result.Message, "success");
+                        } else {
+                            swal("[[[O Item não pode ser excluído!]]]", result.Message, "error");
+                        }
+                        location.reload();
+                    })
+                    .fail(function (xhr, textStatus, errorThrown) {
+                        swal("[[[Failed!]]]", xhr.responseText, "error");
+                    })
+                } else {
+                    location.reload();
+                }
+            });
+        }
+
+        function confirmCriarCotacaoGrupo(oqeq) {
+            swal({
+                title: "[[[Cotação em Grupo]]]",
+                text: "[[[Clicando em CONTINUAR você iniciará o processo de criação de um Grupo de Compras para Cotação de um determinado produto.]]]",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "[[[Continuar]]]",
+                cancelButtonText: "[[[Cancelar]]]",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    window.location.href = "@Url.Action("SearchInGroup", "SearchPrice", new { })" + "?oqeq=" + oqeq;
+                } else {
+                    location.reload();
+                }
+            });
+        }
+
+        function confirmCriarCotacaoIndivdual(oqeq) {
+            swal({
+                title: "[[[Cotação Individual]]]",
+                text: "[[[Clicando em CONTINUAR você iniciará o processo de criação de uma Cotação Indivudal.]]]",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "[[[Continuar]]]",
+                cancelButtonText: "[[[Cancelar]]]",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    window.location.href = "@Url.Action("SearchIndividual", "SearchPrice", new { })" + "?oqeq=" + oqeq;
+                } else {
+                    location.reload();
+                }
+            });
+        }
+    </script>
+}
+
