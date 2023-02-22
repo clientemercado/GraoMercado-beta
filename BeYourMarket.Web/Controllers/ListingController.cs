@@ -861,6 +861,7 @@ namespace BeYourMarket.Web.Controllers
         public async Task<ActionResult> ListingUpdate(Listing listing, FormCollection form, IEnumerable<HttpPostedFileBase> files, int? oqeq)
         {
             var tipoAcao = 1;
+            var lote = "";
             int[] tipsOper = new int[] { 1, 2, 3, 4, 6 };
 
             if (CacheHelper.Categories.Count == 0)
@@ -975,7 +976,8 @@ namespace BeYourMarket.Web.Controllers
                 //GERAR NOVA REFERÊNCIA PARA O LOTE OFERTADO
                 var listOfertas = await _listingService.Query(l => (l.ID > 0)).SelectAsync();
                 var listaIDsOfertas = listOfertas.OrderByDescending(l => l.ID).Select(l => l.ID).ToList();
-                listing. = ("GMC-" + listaIDsOfertas[0].ToString().PadLeft(6, '0'));
+                listing.ReferLote = ("GMC-" + listaIDsOfertas[0].ToString().PadLeft(6, '0'));   // OBS: PARA MAIS ZEROS À ESQUERD, ALTERAR O NÚMERO 6 PRA QUANT. DESEJADA, ATÉ 10 NO MÁXIMO
+                lote = listing.ReferLote;
 
                 updateCount = true;
                 _listingService.Insert(listing);
@@ -1037,6 +1039,7 @@ namespace BeYourMarket.Web.Controllers
 
                 listingExisting.ObjectState = Repository.Pattern.Infrastructure.ObjectState.Modified;
                 tipoAcao = 2;
+                lote = listingExisting.ReferLote;
 
                 _listingService.Update(listingExisting);
             }
@@ -1139,7 +1142,7 @@ namespace BeYourMarket.Web.Controllers
 
             ViewBag.oqeq = (oqeq >= 0) ? oqeq : 0;
 
-            TempData[TempDataKeys.UserMessage] = (tipoAcao == 1) ? "[[[Oferta de VENDA publicada com SUCESSO!]]]" : "[[[Oferta de VENDA atualizada com SUCESSO!]]]";
+            TempData[TempDataKeys.UserMessage] = (tipoAcao == 1) ? "[[[Oferta de VENDA LOTE: " + lote + " publicada com SUCESSO!]]]" : "[[[Oferta de VENDA LOTE: " + lote + " atualizada com SUCESSO!]]]";
             return RedirectToAction("Listing", new { id = listing.ID });
         }
 

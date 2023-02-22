@@ -212,10 +212,18 @@
                                         <tbody>
                                             <tr>
                                                 <td>
+                                                    [[[<h4>Lote</h4>]]]
+                                                </td>
+                                                <td>
+                                                    <h4><font color="orange">@Html.DisplayFor(x => Model.ListingCurrent.ReferLote)</font></h4>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
                                                     [[[Categoria]]]
                                                 </td>
                                                 <td>
-                                                    <a href="@Url.Action("Search", "Home", new { categoryId = Model.ListingCurrent.CategoryID, oqeq = @ViewBag.oqeq })">@Model.ListingCurrent.Category.Name</a>
+                                                    @Html.DisplayFor(x => Model.ListingCurrent.Category.Name)
                                                 </td>
                                             </tr>
                                             @if (Model.ListingCurrent.CategoryID == 6)
@@ -246,7 +254,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <h4>[[[Quantidade]]]</h4>
+                                                        [[[<h4>Quantidade</h4>]]]
                                                     </td>
                                                     <td>
                                                         <h4>@Html.DisplayFor(x => Model.ListingCurrent.QuantidadeItemSale)</h4>
@@ -286,7 +294,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <h4>[[[Preço do Lote]]]</h4>
+                                                        [[[<h4>Preço do Lote</h4>]]]
                                                     </td>
                                                     <td>
                                                         @*<h4>@Html.DisplayFor(x => Model.ListingCurrent.ValorTotalDoLoteSale)</h4>*@
@@ -333,7 +341,6 @@
                                                         <h4>[[[Preço do Lote]]]</h4>
                                                     </td>
                                                     <td>
-                                                        @*<h4>@Html.DisplayFor(x => Model.ListingCurrent.PriceFormatted)</h4>*@
                                                         <h4>@Html.DisplayFor(x => Model.totalOfertaMaisComissao)</h4>
                                                     </td>
                                                 </tr>
