@@ -274,10 +274,10 @@
             "_replacement": "man",
             "_reason": "macrolanguage"
           },
-          "eng": {
-            "_replacement": "pt",
-            "_reason": "overlong"
-          },
+          //"eng": {
+          //  "_replacement": "pt",
+          //  "_reason": "overlong"
+          //},
           "epo": {
             "_replacement": "eo",
             "_reason": "overlong"
@@ -934,10 +934,10 @@
             "_replacement": "pl",
             "_reason": "overlong"
           },
-          "por": {
-            "_replacement": "pt",
-            "_reason": "overlong"
-          },
+          //"por": {
+          //  "_replacement": "pt",
+          //  "_reason": "overlong"
+          //},
           "pus": {
             "_replacement": "ps",
             "_reason": "overlong"
@@ -2094,10 +2094,10 @@
             "_replacement": "PL",
             "_reason": "overlong"
           },
-          "620": {
-            "_replacement": "PT",
-            "_reason": "overlong"
-          },
+          //"620": {
+          //  "_replacement": "PT",
+          //  "_reason": "overlong"
+          //},
           "624": {
             "_replacement": "GW",
             "_reason": "overlong"
@@ -3398,10 +3398,10 @@
             "_replacement": "KP",
             "_reason": "overlong"
           },
-          "PRT": {
-            "_replacement": "PT",
-            "_reason": "overlong"
-          },
+          //"PRT": {
+          //  "_replacement": "PT",
+          //  "_reason": "overlong"
+          //},
           "PRY": {
             "_replacement": "PY",
             "_reason": "overlong"

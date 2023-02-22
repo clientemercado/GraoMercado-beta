@@ -81,5 +81,6 @@ namespace BeYourMarket.Model.Models
         public int? id_OperationType { get; set; }
         public decimal ValorComissao { get; set; }
         public decimal ValorTotalDoLoteSaleAddComissao { get; set; }
+        public string ReferLote { get; set; }
     }
 }

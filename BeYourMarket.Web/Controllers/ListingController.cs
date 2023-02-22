@@ -972,6 +972,11 @@ namespace BeYourMarket.Web.Controllers
                 listing.ValorComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTaxa").Replace(".", ",")));
                 listing.ValorTotalDoLoteSaleAddComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTotalDoLoteMaisTaxaSale").Replace(".", ",")));
 
+                //GERAR NOVA REFERÊNCIA PARA O LOTE OFERTADO
+                var listOfertas = await _listingService.Query(l => (l.ID > 0)).SelectAsync();
+                var listaIDsOfertas = listOfertas.OrderByDescending(l => l.ID).Select(l => l.ID).ToList();
+                listing. = ("GMC-" + listaIDsOfertas[0].ToString().PadLeft(6, '0'));
+
                 updateCount = true;
                 _listingService.Insert(listing);
             }
