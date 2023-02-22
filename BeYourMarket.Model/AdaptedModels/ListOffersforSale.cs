@@ -17,5 +17,8 @@ namespace BeYourMarket.Model.AdaptedModels
         //OBS: Armazena o cód. da Categoria e o Link de Vídeo, registrado pelo ofertante
         public int CategoryID { get; set; }
         public string LinkCam { get; set; }
+        public string LoteOferta { get; set; }
+        public string LocalizacaoView { get; set; }
+        public string QuantItens { get; set; }
     }
 }

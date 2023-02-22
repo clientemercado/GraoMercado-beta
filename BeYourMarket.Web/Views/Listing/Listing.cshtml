@@ -431,7 +431,6 @@
                         <!-- Listing Hook -->
                         @Html.DoAction(HookName.Listing, Model.ListingCurrent.ID)
 
-                        <!-- ========================================================================================================================== -->
                         <div class="panel">
                             @if (Model.ListingCurrent.UserID == User.Identity.GetUserId() || User.IsInRole("Administrator"))
                             {
@@ -456,7 +455,6 @@
                                 </div>
                             </fieldset>
                         </div>
-                        <!-- ========================================================================================================================== -->
                     </div>
 
                     <div>

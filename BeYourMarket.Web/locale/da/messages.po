@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-02-22 16:17-03:00\n"
-"PO-Revision-Date: 2023-02-22 16:17-03:00\n"
+"POT-Creation-Date: 2023-02-22 17:54-03:00\n"
+"PO-Revision-Date: 2023-02-22 17:54-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: Views\Listing\Profile.cshtml:25
 #: Views\Listing\Review.cshtml:36
 #: Views\Listing\BuyItemOffer.cshtml:438
-#: Views\Listing\Listing.cshtml:478
+#: Views\Listing\Listing.cshtml:476
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:438
 #: obj\Release\Package\PackageTmp\Views\Listing\Review.cshtml:36
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:471
@@ -674,7 +674,7 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\Listing.cshtml:618
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:631
 #: Views\Listing\BuyItemOffer.cshtml:631
-#: Views\Listing\Listing.cshtml:625
+#: Views\Listing\Listing.cshtml:623
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:631
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:618
 msgid "Cancelado!"
@@ -717,7 +717,7 @@ msgstr ""
 #: Views\Listing\PurchaseUpdate.cshtml:142
 #: Views\Listing\Review.cshtml:74
 #: Views\Listing\BuyItemOffer.cshtml:607
-#: Views\Listing\Listing.cshtml:601
+#: Views\Listing\Listing.cshtml:599
 #: Views\Manage\BestPrice.cshtml:186
 #: Views\Manage\BestPrice.cshtml:218
 #: Views\Manage\BestPrice.cshtml:238
@@ -1065,7 +1065,7 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\Listing.cshtml:480
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:447
 #: Views\Listing\BuyItemOffer.cshtml:447
-#: Views\Listing\Listing.cshtml:487
+#: Views\Listing\Listing.cshtml:485
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:447
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:480
 msgid "Compartilhar"
@@ -1342,7 +1342,7 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\Listing.cshtml:589
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:602
 #: Views\Listing\BuyItemOffer.cshtml:602
-#: Views\Listing\Listing.cshtml:596
+#: Views\Listing\Listing.cshtml:594
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:602
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:589
 msgid "Confirma sua resposta para a pergunta do interessado?"
@@ -1358,7 +1358,7 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:606
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Manage\BestPrice_OLD_2.cshtml:249
 #: Views\Listing\BuyItemOffer.cshtml:606
-#: Views\Listing\Listing.cshtml:600
+#: Views\Listing\Listing.cshtml:598
 #: Views\Manage\BestPrice_OLD_2.cshtml:249
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:606
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:593
@@ -1493,7 +1493,7 @@ msgstr ""
 #: Views\Listing\Listing.cshtml:85
 #: Views\Listing\Listing.cshtml:419
 #: Views\Listing\Listing.cshtml:422
-#: Views\Listing\Listing.cshtml:482
+#: Views\Listing\Listing.cshtml:480
 #: Views\Manage\_ListingContactModal.cshtml:8
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingContactModal.cshtml:8
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:85
@@ -1960,7 +1960,7 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\Listing.cshtml:466
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:433
 #: Views\Listing\BuyItemOffer.cshtml:433
-#: Views\Listing\Listing.cshtml:473
+#: Views\Listing\Listing.cshtml:471
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:433
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:466
 msgid "Desde "
@@ -2425,7 +2425,7 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\Listing.cshtml:438
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:399
 #: Views\Listing\BuyItemOffer.cshtml:399
-#: Views\Listing\Listing.cshtml:445
+#: Views\Listing\Listing.cshtml:444
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:399
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:438
 msgid "Escreva sua pergunta ao vendedor"
@@ -2660,8 +2660,8 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Payment\Orders.cshtml:186
 #: Views\Listing\BuyItemOffer.cshtml:624
 #: Views\Listing\BuyItemOffer.cshtml:628
-#: Views\Listing\Listing.cshtml:618
-#: Views\Listing\Listing.cshtml:622
+#: Views\Listing\Listing.cshtml:616
+#: Views\Listing\Listing.cshtml:620
 #: Views\Manage\BestPrice.cshtml:202
 #: Views\Manage\BestPrice_OLD.cshtml:132
 #: Views\Manage\BestPrice_OLD_2.cshtml:200
@@ -4173,7 +4173,7 @@ msgstr "Yderligere info"
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\Listing.cshtml:469
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:436
 #: Views\Listing\BuyItemOffer.cshtml:436
-#: Views\Listing\Listing.cshtml:476
+#: Views\Listing\Listing.cshtml:474
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:436
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:469
 msgid "Outros itens comercializados por este Usuário"
@@ -4459,7 +4459,7 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\Listing.cshtml:435
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:396
 #: Views\Listing\BuyItemOffer.cshtml:396
-#: Views\Listing\Listing.cshtml:442
+#: Views\Listing\Listing.cshtml:441
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:396
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:435
 msgid "Perguntas e respostas"
@@ -4468,7 +4468,7 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\Listing.cshtml:437
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:398
 #: Views\Listing\BuyItemOffer.cshtml:398
-#: Views\Listing\Listing.cshtml:444
+#: Views\Listing\Listing.cshtml:443
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:398
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:437
 msgid "Pergunte ao Vendedor"
@@ -5279,8 +5279,8 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:587
 #: Views\Listing\BuyItemOffer.cshtml:586
 #: Views\Listing\BuyItemOffer.cshtml:587
-#: Views\Listing\Listing.cshtml:580
-#: Views\Listing\Listing.cshtml:581
+#: Views\Listing\Listing.cshtml:578
+#: Views\Listing\Listing.cshtml:579
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:586
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:587
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:573
@@ -5312,7 +5312,7 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\Listing.cshtml:607
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:620
 #: Views\Listing\BuyItemOffer.cshtml:620
-#: Views\Listing\Listing.cshtml:614
+#: Views\Listing\Listing.cshtml:612
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:620
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:607
 msgid "Respondido!"
@@ -5357,8 +5357,8 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Settings\SettingsUpdate.cshtml:81
 #: Views\Listing\BuyItemOffer.cshtml:586
 #: Views\Listing\BuyItemOffer.cshtml:587
-#: Views\Listing\Listing.cshtml:580
-#: Views\Listing\Listing.cshtml:581
+#: Views\Listing\Listing.cshtml:578
+#: Views\Listing\Listing.cshtml:579
 #: Views\Manage\UserProfile.cshtml:95
 #: Views\Settings\SettingsUpdate.cshtml:81
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Areas\Admin\Views\ContentPage\ContentPageUpdate.cshtml:76
@@ -6030,7 +6030,7 @@ msgstr ""
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\Listing.cshtml:446
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master\BeYourMarket.Web\Views\Listing\BuyItemOffer.cshtml:414
 #: Views\Listing\BuyItemOffer.cshtml:414
-#: Views\Listing\Listing.cshtml:453
+#: Views\Listing\Listing.cshtml:452
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:414
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:446
 msgid "Últimas perguntas feitas"

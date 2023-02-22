@@ -382,13 +382,17 @@ namespace BeYourMarket.Web.Controllers
             var itensIntencaoCompra = new List<ListingItemICModel>();
             foreach (var item in items.Where(x => x.Active && x.Enabled).OrderByDescending(x => x.Created))
             {
+                var quant1 = item.QuantidadeItemSale.ToString().Split(',');
                 intensOfertaVenda.Add(new ListOffersforSale { 
                     ID = item.ID,
                     Title = item.Title,
                     UrlPicture = item.ListingPictures.Count == 0 ? ImageHelper.GetListingImagePath(0) : ImageHelper.GetListingImagePath(item.ListingPictures.OrderBy(x => x.Ordering).FirstOrDefault().PictureID),
                     Description = (item.Description.Length > 29) ? item.Description.Substring(0, 30) : item.Description,
                     CategoryID = item.CategoryID,
-                    LinkCam = item.LinkCam
+                    LinkCam = item.LinkCam,
+                    LoteOferta = item.ReferLote,
+                    LocalizacaoView = item.Location,
+                    QuantItens = quant1[0]
                 });
             }
 
