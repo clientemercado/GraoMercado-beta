@@ -40,6 +40,10 @@
                                 }
                                 <input type="hidden" id="inIdOf" name="inIdOf" value="@ViewBag.idOferta" />
                                 <input type="hidden" id="inTC" name="inTC" value="@Model.temDialogo" />
+                                <input type="hidden" id="inOqeq" name="inOqeq" value="@ViewBag.oqeq" />
+                            </div>
+                            <div class="col-md-12">
+                                <h3>[[[Lote: ]]]<font color="orange">@Html.DisplayFor(x => Model.ListingCurrent.ReferLote)</font></h3>
                             </div>
                             <div class="col-md-12">
                                 <h3>
@@ -55,7 +59,7 @@
                                     {
                                         @*<a class="btn btn-success" href="@Url.Action("BuyInAction", "Listing", new { id = Model.ListingCurrent.ID, area = "" })"> [[[COMPRAR AGORA]]]</a>*@
                                         <a class="btn btn-success compra" href="#inQuantCompra"> [[[COMPRAR AGORA]]]</a>
-                                        <input type="hidden" id ="inToEd" value="noad" />
+                                        <input type="hidden" id="inToEd" value="noad" />
                                     }
                                 </h3>
 
@@ -156,10 +160,18 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <h4>[[[Categoria]]]</h4>
+                                                    [[[<h4>Lote</h4>]]]
                                                 </td>
                                                 <td>
-                                                    <a href="@Url.Action("Search", "Home", new { categoryId = Model.ListingCurrent.CategoryID, oqeq = @ViewBag.oqeq })"><h4>@Model.ListingCurrent.Category.Name</h4></a>
+                                                    <h4><font color="orange">@Html.DisplayFor(x => Model.ListingCurrent.ReferLote)</font></h4>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h4>[[[Categoria]]]<h4>
+                                                </td>
+                                                <td>
+                                                    <h4>@Html.DisplayFor(x => Model.ListingCurrent.Category.Name)</h4>
                                                 </td>
                                             </tr>
                                             @if (Model.ListingCurrent.CategoryID == 6)
@@ -226,7 +238,7 @@
                                                     </td>
                                                     <td>
                                                         @*<h4>@Html.DisplayFor(x => Model.ListingCurrent.ValorTotalDoLoteSale)</h4>*@
-                                                        <h4>@Html.DisplayFor(x => Model.totalOfertaMaisComissao)</h4> 
+                                                        <h4>@Html.DisplayFor(x => Model.totalOfertaMaisComissao)</h4>
                                                     </td>
                                                 </tr>
                                                 <tr>
