@@ -126,12 +126,15 @@
     <Compile Include="IChatOfertaService.cs" />
     <Compile Include="ICidadesGeolocalizacaoService.cs" />
     <Compile Include="ICidadesService.cs" />
+    <Compile Include="ICompraEfetuadaService.cs" />
     <Compile Include="ICotacaoMasterService.cs" />
     <Compile Include="IEstadoService.cs" />
     <Compile Include="IFornecedoresCotacaoService.cs" />
     <Compile Include="IGruposAtividadesService.cs" />
     <Compile Include="IInsurersService.cs" />
     <Compile Include="IItensCotacaoService.cs" />
+    <Compile Include="IMeiosDePagamentoService.cs" />
+    <Compile Include="IModosPagamentoService.cs" />
     <Compile Include="IntencoesCompraService.cs" />
     <Compile Include="IOperationTypeService.cs" />
     <Compile Include="IPaisService.cs" />

@@ -53,20 +53,6 @@ namespace BeYourMarket.Service
             }
         }
 
-        public static SettingDictionary GetSettingDictionary(string settingKey)
-        {
-            var setting = SettingDictionary.Where(x => x.Name == settingKey).FirstOrDefault();
-
-            if (setting == null)
-                return new SettingDictionary()
-                {
-                    Name = settingKey.ToString(),
-                    Value = string.Empty
-                };
-
-            return setting;
-        }
-
         public static Statistics Statistics
         {
             get
@@ -305,6 +291,44 @@ namespace BeYourMarket.Service
             {
                 return ContainerManager.GetConfiguredContainer().Resolve<BeYourMarket.Service.DataCacheService>().GetCachedItem(CacheKeys.OperationType) as List<ShippingCompany>;
             }
+        }
+
+        public static List<MeiosDePagamento> MeiosDePagamento
+        {
+            get
+            {
+                return ContainerManager.GetConfiguredContainer().Resolve<BeYourMarket.Service.DataCacheService>().GetCachedItem(CacheKeys.OperationType) as List<MeiosDePagamento>;
+            }
+        }
+
+        public static List<ModosPagamento> ModosPagamento
+        {
+            get
+            {
+                return ContainerManager.GetConfiguredContainer().Resolve<BeYourMarket.Service.DataCacheService>().GetCachedItem(CacheKeys.OperationType) as List<ModosPagamento>;
+            }
+        }
+
+        public static List<CompraEfetuada> CompraEfetuada
+        {
+            get
+            {
+                return ContainerManager.GetConfiguredContainer().Resolve<BeYourMarket.Service.DataCacheService>().GetCachedItem(CacheKeys.OperationType) as List<CompraEfetuada>;
+            }
+        }
+
+        public static SettingDictionary GetSettingDictionary(string settingKey)
+        {
+            var setting = SettingDictionary.Where(x => x.Name == settingKey).FirstOrDefault();
+
+            if (setting == null)
+                return new SettingDictionary()
+                {
+                    Name = settingKey.ToString(),
+                    Value = string.Empty
+                };
+
+            return setting;
         }
     }
 }

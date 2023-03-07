@@ -211,6 +211,21 @@ namespace BeYourMarket.Service
             get { return _container.Resolve<IShippingCompanyService>(); }
         }
 
+        private IMeiosDePagamentoService MeiosDePagamentoService
+        {
+            get { return _container.Resolve<IMeiosDePagamentoService>(); }
+        }
+
+        private IModosPagamentoService ModosPagamentoService
+        {
+            get { return _container.Resolve<IModosPagamentoService>(); }
+        }
+
+        private ICompraEfetuadaService CompraEfetuadaService
+        {
+            get { return _container.Resolve<ICompraEfetuadaService>(); }
+        }
+
         private IUnityContainer _container;
 
         private object _lock = new object();
@@ -387,6 +402,18 @@ namespace BeYourMarket.Service
                             //var shippingCompany = ShippingCompanyService.Queryable().Where(x => (x.Habilitado_View_Plataforma_SC == true)).ToList();
                             var shippingCompany = ShippingCompanyService.Queryable().Where(x => (x.Id_SC > 0)).ToList();
                             UpdateCache(CacheKeys.ShippingCompany, shippingCompany);
+                            break;
+                        case CacheKeys.MeiosDePagamento:
+                            var meiosPagamento = MeiosDePagamentoService.Queryable().Where(x => (x.Id_MeiosPag > 0)).ToList();
+                            UpdateCache(CacheKeys.MeiosDePagamento, meiosPagamento);
+                            break;
+                        case CacheKeys.ModosPagamento:
+                            var modosPagamento = ModosPagamentoService.Queryable().Where(x => (x.Id_ModosPag> 0)).ToList();
+                            UpdateCache(CacheKeys.ModosPagamento, modosPagamento);
+                            break;
+                        case CacheKeys.CompraEfetuada:
+                            var compraEfetuada = CompraEfetuadaService.Queryable().Where(x => (x.Id_CompEfet > 0)).ToList();
+                            UpdateCache(CacheKeys.CompraEfetuada, compraEfetuada);
                             break;
 
                         case CacheKeys.Statistics:

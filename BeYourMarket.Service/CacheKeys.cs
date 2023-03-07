@@ -43,6 +43,9 @@ namespace BeYourMarket.Service
         Insurers,
         OperationType,
         ChatOferta,
-        ShippingCompany
+        ShippingCompany,
+        MeiosDePagamento,
+        ModosPagamento,
+        CompraEfetuada
     }
 }
