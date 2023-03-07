@@ -144,6 +144,7 @@
     <Compile Include="Models\ChatOferta.cs" />
     <Compile Include="Models\CIDADE.cs" />
     <Compile Include="Models\CIDADE_GEOLOCALIZACAO.cs" />
+    <Compile Include="Models\CompraEfetuada.cs" />
     <Compile Include="Models\ContentPage.cs" />
     <Compile Include="Models\Cotacao_Master.cs" />
     <Compile Include="Models\EmailTemplate.cs" />
@@ -174,6 +175,7 @@
     <Compile Include="Models\Mapping\ChatOfertaMap.cs" />
     <Compile Include="Models\Mapping\CIDADEMap.cs" />
     <Compile Include="Models\Mapping\CIDADE_GEOLOCALIZACAOMap.cs" />
+    <Compile Include="Models\Mapping\CompraEfetuadaMap.cs" />
     <Compile Include="Models\Mapping\ContentPageMap.cs" />
     <Compile Include="Models\Mapping\Cotacao_MasterMap.cs" />
     <Compile Include="Models\Mapping\EmailTemplateMap.cs" />
@@ -191,6 +193,7 @@
     <Compile Include="Models\Mapping\ListingReviewMap.cs" />
     <Compile Include="Models\Mapping\ListingStatMap.cs" />
     <Compile Include="Models\Mapping\ListingTypeMap.cs" />
+    <Compile Include="Models\Mapping\MeiosDePagamentoMap.cs" />
     <Compile Include="Models\Mapping\MessageMap.cs" />
     <Compile Include="Models\Mapping\MessageParticipantMap.cs" />
     <Compile Include="Models\Mapping\MessageReadStateMap.cs" />
@@ -198,6 +201,7 @@
     <Compile Include="Models\Mapping\MetaCategoryMap.cs" />
     <Compile Include="Models\Mapping\MetaFieldMap.cs" />
     <Compile Include="Models\Mapping\ModalidadesCompraMap.cs" />
+    <Compile Include="Models\Mapping\ModosPagamentoMap.cs" />
     <Compile Include="Models\Mapping\OperationTypeMap.cs" />
     <Compile Include="Models\Mapping\OrderMap.cs" />
     <Compile Include="Models\Mapping\PAISMap.cs" />
@@ -217,6 +221,7 @@
     <Compile Include="Models\Mapping\TiposRacasAnimaisPecuariaMap.cs" />
     <Compile Include="Models\Mapping\UnidadesMap.cs" />
     <Compile Include="Models\Mapping\UserBankDetailsMap.cs" />
+    <Compile Include="Models\MeiosDePagamento.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\MessageParticipant.cs" />
     <Compile Include="Models\MessageReadState.cs" />
@@ -224,6 +229,7 @@
     <Compile Include="Models\MetaCategory.cs" />
     <Compile Include="Models\MetaField.cs" />
     <Compile Include="Models\ModalidadesCompra.cs" />
+    <Compile Include="Models\ModosPagamento.cs" />
     <Compile Include="Models\OperationType.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\PAIS.cs" />

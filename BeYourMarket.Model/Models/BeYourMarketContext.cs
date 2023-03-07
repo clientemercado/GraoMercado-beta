@@ -80,6 +80,9 @@ namespace BeYourMarket.Model.Models
         public DbSet<OperationType> OperationType { get; set; }
         public DbSet<ChatOferta> ChatOferta { get; set; }
         public DbSet<ShippingCompany> ShippingCompany { get; set; }
+        public DbSet<MeiosDePagamento> MeiosDePagamento { get; set; }
+        public DbSet<ModosPagamento> ModosPagamento { get; set; }
+        public DbSet<CompraEfetuada> CompraEfetuada { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -138,6 +141,9 @@ namespace BeYourMarket.Model.Models
             modelBuilder.Configurations.Add(new OperationTypeMap());
             modelBuilder.Configurations.Add(new ChatOfertaMap());
             modelBuilder.Configurations.Add(new ShippingCompanyMap());
+            modelBuilder.Configurations.Add(new MeiosDePagamentoMap());
+            modelBuilder.Configurations.Add(new ModosPagamentoMap());
+            modelBuilder.Configurations.Add(new CompraEfetuadaMap());
         }
     }
 }
