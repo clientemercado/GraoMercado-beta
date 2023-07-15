@@ -40,9 +40,9 @@
                             <div class="panel panel-default panel-body mrg-t text-center">
                                 <h4>[[[Quantidade: ]]] @Model.quantDesejaComprar</h4><br />
                                 <legend></legend>
-                                <h4>[[[Vlr Produto: R$ ]]] @Model.ListingCurrent.ValorTotalPorAnimalSale</h4><br />
+                                <h4>[[[Vlr unit. Produto: R$ ]]] @Model.ListingCurrent.ValorTotalPorAnimalSale</h4><br />
                                 <legend></legend>
-                                <h3>[[[Você pagará: <br />R$ ]]] @Model.valorTotalDaCompra</h3>
+                                <h3>[[[Você pagará: <br />R$ ]]] <font color="green">@Model.valorTotalDaCompra</font></h3>
                             </div>
                             <input type="hidden" id="inVTOffer" name="inVTOffer" value="@Model.valorTotalDaCompra" />
                             <input type="hidden" id="inQtC" name="inQtC" value="@Model.quantCompraCalc" />

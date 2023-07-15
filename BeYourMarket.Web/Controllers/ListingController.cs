@@ -858,7 +858,7 @@ namespace BeYourMarket.Web.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateInput(false)]
-        public async Task<ActionResult> ListingUpdate(Listing listing, FormCollection form, IEnumerable<HttpPostedFileBase> files, int? oqeq)
+        public async Task<ActionResult> ListingUpdate(Listing listing, FormCollection form, IEnumerable<HttpPostedFileBase> files, IEnumerable<HttpPostedFileBase> fileUploads, int? oqeq)
         {
             var tipoAcao = 1;
             var lote = "";
@@ -1083,7 +1083,7 @@ namespace BeYourMarket.Web.Controllers
 
             await _unitOfWorkAsync.SaveChangesAsync();
 
-            if (Request.Files.Count > 0)
+            if (Request.Files.Count > 0) // CONTINUAR AQUI <-- ANALISAR A POSTAGEM DA IMAGEM E FAZER A MESMA COISA COM O VÍDEO...
             {
                 var itemPictureQuery = _listingPictureservice.Queryable().Where(x => x.ListingID == listing.ID);
                 if (itemPictureQuery.Count() > 0)

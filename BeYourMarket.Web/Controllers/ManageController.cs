@@ -662,7 +662,7 @@ namespace BeYourMarket.Web.Controllers
         {
             var userId = User.Identity.GetUserId();
             var items = await _listingService.Query(x => x.UserID == userId).Include(x => x.ListingPictures).SelectAsync();
-            var uBank = CacheHelper.UserBankDetails.Where(u => (u.Id_User_UBankDetails == userId)).FirstOrDefault();
+            var uBank = CacheHelper.UserBankDetails.Where(u => (u.Id_User_UBankDetails == userId)).FirstOrDefault(); 
             var listaChatsOfertaAll = await _chatOfertaService.Query(c => ((c.Eh_Pergunta) && (c.Pergunta_Respondida == false) && (c.id_Usuario_Respondeu == null))).SelectAsync();
 
             // Filter string

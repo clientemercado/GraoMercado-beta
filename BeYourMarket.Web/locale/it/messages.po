@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-07-14 16:04-03:00\n"
-"PO-Revision-Date: 2023-07-14 16:04-03:00\n"
+"POT-Creation-Date: 2023-07-15 16:53-03:00\n"
+"PO-Revision-Date: 2023-07-15 16:53-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -88,12 +88,12 @@ msgid "<h4>Quantidade</h4>"
 msgstr ""
 
 #: Views\Listing\BuyItemOffer.cshtml:310
-#: Views\Listing\ListingUpdate.cshtml:131
-#: Views\Listing\ListingUpdate.cshtml:139
-#: Views\Listing\ListingUpdate.cshtml:147
 #: Views\Listing\PurchaseUpdate.cshtml:73
 #: Views\Listing\PurchaseUpdate.cshtml:77
 #: Views\Listing\PurchaseUpdate.cshtml:88
+#: Views\Listing\ListingUpdate.cshtml:131
+#: Views\Listing\ListingUpdate.cshtml:139
+#: Views\Listing\ListingUpdate.cshtml:147
 #: Views\Purchase\PurchaseUpdate.cshtml:73
 #: Views\Purchase\PurchaseUpdate.cshtml:77
 #: Views\Purchase\PurchaseUpdate.cshtml:88
@@ -407,10 +407,10 @@ msgid "Até"
 msgstr ""
 
 #: Views\Listing\BuyItemOffer.cshtml:546
-#: Views\Listing\BuyItemOffer2.cshtml:160
-#: Views\Listing\BuyItemOffer2.cshtml:171
 #: Views\Listing\Invoicing.cshtml:157
 #: Views\Listing\Invoicing.cshtml:168
+#: Views\Listing\BuyItemOffer2.cshtml:160
+#: Views\Listing\BuyItemOffer2.cshtml:171
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:546
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer2.cshtml:160
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer2.cshtml:171
@@ -530,9 +530,9 @@ msgstr ""
 
 #: Views\Listing\BuyItemOffer.cshtml:619
 #: Views\Listing\Listing.cshtml:602
-#: Views\Listing\ListingUpdate.cshtml:265
 #: Views\Listing\PurchaseUpdate.cshtml:142
 #: Views\Listing\Review.cshtml:74
+#: Views\Listing\ListingUpdate.cshtml:273
 #: Views\Manage\BestPrice.cshtml:186
 #: Views\Manage\BestPrice.cshtml:218
 #: Views\Manage\BestPrice.cshtml:238
@@ -666,9 +666,9 @@ msgstr ""
 #: Views\Listing\Listing.cshtml:161
 #: Views\Listing\Listing.cshtml:226
 #: Views\Listing\Listings.cshtml:50
-#: Views\Listing\ListingUpdate.cshtml:36
 #: Views\Listing\PurchaseUpdate.cshtml:49
 #: Views\Listing\_ListingGridList.cshtml:35
+#: Views\Listing\ListingUpdate.cshtml:36
 #: Views\Purchase\PurchaseUpdate.cshtml:49
 #: Areas\Admin\Views\Listing\CategoryUpdate.cshtml:4
 #: Areas\Admin\Views\Listing\CategoryUpdate.cshtml:12
@@ -734,7 +734,7 @@ msgstr ""
 msgid "Change your password"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:216
+#: Views\Listing\ListingUpdate.cshtml:224
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:216
 msgid "Cidade"
 msgstr ""
@@ -791,7 +791,7 @@ msgstr ""
 msgid "Code"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:204
+#: Views\Listing\ListingUpdate.cshtml:203
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:204
 msgid "Cole aqui o link do seu vídeo"
 msgstr ""
@@ -930,10 +930,10 @@ msgstr ""
 msgid "Confirm password"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:258
-#: Views\Listing\ListingUpdate.cshtml:259
 #: Views\Listing\PurchaseUpdate.cshtml:135
 #: Views\Listing\PurchaseUpdate.cshtml:136
+#: Views\Listing\ListingUpdate.cshtml:266
+#: Views\Listing\ListingUpdate.cshtml:267
 #: Views\Purchase\PurchaseUpdate.cshtml:135
 #: Views\Purchase\PurchaseUpdate.cshtml:136
 #: Views\SearchPrice\AddMyQuote.cshtml:119
@@ -1618,8 +1618,8 @@ msgstr ""
 #: Models\AccountViewModels.cs:157
 #: Views\Account\Register.cshtml:45
 #: Views\Account\Register_OLD.cshtml:58
-#: Views\Listing\ListingUpdate.cshtml:248
 #: Views\Listing\PurchaseUpdate.cshtml:125
+#: Views\Listing\ListingUpdate.cshtml:256
 #: Views\Manage\CompanyData.cshtml:67
 #: Views\Purchase\PurchaseUpdate.cshtml:125
 #: Areas\Admin\Views\Manage\Settings.cshtml:49
@@ -1680,8 +1680,8 @@ msgstr ""
 msgid "Enter email"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:249
 #: Views\Listing\PurchaseUpdate.cshtml:126
+#: Views\Listing\ListingUpdate.cshtml:257
 #: Views\Purchase\PurchaseUpdate.cshtml:126
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:249
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:126
@@ -1752,7 +1752,7 @@ msgstr ""
 msgid "Entrar "
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:237
+#: Views\Listing\ListingUpdate.cshtml:245
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:237
 msgid "Entre com seu nome completo"
 msgstr ""
@@ -2235,7 +2235,7 @@ msgstr ""
 msgid "Informações do Item (Lote)"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:210
+#: Views\Listing\ListingUpdate.cshtml:218
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:210
 msgid "Informações sobre o local de Retirada"
 msgstr ""
@@ -2245,7 +2245,7 @@ msgstr ""
 msgid "Informe a Agência"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:217
+#: Views\Listing\ListingUpdate.cshtml:225
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:217
 msgid "Informe a cidade e estado (Ex: Pedra Cinza-MG...)"
 msgstr ""
@@ -2255,7 +2255,7 @@ msgstr ""
 msgid "Informe a idade média dos animais"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:221
+#: Views\Listing\ListingUpdate.cshtml:229
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:221
 msgid "Informe a referência para facilitar encontrar (Ex: Rod X ou Perto de...)"
 msgstr ""
@@ -2308,7 +2308,7 @@ msgstr ""
 msgid "Informe o dígito da Conta"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:213
+#: Views\Listing\ListingUpdate.cshtml:221
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:213
 msgid "Informe o local de retirada (Ex: nome da propriedade como é conhecida...)"
 msgstr ""
@@ -2465,8 +2465,8 @@ msgstr ""
 msgid "IP"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:26
 #: Views\Listing\PurchaseUpdate.cshtml:25
+#: Views\Listing\ListingUpdate.cshtml:26
 #: Views\Purchase\PurchaseUpdate.cshtml:26
 #: Views\SearchPrice\AddMyQuote.cshtml:24
 #: Views\SearchPrice\ReplyQuote.cshtml:26
@@ -2563,8 +2563,8 @@ msgstr ""
 msgid "Listing Type Update"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:4
 #: Views\Listing\PurchaseUpdate.cshtml:4
+#: Views\Listing\ListingUpdate.cshtml:4
 #: Views\Purchase\PurchaseUpdate.cshtml:4
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:4
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:16
@@ -2578,7 +2578,7 @@ msgstr ""
 
 #: Views\Listing\BuyItemOffer.cshtml:315
 #: Views\Listing\Listing.cshtml:361
-#: Views\Listing\ListingUpdate.cshtml:212
+#: Views\Listing\ListingUpdate.cshtml:220
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:315
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:212
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:361
@@ -2853,8 +2853,8 @@ msgstr ""
 msgid "Mostrar apenas listagens com fotos"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:244
 #: Views\Listing\PurchaseUpdate.cshtml:121
+#: Views\Listing\ListingUpdate.cshtml:252
 #: Views\Purchase\PurchaseUpdate.cshtml:121
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:244
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:121
@@ -2960,8 +2960,8 @@ msgstr ""
 msgid "Nome"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:236
 #: Views\Listing\PurchaseUpdate.cshtml:113
+#: Views\Listing\ListingUpdate.cshtml:244
 #: Views\Purchase\PurchaseUpdate.cshtml:113
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:236
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:113
@@ -3283,10 +3283,10 @@ msgstr ""
 #: Models\AccountViewModels.cs:59
 #: Models\AccountViewModels.cs:84
 #: Models\AccountViewModels.cs:142
-#: Views\Listing\ListingUpdate.cshtml:254
-#: Views\Listing\ListingUpdate.cshtml:255
 #: Views\Listing\PurchaseUpdate.cshtml:131
 #: Views\Listing\PurchaseUpdate.cshtml:132
+#: Views\Listing\ListingUpdate.cshtml:262
+#: Views\Listing\ListingUpdate.cshtml:263
 #: Views\Manage\Index.cshtml:13
 #: Views\Purchase\PurchaseUpdate.cshtml:131
 #: Views\Purchase\PurchaseUpdate.cshtml:132
@@ -3577,9 +3577,9 @@ msgid "Porta"
 msgstr ""
 
 #: Views\Listing\Listings.cshtml:75
+#: Views\Listing\_ListingGridList.cshtml:41
 #: Views\Listing\ListingUpdate.cshtml:61
 #: Views\Listing\ListingUpdate.cshtml:64
-#: Views\Listing\_ListingGridList.cshtml:41
 #: Views\Payment\Orders.cshtml:125
 #: Views\Payment\Payment.cshtml:63
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:94
@@ -3732,8 +3732,8 @@ msgstr ""
 msgid "Publicar Cotação"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:264
 #: Views\Listing\PurchaseUpdate.cshtml:141
+#: Views\Listing\ListingUpdate.cshtml:272
 #: Views\Purchase\PurchaseUpdate.cshtml:141
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:264
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:141
@@ -3863,15 +3863,15 @@ msgstr ""
 msgid "Quantidade Total: (OBS: Até o momento)"
 msgstr ""
 
-#: Views\Listing\BuyItemOffer2.cshtml:41
 #: Views\Listing\Invoicing.cshtml:44
+#: Views\Listing\BuyItemOffer2.cshtml:41
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer2.cshtml:41
 #: obj\Release\Package\PackageTmp\Views\Listing\Invoicing.cshtml:44
 msgid "Quantidade: "
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:234
 #: Views\Listing\PurchaseUpdate.cshtml:111
+#: Views\Listing\ListingUpdate.cshtml:242
 #: Views\Purchase\PurchaseUpdate.cshtml:111
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:234
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:111
@@ -3945,7 +3945,7 @@ msgstr ""
 msgid "Referência (Como chegar)"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:220
+#: Views\Listing\ListingUpdate.cshtml:228
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:220
 msgid "Referências (facilitar localização)"
 msgstr ""
@@ -4108,8 +4108,8 @@ msgstr ""
 msgid "Salvar"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:27
 #: Views\Listing\PurchaseUpdate.cshtml:26
+#: Views\Listing\ListingUpdate.cshtml:27
 #: Views\Purchase\PurchaseUpdate.cshtml:27
 #: Views\SearchPrice\AddMyQuote.cshtml:25
 #: Views\SearchPrice\ReplyQuote.cshtml:27
@@ -4135,8 +4135,8 @@ msgstr ""
 msgid "Selecionar Fornecedores (Para enviar a Cotação)"
 msgstr ""
 
-#: Views\Listing\BuyItemOffer2.cshtml:95
 #: Views\Listing\Invoicing.cshtml:92
+#: Views\Listing\BuyItemOffer2.cshtml:95
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer2.cshtml:95
 #: obj\Release\Package\PackageTmp\Views\Listing\Invoicing.cshtml:92
 msgid "Selecione uma Transportadora"
@@ -4182,7 +4182,7 @@ msgstr ""
 msgid "Seu Email..."
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:241
+#: Views\Listing\ListingUpdate.cshtml:249
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:241
 msgid "Seu número de telefone (XX) XXXXX-XXXX (Obs: Preferencia Whatsapp)"
 msgstr ""
@@ -4284,8 +4284,8 @@ msgid "Taxa de transação mínima"
 msgstr ""
 
 #: Models\ManageViewModels.cs:67
-#: Views\Listing\ListingUpdate.cshtml:240
 #: Views\Listing\PurchaseUpdate.cshtml:117
+#: Views\Listing\ListingUpdate.cshtml:248
 #: Views\Manage\AddPhoneNumber.cshtml:3
 #: Views\Manage\UserProfile.cshtml:56
 #: Views\Purchase\PurchaseUpdate.cshtml:117
@@ -4316,6 +4316,10 @@ msgstr ""
 #: Views\Manage\CompanyData.cshtml:63
 #: obj\Release\Package\PackageTmp\Views\Manage\CompanyData.cshtml:63
 msgid "Telefone..."
+msgstr ""
+
+#: Views\Listing\ListingUpdate.cshtml:209
+msgid "Tem um vídeo dos animais? Carregue-o aqui e torne seu produto mais atraente para os compradores. <i class=\"fa fa-long-arrow-down\" aria-hidden=\"true\"></i>"
 msgstr ""
 
 #: Areas\Admin\Views\Manage\Settings.cshtml:81
@@ -4745,11 +4749,14 @@ msgstr ""
 msgid "Visualizações"
 msgstr ""
 
-#: Views\Listing\BuyItemOffer2.cshtml:43
 #: Views\Listing\Invoicing.cshtml:46
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer2.cshtml:43
 #: obj\Release\Package\PackageTmp\Views\Listing\Invoicing.cshtml:46
 msgid "Vlr Produto: R$ "
+msgstr ""
+
+#: Views\Listing\BuyItemOffer2.cshtml:43
+msgid "Vlr unit. Produto: R$ "
 msgstr ""
 
 #: Controllers\AccountController.cs:132
@@ -4793,8 +4800,8 @@ msgstr ""
 msgid "Você não pode avaliar a si mesmo!"
 msgstr ""
 
-#: Views\Listing\BuyItemOffer2.cshtml:45
 #: Views\Listing\Invoicing.cshtml:48
+#: Views\Listing\BuyItemOffer2.cshtml:45
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer2.cshtml:45
 #: obj\Release\Package\PackageTmp\Views\Listing\Invoicing.cshtml:48
 msgid "Você pagará: <br />R$ "
