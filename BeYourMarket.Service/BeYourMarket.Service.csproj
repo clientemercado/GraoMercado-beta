@@ -140,6 +140,7 @@
     <Compile Include="IPaisService.cs" />
     <Compile Include="IRespostaFornecedoresCotacaoService.cs" />
     <Compile Include="IShippingCompanyService.cs" />
+    <Compile Include="IVideosOfertaService.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TipoAnimalPecuariaService.cs" />
     <Compile Include="TipoAnimalProducaoService.cs" />

@@ -46,6 +46,7 @@ namespace BeYourMarket.Service
         ShippingCompany,
         MeiosDePagamento,
         ModosPagamento,
-        CompraEfetuada
+        CompraEfetuada,
+        VideosOferta
     }
 }

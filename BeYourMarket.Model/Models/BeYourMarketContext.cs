@@ -83,6 +83,8 @@ namespace BeYourMarket.Model.Models
         public DbSet<MeiosDePagamento> MeiosDePagamento { get; set; }
         public DbSet<ModosPagamento> ModosPagamento { get; set; }
         public DbSet<CompraEfetuada> CompraEfetuada { get; set; }
+        public DbSet<VideosOferta> VideosOferta { get; set; }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -144,6 +146,7 @@ namespace BeYourMarket.Model.Models
             modelBuilder.Configurations.Add(new MeiosDePagamentoMap());
             modelBuilder.Configurations.Add(new ModosPagamentoMap());
             modelBuilder.Configurations.Add(new CompraEfetuadaMap());
+            modelBuilder.Configurations.Add(new VideosOfertaMap());            
         }
     }
 }

@@ -76,6 +76,7 @@ namespace BeYourMarket.Web.Controllers
         private readonly IChatOfertaService _chatOfertaService;
         private readonly IShippingCompanyService _shippingCompanyService;
         //private readonly ITiposFreteService _tiposFreteService;
+        private readonly IVideosOfertaService _videosOfertaService;
         private readonly DataCacheService _dataCacheService;
         private readonly SqlDbService _sqlDbService;
 
@@ -150,6 +151,7 @@ namespace BeYourMarket.Web.Controllers
            IOperationTypeService operationTypeService,
            IChatOfertaService chatOfertaService,
            IShippingCompanyService shippingCompanyService,
+           IVideosOfertaService videosOfertaService,
            DataCacheService dataCacheService,
            SqlDbService sqlDbService)
         {
@@ -196,6 +198,7 @@ namespace BeYourMarket.Web.Controllers
             _operationTypeService = operationTypeService;
             _chatOfertaService = chatOfertaService;
             _shippingCompanyService = shippingCompanyService;
+            _videosOfertaService = videosOfertaService;
         }
         #endregion
 
@@ -858,7 +861,7 @@ namespace BeYourMarket.Web.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateInput(false)]
-        public async Task<ActionResult> ListingUpdate(Listing listing, FormCollection form, IEnumerable<HttpPostedFileBase> files, IEnumerable<HttpPostedFileBase> fileUploads, int? oqeq)
+        public async Task<ActionResult> ListingUpdate(Listing listing, FormCollection form, IEnumerable<HttpPostedFileBase> files, IEnumerable<HttpPostedFileBase> fileVideoUploads, int? oqeq)
         {
             var tipoAcao = 1;
             var lote = "";
@@ -1083,7 +1086,7 @@ namespace BeYourMarket.Web.Controllers
 
             await _unitOfWorkAsync.SaveChangesAsync();
 
-            if (Request.Files.Count > 0) // CONTINUAR AQUI <-- ANALISAR A POSTAGEM DA IMAGEM E FAZER A MESMA COISA COM O VÍDEO...
+            if (Request.Files.Count > 0)
             {
                 var itemPictureQuery = _listingPictureservice.Queryable().Where(x => x.ListingID == listing.ID);
                 if (itemPictureQuery.Count() > 0)
@@ -1130,6 +1133,18 @@ namespace BeYourMarket.Web.Controllers
                     }
                 }
             }
+
+            //================================================================================
+            //================================================================================
+            //Upload do Vídeo - Implemented By Edwilson Curti
+            if (fileVideoUploads != null && fileVideoUploads.Count() > 0)
+            {
+                // CONTINUAR AQUI...
+                // 1º) VER EXEMPLO NO SOX DE UPLOAD DE ARQUIVOS
+                // 2º) CRIAR MÉTODO DE UPLOAD DE ARQUIVOS, DE PREFERENCIA FUNCIONANDO DE FORMA DINÂMICA, NA PASTA UTILITIES, NA CLASSE MiscellaneousUtilitiesHelper.cs
+            }
+            //================================================================================
+            //================================================================================
 
             await _unitOfWorkAsync.SaveChangesAsync();
 

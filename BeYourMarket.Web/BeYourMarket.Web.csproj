@@ -1540,6 +1540,7 @@
     <Folder Include="Images\Profile\" />
     <Folder Include="Plugins\bin\" />
     <Folder Include="Properties\PublishProfiles\" />
+    <Folder Include="Videos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

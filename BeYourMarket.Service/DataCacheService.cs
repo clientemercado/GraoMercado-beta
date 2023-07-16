@@ -226,6 +226,12 @@ namespace BeYourMarket.Service
             get { return _container.Resolve<ICompraEfetuadaService>(); }
         }
 
+        private IVideosOfertaService VideosOfertaService
+        {
+            get { return _container.Resolve<IVideosOfertaService>(); }
+        }
+                
+
         private IUnityContainer _container;
 
         private object _lock = new object();
@@ -415,6 +421,12 @@ namespace BeYourMarket.Service
                             var compraEfetuada = CompraEfetuadaService.Queryable().Where(x => (x.Id_CompEfet > 0)).ToList();
                             UpdateCache(CacheKeys.CompraEfetuada, compraEfetuada);
                             break;
+                        case CacheKeys.VideosOferta:
+                            var videosOferta = VideosOfertaService.Queryable().Where(x => (x.id_VideoOferta > 0)).ToList();
+                            UpdateCache(CacheKeys.VideosOferta, videosOferta);
+                            break;
+
+                            
 
                         case CacheKeys.Statistics:
                             SaveCategoryStats();

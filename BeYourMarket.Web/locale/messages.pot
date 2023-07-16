@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-07-15 16:53-03:00\n"
+"POT-Creation-Date: 2023-07-16 11:59-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -266,8 +266,8 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:236
 #: Controllers\PurchaseController.cs:235
-#: Controllers\ListingController.cs:567
-#: Controllers\ListingController.cs:870
+#: Controllers\ListingController.cs:570
+#: Controllers\ListingController.cs:873
 #: Areas\Admin\Controllers\ListingController.cs:491
 #: Areas\Admin\Controllers\ListingController.cs:593
 msgid "Ainda não há categorias disponíveis"
@@ -1790,6 +1790,9 @@ msgid "Enviar Cotação"
 msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:191
+msgid "Enviar Fotos"
+msgstr ""
+
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:159
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:191
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingUpdate.cshtml:159
@@ -2548,7 +2551,7 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:694
 #: Controllers\PurchaseController.cs:689
-#: Controllers\ListingController.cs:1547
+#: Controllers\ListingController.cs:1562
 msgid "Listing review is not allowed!"
 msgstr ""
 
@@ -2760,7 +2763,7 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:559
 #: Controllers\PurchaseController.cs:554
-#: Controllers\ListingController.cs:1405
+#: Controllers\ListingController.cs:1420
 msgid "Message sent succesfully!"
 msgstr ""
 
@@ -3062,8 +3065,8 @@ msgstr ""
 #: Controllers\BestPriceController.cs:765
 #: Controllers\PurchaseController.cs:671
 #: Controllers\PurchaseController.cs:760
-#: Controllers\ListingController.cs:1529
-#: Controllers\ListingController.cs:1618
+#: Controllers\ListingController.cs:1544
+#: Controllers\ListingController.cs:1633
 msgid "Obrigado pelo seu feedback!"
 msgstr ""
 
@@ -3111,11 +3114,11 @@ msgstr ""
 msgid "Oferta de Compra incluída com Sucesso!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1145
+#: Controllers\ListingController.cs:1160
 msgid "Oferta de VENDA LOTE: \" + lote + \" atualizada com SUCESSO!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1145
+#: Controllers\ListingController.cs:1160
 msgid "Oferta de VENDA LOTE: \" + lote + \" publicada com SUCESSO!"
 msgstr ""
 
@@ -4046,7 +4049,7 @@ msgstr ""
 msgid "RESPOSTA da COTAÇÃO alterada com Sucesso!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1272
+#: Controllers\ListingController.cs:1287
 msgid "Resposta registrada com Sucesso!"
 msgstr ""
 
@@ -4794,8 +4797,8 @@ msgstr ""
 #: Controllers\BestPriceController.cs:721
 #: Controllers\PurchaseController.cs:616
 #: Controllers\PurchaseController.cs:716
-#: Controllers\ListingController.cs:1474
-#: Controllers\ListingController.cs:1574
+#: Controllers\ListingController.cs:1489
+#: Controllers\ListingController.cs:1589
 msgid "Você não pode avaliar a si mesmo!"
 msgstr ""
 
@@ -4821,20 +4824,20 @@ msgstr ""
 msgid "You cannot delete Administrator, change the user role first."
 msgstr ""
 
-#: Controllers\ListingController.cs:1285
+#: Controllers\ListingController.cs:1300
 #: Areas\Admin\Controllers\ListingController.cs:762
 msgid "You cannot delete item with orders! You can deactivate it instead."
 msgstr ""
 
 #: Controllers\BestPriceController.cs:629
 #: Controllers\PurchaseController.cs:624
-#: Controllers\ListingController.cs:1482
+#: Controllers\ListingController.cs:1497
 msgid "You cannot review the order!"
 msgstr ""
 
 #: Controllers\BestPriceController.cs:531
 #: Controllers\PurchaseController.cs:526
-#: Controllers\ListingController.cs:1377
+#: Controllers\ListingController.cs:1392
 msgid "You cannot send message to yourself!"
 msgstr ""
 
@@ -4844,7 +4847,7 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:707
 #: Controllers\PurchaseController.cs:702
-#: Controllers\ListingController.cs:1560
+#: Controllers\ListingController.cs:1575
 msgid "You have reach the review limits today!"
 msgstr ""
 
@@ -4869,7 +4872,7 @@ msgstr ""
 msgid "You will delete the user and its all listings from "
 msgstr ""
 
-#: Controllers\ListingController.cs:1293
+#: Controllers\ListingController.cs:1308
 msgid "Your listing has been deleted."
 msgstr ""
 

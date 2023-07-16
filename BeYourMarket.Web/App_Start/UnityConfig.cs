@@ -81,6 +81,7 @@ namespace BeYourMarket.Web.App_Start
                 .RegisterType<IRepositoryAsync<MeiosDePagamento>, Repository<MeiosDePagamento>>()
                 .RegisterType<IRepositoryAsync<ModosPagamento>, Repository<ModosPagamento>>()
                 .RegisterType<IRepositoryAsync<CompraEfetuada>, Repository<CompraEfetuada>>()
+                .RegisterType<IRepositoryAsync<VideosOferta>, Repository<VideosOferta>>()
                 .RegisterType<ISettingService, SettingService>()
                 .RegisterType<ICategoryService, CategoryService>()
                 .RegisterType<IUnidadesService, UnidadesService>()
@@ -134,6 +135,7 @@ namespace BeYourMarket.Web.App_Start
                 .RegisterType<IMeiosDePagamentoService, MeiosDePagamentoService>()
                 .RegisterType<IModosPagamentoService, ModosPagamentoService>()
                 .RegisterType<ICompraEfetuadaService, CompraEfetuadaService>()
+                .RegisterType<IVideosOfertaService, VideosOfertaService>()
                 .RegisterType<IStoredProcedures, BeYourMarketContext>(new PerRequestLifetimeManager())
                 .RegisterType<SqlDbService, SqlDbService>()
                 .RegisterType<DataCacheService, DataCacheService>(new ContainerControlledLifetimeManager());

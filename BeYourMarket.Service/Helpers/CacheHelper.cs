@@ -317,6 +317,14 @@ namespace BeYourMarket.Service
             }
         }
 
+        public static List<VideosOferta> VideosOferta
+        {
+            get
+            {
+                return ContainerManager.GetConfiguredContainer().Resolve<BeYourMarket.Service.DataCacheService>().GetCachedItem(CacheKeys.OperationType) as List<VideosOferta>;
+            }
+        }
+
         public static SettingDictionary GetSettingDictionary(string settingKey)
         {
             var setting = SettingDictionary.Where(x => x.Name == settingKey).FirstOrDefault();
