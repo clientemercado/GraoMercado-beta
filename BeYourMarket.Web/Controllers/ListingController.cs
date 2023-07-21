@@ -572,10 +572,8 @@ namespace BeYourMarket.Web.Controllers
             }
 
             Listing listing;
-
             var userId = User.Identity.GetUserId();
             var user = await UserManager.FindByIdAsync(userId);
-
             var model = new ListingUpdateModel()
             {
                 Categories = CacheHelper.Categories,
@@ -600,13 +598,11 @@ namespace BeYourMarket.Web.Controllers
                     return new HttpUnauthorizedResult();
 
                 listing = await _listingService.FindAsync(id);
-
                 if (listing == null)
                     return new HttpNotFoundResult();
 
                 // Pictures
                 var pictures = await _listingPictureservice.Query(x => x.ListingID == id).SelectAsync();
-
                 var picturesModel = pictures.Select(x =>
                     new PictureModel()
                     {
@@ -641,7 +637,6 @@ namespace BeYourMarket.Web.Controllers
 
             // Populate model with listing
             await PopulateListingUpdateModel(listing, model);
-
             ViewBag.oqeq = (oqeq >= 0) ? oqeq : 0;
 
             return View("~/Views/Listing/ListingUpdate.cshtml", model);
@@ -675,6 +670,7 @@ namespace BeYourMarket.Web.Controllers
             model.id_TipoFrete = listing.id_TipoFrete;
             model.inNumApolice = listing.NumApolice.ToString();
             model.inPercentTaxaPlat = tipOper.Percentual_Comissao.ToString().Replace(",", ".");
+            model.UrlVideo = Path.Combine(Server.MapPath("~/Videos/"), listing.NomeVideoOferta);
 
             // Custom fields
             var customFieldCategoryQuery = await _customFieldCategoryService.Query(x => x.CategoryID == listing.CategoryID).Include(x => x.MetaField.ListingMetas).SelectAsync();
@@ -976,7 +972,16 @@ namespace BeYourMarket.Web.Controllers
                 listing.id_TipoFrete = Convert.ToInt32(form.Get("id_TipoFrete"));
                 //listing.id_Insurer = Convert.ToInt32(form.Get("SeguradoraID"));
                 listing.id_OperationType = (Array.IndexOf(tipsOper, listing.CategoryID) > -1) ? 1 : 0; //OBS: VER DEPOIS OS TIPOS DE OPERACAO QUE PODEM SER CONSIDERADOS AQUI EM VEZ DO 0 (zero) 
-                listing.ValorComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTaxa").Replace(".", ",")));
+
+                if (form.Get("inValorTaxa").IndexOf(".") > -1)
+                {
+                    listing.ValorComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTaxa").Replace(".", "")));
+                }
+                else
+                {
+                    listing.ValorComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTaxa").Replace(".", ","))); // ORIGINAL
+                }
+
                 listing.ValorTotalDoLoteSaleAddComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTotalDoLoteMaisTaxaSale").Replace(".", ",")));
 
                 //GERAR NOVA REFERÊNCIA PARA O LOTE OFERTADO
@@ -1042,9 +1047,6 @@ namespace BeYourMarket.Web.Controllers
                 //listingExisting.id_Insurer = Convert.ToInt32(form.Get("SeguradoraID"));
                 listingExisting.id_OperationType = (Array.IndexOf(tipsOper, listing.CategoryID) > -1) ? 1 : 0; //OBS: VER DEPOIS OS TIPOS DE OPERACAO QUE PODEM SER CONSIDERADOS AQUI EM VEZ DO 0 (zero) 
 
-                var teste1 = form.Get("inValorTaxa");
-                var teste2 = (form.Get("inValorTaxa").IndexOf("."));
-
                 if (form.Get("inValorTaxa").IndexOf(".") > -1)
                 {
                     listingExisting.ValorComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTaxa").Replace(".", "")));
@@ -1055,7 +1057,6 @@ namespace BeYourMarket.Web.Controllers
                 }
 
                 listingExisting.ValorTotalDoLoteSaleAddComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTotalDoLoteMaisTaxaSale")).Replace(".", ","));
-
                 listingExisting.ObjectState = Repository.Pattern.Infrastructure.ObjectState.Modified;
                 tipoAcao = 2;
                 lote = listingExisting.ReferLote;

@@ -297,6 +297,8 @@
 	        {
                 preview.AppendFormat(@"'<img src=""{0}"" class=""file-preview-image"">',", picture.Url);
                 previewDelete.AppendFormat(@"{{url: '{0}',key: {1} }},", Url.Action("ListingPhotoDelete", "Listing", new { id = picture.ID }), picture.ID);
+
+                //CONTINUAR AQUI... IMPLEMNETAR MODELO ACIMA PRA VÍDEO <--
 	        }
         }
 

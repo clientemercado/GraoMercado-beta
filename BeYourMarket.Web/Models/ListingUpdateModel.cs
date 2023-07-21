@@ -60,6 +60,7 @@ namespace BeYourMarket.Web.Models
         public string OfertaValidaAte { get; set; }
         public string FormaPagamento { get; set; }
         public string Linkcam { get; set; }
+        public string UrlVideo { get; set; }
 
         public List<TipoAnimalProducao> TiposAnimaisProducao { get; set; }
         public List<TiposRacasAnimaisPecuaria> RacasAnimais { get; set; }

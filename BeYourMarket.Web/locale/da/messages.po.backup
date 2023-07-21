@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-07-21 13:39-03:00\n"
-"PO-Revision-Date: 2023-07-21 13:39-03:00\n"
+"POT-Creation-Date: 2023-07-21 15:04-03:00\n"
+"PO-Revision-Date: 2023-07-21 15:04-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -268,7 +268,7 @@ msgstr ""
 #: Controllers\BestPriceController.cs:236
 #: Controllers\PurchaseController.cs:235
 #: Controllers\ListingController.cs:571
-#: Controllers\ListingController.cs:875
+#: Controllers\ListingController.cs:871
 #: Areas\Admin\Controllers\ListingController.cs:491
 #: Areas\Admin\Controllers\ListingController.cs:593
 msgid "Ainda não há categorias disponíveis"
@@ -2552,7 +2552,7 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:694
 #: Controllers\PurchaseController.cs:689
-#: Controllers\ListingController.cs:1628
+#: Controllers\ListingController.cs:1627
 msgid "Listing review is not allowed!"
 msgstr ""
 
@@ -2764,7 +2764,7 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:559
 #: Controllers\PurchaseController.cs:554
-#: Controllers\ListingController.cs:1486
+#: Controllers\ListingController.cs:1485
 msgid "Message sent succesfully!"
 msgstr "Beskeden er sendt"
 
@@ -2889,6 +2889,9 @@ msgstr ""
 #: Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:40
 #: Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:63
 #: Plugins\Plugin.Payment.Stripe\Views\TransactionOverview.cshtml:31
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\bin\Views\Transaction.cshtml:40
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\bin\Views\Transaction.cshtml:63
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\bin\Views\TransactionOverview.cshtml:31
 #: Areas\Admin\Views\ContentPage\ContentPages.cshtml:36
 #: Areas\Admin\Views\Listing\CustomFields.cshtml:54
 #: Areas\Admin\Views\Listing\Listings.cshtml:52
@@ -3063,8 +3066,8 @@ msgstr ""
 #: Controllers\BestPriceController.cs:765
 #: Controllers\PurchaseController.cs:671
 #: Controllers\PurchaseController.cs:760
-#: Controllers\ListingController.cs:1610
-#: Controllers\ListingController.cs:1699
+#: Controllers\ListingController.cs:1609
+#: Controllers\ListingController.cs:1698
 msgid "Obrigado pelo seu feedback!"
 msgstr ""
 
@@ -3112,11 +3115,11 @@ msgstr ""
 msgid "Oferta de Compra incluída com Sucesso!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1172
+#: Controllers\ListingController.cs:1171
 msgid "Oferta de VENDA LOTE: \" + lote + \" atualizada com SUCESSO!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1172
+#: Controllers\ListingController.cs:1171
 msgid "Oferta de VENDA LOTE: \" + lote + \" publicada com SUCESSO!"
 msgstr ""
 
@@ -3229,6 +3232,7 @@ msgstr ""
 
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:21
 #: Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:21
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\bin\Views\Transaction.cshtml:21
 #: obj\Release\Package\PackageTmp\Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:21
 msgid "Paid"
 msgstr "Betalt"
@@ -3351,6 +3355,7 @@ msgstr ""
 #: Views\Payment\Orders.cshtml:45
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:25
 #: Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:25
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\bin\Views\Transaction.cshtml:25
 #: Areas\Admin\Views\Payment\Order.cshtml:40
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:45
 #: obj\Release\Package\PackageTmp\Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:25
@@ -4045,7 +4050,7 @@ msgstr ""
 msgid "RESPOSTA da COTAÇÃO alterada com Sucesso!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1353
+#: Controllers\ListingController.cs:1352
 msgid "Resposta registrada com Sucesso!"
 msgstr ""
 
@@ -4796,8 +4801,8 @@ msgstr ""
 #: Controllers\BestPriceController.cs:721
 #: Controllers\PurchaseController.cs:616
 #: Controllers\PurchaseController.cs:716
-#: Controllers\ListingController.cs:1555
-#: Controllers\ListingController.cs:1655
+#: Controllers\ListingController.cs:1554
+#: Controllers\ListingController.cs:1654
 msgid "Você não pode avaliar a si mesmo!"
 msgstr ""
 
@@ -4823,20 +4828,20 @@ msgstr "Du kan ikke købe en vare af dig selv"
 msgid "You cannot delete Administrator, change the user role first."
 msgstr ""
 
-#: Controllers\ListingController.cs:1366
+#: Controllers\ListingController.cs:1365
 #: Areas\Admin\Controllers\ListingController.cs:762
 msgid "You cannot delete item with orders! You can deactivate it instead."
 msgstr "Du kan ikke slette varer, der har udestående ordre. Du kan deaktivere varen i stedet."
 
 #: Controllers\BestPriceController.cs:629
 #: Controllers\PurchaseController.cs:624
-#: Controllers\ListingController.cs:1563
+#: Controllers\ListingController.cs:1562
 msgid "You cannot review the order!"
 msgstr ""
 
 #: Controllers\BestPriceController.cs:531
 #: Controllers\PurchaseController.cs:526
-#: Controllers\ListingController.cs:1458
+#: Controllers\ListingController.cs:1457
 msgid "You cannot send message to yourself!"
 msgstr ""
 
@@ -4846,7 +4851,7 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:707
 #: Controllers\PurchaseController.cs:702
-#: Controllers\ListingController.cs:1641
+#: Controllers\ListingController.cs:1640
 msgid "You have reach the review limits today!"
 msgstr ""
 
@@ -4871,7 +4876,7 @@ msgstr ""
 msgid "You will delete the user and its all listings from "
 msgstr ""
 
-#: Controllers\ListingController.cs:1374
+#: Controllers\ListingController.cs:1373
 msgid "Your listing has been deleted."
 msgstr ""
 
