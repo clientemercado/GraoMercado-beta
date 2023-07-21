@@ -73,6 +73,7 @@ namespace BeYourMarket.Model.Models
 
         [AllowHtml]
         public string LinkCam { get; set; }
+        public string NomeVideoOferta { get; set; }
 
         public int? id_Insurer { get; set; }
         public double? NumApolice { get; set; }

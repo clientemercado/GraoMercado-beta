@@ -1,0 +1,304 @@
+﻿<error errorId="f92eb442-bf0b-4251-bb7f-0b05d6a84ae4" host="DESKTOP-GJ1QFNP" type="System.FormatException" message="Input string was not in a correct format." source="mscorlib" detail="System.FormatException: Input string was not in a correct format.&#xD;&#xA;   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer&amp; number, NumberFormatInfo info, Boolean parseDecimal)&#xD;&#xA;   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)&#xD;&#xA;   at System.Convert.ToDecimal(String value)&#xD;&#xA;   at BeYourMarket.Web.Controllers.ListingController.&lt;ListingUpdate&gt;d__64.MoveNext() in F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\BeYourMarket.Web\Controllers\ListingController.cs:line 1044&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass8_0.&lt;BeginInvokeAsynchronousActionMethod&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_0.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_2.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass7_0.&lt;BeginInvokeActionMethodWithFilters&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__4()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__1(IAsyncResult asyncResult)" user="edwilsoncurtis@gmail.com" time="2023-07-21T15:15:02.7692229Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:1869240&#xD;&#xA;HTTP_CONTENT_TYPE:multipart/form-data; boundary=----WebKitFormBoundaryQk810M6yYLrhWj9I&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=xvpNsoy3UcgtFzB7JgBYA3Noru5ClgnHp-SHnLW5PP51lzR0n5pCvtXN8Pn3Z6L2ubALbcDb5E7AZkfgllpMPmfzSa90NvpcD3Kl8xTmCuQ1; ASP.NET_SessionId=ze4v3e4jizawzznzdi31d2pj; .AspNet.ApplicationCookie=TYmCj_Lu3j9idvk1Vxy5TgaBPeF8tAmdxAfgKonMcZ1gUBV17HH_a3LECnJtSkbqrqcA5HD3sUhiKk6Kw7qbTQUaWe2OCgwXF1tSEbBPHMTNnXTgvHwwbSpYe57yvbSLrcU4rFXga5nspWcfV3gSjyQdgLxjubp3s_62CLHauEgH734rbCaDMCJ3XSfzTks5C9H24xlSoxnXp-ZgMp6sxUYTnYau0TQbIcDqYu7EKNFvj8ui6UTckIyrP2sFI9wkRed1UgSSgUcCBmrwidZV6Kht67387pWQqFOQ74MPFSdOg_eYHGhgms7y_XV9iIMjqAjmLJvDW0rtPzU-RAopsgy6-LnYHdGVxPoS1uiJ1LuRlb3dI9IQX_Wh65Fky_Pj0i-iurouSoyExvf-G_5TwMvIN5kOaCJVR_J4mm9xLTTIPZC5Sw7aGpKQlP_kmw9rGUd6n7ne1TnmM6ZG_EveZUZVeoexG18ouNdpwYN5BTNDFpDUyeohsP8w-CJmM6wx&#xD;&#xA;HTTP_HOST:localhost:59674&#xD;&#xA;HTTP_REFERER:http://localhost:59674/pt/listing/listingupdate/27?oqeq=0&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36&#xD;&#xA;HTTP_SEC_CH_UA:&quot;Not.A/Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;114&quot;, &quot;Google Chrome&quot;;v=&quot;114&quot;&#xD;&#xA;HTTP_SEC_CH_UA_MOBILE:?0&#xD;&#xA;HTTP_SEC_CH_UA_PLATFORM:&quot;Windows&quot;&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_ORIGIN:http://localhost:59674&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;HTTP_DNT:1&#xD;&#xA;HTTP_SEC_GPC:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 1869240&#xD;&#xA;Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryQk810M6yYLrhWj9I&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=xvpNsoy3UcgtFzB7JgBYA3Noru5ClgnHp-SHnLW5PP51lzR0n5pCvtXN8Pn3Z6L2ubALbcDb5E7AZkfgllpMPmfzSa90NvpcD3Kl8xTmCuQ1; ASP.NET_SessionId=ze4v3e4jizawzznzdi31d2pj; .AspNet.ApplicationCookie=TYmCj_Lu3j9idvk1Vxy5TgaBPeF8tAmdxAfgKonMcZ1gUBV17HH_a3LECnJtSkbqrqcA5HD3sUhiKk6Kw7qbTQUaWe2OCgwXF1tSEbBPHMTNnXTgvHwwbSpYe57yvbSLrcU4rFXga5nspWcfV3gSjyQdgLxjubp3s_62CLHauEgH734rbCaDMCJ3XSfzTks5C9H24xlSoxnXp-ZgMp6sxUYTnYau0TQbIcDqYu7EKNFvj8ui6UTckIyrP2sFI9wkRed1UgSSgUcCBmrwidZV6Kht67387pWQqFOQ74MPFSdOg_eYHGhgms7y_XV9iIMjqAjmLJvDW0rtPzU-RAopsgy6-LnYHdGVxPoS1uiJ1LuRlb3dI9IQX_Wh65Fky_Pj0i-iurouSoyExvf-G_5TwMvIN5kOaCJVR_J4mm9xLTTIPZC5Sw7aGpKQlP_kmw9rGUd6n7ne1TnmM6ZG_EveZUZVeoexG18ouNdpwYN5BTNDFpDUyeohsP8w-CJmM6wx&#xD;&#xA;Host: localhost:59674&#xD;&#xA;Referer: http://localhost:59674/pt/listing/listingupdate/27?oqeq=0&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36&#xD;&#xA;sec-ch-ua: &quot;Not.A/Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;114&quot;, &quot;Google Chrome&quot;;v=&quot;114&quot;&#xD;&#xA;sec-ch-ua-mobile: ?0&#xD;&#xA;sec-ch-ua-platform: &quot;Windows&quot;&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Origin: http://localhost:59674&#xD;&#xA;Sec-Fetch-Site: same-origin&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;dnt: 1&#xD;&#xA;sec-gpc: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\BeYourMarket.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="1869240" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=----WebKitFormBoundaryQk810M6yYLrhWj9I" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/listing/listingupdate/27" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\BeYourMarket.Web\listing\listingupdate\27" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="oqeq=0" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="55953" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/listing/listingupdate/27" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="59674" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/listing/listingupdate/27" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="1869240" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=----WebKitFormBoundaryQk810M6yYLrhWj9I" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=xvpNsoy3UcgtFzB7JgBYA3Noru5ClgnHp-SHnLW5PP51lzR0n5pCvtXN8Pn3Z6L2ubALbcDb5E7AZkfgllpMPmfzSa90NvpcD3Kl8xTmCuQ1; ASP.NET_SessionId=ze4v3e4jizawzznzdi31d2pj; .AspNet.ApplicationCookie=TYmCj_Lu3j9idvk1Vxy5TgaBPeF8tAmdxAfgKonMcZ1gUBV17HH_a3LECnJtSkbqrqcA5HD3sUhiKk6Kw7qbTQUaWe2OCgwXF1tSEbBPHMTNnXTgvHwwbSpYe57yvbSLrcU4rFXga5nspWcfV3gSjyQdgLxjubp3s_62CLHauEgH734rbCaDMCJ3XSfzTks5C9H24xlSoxnXp-ZgMp6sxUYTnYau0TQbIcDqYu7EKNFvj8ui6UTckIyrP2sFI9wkRed1UgSSgUcCBmrwidZV6Kht67387pWQqFOQ74MPFSdOg_eYHGhgms7y_XV9iIMjqAjmLJvDW0rtPzU-RAopsgy6-LnYHdGVxPoS1uiJ1LuRlb3dI9IQX_Wh65Fky_Pj0i-iurouSoyExvf-G_5TwMvIN5kOaCJVR_J4mm9xLTTIPZC5Sw7aGpKQlP_kmw9rGUd6n7ne1TnmM6ZG_EveZUZVeoexG18ouNdpwYN5BTNDFpDUyeohsP8w-CJmM6wx" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:59674" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:59674/pt/listing/listingupdate/27?oqeq=0" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" />
+    </item>
+    <item name="HTTP_SEC_CH_UA">
+      <value string="&quot;Not.A/Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;114&quot;, &quot;Google Chrome&quot;;v=&quot;114&quot;" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_MOBILE">
+      <value string="?0" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_PLATFORM">
+      <value string="&quot;Windows&quot;" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:59674" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+    <item name="HTTP_DNT">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_GPC">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="oqeq">
+      <value string="0" />
+    </item>
+  </queryString>
+  <form>
+    <item name="ListingItem.ID">
+      <value string="27" />
+    </item>
+    <item name="CategoryID">
+      <value string="6" />
+    </item>
+    <item name="Title">
+      <value string="Vende-se 1800 boi de 12 a 14@" />
+    </item>
+    <item name="Description">
+      <value string="Vende se 1800 boi Angus de 12 a 14@" />
+    </item>
+    <item name="TiposAnimaisProducao">
+      <value string="1" />
+    </item>
+    <item name="inTipoRacaAnimal">
+      <value string="1" />
+    </item>
+    <item name="inTpRacaSelec">
+      <value string="1" />
+    </item>
+    <item name="inIdadeAnimais">
+      <value string="10 meses" />
+    </item>
+    <item name="inQuantidadeItemSale">
+      <value string="1.800,00" />
+    </item>
+    <item name="UnidadeProduto">
+      <value string="Cabeça(s)" />
+    </item>
+    <item name="inPesoKgPorItemSale">
+      <value string="390,00" />
+    </item>
+    <item name="inPesoArrobaPorItemSale">
+      <value string="13,00" />
+    </item>
+    <item name="inPesoTotalLoteKgSale">
+      <value string="702.000,00" />
+    </item>
+    <item name="inPesoTotalLoteArrobaSale">
+      <value string="23.400,00" />
+    </item>
+    <item name="inValorTotalPorAnimalSale">
+      <value string="3333,00" />
+    </item>
+    <item name="inValorTotalDoLoteSale">
+      <value string="5.999.400,00" />
+    </item>
+    <item name="inValorTaxa">
+      <value string="59.994,00" />
+    </item>
+    <item name="inPctTx">
+      <value string="1.00" />
+    </item>
+    <item name="inValorTotalDoLoteMaisTaxaSale">
+      <value string="6.059.394,00" />
+    </item>
+    <item name="inValorTotalPorKgSale">
+      <value string="8,63" />
+    </item>
+    <item name="inValorTotalPorArrobaSale">
+      <value string="258,95" />
+    </item>
+    <item name="id_TipoFrete">
+      <value string="3" />
+    </item>
+    <item name="inLocalRetirada">
+      <value string="Fazenda Santa Rosa" />
+    </item>
+    <item name="inCidadeEstadoRetirada">
+      <value string="Carangola-MG" />
+    </item>
+    <item name="inReferenciaLocalRetirada">
+      <value string="Estrada pro horto, km 1, depois do antigo lixão, primeira entrada à esquerda" />
+    </item>
+    <item name="ContactName">
+      <value string="Usuario Teste2 Modelo" />
+    </item>
+    <item name="ContactPhone">
+      <value string="(27) 99735-4780" />
+    </item>
+    <item name="ShowPhone">
+      <value string="false" />
+    </item>
+    <item name="ContactEmail">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="xvpNsoy3UcgtFzB7JgBYA3Noru5ClgnHp-SHnLW5PP51lzR0n5pCvtXN8Pn3Z6L2ubALbcDb5E7AZkfgllpMPmfzSa90NvpcD3Kl8xTmCuQ1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="ze4v3e4jizawzznzdi31d2pj" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="TYmCj_Lu3j9idvk1Vxy5TgaBPeF8tAmdxAfgKonMcZ1gUBV17HH_a3LECnJtSkbqrqcA5HD3sUhiKk6Kw7qbTQUaWe2OCgwXF1tSEbBPHMTNnXTgvHwwbSpYe57yvbSLrcU4rFXga5nspWcfV3gSjyQdgLxjubp3s_62CLHauEgH734rbCaDMCJ3XSfzTks5C9H24xlSoxnXp-ZgMp6sxUYTnYau0TQbIcDqYu7EKNFvj8ui6UTckIyrP2sFI9wkRed1UgSSgUcCBmrwidZV6Kht67387pWQqFOQ74MPFSdOg_eYHGhgms7y_XV9iIMjqAjmLJvDW0rtPzU-RAopsgy6-LnYHdGVxPoS1uiJ1LuRlb3dI9IQX_Wh65Fky_Pj0i-iurouSoyExvf-G_5TwMvIN5kOaCJVR_J4mm9xLTTIPZC5Sw7aGpKQlP_kmw9rGUd6n7ne1TnmM6ZG_EveZUZVeoexG18ouNdpwYN5BTNDFpDUyeohsP8w-CJmM6wx" />
+    </item>
+  </cookies>
+</error>

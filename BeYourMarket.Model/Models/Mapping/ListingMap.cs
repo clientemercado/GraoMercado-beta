@@ -81,6 +81,7 @@ namespace BeYourMarket.Model.Models.Mapping
             this.Property(t => t.LocalRetirada).HasColumnName("LocalRetirada");
             this.Property(t => t.ReferenciaLocalRetirada).HasColumnName("ReferenciaLocalRetirada");
             this.Property(t => t.LinkCam).HasColumnName("LinkCam");
+            this.Property(t => t.NomeVideoOferta).HasColumnName("NomeVideoOferta");           
             this.Property(t => t.id_Insurer).HasColumnName("id_Insurer");
             this.Property(t => t.NumApolice).HasColumnName("NumApolice");
             this.Property(t => t.ValorCoberturaApolice).HasColumnName("ValorCoberturaApolice");

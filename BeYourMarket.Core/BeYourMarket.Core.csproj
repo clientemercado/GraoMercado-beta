@@ -123,6 +123,7 @@
     <Compile Include="Services\IHookService.cs" />
     <Compile Include="Services\HookService.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ViewModel\UploadFilesResult.cs" />
     <Compile Include="Web\TempDataKeys.cs" />
     <Compile Include="HookName.cs" />
     <Compile Include="WriteLockDisposable.cs" />
@@ -146,6 +147,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -209,7 +209,7 @@
                             <legend class="animals" style="display:none;">[[[Tem um vídeo dos animais? Carregue-o aqui e torne seu produto mais atraente para os compradores. <i class="fa fa-long-arrow-down" aria-hidden="true"></i>]]]</legend>
                             <div class="form-group animals" style="display:none;">
                                 <div class="target">
-                                    <input type="file" id="fileUploads" name="fileUploads" class="file-loading">
+                                    <input type="file" id="fileVideoUploads" name="fileVideoUploads" class="file-loading">
                                 </div>
                             </div>
                         </fieldset>
@@ -303,7 +303,7 @@
         animalform();
         CarregaRacas($('#tipoAnimal').val());
         var $input = $("#files");
-        var $input2 = $("#fileUploads");
+        var $input2 = $("#fileVideoUploads");
 
         if (parseInt($('#ListingItem_ID').val()) == 0) $('#inUnidades').val(0)
 

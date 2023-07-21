@@ -24,7 +24,8 @@ using BeYourMarket.Service.Models;
 using Microsoft.Practices.Unity;
 using BeYourMarket.Web.Extensions;
 using System.Text.RegularExpressions;
-using System.Data.Entity.Validation; 
+using System.Data.Entity.Validation;
+using BeYourMarket.Core.Controllers;
 
 namespace BeYourMarket.Web.Controllers
 {
@@ -861,7 +862,8 @@ namespace BeYourMarket.Web.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateInput(false)]
-        public async Task<ActionResult> ListingUpdate(Listing listing, FormCollection form, IEnumerable<HttpPostedFileBase> files, IEnumerable<HttpPostedFileBase> fileVideoUploads, int? oqeq)
+        //public async Task<ActionResult> ListingUpdate(Listing listing, FormCollection form, IEnumerable<HttpPostedFileBase> files, IEnumerable<HttpPostedFileBase> fileVideoUploads, int? oqeq)
+        public async Task<ActionResult> ListingUpdate(Listing listing, FormCollection form, IEnumerable<HttpPostedFileBase> files, HttpPostedFileBase fileVideoUploads, int? oqeq)
         {
             var tipoAcao = 1;
             var lote = "";
@@ -967,6 +969,7 @@ namespace BeYourMarket.Web.Controllers
                 listing.id_AnimalProducao = Convert.ToInt32(form.Get("TiposAnimaisProducao"));
                 listing.id_TipoRacasAnimais = Convert.ToInt32(form.Get("inTipoRacaAnimal"));
                 listing.LinkCam = form.Get("Linkcam");
+                listing.NomeVideoOferta = fileVideoUploads.FileName;                
                 listing.Location = form.Get("inCidadeEstadoRetirada");
                 listing.LocalRetirada = form.Get("inLocalRetirada");
                 listing.ReferenciaLocalRetirada = form.Get("inReferenciaLocalRetirada");
@@ -1031,13 +1034,26 @@ namespace BeYourMarket.Web.Controllers
                 listingExisting.ValorTotalPorAnimalSale = valorUnitAdComissao;
                 listingExisting.ValorTotalDoLoteSale = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTotalDoLoteSale")).Replace(".", ","));
                 listingExisting.LinkCam = form.Get("Linkcam");
+                listingExisting.NomeVideoOferta = fileVideoUploads.FileName;
                 listingExisting.Location = form.Get("inCidadeEstadoRetirada");
                 listingExisting.LocalRetirada = form.Get("inLocalRetirada");
                 listingExisting.ReferenciaLocalRetirada = form.Get("inReferenciaLocalRetirada");
                 listingExisting.id_TipoFrete = Convert.ToInt32(form.Get("id_TipoFrete"));
                 //listingExisting.id_Insurer = Convert.ToInt32(form.Get("SeguradoraID"));
                 listingExisting.id_OperationType = (Array.IndexOf(tipsOper, listing.CategoryID) > -1) ? 1 : 0; //OBS: VER DEPOIS OS TIPOS DE OPERACAO QUE PODEM SER CONSIDERADOS AQUI EM VEZ DO 0 (zero) 
-                listingExisting.ValorComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTaxa").Replace(".", ",")));
+
+                var teste1 = form.Get("inValorTaxa");
+                var teste2 = (form.Get("inValorTaxa").IndexOf("."));
+
+                if (form.Get("inValorTaxa").IndexOf(".") > -1)
+                {
+                    listingExisting.ValorComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTaxa").Replace(".", "")));
+                }
+                else
+                {
+                    listingExisting.ValorComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTaxa").Replace(".", ","))); // ORIGINAL
+                }
+
                 listingExisting.ValorTotalDoLoteSaleAddComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTotalDoLoteMaisTaxaSale")).Replace(".", ","));
 
                 listingExisting.ObjectState = Repository.Pattern.Infrastructure.ObjectState.Modified;
@@ -1134,17 +1150,11 @@ namespace BeYourMarket.Web.Controllers
                 }
             }
 
-            //================================================================================
-            //================================================================================
             //Upload do Vídeo - Implemented By Edwilson Curti
-            if (fileVideoUploads != null && fileVideoUploads.Count() > 0)
+            if (fileVideoUploads != null)
             {
-                // CONTINUAR AQUI...
-                // 1º) VER EXEMPLO NO SOX DE UPLOAD DE ARQUIVOS
-                // 2º) CRIAR MÉTODO DE UPLOAD DE ARQUIVOS, DE PREFERENCIA FUNCIONANDO DE FORMA DINÂMICA, NA PASTA UTILITIES, NA CLASSE MiscellaneousUtilitiesHelper.cs
+                UploadFiles(fileVideoUploads);
             }
-            //================================================================================
-            //================================================================================
 
             await _unitOfWorkAsync.SaveChangesAsync();
 
@@ -1160,6 +1170,60 @@ namespace BeYourMarket.Web.Controllers
             TempData[TempDataKeys.UserMessage] = (tipoAcao == 1) ? "[[[Oferta de VENDA LOTE: " + lote + " publicada com SUCESSO!]]]" : "[[[Oferta de VENDA LOTE: " + lote + " atualizada com SUCESSO!]]]";
             return RedirectToAction("Listing", new { id = listing.ID });
         }
+
+        //======================================================================
+        //UPLOAD de arquivos
+        [HttpPost]
+        public ContentResult UploadFiles(HttpPostedFileBase fileVideoUploads)
+        {
+            try
+            {
+                string nomeCaminhoMaisArquivo = "";
+                var r = new List<UploadFilesResult>();
+
+                //string pastaCodigoEmpresa = Sessao.IdEmpresaUsuario.ToString();
+                string caminhoVideo = System.AppDomain.CurrentDomain.BaseDirectory.ToString(); //Pega o caminho físico do PROJETO, para ser usado na montagem do caminho real de armaz.
+
+                //Montando o caminho de armazenamento a ser confirmada existência
+                caminhoVideo = (caminhoVideo + "Videos/");
+
+                //Verifica se a estrutura de pastas de armazenamento está criada. Se não existir, cria imediatamente
+                DirectoryInfo dir = new DirectoryInfo(caminhoVideo);
+
+                if (dir.Exists == false)
+                    dir.Create();
+
+                //Realizando o UPLOAD
+                //foreach (string file in Request.Files)
+                //{
+                    //HttpPostedFileBase hpf = Request.Files[file];
+                    //if (hpf.ContentLength == 0)
+                    //    continue;
+
+                    string fileName = Regex.Replace(fileVideoUploads.FileName, @"\s+", "_");
+                    string savedFileName = Path.Combine(Server.MapPath("~/Videos/"), Path.GetFileName(fileName));
+                    fileVideoUploads.SaveAs(savedFileName); //Salva o arquivo
+                    nomeCaminhoMaisArquivo = ("~/Videos/" + fileName);
+
+                    r.Add(new UploadFilesResult()
+                    {
+                        Name = fileName,
+                        //Length = hpf.ContentLength,
+                        //Type = hpf.ContentType,
+                        Length = fileVideoUploads.ContentLength,
+                        Type = fileVideoUploads.ContentType,
+                        CaminhoArquivoVideo = nomeCaminhoMaisArquivo
+                    });
+                //}
+
+                return Content("{\"name\":\"" + r[0].Name + "\",\"type\":\"" + r[0].Type + "\",\"size\":\"" + string.Format("{0} bytes", r[0].Length) + "\",\"nomeCaminhoArquivo\":\"" + r[0].CaminhoArquivoVideo + "\"}", "application/json"); //ORIGINAL
+            }
+            catch (Exception erro)
+            {
+                throw erro;
+            }
+        }
+        //======================================================================
 
         /// <summary>
         /// Grava a conversa do Chat
