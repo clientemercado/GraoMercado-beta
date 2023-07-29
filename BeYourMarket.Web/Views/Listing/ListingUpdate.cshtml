@@ -208,9 +208,21 @@
                         <fieldset>
                             <legend class="animals" style="display:none;">[[[Tem um vídeo dos animais? Carregue-o aqui e torne seu produto mais atraente para os compradores. <i class="fa fa-long-arrow-down" aria-hidden="true"></i>]]]</legend>
                             <div class="form-group animals" style="display:none;">
-                                <div class="target">
-                                    <input type="file" id="fileVideoUploads" name="fileVideoUploads" class="file-loading">
-                                </div>
+                                @*<div class="embed-responsive embed-responsive-16by9">*@
+                                    @if (string.IsNullOrEmpty(@Model.UrlVideo))
+                                    {
+                                        <div class="target">
+                                            <input type="file" id="fileVideoUploads" name="fileVideoUploads" class="file-loading">
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        @*<div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" src="@Model.UrlVideo" allowfullscreen></iframe>
+                                        </div>*@
+                                        <video src="@Model.UrlVideo" controls muted></video>
+                                    }
+                                @*</div>*@
                             </div>
                         </fieldset>
 
@@ -289,17 +301,22 @@
     @Html.Partial("_LocalizationFileInput")
 
 <script>
+    debugger;
         @{
             var preview = new System.Text.StringBuilder();
             var previewDelete = new System.Text.StringBuilder();
+            var previewVideo = new System.Text.StringBuilder();
+            var previewDeleteVideo = new System.Text.StringBuilder();
 
             foreach (var picture in Model.Pictures)
-	        {
+            {
                 preview.AppendFormat(@"'<img src=""{0}"" class=""file-preview-image"">',", picture.Url);
                 previewDelete.AppendFormat(@"{{url: '{0}',key: {1} }},", Url.Action("ListingPhotoDelete", "Listing", new { id = picture.ID }), picture.ID);
+            }
 
-                //CONTINUAR AQUI... IMPLEMNETAR MODELO ACIMA PRA VÍDEO <--
-	        }
+            //Sobre os Vídeos
+            //previewVideo.AppendFormat(@"'<source src=""{0}"" type=""video/mp4"" class=""file-preview-image"">',", Model.UrlVideo);
+            //previewDeleteVideo.AppendFormat(@"{{url: '{0}',key: {1} }},", Url.Action("ListingPhotoDelete", "Listing", new { id = picture.ID }), picture.ID);
         }
 
         animalform();
@@ -336,10 +353,10 @@
             maxFileCount: 1,
             overwriteInitial: false,
             initialPreview: [
-                    @Html.Raw(preview.ToString())
+                    @Html.Raw(previewVideo.ToString())
             ],
             initialPreviewConfig: [
-                @Html.Raw(previewDelete.ToString())
+                @Html.Raw(previewDeleteVideo.ToString())
             ],
             maxFileSize: 11000,
             browseClass: "btn btn-primary",

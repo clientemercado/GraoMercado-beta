@@ -670,7 +670,12 @@ namespace BeYourMarket.Web.Controllers
             model.id_TipoFrete = listing.id_TipoFrete;
             model.inNumApolice = listing.NumApolice.ToString();
             model.inPercentTaxaPlat = tipOper.Percentual_Comissao.ToString().Replace(",", ".");
-            model.UrlVideo = Path.Combine(Server.MapPath("~/Videos/"), listing.NomeVideoOferta);
+
+            if (listing.NomeVideoOferta != null) 
+            {
+
+                model.UrlVideo = Path.Combine(Server.MapPath("~/Videos/"), listing.NomeVideoOferta); //DEPOIS CARREGAR AQUI O ID DO REGISTRO DE VÍDEO
+            }
 
             // Custom fields
             var customFieldCategoryQuery = await _customFieldCategoryService.Query(x => x.CategoryID == listing.CategoryID).Include(x => x.MetaField.ListingMetas).SelectAsync();
@@ -864,6 +869,7 @@ namespace BeYourMarket.Web.Controllers
             var tipoAcao = 1;
             var lote = "";
             int[] tipsOper = new int[] { 1, 2, 3, 4, 6 };
+            VideosOferta videoOferta = new VideosOferta();
 
             if (CacheHelper.Categories.Count == 0)
             {
@@ -965,7 +971,6 @@ namespace BeYourMarket.Web.Controllers
                 listing.id_AnimalProducao = Convert.ToInt32(form.Get("TiposAnimaisProducao"));
                 listing.id_TipoRacasAnimais = Convert.ToInt32(form.Get("inTipoRacaAnimal"));
                 listing.LinkCam = form.Get("Linkcam");
-                listing.NomeVideoOferta = fileVideoUploads.FileName;                
                 listing.Location = form.Get("inCidadeEstadoRetirada");
                 listing.LocalRetirada = form.Get("inLocalRetirada");
                 listing.ReferenciaLocalRetirada = form.Get("inReferenciaLocalRetirada");
@@ -983,6 +988,16 @@ namespace BeYourMarket.Web.Controllers
                 }
 
                 listing.ValorTotalDoLoteSaleAddComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTotalDoLoteMaisTaxaSale").Replace(".", ",")));
+
+                //=============================================================================
+                //Upload do Vídeo - Implemented By Edwilson Curti
+                if (fileVideoUploads != null)
+                {
+                    UploadFiles(fileVideoUploads);
+                }
+
+                listing.NomeVideoOferta = fileVideoUploads.FileName;
+                //=============================================================================
 
                 //GERAR NOVA REFERÊNCIA PARA O LOTE OFERTADO
                 var listOfertas = await _listingService.Query(l => (l.ID > 0)).SelectAsync();
@@ -1039,7 +1054,6 @@ namespace BeYourMarket.Web.Controllers
                 listingExisting.ValorTotalPorAnimalSale = valorUnitAdComissao;
                 listingExisting.ValorTotalDoLoteSale = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTotalDoLoteSale")).Replace(".", ","));
                 listingExisting.LinkCam = form.Get("Linkcam");
-                listingExisting.NomeVideoOferta = fileVideoUploads.FileName;
                 listingExisting.Location = form.Get("inCidadeEstadoRetirada");
                 listingExisting.LocalRetirada = form.Get("inLocalRetirada");
                 listingExisting.ReferenciaLocalRetirada = form.Get("inReferenciaLocalRetirada");
@@ -1056,12 +1070,29 @@ namespace BeYourMarket.Web.Controllers
                     listingExisting.ValorComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTaxa").Replace(".", ","))); // ORIGINAL
                 }
 
+                //=============================================================================
+                //Upload do Vídeo - Implemented By Edwilson Curti
+                if (fileVideoUploads != null)
+                {
+                    UploadFiles(fileVideoUploads);
+                }
+
+                listingExisting.NomeVideoOferta = fileVideoUploads.FileName;
+                //=============================================================================
+
                 listingExisting.ValorTotalDoLoteSaleAddComissao = Convert.ToDecimal(MiscellaneousUtilitiesHelper.TratamentoMilharMonetario(form.Get("inValorTotalDoLoteMaisTaxaSale")).Replace(".", ","));
                 listingExisting.ObjectState = Repository.Pattern.Infrastructure.ObjectState.Modified;
                 tipoAcao = 2;
                 lote = listingExisting.ReferLote;
 
                 _listingService.Update(listingExisting);
+
+                ////==============================================================================
+                //// Gravação do registro relacionado ao Vídeo
+                //videoOferta.id_Oferta = listingExisting.ID;
+                //videoOferta.descricao_videoOferta = fileVideoUploads.FileName;
+                //_videosOfertaService.Insert(videoOferta);
+                ////===============================================================================
             }
 
             // Delete existing fields on item
@@ -1102,6 +1133,17 @@ namespace BeYourMarket.Web.Controllers
             }
 
             await _unitOfWorkAsync.SaveChangesAsync();
+
+            //==============================================================================
+            // Gravação do registro relacionado ao Vídeo
+            // OBS: CONTINUAR AQUI ,=== A GRAVAÇÃO JÁ ESTÁ FUNCIONANDO. VER O Q TEM Q ADAPTAR PRA QUE FUNCIONE A EDIÇÃO DA OFERTA <=== CONTINUAR AQUI
+
+            videoOferta.id_Oferta = listing.ID;
+            videoOferta.descricao_videoOferta = fileVideoUploads.FileName;
+            _videosOfertaService.Insert(videoOferta);
+
+            await _unitOfWorkAsync.SaveChangesAsync();
+            //===============================================================================
 
             if (Request.Files.Count > 0)
             {
@@ -1149,12 +1191,6 @@ namespace BeYourMarket.Web.Controllers
                         nextPictureOrderId++;
                     }
                 }
-            }
-
-            //Upload do Vídeo - Implemented By Edwilson Curti
-            if (fileVideoUploads != null)
-            {
-                UploadFiles(fileVideoUploads);
             }
 
             await _unitOfWorkAsync.SaveChangesAsync();
@@ -1399,6 +1435,34 @@ namespace BeYourMarket.Web.Controllers
                 return Json(result, JsonRequestBehavior.AllowGet);
             }
         }
+
+        //=========================================================
+        public async Task<ActionResult> ListingVideoDelete(int id)
+        {
+            try
+            {
+                await _pictureService.DeleteAsync(id);
+                var itemPicture = _listingPictureservice.Query(x => x.PictureID == id).Select().FirstOrDefault();
+
+                if (itemPicture != null)
+                    await _listingPictureservice.DeleteAsync(itemPicture.ID);
+
+                await _unitOfWorkAsync.SaveChangesAsync();
+
+                var path = Path.Combine(Server.MapPath("~/images/listing"), string.Format("{0}.{1}", id.ToString("00000000"), "jpg"));
+
+                System.IO.File.Delete(path);
+
+                var result = new { Success = "true", Message = "" };
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                var result = new { Success = "false", Message = ex.Message };
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+        }
+        //=========================================================
 
         [AllowAnonymous]
         public async new Task<ActionResult> Profile(string id, int? oqeq)

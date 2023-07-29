@@ -40,7 +40,7 @@ namespace BeYourMarket.Web.Models
         public CustomFieldListingModel CustomFields { get; set; }
 
         public List<Unidades> Unidades { get; set; }
-        public List<ModalidadesCompra> ModalidadesCompra { get; set;}
+        public List<ModalidadesCompra> ModalidadesCompra { get; set; }
         public List<TiposFrete> TiposFrete { get; set; }
         public List<IntencoesCompra> IntencoesCompra { get; set; }
         public List<FormasPagamento> FormasPagamento { get; set; }
@@ -60,6 +60,7 @@ namespace BeYourMarket.Web.Models
         public string OfertaValidaAte { get; set; }
         public string FormaPagamento { get; set; }
         public string Linkcam { get; set; }
+        public int id_Video { get; set; }
         public string UrlVideo { get; set; }
 
         public List<TipoAnimalProducao> TiposAnimaisProducao { get; set; }

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-07-21 15:04-03:00\n"
-"PO-Revision-Date: 2023-07-21 15:04-03:00\n"
+"POT-Creation-Date: 2023-07-29 15:29-03:00\n"
+"PO-Revision-Date: 2023-07-29 15:29-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -266,9 +266,9 @@ msgid "Ainda não há avaliações"
 msgstr ""
 
 #: Controllers\BestPriceController.cs:236
-#: Controllers\PurchaseController.cs:235
 #: Controllers\ListingController.cs:571
-#: Controllers\ListingController.cs:871
+#: Controllers\ListingController.cs:877
+#: Controllers\PurchaseController.cs:235
 #: Areas\Admin\Controllers\ListingController.cs:491
 #: Areas\Admin\Controllers\ListingController.cs:593
 msgid "Ainda não há categorias disponíveis"
@@ -303,15 +303,15 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:55
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingReviewModal.cshtml:60
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:55
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:65
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:48
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:64
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:53
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:140
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:59
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:83
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:122
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:47
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:65
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:48
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:64
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\ContentPage\ContentPages.cshtml:15
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:15
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Categories.cshtml:21
@@ -532,7 +532,7 @@ msgstr ""
 #: Views\Listing\Listing.cshtml:602
 #: Views\Listing\PurchaseUpdate.cshtml:142
 #: Views\Listing\Review.cshtml:74
-#: Views\Listing\ListingUpdate.cshtml:273
+#: Views\Listing\ListingUpdate.cshtml:283
 #: Views\Manage\BestPrice.cshtml:186
 #: Views\Manage\BestPrice.cshtml:218
 #: Views\Manage\BestPrice.cshtml:238
@@ -587,6 +587,11 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:273
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:602
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:142
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:91
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:74
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:105
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:90
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:121
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:79
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:110
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:186
@@ -603,11 +608,6 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:303
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:323
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:73
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:91
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:74
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:105
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:90
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:121
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:26
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:30
 #: obj\Release\Package\PackageTmp\Views\Purchase\PurchaseUpdate.cshtml:142
@@ -654,9 +654,9 @@ msgstr "Annulleret"
 #: Views\Manage\Dashboard_OLD_2.cshtml:109
 #: Views\Payment\Orders.cshtml:189
 #: Areas\Admin\Views\Listing\Listings.cshtml:105
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:109
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:114
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:91
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:109
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:189
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Listings.cshtml:105
 msgid "Cancelled!"
@@ -734,7 +734,7 @@ msgstr "Ændre profiloplysninger"
 msgid "Change your password"
 msgstr "Skift adgangskode"
 
-#: Views\Listing\ListingUpdate.cshtml:224
+#: Views\Listing\ListingUpdate.cshtml:234
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:224
 msgid "Cidade"
 msgstr ""
@@ -752,9 +752,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:105
 #: Views\Manage\ToBuy_OLD.cshtml:100
 #: Views\Manage\ToBuy_OLD_2.cshtml:116
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:105
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:100
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:116
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:105
 msgid "Clicando em CONTINUAR você iniciará o cadastro da sua OFERTA DE COMPRA com a intenção de COMPRAR algum produto nesta plataforma.\n\nSe sua intenção é VENDER, clique em CANCELAR e inicie uma OFERTA DE VENDA."
 msgstr ""
 
@@ -932,8 +932,8 @@ msgstr "Bekræft adgangskode"
 
 #: Views\Listing\PurchaseUpdate.cshtml:135
 #: Views\Listing\PurchaseUpdate.cshtml:136
-#: Views\Listing\ListingUpdate.cshtml:266
-#: Views\Listing\ListingUpdate.cshtml:267
+#: Views\Listing\ListingUpdate.cshtml:276
+#: Views\Listing\ListingUpdate.cshtml:277
 #: Views\Purchase\PurchaseUpdate.cshtml:135
 #: Views\Purchase\PurchaseUpdate.cshtml:136
 #: Views\SearchPrice\AddMyQuote.cshtml:119
@@ -990,15 +990,15 @@ msgstr "Bekræft for at annullere ordren"
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:102
 #: Areas\Admin\Views\Manage\Users.cshtml:77
 #: Areas\Admin\Views\Payment\Order.cshtml:142
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:85
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:68
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:84
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:73
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:180
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:90
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:110
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:210
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:67
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:85
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:68
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:84
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:166
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:102
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Categories.cshtml:101
@@ -1146,6 +1146,8 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:109
 #: Views\Manage\ToBuy_OLD.cshtml:104
 #: Views\Manage\ToBuy_OLD_2.cshtml:120
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:104
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:120
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:109
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:217
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:237
@@ -1153,8 +1155,6 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:167
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:282
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:302
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:104
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:120
 msgid "Continuar"
 msgstr ""
 
@@ -1397,6 +1397,9 @@ msgstr "Du skal først vælge et standardsprog"
 #: Areas\Admin\Views\Listing\Listings.cshtml:19
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:20
 #: Areas\Admin\Views\Manage\Users.cshtml:12
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:66
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:49
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:65
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:54
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:141
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:60
@@ -1404,9 +1407,6 @@ msgstr "Du skal først vælge et standardsprog"
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:89
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:123
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:48
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:66
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:49
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:65
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:20
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Categories.cshtml:23
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Listings.cshtml:19
@@ -1417,9 +1417,9 @@ msgstr "Slet"
 #: Views\Manage\Dashboard.cshtml:105
 #: Views\Manage\Dashboard_OLD.cshtml:82
 #: Views\Manage\Dashboard_OLD_2.cshtml:100
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:100
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:105
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:82
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:100
 msgid "Deleted!"
 msgstr "Slettet"
 
@@ -1619,7 +1619,7 @@ msgstr ""
 #: Views\Account\Register.cshtml:45
 #: Views\Account\Register_OLD.cshtml:58
 #: Views\Listing\PurchaseUpdate.cshtml:125
-#: Views\Listing\ListingUpdate.cshtml:256
+#: Views\Listing\ListingUpdate.cshtml:266
 #: Views\Manage\CompanyData.cshtml:67
 #: Views\Purchase\PurchaseUpdate.cshtml:125
 #: Areas\Admin\Views\Manage\Settings.cshtml:49
@@ -1681,7 +1681,7 @@ msgid "Enter email"
 msgstr "Indtast email"
 
 #: Views\Listing\PurchaseUpdate.cshtml:126
-#: Views\Listing\ListingUpdate.cshtml:257
+#: Views\Listing\ListingUpdate.cshtml:267
 #: Views\Purchase\PurchaseUpdate.cshtml:126
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:257
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:126
@@ -1752,7 +1752,7 @@ msgstr ""
 msgid "Entrar "
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:245
+#: Views\Listing\ListingUpdate.cshtml:255
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:245
 msgid "Entre com seu nome completo"
 msgstr ""
@@ -1775,8 +1775,8 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingContactModal.cshtml:28
 #: obj\Release\Package\PackageTmp\Views\Listing\Review.cshtml:73
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingReviewModal.cshtml:28
-#: obj\Release\Package\PackageTmp\Views\Manage\Message.cshtml:79
 #: obj\Release\Package\PackageTmp\Views\Manage\_ListingContactModal.cshtml:28
+#: obj\Release\Package\PackageTmp\Views\Manage\Message.cshtml:79
 msgid "Enviar"
 msgstr ""
 
@@ -1921,12 +1921,12 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:88
 #: Views\Manage\ToBuy_OLD.cshtml:83
 #: Views\Manage\ToBuy_OLD_2.cshtml:99
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:83
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:99
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:88
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:195
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:125
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:226
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:83
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:99
 msgid "Excluído com sucesso!"
 msgstr ""
 
@@ -1944,6 +1944,9 @@ msgstr ""
 #: Areas\Admin\Views\Listing\Listings.cshtml:97
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:107
 #: Areas\Admin\Views\Manage\Users.cshtml:82
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:90
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:73
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:89
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:78
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:185
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:95
@@ -1951,9 +1954,6 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:182
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:215
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:72
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:90
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:73
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:89
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:107
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Categories.cshtml:106
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Listings.cshtml:97
@@ -2019,6 +2019,10 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:640
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:619
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:623
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:102
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:106
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:89
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:105
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:94
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:202
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:107
@@ -2030,10 +2034,6 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:339
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:84
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:88
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:102
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:106
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:89
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:105
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:182
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:186
 msgid "Failed!"
@@ -2238,7 +2238,7 @@ msgstr ""
 msgid "Informações do Item (Lote)"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:218
+#: Views\Listing\ListingUpdate.cshtml:228
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:218
 msgid "Informações sobre o local de Retirada"
 msgstr ""
@@ -2248,7 +2248,7 @@ msgstr ""
 msgid "Informe a Agência"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:225
+#: Views\Listing\ListingUpdate.cshtml:235
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:225
 msgid "Informe a cidade e estado (Ex: Pedra Cinza-MG...)"
 msgstr ""
@@ -2258,7 +2258,7 @@ msgstr ""
 msgid "Informe a idade média dos animais"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:229
+#: Views\Listing\ListingUpdate.cshtml:239
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:229
 msgid "Informe a referência para facilitar encontrar (Ex: Rod X ou Perto de...)"
 msgstr ""
@@ -2311,7 +2311,7 @@ msgstr ""
 msgid "Informe o dígito da Conta"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:221
+#: Views\Listing\ListingUpdate.cshtml:231
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:221
 msgid "Informe o local de retirada (Ex: nome da propriedade como é conhecida...)"
 msgstr ""
@@ -2551,8 +2551,8 @@ msgid "Listagens por categoria"
 msgstr ""
 
 #: Controllers\BestPriceController.cs:694
+#: Controllers\ListingController.cs:1691
 #: Controllers\PurchaseController.cs:689
-#: Controllers\ListingController.cs:1627
 msgid "Listing review is not allowed!"
 msgstr ""
 
@@ -2581,7 +2581,7 @@ msgstr "Opdatér annonce"
 
 #: Views\Listing\BuyItemOffer.cshtml:315
 #: Views\Listing\Listing.cshtml:361
-#: Views\Listing\ListingUpdate.cshtml:220
+#: Views\Listing\ListingUpdate.cshtml:230
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:315
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:220
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:361
@@ -2694,9 +2694,9 @@ msgstr ""
 #: Views\Manage\Messages.cshtml:52
 #: Views\Manage\Messages_OLD.cshtml:44
 #: Views\Manage\Messages_OLD_2.cshtml:42
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:52
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:44
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:42
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:52
 msgid "Marcar como lida"
 msgstr ""
 
@@ -2735,13 +2735,13 @@ msgstr ""
 #: Views\Manage\Messages_OLD_2.cshtml:7
 #: Views\Manage\Messages_OLD_2.cshtml:26
 #: Views\Shared\_DashBoardSide.cshtml:14
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:7
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:26
-#: obj\Release\Package\PackageTmp\Views\Manage\Message.cshtml:5
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:7
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:26
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:7
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:26
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:7
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:26
+#: obj\Release\Package\PackageTmp\Views\Manage\Message.cshtml:5
 #: obj\Release\Package\PackageTmp\Views\Shared\_DashBoardSide.cshtml:14
 msgid "Mensagens"
 msgstr ""
@@ -2763,8 +2763,8 @@ msgid "Message is sent."
 msgstr ""
 
 #: Controllers\BestPriceController.cs:559
+#: Controllers\ListingController.cs:1549
 #: Controllers\PurchaseController.cs:554
-#: Controllers\ListingController.cs:1485
 msgid "Message sent succesfully!"
 msgstr "Beskeden er sendt"
 
@@ -2845,9 +2845,9 @@ msgstr ""
 #: Views\Manage\Messages.cshtml:132
 #: Views\Manage\Messages_OLD.cshtml:118
 #: Views\Manage\Messages_OLD_2.cshtml:134
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:132
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:118
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:134
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:132
 msgid "Mostrando {0} - {1} of {2}"
 msgstr ""
 
@@ -2857,7 +2857,7 @@ msgid "Mostrar apenas listagens com fotos"
 msgstr ""
 
 #: Views\Listing\PurchaseUpdate.cshtml:121
-#: Views\Listing\ListingUpdate.cshtml:252
+#: Views\Listing\ListingUpdate.cshtml:262
 #: Views\Purchase\PurchaseUpdate.cshtml:121
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:252
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:121
@@ -2964,7 +2964,7 @@ msgid "Nome"
 msgstr ""
 
 #: Views\Listing\PurchaseUpdate.cshtml:113
-#: Views\Listing\ListingUpdate.cshtml:244
+#: Views\Listing\ListingUpdate.cshtml:254
 #: Views\Purchase\PurchaseUpdate.cshtml:113
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:244
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:113
@@ -3019,14 +3019,14 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:90
 #: Views\Manage\ToBuy_OLD.cshtml:85
 #: Views\Manage\ToBuy_OLD_2.cshtml:101
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:85
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:101
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:90
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:197
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:127
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:195
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:228
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:262
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:85
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:101
 msgid "O Item não pode ser excluído!"
 msgstr ""
 
@@ -3064,10 +3064,10 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:676
 #: Controllers\BestPriceController.cs:765
+#: Controllers\ListingController.cs:1673
+#: Controllers\ListingController.cs:1762
 #: Controllers\PurchaseController.cs:671
 #: Controllers\PurchaseController.cs:760
-#: Controllers\ListingController.cs:1609
-#: Controllers\ListingController.cs:1698
 msgid "Obrigado pelo seu feedback!"
 msgstr ""
 
@@ -3099,9 +3099,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:104
 #: Views\Manage\ToBuy_OLD.cshtml:99
 #: Views\Manage\ToBuy_OLD_2.cshtml:115
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:104
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:99
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:115
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:104
 msgid "Oferta de Compra"
 msgstr ""
 
@@ -3115,11 +3115,11 @@ msgstr ""
 msgid "Oferta de Compra incluída com Sucesso!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1171
+#: Controllers\ListingController.cs:1207
 msgid "Oferta de VENDA LOTE: \" + lote + \" atualizada com SUCESSO!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1171
+#: Controllers\ListingController.cs:1207
 msgid "Oferta de VENDA LOTE: \" + lote + \" publicada com SUCESSO!"
 msgstr ""
 
@@ -3254,12 +3254,12 @@ msgstr ""
 #: Views\Shared\_NavigationSide.cshtml:78
 #: Areas\Admin\Views\Manage\Dashboard.cshtml:3
 #: Areas\Admin\Views\Shared\_NavigationSide.cshtml:76
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:4
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:4
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:4
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:4
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:4
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:4
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:4
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:4
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:4
 #: obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml:62
 #: obj\Release\Package\PackageTmp\Views\Shared\_NavigationSide.cshtml:78
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\Dashboard.cshtml:3
@@ -3288,8 +3288,8 @@ msgstr ""
 #: Models\AccountViewModels.cs:142
 #: Views\Listing\PurchaseUpdate.cshtml:131
 #: Views\Listing\PurchaseUpdate.cshtml:132
-#: Views\Listing\ListingUpdate.cshtml:262
-#: Views\Listing\ListingUpdate.cshtml:263
+#: Views\Listing\ListingUpdate.cshtml:272
+#: Views\Listing\ListingUpdate.cshtml:273
 #: Views\Manage\Index.cshtml:13
 #: Views\Purchase\PurchaseUpdate.cshtml:131
 #: Views\Purchase\PurchaseUpdate.cshtml:132
@@ -3472,31 +3472,31 @@ msgstr ""
 #: Views\Manage\Messages_OLD.cshtml:34
 #: Views\Manage\Messages_OLD_2.cshtml:56
 #: obj\Release\Package\PackageTmp\Views\Listing\Listings.cshtml:95
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:34
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:56
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:42
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:56
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:79
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:34
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:59
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:34
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:56
 msgid "Pesquisar"
 msgstr ""
 
 #: Views\Manage\Dashboard.cshtml:23
 #: Views\Manage\Dashboard_OLD.cshtml:23
 #: Views\Manage\Dashboard_OLD_2.cshtml:34
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:34
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:23
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:23
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:34
 msgid "Pesquisar Item ofertado"
 msgstr ""
 
 #: Views\Manage\Messages.cshtml:37
 #: Views\Manage\Messages_OLD.cshtml:33
 #: Views\Manage\Messages_OLD_2.cshtml:51
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:37
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:33
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:51
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:37
 msgid "Pesquisar mensagens..."
 msgstr ""
 
@@ -3514,9 +3514,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:25
 #: Views\Manage\ToBuy_OLD.cshtml:24
 #: Views\Manage\ToBuy_OLD_2.cshtml:35
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:25
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:24
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:35
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:25
 msgid "Pesquisar Oferta"
 msgstr ""
 
@@ -3675,12 +3675,12 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:29
 #: Views\Manage\ToBuy_OLD.cshtml:25
 #: Views\Manage\ToBuy_OLD_2.cshtml:40
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:29
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:26
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:24
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:39
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:25
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:40
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:29
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:26
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:24
 msgid "Procurar"
 msgstr ""
 
@@ -3736,7 +3736,7 @@ msgid "Publicar Cotação"
 msgstr ""
 
 #: Views\Listing\PurchaseUpdate.cshtml:141
-#: Views\Listing\ListingUpdate.cshtml:272
+#: Views\Listing\ListingUpdate.cshtml:282
 #: Views\Purchase\PurchaseUpdate.cshtml:141
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:272
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:141
@@ -3747,9 +3747,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:32
 #: Views\Manage\ToBuy_OLD.cshtml:29
 #: Views\Manage\ToBuy_OLD_2.cshtml:28
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:32
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:29
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:28
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:32
 msgid "Publicar nova Compra"
 msgstr ""
 
@@ -3761,10 +3761,10 @@ msgstr ""
 #: Views\Shared\_LoginPartial.cshtml:63
 #: Views\Shared\_NavigationSide.cshtml:70
 #: Views\Shared\_NavigationSide.cshtml:84
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:27
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:29
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:30
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:28
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:27
 #: obj\Release\Package\PackageTmp\Views\Shared\_Layout.cshtml:67
 #: obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml:63
 #: obj\Release\Package\PackageTmp\Views\Shared\_NavigationSide.cshtml:70
@@ -3874,7 +3874,7 @@ msgid "Quantidade: "
 msgstr ""
 
 #: Views\Listing\PurchaseUpdate.cshtml:111
-#: Views\Listing\ListingUpdate.cshtml:242
+#: Views\Listing\ListingUpdate.cshtml:252
 #: Views\Purchase\PurchaseUpdate.cshtml:111
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:242
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:111
@@ -3892,9 +3892,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:19
 #: Views\Manage\ToBuy_OLD.cshtml:19
 #: Views\Manage\ToBuy_OLD_2.cshtml:19
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:19
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:19
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:19
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:19
 msgid "Quero Comprar (Minhas ofertas de Compra)"
 msgstr ""
 
@@ -3908,9 +3908,9 @@ msgstr ""
 #: Views\Manage\Dashboard.cshtml:16
 #: Views\Manage\Dashboard_OLD.cshtml:18
 #: Views\Manage\Dashboard_OLD_2.cshtml:18
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:18
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:16
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:18
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:18
 msgid "Quero Vender (Minhas ofertas de venda)"
 msgstr ""
 
@@ -3948,7 +3948,7 @@ msgstr "Modtager"
 msgid "Referência (Como chegar)"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:228
+#: Views\Listing\ListingUpdate.cshtml:238
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:228
 msgid "Referências (facilitar localização)"
 msgstr ""
@@ -4050,7 +4050,7 @@ msgstr ""
 msgid "RESPOSTA da COTAÇÃO alterada com Sucesso!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1352
+#: Controllers\ListingController.cs:1388
 msgid "Resposta registrada com Sucesso!"
 msgstr ""
 
@@ -4186,7 +4186,7 @@ msgstr ""
 msgid "Seu Email..."
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:249
+#: Views\Listing\ListingUpdate.cshtml:259
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:249
 msgid "Seu número de telefone (XX) XXXXX-XXXX (Obs: Preferencia Whatsapp)"
 msgstr ""
@@ -4290,7 +4290,7 @@ msgstr "Mindste transaktionsgebyr"
 
 #: Models\ManageViewModels.cs:67
 #: Views\Listing\PurchaseUpdate.cshtml:117
-#: Views\Listing\ListingUpdate.cshtml:248
+#: Views\Listing\ListingUpdate.cshtml:258
 #: Views\Manage\AddPhoneNumber.cshtml:3
 #: Views\Manage\UserProfile.cshtml:56
 #: Views\Purchase\PurchaseUpdate.cshtml:117
@@ -4786,9 +4786,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:74
 #: Views\Manage\ToBuy_OLD.cshtml:69
 #: Views\Manage\ToBuy_OLD_2.cshtml:85
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:74
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:69
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:85
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:74
 msgid "Você está prestes a excluir a oferta de compra: "
 msgstr ""
 
@@ -4799,10 +4799,10 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:621
 #: Controllers\BestPriceController.cs:721
+#: Controllers\ListingController.cs:1618
+#: Controllers\ListingController.cs:1718
 #: Controllers\PurchaseController.cs:616
 #: Controllers\PurchaseController.cs:716
-#: Controllers\ListingController.cs:1554
-#: Controllers\ListingController.cs:1654
 msgid "Você não pode avaliar a si mesmo!"
 msgstr ""
 
@@ -4828,20 +4828,20 @@ msgstr "Du kan ikke købe en vare af dig selv"
 msgid "You cannot delete Administrator, change the user role first."
 msgstr ""
 
-#: Controllers\ListingController.cs:1365
+#: Controllers\ListingController.cs:1401
 #: Areas\Admin\Controllers\ListingController.cs:762
 msgid "You cannot delete item with orders! You can deactivate it instead."
 msgstr "Du kan ikke slette varer, der har udestående ordre. Du kan deaktivere varen i stedet."
 
 #: Controllers\BestPriceController.cs:629
+#: Controllers\ListingController.cs:1626
 #: Controllers\PurchaseController.cs:624
-#: Controllers\ListingController.cs:1562
 msgid "You cannot review the order!"
 msgstr ""
 
 #: Controllers\BestPriceController.cs:531
+#: Controllers\ListingController.cs:1521
 #: Controllers\PurchaseController.cs:526
-#: Controllers\ListingController.cs:1457
 msgid "You cannot send message to yourself!"
 msgstr ""
 
@@ -4850,8 +4850,8 @@ msgid "You cannot the listing type. There should be at least one listing type."
 msgstr ""
 
 #: Controllers\BestPriceController.cs:707
+#: Controllers\ListingController.cs:1704
 #: Controllers\PurchaseController.cs:702
-#: Controllers\ListingController.cs:1640
 msgid "You have reach the review limits today!"
 msgstr ""
 
@@ -4859,9 +4859,9 @@ msgstr ""
 #: Views\Manage\Dashboard_OLD.cshtml:68
 #: Views\Manage\Dashboard_OLD_2.cshtml:86
 #: Areas\Admin\Views\Listing\Listings.cshtml:93
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:86
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:91
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:68
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:86
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Listings.cshtml:93
 msgid "You will delete"
 msgstr "Du vil slette"
@@ -4876,7 +4876,7 @@ msgstr ""
 msgid "You will delete the user and its all listings from "
 msgstr ""
 
-#: Controllers\ListingController.cs:1373
+#: Controllers\ListingController.cs:1409
 msgid "Your listing has been deleted."
 msgstr ""
 
