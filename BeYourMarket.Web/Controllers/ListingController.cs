@@ -673,7 +673,6 @@ namespace BeYourMarket.Web.Controllers
 
             if (listing.NomeVideoOferta != null) 
             {
-
                 model.UrlVideo = Path.Combine(Server.MapPath("~/Videos/"), listing.NomeVideoOferta); //DEPOIS CARREGAR AQUI O ID DO REGISTRO DE VÍDEO
             }
 

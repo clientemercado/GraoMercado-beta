@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-07-29 15:29-03:00\n"
+"POT-Creation-Date: 2023-07-29 15:54-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -531,7 +531,7 @@ msgstr ""
 #: Views\Listing\Listing.cshtml:602
 #: Views\Listing\PurchaseUpdate.cshtml:142
 #: Views\Listing\Review.cshtml:74
-#: Views\Listing\ListingUpdate.cshtml:283
+#: Views\Listing\ListingUpdate.cshtml:285
 #: Views\Manage\BestPrice.cshtml:186
 #: Views\Manage\BestPrice.cshtml:218
 #: Views\Manage\BestPrice.cshtml:238
@@ -733,7 +733,7 @@ msgstr ""
 msgid "Change your password"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:234
+#: Views\Listing\ListingUpdate.cshtml:236
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:224
 msgid "Cidade"
 msgstr ""
@@ -931,8 +931,8 @@ msgstr ""
 
 #: Views\Listing\PurchaseUpdate.cshtml:135
 #: Views\Listing\PurchaseUpdate.cshtml:136
-#: Views\Listing\ListingUpdate.cshtml:276
-#: Views\Listing\ListingUpdate.cshtml:277
+#: Views\Listing\ListingUpdate.cshtml:278
+#: Views\Listing\ListingUpdate.cshtml:279
 #: Views\Purchase\PurchaseUpdate.cshtml:135
 #: Views\Purchase\PurchaseUpdate.cshtml:136
 #: Views\SearchPrice\AddMyQuote.cshtml:119
@@ -1618,7 +1618,7 @@ msgstr ""
 #: Views\Account\Register.cshtml:45
 #: Views\Account\Register_OLD.cshtml:58
 #: Views\Listing\PurchaseUpdate.cshtml:125
-#: Views\Listing\ListingUpdate.cshtml:266
+#: Views\Listing\ListingUpdate.cshtml:268
 #: Views\Manage\CompanyData.cshtml:67
 #: Views\Purchase\PurchaseUpdate.cshtml:125
 #: Areas\Admin\Views\Manage\Settings.cshtml:49
@@ -1680,7 +1680,7 @@ msgid "Enter email"
 msgstr ""
 
 #: Views\Listing\PurchaseUpdate.cshtml:126
-#: Views\Listing\ListingUpdate.cshtml:267
+#: Views\Listing\ListingUpdate.cshtml:269
 #: Views\Purchase\PurchaseUpdate.cshtml:126
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:257
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:126
@@ -1751,7 +1751,7 @@ msgstr ""
 msgid "Entrar "
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:255
+#: Views\Listing\ListingUpdate.cshtml:257
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:245
 msgid "Entre com seu nome completo"
 msgstr ""
@@ -2237,7 +2237,7 @@ msgstr ""
 msgid "Informações do Item (Lote)"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:228
+#: Views\Listing\ListingUpdate.cshtml:230
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:218
 msgid "Informações sobre o local de Retirada"
 msgstr ""
@@ -2247,7 +2247,7 @@ msgstr ""
 msgid "Informe a Agência"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:235
+#: Views\Listing\ListingUpdate.cshtml:237
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:225
 msgid "Informe a cidade e estado (Ex: Pedra Cinza-MG...)"
 msgstr ""
@@ -2257,7 +2257,7 @@ msgstr ""
 msgid "Informe a idade média dos animais"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:239
+#: Views\Listing\ListingUpdate.cshtml:241
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:229
 msgid "Informe a referência para facilitar encontrar (Ex: Rod X ou Perto de...)"
 msgstr ""
@@ -2310,7 +2310,7 @@ msgstr ""
 msgid "Informe o dígito da Conta"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:231
+#: Views\Listing\ListingUpdate.cshtml:233
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:221
 msgid "Informe o local de retirada (Ex: nome da propriedade como é conhecida...)"
 msgstr ""
@@ -2580,7 +2580,7 @@ msgstr ""
 
 #: Views\Listing\BuyItemOffer.cshtml:315
 #: Views\Listing\Listing.cshtml:361
-#: Views\Listing\ListingUpdate.cshtml:230
+#: Views\Listing\ListingUpdate.cshtml:232
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:315
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:220
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:361
@@ -2856,7 +2856,7 @@ msgid "Mostrar apenas listagens com fotos"
 msgstr ""
 
 #: Views\Listing\PurchaseUpdate.cshtml:121
-#: Views\Listing\ListingUpdate.cshtml:262
+#: Views\Listing\ListingUpdate.cshtml:264
 #: Views\Purchase\PurchaseUpdate.cshtml:121
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:252
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:121
@@ -2963,7 +2963,7 @@ msgid "Nome"
 msgstr ""
 
 #: Views\Listing\PurchaseUpdate.cshtml:113
-#: Views\Listing\ListingUpdate.cshtml:254
+#: Views\Listing\ListingUpdate.cshtml:256
 #: Views\Purchase\PurchaseUpdate.cshtml:113
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:244
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:113
@@ -3287,8 +3287,8 @@ msgstr ""
 #: Models\AccountViewModels.cs:142
 #: Views\Listing\PurchaseUpdate.cshtml:131
 #: Views\Listing\PurchaseUpdate.cshtml:132
-#: Views\Listing\ListingUpdate.cshtml:272
-#: Views\Listing\ListingUpdate.cshtml:273
+#: Views\Listing\ListingUpdate.cshtml:274
+#: Views\Listing\ListingUpdate.cshtml:275
 #: Views\Manage\Index.cshtml:13
 #: Views\Purchase\PurchaseUpdate.cshtml:131
 #: Views\Purchase\PurchaseUpdate.cshtml:132
@@ -3735,7 +3735,7 @@ msgid "Publicar Cotação"
 msgstr ""
 
 #: Views\Listing\PurchaseUpdate.cshtml:141
-#: Views\Listing\ListingUpdate.cshtml:282
+#: Views\Listing\ListingUpdate.cshtml:284
 #: Views\Purchase\PurchaseUpdate.cshtml:141
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:272
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:141
@@ -3873,7 +3873,7 @@ msgid "Quantidade: "
 msgstr ""
 
 #: Views\Listing\PurchaseUpdate.cshtml:111
-#: Views\Listing\ListingUpdate.cshtml:252
+#: Views\Listing\ListingUpdate.cshtml:254
 #: Views\Purchase\PurchaseUpdate.cshtml:111
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:242
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:111
@@ -3947,7 +3947,7 @@ msgstr ""
 msgid "Referência (Como chegar)"
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:238
+#: Views\Listing\ListingUpdate.cshtml:240
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:228
 msgid "Referências (facilitar localização)"
 msgstr ""
@@ -4184,7 +4184,7 @@ msgstr ""
 msgid "Seu Email..."
 msgstr ""
 
-#: Views\Listing\ListingUpdate.cshtml:259
+#: Views\Listing\ListingUpdate.cshtml:261
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:249
 msgid "Seu número de telefone (XX) XXXXX-XXXX (Obs: Preferencia Whatsapp)"
 msgstr ""
@@ -4287,7 +4287,7 @@ msgstr ""
 
 #: Models\ManageViewModels.cs:67
 #: Views\Listing\PurchaseUpdate.cshtml:117
-#: Views\Listing\ListingUpdate.cshtml:258
+#: Views\Listing\ListingUpdate.cshtml:260
 #: Views\Manage\AddPhoneNumber.cshtml:3
 #: Views\Manage\UserProfile.cshtml:56
 #: Views\Purchase\PurchaseUpdate.cshtml:117
