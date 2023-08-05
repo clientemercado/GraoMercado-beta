@@ -102,7 +102,7 @@
                 if (isConfirm) {
                     post('@Url.Action("ListingDelete","Listing")', { id: id });
                 } else {
-                    swal("[[[Cancelled!]]]", "", "error");
+                    swal("[[[Operação cancelada!]]]", "", "error");
                 }
             });
         }

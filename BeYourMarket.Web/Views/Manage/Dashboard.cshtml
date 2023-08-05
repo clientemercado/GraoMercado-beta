@@ -88,7 +88,7 @@
         function confirmDelete(id, title) {
             swal({
                 title: "[[[Confirma a exclusão do item?]]]",
-                text: "[[[You will delete]]] " + title,
+                text: "[[[Você irá excluir ']]] " + title + "[[[' e esta ação não poderá ser desfeita!]]]",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#DD6B55",
@@ -102,7 +102,7 @@
                     .done(function (result) {
                         if (result.Success) {
                             $("#item_" + id).remove();
-                            swal("[[[Deleted!]]]", result.Message, "success");
+                            swal("[[[Excluído com Sucesso!]]]", result.Message, "success");
                         } else {
                             swal("[[[Failed!]]]", result.Message, "error");
                         }
@@ -111,7 +111,7 @@
                         swal("[[[Failed!]]]", xhr.responseText, "error");
                     })
                 } else {
-                    swal("[[[Cancelled!]]]", "", "error");
+                    swal("[[[Operação cancelada!]]]", "", "error");
                 }
             });
         }

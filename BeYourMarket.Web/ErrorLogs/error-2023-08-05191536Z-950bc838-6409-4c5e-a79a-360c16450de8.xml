@@ -1,0 +1,206 @@
+﻿<error errorId="950bc838-6409-4c5e-a79a-360c16450de8" host="DESKTOP-GJ1QFNP" type="System.Data.SqlClient.SqlException" message="The DELETE statement conflicted with the REFERENCE constraint &quot;FK__VideosOfe__id_Of__5DC0CDC3&quot;. The conflict occurred in database &quot;sasql&quot;, table &quot;dbo.VideosOferta&quot;, column 'id_Oferta'.&#xD;&#xA;The statement has been terminated." source=".Net SqlClient Data Provider" detail="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.SqlClient.SqlException: The DELETE statement conflicted with the REFERENCE constraint &quot;FK__VideosOfe__id_Of__5DC0CDC3&quot;. The conflict occurred in database &quot;sasql&quot;, table &quot;dbo.VideosOferta&quot;, column 'id_Oferta'.&#xD;&#xA;The statement has been terminated.&#xD;&#xA;   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)&#xD;&#xA;   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)&#xD;&#xA;   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)&#xD;&#xA;   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, String endMethod, Boolean isInternal)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)&#xD;&#xA;   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.&lt;ExecuteAsync&gt;d__8.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__39.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__39.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;ExecuteInTransactionAsync&gt;d__156`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesToStoreAsync&gt;d__154.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;ExecuteAsyncImplementation&gt;d__6`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesInternalAsync&gt;d__151.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at Repository.Pattern.Ef6.DataContext.&lt;SaveChangesAsync&gt;d__10.MoveNext() in F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Frameworks\Repository.Pattern.Ef6\DataContext.cs:line 159&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Repository.Pattern.Ef6.DataContext.&lt;SaveChangesAsync&gt;d__9.MoveNext() in F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Frameworks\Repository.Pattern.Ef6\DataContext.cs:line 100&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at BeYourMarket.Web.Controllers.ListingController.&lt;ListingDelete&gt;d__70.MoveNext() in F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\BeYourMarket.Web\Controllers\ListingController.cs:line 1407&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass8_0.&lt;BeginInvokeAsynchronousActionMethod&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_0.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_2.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass7_0.&lt;BeginInvokeActionMethodWithFilters&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__4()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecuteCore&gt;b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;&gt;c.&lt;BeginExecute&gt;b__151_2(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;&gt;c.&lt;BeginProcessRequest&gt;b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.InvokeEndHandler(IAsyncResult ar)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)" user="edwilsoncurtis@gmail.com" time="2023-08-05T19:15:36.3666156Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:5&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;HTTP_ACCEPT:*/*&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=SYXVgTqWmf_zDvNfXi7LXL7ILenXzPJtvMKykY5wl0ib8wgtptc0jyDlY35nM3YVW0WHUL8Jvh5fnDGD5g4h0_uX8BkmgESQxLfGIk-s-G81; .AspNet.ApplicationCookie=o7-GBexnUvJiVTce79UWnG6_mSGSdlqbrhZdn_Uvjr1cItfCbY6gC6p66lyJM99eKeH50HdqLFdt-TBI_AK3W8UgFQAf8Z2u7PAOVkpwpoTSd_WAgkuGSeb04O3IcFpYa8TeGfoZdP99YZkDOOP8pboKgQdy0ZgIUnMHe9f9i143Db9NsYjOfTx3bBbrD7YZ9sLaosLSG25ElGJogtzKMqwgZY2_nG2asuJyGwgEw2dIng6hEHLx0Qgi1-B8GZ1VjTRJHre0dBDGcctJ3vsqKW4gUqUIxL6sn5igUAwTr4SfvNcjwEe-ATJSrKhBZQQvsAn3o8dvHbXccdQ36lBds8zYzVkeoSKEzGCnQFkHF91zc79feu3yZqxUIRcd3vThio8stMBTC-rcMMDCX7ytR7iXo2VKPduoDtJw4b5XGnSMDwfNduCf6dmqeXojDO2oapgZWh03oLYg6fSjIC1pZUR0vOSPqzQMar9Bvxn1c3gUh49143UpxKaXvKH4uWME&#xD;&#xA;HTTP_HOST:localhost:59674&#xD;&#xA;HTTP_REFERER:http://localhost:59674/pt/manage/dashboard?oqeq=0&amp;ib=18&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36&#xD;&#xA;HTTP_SEC_CH_UA:&quot;Not/A)Brand&quot;;v=&quot;99&quot;, &quot;Google Chrome&quot;;v=&quot;115&quot;, &quot;Chromium&quot;;v=&quot;115&quot;&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;HTTP_SEC_CH_UA_MOBILE:?0&#xD;&#xA;HTTP_SEC_CH_UA_PLATFORM:&quot;Windows&quot;&#xD;&#xA;HTTP_ORIGIN:http://localhost:59674&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;HTTP_SEC_FETCH_MODE:cors&#xD;&#xA;HTTP_SEC_FETCH_DEST:empty&#xD;&#xA;HTTP_DNT:1&#xD;&#xA;HTTP_SEC_GPC:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 5&#xD;&#xA;Content-Type: application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;Accept: */*&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=SYXVgTqWmf_zDvNfXi7LXL7ILenXzPJtvMKykY5wl0ib8wgtptc0jyDlY35nM3YVW0WHUL8Jvh5fnDGD5g4h0_uX8BkmgESQxLfGIk-s-G81; .AspNet.ApplicationCookie=o7-GBexnUvJiVTce79UWnG6_mSGSdlqbrhZdn_Uvjr1cItfCbY6gC6p66lyJM99eKeH50HdqLFdt-TBI_AK3W8UgFQAf8Z2u7PAOVkpwpoTSd_WAgkuGSeb04O3IcFpYa8TeGfoZdP99YZkDOOP8pboKgQdy0ZgIUnMHe9f9i143Db9NsYjOfTx3bBbrD7YZ9sLaosLSG25ElGJogtzKMqwgZY2_nG2asuJyGwgEw2dIng6hEHLx0Qgi1-B8GZ1VjTRJHre0dBDGcctJ3vsqKW4gUqUIxL6sn5igUAwTr4SfvNcjwEe-ATJSrKhBZQQvsAn3o8dvHbXccdQ36lBds8zYzVkeoSKEzGCnQFkHF91zc79feu3yZqxUIRcd3vThio8stMBTC-rcMMDCX7ytR7iXo2VKPduoDtJw4b5XGnSMDwfNduCf6dmqeXojDO2oapgZWh03oLYg6fSjIC1pZUR0vOSPqzQMar9Bvxn1c3gUh49143UpxKaXvKH4uWME&#xD;&#xA;Host: localhost:59674&#xD;&#xA;Referer: http://localhost:59674/pt/manage/dashboard?oqeq=0&amp;ib=18&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36&#xD;&#xA;sec-ch-ua: &quot;Not/A)Brand&quot;;v=&quot;99&quot;, &quot;Google Chrome&quot;;v=&quot;115&quot;, &quot;Chromium&quot;;v=&quot;115&quot;&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;sec-ch-ua-mobile: ?0&#xD;&#xA;sec-ch-ua-platform: &quot;Windows&quot;&#xD;&#xA;Origin: http://localhost:59674&#xD;&#xA;Sec-Fetch-Site: same-origin&#xD;&#xA;Sec-Fetch-Mode: cors&#xD;&#xA;Sec-Fetch-Dest: empty&#xD;&#xA;dnt: 1&#xD;&#xA;sec-gpc: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\BeYourMarket.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="5" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/listing/listingdelete" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\BeYourMarket.Web\listing\listingdelete" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="60739" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/listing/listingdelete" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="59674" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/listing/listingdelete" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="5" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="*/*" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=SYXVgTqWmf_zDvNfXi7LXL7ILenXzPJtvMKykY5wl0ib8wgtptc0jyDlY35nM3YVW0WHUL8Jvh5fnDGD5g4h0_uX8BkmgESQxLfGIk-s-G81; .AspNet.ApplicationCookie=o7-GBexnUvJiVTce79UWnG6_mSGSdlqbrhZdn_Uvjr1cItfCbY6gC6p66lyJM99eKeH50HdqLFdt-TBI_AK3W8UgFQAf8Z2u7PAOVkpwpoTSd_WAgkuGSeb04O3IcFpYa8TeGfoZdP99YZkDOOP8pboKgQdy0ZgIUnMHe9f9i143Db9NsYjOfTx3bBbrD7YZ9sLaosLSG25ElGJogtzKMqwgZY2_nG2asuJyGwgEw2dIng6hEHLx0Qgi1-B8GZ1VjTRJHre0dBDGcctJ3vsqKW4gUqUIxL6sn5igUAwTr4SfvNcjwEe-ATJSrKhBZQQvsAn3o8dvHbXccdQ36lBds8zYzVkeoSKEzGCnQFkHF91zc79feu3yZqxUIRcd3vThio8stMBTC-rcMMDCX7ytR7iXo2VKPduoDtJw4b5XGnSMDwfNduCf6dmqeXojDO2oapgZWh03oLYg6fSjIC1pZUR0vOSPqzQMar9Bvxn1c3gUh49143UpxKaXvKH4uWME" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:59674" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:59674/pt/manage/dashboard?oqeq=0&amp;ib=18" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" />
+    </item>
+    <item name="HTTP_SEC_CH_UA">
+      <value string="&quot;Not/A)Brand&quot;;v=&quot;99&quot;, &quot;Google Chrome&quot;;v=&quot;115&quot;, &quot;Chromium&quot;;v=&quot;115&quot;" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_MOBILE">
+      <value string="?0" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_PLATFORM">
+      <value string="&quot;Windows&quot;" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:59674" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="cors" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="empty" />
+    </item>
+    <item name="HTTP_DNT">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_GPC">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="id">
+      <value string="30" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="SYXVgTqWmf_zDvNfXi7LXL7ILenXzPJtvMKykY5wl0ib8wgtptc0jyDlY35nM3YVW0WHUL8Jvh5fnDGD5g4h0_uX8BkmgESQxLfGIk-s-G81" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="o7-GBexnUvJiVTce79UWnG6_mSGSdlqbrhZdn_Uvjr1cItfCbY6gC6p66lyJM99eKeH50HdqLFdt-TBI_AK3W8UgFQAf8Z2u7PAOVkpwpoTSd_WAgkuGSeb04O3IcFpYa8TeGfoZdP99YZkDOOP8pboKgQdy0ZgIUnMHe9f9i143Db9NsYjOfTx3bBbrD7YZ9sLaosLSG25ElGJogtzKMqwgZY2_nG2asuJyGwgEw2dIng6hEHLx0Qgi1-B8GZ1VjTRJHre0dBDGcctJ3vsqKW4gUqUIxL6sn5igUAwTr4SfvNcjwEe-ATJSrKhBZQQvsAn3o8dvHbXccdQ36lBds8zYzVkeoSKEzGCnQFkHF91zc79feu3yZqxUIRcd3vThio8stMBTC-rcMMDCX7ytR7iXo2VKPduoDtJw4b5XGnSMDwfNduCf6dmqeXojDO2oapgZWh03oLYg6fSjIC1pZUR0vOSPqzQMar9Bvxn1c3gUh49143UpxKaXvKH4uWME" />
+    </item>
+  </cookies>
+</error>

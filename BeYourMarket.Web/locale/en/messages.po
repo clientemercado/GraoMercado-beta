@@ -1,12 +1,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-07-29 15:55-03:00\n"
-"PO-Revision-Date: 2023-07-29 15:55-03:00\n"
+"POT-Creation-Date: 2023-08-05 17:31-03:00\n"
+"PO-Revision-Date: 2023-08-05 17:31-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: i18n.POTGenerator\n"
+
+#: Views\Manage\Dashboard.cshtml:91
+msgid "' e esta ação não poderá ser desfeita!"
+msgstr ""
 
 #: Views\Account\Register.cshtml:113
 #: Views\Account\Register_OLD.cshtml:85
@@ -221,10 +225,10 @@ msgid "Adicionar nova página"
 msgstr ""
 
 #: Areas\Admin\Views\ContentPage\ContentPages.cshtml:28
-#: Areas\Admin\Views\Listing\Categories.cshtml:49
 #: Areas\Admin\Views\Listing\CustomFields.cshtml:46
 #: Areas\Admin\Views\Listing\Listings.cshtml:44
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:46
+#: Areas\Admin\Views\Listing\Categories.cshtml:49
 #: Areas\Admin\Views\Manage\Users.cshtml:28
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\ContentPage\ContentPages.cshtml:28
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:46
@@ -267,7 +271,7 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:236
 #: Controllers\ListingController.cs:571
-#: Controllers\ListingController.cs:877
+#: Controllers\ListingController.cs:876
 #: Controllers\PurchaseController.cs:235
 #: Areas\Admin\Controllers\ListingController.cs:491
 #: Areas\Admin\Controllers\ListingController.cs:593
@@ -287,31 +291,31 @@ msgstr ""
 #: Views\Manage\BestPrice.cshtml:140
 #: Views\Manage\BestPrice_OLD.cshtml:83
 #: Views\Manage\BestPrice_OLD_2.cshtml:122
-#: Views\Manage\Dashboard.cshtml:59
 #: Views\Manage\Dashboard_OLD.cshtml:47
 #: Views\Manage\Dashboard_OLD_2.cshtml:65
 #: Views\Manage\ToBuy.cshtml:53
 #: Views\Manage\ToBuy_OLD.cshtml:48
 #: Views\Manage\ToBuy_OLD_2.cshtml:64
+#: Views\Manage\Dashboard.cshtml:59
 #: Areas\Admin\Views\ContentPage\ContentPages.cshtml:15
-#: Areas\Admin\Views\Listing\Categories.cshtml:21
 #: Areas\Admin\Views\Listing\CustomFields.cshtml:15
 #: Areas\Admin\Views\Listing\Listings.cshtml:15
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:15
+#: Areas\Admin\Views\Listing\Categories.cshtml:21
 #: Areas\Admin\Views\Manage\EmailTemplates.cshtml:15
 #: Areas\Admin\Views\Manage\Users.cshtml:57
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:55
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingReviewModal.cshtml:60
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:55
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:65
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:48
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:64
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:53
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:140
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:59
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:83
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:122
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:47
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:65
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:48
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:64
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\ContentPage\ContentPages.cshtml:15
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:15
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Categories.cshtml:21
@@ -373,8 +377,8 @@ msgstr ""
 msgid "Aqui você pode gerenciar todas as listagens no mercado."
 msgstr ""
 
-#: Areas\Admin\Views\Payment\Order.cshtml:71
 #: Areas\Admin\Views\Payment\Transaction.cshtml:19
+#: Areas\Admin\Views\Payment\Order.cshtml:71
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Payment\Order.cshtml:71
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Payment\Transaction.cshtml:19
 msgid "Aqui você pode gerenciar todos os pedidos, você pode cancelar ou aceitar pedidos em nome dos usuários."
@@ -420,8 +424,8 @@ msgid "Atenção!"
 msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:70
-#: Areas\Admin\Views\Listing\Listings.cshtml:67
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:133
+#: Areas\Admin\Views\Listing\Listings.cshtml:67
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:70
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Listings.cshtml:67
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingUpdate.cshtml:133
@@ -545,7 +549,6 @@ msgstr ""
 #: Views\Manage\BestPrice_OLD_2.cshtml:283
 #: Views\Manage\BestPrice_OLD_2.cshtml:303
 #: Views\Manage\BestPrice_OLD_2.cshtml:323
-#: Views\Manage\Dashboard.cshtml:96
 #: Views\Manage\Dashboard_OLD.cshtml:73
 #: Views\Manage\Dashboard_OLD_2.cshtml:91
 #: Views\Manage\ToBuy.cshtml:79
@@ -554,6 +557,7 @@ msgstr ""
 #: Views\Manage\ToBuy_OLD.cshtml:105
 #: Views\Manage\ToBuy_OLD_2.cshtml:90
 #: Views\Manage\ToBuy_OLD_2.cshtml:121
+#: Views\Manage\Dashboard.cshtml:96
 #: Views\Payment\Orders.cshtml:26
 #: Views\Payment\Orders.cshtml:30
 #: Views\Purchase\PurchaseUpdate.cshtml:142
@@ -565,33 +569,28 @@ msgstr ""
 #: Areas\Admin\Views\Design\Appearance.cshtml:45
 #: Areas\Admin\Views\Design\CodeScript.cshtml:35
 #: Areas\Admin\Views\Design\CodeStyle.cshtml:35
-#: Areas\Admin\Views\Listing\Categories.cshtml:71
-#: Areas\Admin\Views\Listing\Categories.cshtml:107
 #: Areas\Admin\Views\Listing\CategoryUpdate.cshtml:59
 #: Areas\Admin\Views\Listing\CustomFieldUpdate.cshtml:91
-#: Areas\Admin\Views\Listing\Listings.cshtml:98
-#: Areas\Admin\Views\Listing\ListingTypes.cshtml:108
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:113
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:196
+#: Areas\Admin\Views\Listing\Listings.cshtml:98
+#: Areas\Admin\Views\Listing\ListingTypes.cshtml:108
+#: Areas\Admin\Views\Listing\Categories.cshtml:71
+#: Areas\Admin\Views\Listing\Categories.cshtml:107
 #: Areas\Admin\Views\Manage\EmailTemplateUpdate.cshtml:64
 #: Areas\Admin\Views\Manage\Settings.cshtml:167
 #: Areas\Admin\Views\Manage\SettingsEmail.cshtml:69
 #: Areas\Admin\Views\Manage\SettingsLanguage.cshtml:43
-#: Areas\Admin\Views\Manage\Users.cshtml:83
 #: Areas\Admin\Views\Manage\UserUpdate.cshtml:147
+#: Areas\Admin\Views\Manage\Users.cshtml:83
+#: Areas\Admin\Views\Payment\PaymentSetting.cshtml:46
 #: Areas\Admin\Views\Payment\Order.cshtml:25
 #: Areas\Admin\Views\Payment\Order.cshtml:29
-#: Areas\Admin\Views\Payment\PaymentSetting.cshtml:46
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:619
 #: obj\Release\Package\PackageTmp\Views\Listing\Review.cshtml:74
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:273
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:285
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:602
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:142
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:91
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:74
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:105
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:90
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:121
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:79
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:110
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:186
@@ -608,6 +607,11 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:303
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:323
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:73
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:91
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:74
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:105
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:90
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:121
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:26
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:30
 #: obj\Release\Package\PackageTmp\Views\Purchase\PurchaseUpdate.cshtml:142
@@ -640,23 +644,17 @@ msgid "Cancelar"
 msgstr ""
 
 #: Controllers\PaymentController.cs:205
-#: Views\Payment\Orders.cshtml:51
-#: Areas\Admin\Views\Payment\Order.cshtml:46
-#: Areas\Admin\Views\Payment\Order.cshtml:165
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:51
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Payment\Order.cshtml:46
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Payment\Order.cshtml:165
 msgid "Cancelled"
 msgstr ""
 
-#: Views\Manage\Dashboard.cshtml:114
 #: Views\Manage\Dashboard_OLD.cshtml:91
 #: Views\Manage\Dashboard_OLD_2.cshtml:109
-#: Views\Payment\Orders.cshtml:189
-#: Areas\Admin\Views\Listing\Listings.cshtml:105
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:109
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:114
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:91
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:109
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:189
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Listings.cshtml:105
 msgid "Cancelled!"
@@ -674,8 +672,8 @@ msgstr ""
 #: Areas\Admin\Views\Listing\CategoryUpdate.cshtml:12
 #: Areas\Admin\Views\Listing\CustomFields.cshtml:69
 #: Areas\Admin\Views\Listing\CustomFieldUpdate.cshtml:76
-#: Areas\Admin\Views\Listing\Listings.cshtml:65
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:31
+#: Areas\Admin\Views\Listing\Listings.cshtml:65
 #: Areas\Admin\Views\Manage\Dashboard.cshtml:67
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:171
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:36
@@ -735,7 +733,7 @@ msgid "Change your password"
 msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:236
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:224
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:236
 msgid "Cidade"
 msgstr ""
 
@@ -752,9 +750,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:105
 #: Views\Manage\ToBuy_OLD.cshtml:100
 #: Views\Manage\ToBuy_OLD_2.cshtml:116
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:105
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:100
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:116
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:105
 msgid "Clicando em CONTINUAR você iniciará o cadastro da sua OFERTA DE COMPRA com a intenção de COMPRAR algum produto nesta plataforma.\n\nSe sua intenção é VENDER, clique em CANCELAR e inicie uma OFERTA DE VENDA."
 msgstr ""
 
@@ -798,6 +796,7 @@ msgstr ""
 
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Widget.Disqus\Views\Index.cshtml:6
 #: Plugins\Plugin.Widget.Disqus\Views\Index.cshtml:6
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Widget.Disqus\bin\Views\Index.cshtml:6
 #: obj\Release\Package\PackageTmp\Plugins\Plugin.Widget.Disqus\Views\Index.cshtml:6
 msgid "Comments"
 msgstr ""
@@ -943,8 +942,8 @@ msgstr ""
 #: Views\SearchPrice\SearchInGroup.cshtml:122
 #: Views\SearchPrice\SearchInIndividual.cshtml:89
 #: Views\SearchPrice\SearchInIndividual.cshtml:90
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:266
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:267
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:278
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:279
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:135
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:136
 #: obj\Release\Package\PackageTmp\Views\Purchase\PurchaseUpdate.cshtml:135
@@ -977,27 +976,27 @@ msgstr ""
 #: Views\Manage\BestPrice.cshtml:180
 #: Views\Manage\BestPrice_OLD.cshtml:110
 #: Views\Manage\BestPrice_OLD_2.cshtml:210
-#: Views\Manage\Dashboard.cshtml:90
 #: Views\Manage\Dashboard_OLD.cshtml:67
 #: Views\Manage\Dashboard_OLD_2.cshtml:85
 #: Views\Manage\ToBuy.cshtml:73
 #: Views\Manage\ToBuy_OLD.cshtml:68
 #: Views\Manage\ToBuy_OLD_2.cshtml:84
+#: Views\Manage\Dashboard.cshtml:90
 #: Views\Payment\Orders.cshtml:166
-#: Areas\Admin\Views\Listing\Categories.cshtml:101
 #: Areas\Admin\Views\Listing\Listings.cshtml:92
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:102
+#: Areas\Admin\Views\Listing\Categories.cshtml:101
 #: Areas\Admin\Views\Manage\Users.cshtml:77
 #: Areas\Admin\Views\Payment\Order.cshtml:142
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:85
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:68
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:84
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:73
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:180
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:90
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:110
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:210
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:67
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:85
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:68
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:84
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:166
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:102
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Categories.cshtml:101
@@ -1145,8 +1144,6 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:109
 #: Views\Manage\ToBuy_OLD.cshtml:104
 #: Views\Manage\ToBuy_OLD_2.cshtml:120
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:104
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:120
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:109
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:217
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:237
@@ -1154,6 +1151,8 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:167
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:282
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:302
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:104
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:120
 msgid "Continuar"
 msgstr ""
 
@@ -1247,8 +1246,8 @@ msgstr ""
 #: Views\Listing\_ListingGridList.cshtml:44
 #: Views\Payment\Orders.cshtml:132
 #: Areas\Admin\Views\ContentPage\ContentPages.cshtml:49
-#: Areas\Admin\Views\Listing\Listings.cshtml:71
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:115
+#: Areas\Admin\Views\Listing\Listings.cshtml:71
 #: Areas\Admin\Views\Manage\EmailTemplates.cshtml:39
 #: Areas\Admin\Views\Payment\Order.cshtml:112
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingGridList.cshtml:44
@@ -1386,19 +1385,16 @@ msgstr ""
 #: Views\Manage\BestPrice_OLD.cshtml:84
 #: Views\Manage\BestPrice_OLD.cshtml:89
 #: Views\Manage\BestPrice_OLD_2.cshtml:123
-#: Views\Manage\Dashboard.cshtml:60
 #: Views\Manage\Dashboard_OLD.cshtml:48
 #: Views\Manage\Dashboard_OLD_2.cshtml:66
 #: Views\Manage\ToBuy.cshtml:54
 #: Views\Manage\ToBuy_OLD.cshtml:49
 #: Views\Manage\ToBuy_OLD_2.cshtml:65
-#: Areas\Admin\Views\Listing\Categories.cshtml:23
+#: Views\Manage\Dashboard.cshtml:60
 #: Areas\Admin\Views\Listing\Listings.cshtml:19
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:20
+#: Areas\Admin\Views\Listing\Categories.cshtml:23
 #: Areas\Admin\Views\Manage\Users.cshtml:12
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:66
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:49
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:65
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:54
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:141
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:60
@@ -1406,6 +1402,9 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:89
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:123
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:48
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:66
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:49
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:65
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:20
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Categories.cshtml:23
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Listings.cshtml:19
@@ -1413,12 +1412,11 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: Views\Manage\Dashboard.cshtml:105
 #: Views\Manage\Dashboard_OLD.cshtml:82
 #: Views\Manage\Dashboard_OLD_2.cshtml:100
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:100
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:105
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:82
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:100
 msgid "Deleted!"
 msgstr ""
 
@@ -1434,8 +1432,8 @@ msgstr ""
 #: Areas\Admin\Views\ContentPage\ContentPages.cshtml:46
 #: Areas\Admin\Views\ContentPage\ContentPageUpdate.cshtml:37
 #: Areas\Admin\Views\Listing\CategoryUpdate.cshtml:26
-#: Areas\Admin\Views\Listing\Listings.cshtml:69
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:49
+#: Areas\Admin\Views\Listing\Listings.cshtml:69
 #: Areas\Admin\Views\Manage\Settings.cshtml:28
 #: Areas\Admin\Views\Payment\Order.cshtml:106
 #: Areas\Admin\Views\Plugin\Plugins.cshtml:99
@@ -1558,10 +1556,10 @@ msgstr ""
 msgid "Digite aqui sua resposta..."
 msgstr ""
 
-#: Areas\Admin\Views\Listing\Categories.cshtml:108
-#: Areas\Admin\Views\Listing\Categories.cshtml:116
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:109
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:117
+#: Areas\Admin\Views\Listing\Categories.cshtml:108
+#: Areas\Admin\Views\Listing\Categories.cshtml:116
 #: Areas\Admin\Views\Manage\Users.cshtml:84
 #: Areas\Admin\Views\Manage\Users.cshtml:92
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:109
@@ -1624,11 +1622,11 @@ msgstr ""
 #: Areas\Admin\Views\Manage\Settings.cshtml:49
 #: Areas\Admin\Views\Manage\Settings.cshtml:51
 #: Areas\Admin\Views\Manage\SettingsEmail.cshtml:18
-#: Areas\Admin\Views\Manage\Users.cshtml:39
 #: Areas\Admin\Views\Manage\UserUpdate.cshtml:56
+#: Areas\Admin\Views\Manage\Users.cshtml:39
 #: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:45
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:58
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:256
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:268
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:125
 #: obj\Release\Package\PackageTmp\Views\Manage\CompanyData.cshtml:67
 #: obj\Release\Package\PackageTmp\Views\Purchase\PurchaseUpdate.cshtml:125
@@ -1640,8 +1638,8 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: Areas\Admin\Views\Manage\Users.cshtml:40
 #: Areas\Admin\Views\Manage\UserUpdate.cshtml:67
+#: Areas\Admin\Views\Manage\Users.cshtml:40
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\Users.cshtml:40
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\UserUpdate.cshtml:67
 msgid "Email Confirmado"
@@ -1682,7 +1680,7 @@ msgstr ""
 #: Views\Listing\PurchaseUpdate.cshtml:126
 #: Views\Listing\ListingUpdate.cshtml:269
 #: Views\Purchase\PurchaseUpdate.cshtml:126
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:257
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:269
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:126
 #: obj\Release\Package\PackageTmp\Views\Purchase\PurchaseUpdate.cshtml:126
 msgid "Enter Email Address"
@@ -1752,7 +1750,7 @@ msgid "Entrar "
 msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:257
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:245
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:257
 msgid "Entre com seu nome completo"
 msgstr ""
 
@@ -1774,8 +1772,8 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingContactModal.cshtml:28
 #: obj\Release\Package\PackageTmp\Views\Listing\Review.cshtml:73
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingReviewModal.cshtml:28
-#: obj\Release\Package\PackageTmp\Views\Manage\_ListingContactModal.cshtml:28
 #: obj\Release\Package\PackageTmp\Views\Manage\Message.cshtml:79
+#: obj\Release\Package\PackageTmp\Views\Manage\_ListingContactModal.cshtml:28
 msgid "Enviar"
 msgstr ""
 
@@ -1799,8 +1797,8 @@ msgstr ""
 msgid "Enviar Imagens"
 msgstr ""
 
-#: Areas\Admin\Views\Listing\ListingTypes.cshtml:81
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:69
+#: Areas\Admin\Views\Listing\ListingTypes.cshtml:81
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:81
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:69
 msgid "Envio Habilitado"
@@ -1868,8 +1866,8 @@ msgstr ""
 msgid "Este texto será mostrado próximo a uma caixa de seleção no formulário de checkout"
 msgstr ""
 
-#: Areas\Admin\Views\Listing\ListingTypes.cshtml:77
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:103
+#: Areas\Admin\Views\Listing\ListingTypes.cshtml:77
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:77
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:103
 msgid "Etiqueta de tipo de pedido"
@@ -1920,32 +1918,33 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:88
 #: Views\Manage\ToBuy_OLD.cshtml:83
 #: Views\Manage\ToBuy_OLD_2.cshtml:99
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:83
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:99
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:88
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:195
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:125
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:226
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:83
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:99
 msgid "Excluído com sucesso!"
+msgstr ""
+
+#: Views\Manage\Dashboard.cshtml:105
+msgid "Excluído com Sucesso!"
 msgstr ""
 
 #: Views\Manage\BestPrice.cshtml:185
 #: Views\Manage\BestPrice_OLD.cshtml:115
 #: Views\Manage\BestPrice_OLD_2.cshtml:182
 #: Views\Manage\BestPrice_OLD_2.cshtml:215
-#: Views\Manage\Dashboard.cshtml:95
 #: Views\Manage\Dashboard_OLD.cshtml:72
 #: Views\Manage\Dashboard_OLD_2.cshtml:90
 #: Views\Manage\ToBuy.cshtml:78
 #: Views\Manage\ToBuy_OLD.cshtml:73
 #: Views\Manage\ToBuy_OLD_2.cshtml:89
-#: Areas\Admin\Views\Listing\Categories.cshtml:106
+#: Views\Manage\Dashboard.cshtml:95
 #: Areas\Admin\Views\Listing\Listings.cshtml:97
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:107
+#: Areas\Admin\Views\Listing\Categories.cshtml:106
 #: Areas\Admin\Views\Manage\Users.cshtml:82
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:90
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:73
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:89
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:78
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:185
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:95
@@ -1953,6 +1952,9 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:182
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:215
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:72
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:90
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:73
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:89
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:107
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Categories.cshtml:106
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Listings.cshtml:97
@@ -1960,8 +1962,8 @@ msgstr ""
 msgid "Excluir"
 msgstr ""
 
-#: Areas\Admin\Views\Listing\Listings.cshtml:70
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:74
+#: Areas\Admin\Views\Listing\Listings.cshtml:70
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Listings.cshtml:70
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingUpdate.cshtml:74
 msgid "Exibir Email"
@@ -2003,8 +2005,6 @@ msgstr ""
 #: Views\Manage\BestPrice_OLD_2.cshtml:233
 #: Views\Manage\BestPrice_OLD_2.cshtml:267
 #: Views\Manage\BestPrice_OLD_2.cshtml:339
-#: Views\Manage\Dashboard.cshtml:107
-#: Views\Manage\Dashboard.cshtml:111
 #: Views\Manage\Dashboard_OLD.cshtml:84
 #: Views\Manage\Dashboard_OLD.cshtml:88
 #: Views\Manage\Dashboard_OLD_2.cshtml:102
@@ -2012,16 +2012,14 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:94
 #: Views\Manage\ToBuy_OLD.cshtml:89
 #: Views\Manage\ToBuy_OLD_2.cshtml:105
+#: Views\Manage\Dashboard.cshtml:107
+#: Views\Manage\Dashboard.cshtml:111
 #: Views\Payment\Orders.cshtml:182
 #: Views\Payment\Orders.cshtml:186
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:636
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:640
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:619
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:623
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:102
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:106
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:89
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:105
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:94
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:202
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:107
@@ -2033,6 +2031,10 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:339
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:84
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:88
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:102
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:106
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:89
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:105
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:182
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:186
 msgid "Failed!"
@@ -2238,7 +2240,7 @@ msgid "Informações do Item (Lote)"
 msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:230
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:218
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:230
 msgid "Informações sobre o local de Retirada"
 msgstr ""
 
@@ -2248,7 +2250,7 @@ msgid "Informe a Agência"
 msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:237
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:225
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:237
 msgid "Informe a cidade e estado (Ex: Pedra Cinza-MG...)"
 msgstr ""
 
@@ -2258,7 +2260,7 @@ msgid "Informe a idade média dos animais"
 msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:241
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:229
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:241
 msgid "Informe a referência para facilitar encontrar (Ex: Rod X ou Perto de...)"
 msgstr ""
 
@@ -2311,7 +2313,7 @@ msgid "Informe o dígito da Conta"
 msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:233
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:221
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:233
 msgid "Informe o local de retirada (Ex: nome da propriedade como é conhecida...)"
 msgstr ""
 
@@ -2550,7 +2552,7 @@ msgid "Listagens por categoria"
 msgstr ""
 
 #: Controllers\BestPriceController.cs:694
-#: Controllers\ListingController.cs:1691
+#: Controllers\ListingController.cs:1689
 #: Controllers\PurchaseController.cs:689
 msgid "Listing review is not allowed!"
 msgstr ""
@@ -2582,7 +2584,7 @@ msgstr ""
 #: Views\Listing\Listing.cshtml:361
 #: Views\Listing\ListingUpdate.cshtml:232
 #: obj\Release\Package\PackageTmp\Views\Listing\BuyItemOffer.cshtml:315
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:220
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:232
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:361
 msgid "Local de retirada do Lote"
 msgstr ""
@@ -2693,9 +2695,9 @@ msgstr ""
 #: Views\Manage\Messages.cshtml:52
 #: Views\Manage\Messages_OLD.cshtml:44
 #: Views\Manage\Messages_OLD_2.cshtml:42
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:52
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:44
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:42
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:52
 msgid "Marcar como lida"
 msgstr ""
 
@@ -2734,13 +2736,13 @@ msgstr ""
 #: Views\Manage\Messages_OLD_2.cshtml:7
 #: Views\Manage\Messages_OLD_2.cshtml:26
 #: Views\Shared\_DashBoardSide.cshtml:14
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:7
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:26
+#: obj\Release\Package\PackageTmp\Views\Manage\Message.cshtml:5
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:7
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:26
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:7
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:26
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:7
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:26
-#: obj\Release\Package\PackageTmp\Views\Manage\Message.cshtml:5
 #: obj\Release\Package\PackageTmp\Views\Shared\_DashBoardSide.cshtml:14
 msgid "Mensagens"
 msgstr ""
@@ -2762,7 +2764,7 @@ msgid "Message is sent."
 msgstr ""
 
 #: Controllers\BestPriceController.cs:559
-#: Controllers\ListingController.cs:1549
+#: Controllers\ListingController.cs:1547
 #: Controllers\PurchaseController.cs:554
 msgid "Message sent succesfully!"
 msgstr ""
@@ -2844,9 +2846,9 @@ msgstr ""
 #: Views\Manage\Messages.cshtml:132
 #: Views\Manage\Messages_OLD.cshtml:118
 #: Views\Manage\Messages_OLD_2.cshtml:134
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:132
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:118
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:134
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:132
 msgid "Mostrando {0} - {1} of {2}"
 msgstr ""
 
@@ -2858,7 +2860,7 @@ msgstr ""
 #: Views\Listing\PurchaseUpdate.cshtml:121
 #: Views\Listing\ListingUpdate.cshtml:264
 #: Views\Purchase\PurchaseUpdate.cshtml:121
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:252
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:264
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:121
 #: obj\Release\Package\PackageTmp\Views\Purchase\PurchaseUpdate.cshtml:121
 msgid "Mostrar Telefone"
@@ -2888,6 +2890,9 @@ msgstr ""
 #: Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:40
 #: Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:63
 #: Plugins\Plugin.Payment.Stripe\Views\TransactionOverview.cshtml:31
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\bin\Views\Transaction.cshtml:40
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\bin\Views\Transaction.cshtml:63
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\bin\Views\TransactionOverview.cshtml:31
 #: Areas\Admin\Views\ContentPage\ContentPages.cshtml:36
 #: Areas\Admin\Views\Listing\CustomFields.cshtml:54
 #: Areas\Admin\Views\Listing\Listings.cshtml:52
@@ -2947,8 +2952,8 @@ msgstr ""
 #: Areas\Admin\Views\Listing\CategoryUpdate.cshtml:19
 #: Areas\Admin\Views\Listing\CustomFields.cshtml:62
 #: Areas\Admin\Views\Listing\CustomFieldUpdate.cshtml:40
-#: Areas\Admin\Views\Listing\ListingTypes.cshtml:67
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:32
+#: Areas\Admin\Views\Listing\ListingTypes.cshtml:67
 #: Areas\Admin\Views\Manage\Settings.cshtml:21
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:67
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:32
@@ -2962,7 +2967,7 @@ msgstr ""
 #: Views\Listing\PurchaseUpdate.cshtml:113
 #: Views\Listing\ListingUpdate.cshtml:256
 #: Views\Purchase\PurchaseUpdate.cshtml:113
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:244
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:256
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:113
 #: obj\Release\Package\PackageTmp\Views\Purchase\PurchaseUpdate.cshtml:113
 msgid "Nome Completo"
@@ -3015,14 +3020,14 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:90
 #: Views\Manage\ToBuy_OLD.cshtml:85
 #: Views\Manage\ToBuy_OLD_2.cshtml:101
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:85
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:101
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:90
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:197
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:127
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:195
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:228
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:262
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:85
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:101
 msgid "O Item não pode ser excluído!"
 msgstr ""
 
@@ -3060,8 +3065,8 @@ msgstr ""
 
 #: Controllers\BestPriceController.cs:676
 #: Controllers\BestPriceController.cs:765
-#: Controllers\ListingController.cs:1673
-#: Controllers\ListingController.cs:1762
+#: Controllers\ListingController.cs:1671
+#: Controllers\ListingController.cs:1760
 #: Controllers\PurchaseController.cs:671
 #: Controllers\PurchaseController.cs:760
 msgid "Obrigado pelo seu feedback!"
@@ -3095,9 +3100,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:104
 #: Views\Manage\ToBuy_OLD.cshtml:99
 #: Views\Manage\ToBuy_OLD_2.cshtml:115
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:104
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:99
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:115
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:104
 msgid "Oferta de Compra"
 msgstr ""
 
@@ -3111,11 +3116,11 @@ msgstr ""
 msgid "Oferta de Compra incluída com Sucesso!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1207
+#: Controllers\ListingController.cs:1206
 msgid "Oferta de VENDA LOTE: \" + lote + \" atualizada com SUCESSO!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1207
+#: Controllers\ListingController.cs:1206
 msgid "Oferta de VENDA LOTE: \" + lote + \" publicada com SUCESSO!"
 msgstr ""
 
@@ -3147,6 +3152,18 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\CustomFields.cshtml:73
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\CustomFieldUpdate.cshtml:47
 msgid "Opções"
+msgstr ""
+
+#: Views\Payment\Orders.cshtml:51
+#: Areas\Admin\Views\Payment\Order.cshtml:46
+#: Areas\Admin\Views\Payment\Order.cshtml:165
+msgid "Operação cancelada"
+msgstr ""
+
+#: Views\Manage\Dashboard.cshtml:114
+#: Views\Payment\Orders.cshtml:189
+#: Areas\Admin\Views\Listing\Listings.cshtml:105
+msgid "Operação cancelada!"
 msgstr ""
 
 #: Controllers\PaymentController.cs:228
@@ -3193,8 +3210,8 @@ msgstr ""
 msgid "Pagamento"
 msgstr ""
 
-#: Areas\Admin\Views\Listing\ListingTypes.cshtml:80
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:89
+#: Areas\Admin\Views\Listing\ListingTypes.cshtml:80
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:80
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:89
 msgid "Pagamento Ativado"
@@ -3228,6 +3245,7 @@ msgstr ""
 
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:21
 #: Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:21
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\bin\Views\Transaction.cshtml:21
 #: obj\Release\Package\PackageTmp\Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:21
 msgid "Paid"
 msgstr ""
@@ -3239,22 +3257,22 @@ msgstr ""
 msgid "Painel Admin"
 msgstr ""
 
-#: Views\Manage\Dashboard.cshtml:4
 #: Views\Manage\Dashboard_OLD.cshtml:4
 #: Views\Manage\Dashboard_OLD_2.cshtml:4
 #: Views\Manage\ToBuy.cshtml:4
 #: Views\Manage\ToBuy_OLD.cshtml:4
 #: Views\Manage\ToBuy_OLD_2.cshtml:4
+#: Views\Manage\Dashboard.cshtml:4
 #: Views\Shared\_LoginPartial.cshtml:62
 #: Views\Shared\_NavigationSide.cshtml:78
 #: Areas\Admin\Views\Manage\Dashboard.cshtml:3
 #: Areas\Admin\Views\Shared\_NavigationSide.cshtml:76
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:4
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:4
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:4
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:4
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:4
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:4
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:4
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:4
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:4
 #: obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml:62
 #: obj\Release\Package\PackageTmp\Views\Shared\_NavigationSide.cshtml:78
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\Dashboard.cshtml:3
@@ -3299,8 +3317,8 @@ msgstr ""
 #: Areas\Admin\Views\Install\Index.cshtml:32
 #: Areas\Admin\Views\Install\Index.cshtml:33
 #: Areas\Admin\Views\Install\Index.cshtml:82
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:262
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:263
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:274
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:275
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:131
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:132
 #: obj\Release\Package\PackageTmp\Views\Manage\Index.cshtml:13
@@ -3350,6 +3368,7 @@ msgstr ""
 #: Views\Payment\Orders.cshtml:45
 #: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:25
 #: Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:25
+#: F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Plugins\Plugin.Payment.Stripe\bin\Views\Transaction.cshtml:25
 #: Areas\Admin\Views\Payment\Order.cshtml:40
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:45
 #: obj\Release\Package\PackageTmp\Plugins\Plugin.Payment.Stripe\Views\Transaction.cshtml:25
@@ -3466,31 +3485,31 @@ msgstr ""
 #: Views\Manage\Messages_OLD.cshtml:34
 #: Views\Manage\Messages_OLD_2.cshtml:56
 #: obj\Release\Package\PackageTmp\Views\Listing\Listings.cshtml:95
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:34
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:56
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:42
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:56
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:79
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:34
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:59
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:34
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:56
 msgid "Pesquisar"
 msgstr ""
 
-#: Views\Manage\Dashboard.cshtml:23
 #: Views\Manage\Dashboard_OLD.cshtml:23
 #: Views\Manage\Dashboard_OLD_2.cshtml:34
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:34
+#: Views\Manage\Dashboard.cshtml:23
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:23
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:23
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:34
 msgid "Pesquisar Item ofertado"
 msgstr ""
 
 #: Views\Manage\Messages.cshtml:37
 #: Views\Manage\Messages_OLD.cshtml:33
 #: Views\Manage\Messages_OLD_2.cshtml:51
+#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:37
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD.cshtml:33
 #: obj\Release\Package\PackageTmp\Views\Manage\Messages_OLD_2.cshtml:51
-#: obj\Release\Package\PackageTmp\Views\Manage\Messages.cshtml:37
 msgid "Pesquisar mensagens..."
 msgstr ""
 
@@ -3508,9 +3527,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:25
 #: Views\Manage\ToBuy_OLD.cshtml:24
 #: Views\Manage\ToBuy_OLD_2.cshtml:35
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:25
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:24
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:35
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:25
 msgid "Pesquisar Oferta"
 msgstr ""
 
@@ -3577,8 +3596,8 @@ msgstr ""
 #: Views\Listing\_ListingGridList.cshtml:41
 #: Views\Listing\ListingUpdate.cshtml:61
 #: Views\Listing\ListingUpdate.cshtml:64
-#: Views\Payment\Orders.cshtml:125
 #: Views\Payment\Payment.cshtml:63
+#: Views\Payment\Orders.cshtml:125
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:94
 #: Areas\Admin\Views\Payment\Order.cshtml:104
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:61
@@ -3629,8 +3648,8 @@ msgstr ""
 msgid "Preço por Kg"
 msgstr ""
 
-#: Areas\Admin\Views\Listing\ListingTypes.cshtml:70
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:57
+#: Areas\Admin\Views\Listing\ListingTypes.cshtml:70
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:70
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:57
 msgid "Preço Unitário"
@@ -3663,18 +3682,18 @@ msgstr ""
 msgid "Primeiro Nome"
 msgstr ""
 
-#: Views\Manage\Dashboard.cshtml:26
 #: Views\Manage\Dashboard_OLD.cshtml:24
 #: Views\Manage\Dashboard_OLD_2.cshtml:39
 #: Views\Manage\ToBuy.cshtml:29
 #: Views\Manage\ToBuy_OLD.cshtml:25
 #: Views\Manage\ToBuy_OLD_2.cshtml:40
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:39
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:25
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:40
+#: Views\Manage\Dashboard.cshtml:26
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:29
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:26
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:24
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:39
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:25
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:40
 msgid "Procurar"
 msgstr ""
 
@@ -3732,7 +3751,7 @@ msgstr ""
 #: Views\Listing\PurchaseUpdate.cshtml:141
 #: Views\Listing\ListingUpdate.cshtml:284
 #: Views\Purchase\PurchaseUpdate.cshtml:141
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:272
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:284
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:141
 #: obj\Release\Package\PackageTmp\Views\Purchase\PurchaseUpdate.cshtml:141
 msgid "Publicar Item"
@@ -3741,24 +3760,24 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:32
 #: Views\Manage\ToBuy_OLD.cshtml:29
 #: Views\Manage\ToBuy_OLD_2.cshtml:28
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:32
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:29
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:28
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:32
 msgid "Publicar nova Compra"
 msgstr ""
 
-#: Views\Manage\Dashboard.cshtml:29
-#: Views\Manage\Dashboard.cshtml:30
 #: Views\Manage\Dashboard_OLD.cshtml:28
 #: Views\Manage\Dashboard_OLD_2.cshtml:27
+#: Views\Manage\Dashboard.cshtml:29
+#: Views\Manage\Dashboard.cshtml:30
 #: Views\Shared\_Layout.cshtml:67
 #: Views\Shared\_LoginPartial.cshtml:63
 #: Views\Shared\_NavigationSide.cshtml:70
 #: Views\Shared\_NavigationSide.cshtml:84
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:27
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:29
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:30
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:28
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:27
 #: obj\Release\Package\PackageTmp\Views\Shared\_Layout.cshtml:67
 #: obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml:63
 #: obj\Release\Package\PackageTmp\Views\Shared\_NavigationSide.cshtml:70
@@ -3870,7 +3889,7 @@ msgstr ""
 #: Views\Listing\PurchaseUpdate.cshtml:111
 #: Views\Listing\ListingUpdate.cshtml:254
 #: Views\Purchase\PurchaseUpdate.cshtml:111
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:242
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:254
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:111
 #: obj\Release\Package\PackageTmp\Views\Purchase\PurchaseUpdate.cshtml:111
 msgid "Quem está publicando"
@@ -3886,9 +3905,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:19
 #: Views\Manage\ToBuy_OLD.cshtml:19
 #: Views\Manage\ToBuy_OLD_2.cshtml:19
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:19
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:19
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:19
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:19
 msgid "Quero Comprar (Minhas ofertas de Compra)"
 msgstr ""
 
@@ -3899,12 +3918,12 @@ msgstr ""
 msgid "Quero Vender"
 msgstr ""
 
-#: Views\Manage\Dashboard.cshtml:16
 #: Views\Manage\Dashboard_OLD.cshtml:18
 #: Views\Manage\Dashboard_OLD_2.cshtml:18
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:18
+#: Views\Manage\Dashboard.cshtml:16
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:16
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:18
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:18
 msgid "Quero Vender (Minhas ofertas de venda)"
 msgstr ""
 
@@ -3943,7 +3962,7 @@ msgid "Referência (Como chegar)"
 msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:240
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:228
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:240
 msgid "Referências (facilitar localização)"
 msgstr ""
 
@@ -4044,7 +4063,7 @@ msgstr ""
 msgid "RESPOSTA da COTAÇÃO alterada com Sucesso!"
 msgstr ""
 
-#: Controllers\ListingController.cs:1388
+#: Controllers\ListingController.cs:1387
 msgid "Resposta registrada com Sucesso!"
 msgstr ""
 
@@ -4070,11 +4089,11 @@ msgstr ""
 #: Areas\Admin\Views\Design\Appearance.cshtml:44
 #: Areas\Admin\Views\Design\CodeScript.cshtml:34
 #: Areas\Admin\Views\Design\CodeStyle.cshtml:34
-#: Areas\Admin\Views\Listing\Categories.cshtml:70
 #: Areas\Admin\Views\Listing\CategoryUpdate.cshtml:58
 #: Areas\Admin\Views\Listing\CustomFieldUpdate.cshtml:90
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:112
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:195
+#: Areas\Admin\Views\Listing\Categories.cshtml:70
 #: Areas\Admin\Views\Manage\EmailTemplateUpdate.cshtml:63
 #: Areas\Admin\Views\Manage\Settings.cshtml:166
 #: Areas\Admin\Views\Manage\SettingsEmail.cshtml:68
@@ -4180,7 +4199,7 @@ msgid "Seu Email..."
 msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:261
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:249
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:261
 msgid "Seu número de telefone (XX) XXXXX-XXXX (Obs: Preferencia Whatsapp)"
 msgstr ""
 
@@ -4286,9 +4305,9 @@ msgstr ""
 #: Views\Manage\AddPhoneNumber.cshtml:3
 #: Views\Manage\UserProfile.cshtml:56
 #: Views\Purchase\PurchaseUpdate.cshtml:117
-#: Areas\Admin\Views\Manage\Users.cshtml:41
 #: Areas\Admin\Views\Manage\UserUpdate.cshtml:73
-#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:248
+#: Areas\Admin\Views\Manage\Users.cshtml:41
+#: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:260
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:117
 #: obj\Release\Package\PackageTmp\Views\Manage\AddPhoneNumber.cshtml:3
 #: obj\Release\Package\PackageTmp\Views\Manage\UserProfile.cshtml:56
@@ -4303,8 +4322,8 @@ msgstr ""
 msgid "TELEFONE 1"
 msgstr ""
 
-#: Areas\Admin\Views\Manage\Users.cshtml:42
 #: Areas\Admin\Views\Manage\UserUpdate.cshtml:91
+#: Areas\Admin\Views\Manage\Users.cshtml:42
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\Users.cshtml:42
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\UserUpdate.cshtml:91
 msgid "Telefone Confirmado"
@@ -4353,8 +4372,8 @@ msgstr ""
 msgid "Texto do Acordo"
 msgstr ""
 
-#: Areas\Admin\Views\Listing\ListingTypes.cshtml:69
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:40
+#: Areas\Admin\Views\Listing\ListingTypes.cshtml:69
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:69
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:40
 msgid "Texto do botão"
@@ -4441,8 +4460,8 @@ msgstr ""
 #: Views\Listing\Listings.cshtml:55
 #: Views\Shared\_ListingTypes.cshtml:6
 #: Areas\Admin\Views\Listing\CategoryUpdate.cshtml:44
-#: Areas\Admin\Views\Listing\Listings.cshtml:66
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:16
+#: Areas\Admin\Views\Listing\Listings.cshtml:66
 #: Areas\Admin\Views\Shared\_ListingTypes.cshtml:5
 #: obj\Release\Package\PackageTmp\Views\Listing\Listings.cshtml:55
 #: obj\Release\Package\PackageTmp\Views\Shared\_ListingTypes.cshtml:6
@@ -4453,8 +4472,8 @@ msgstr ""
 msgid "Tipo de Listagem"
 msgstr ""
 
-#: Areas\Admin\Views\Listing\ListingTypes.cshtml:75
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:96
+#: Areas\Admin\Views\Listing\ListingTypes.cshtml:75
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:75
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:96
 msgid "Tipo de Pedido"
@@ -4480,8 +4499,8 @@ msgstr ""
 #: Views\Payment\Orders.cshtml:123
 #: Areas\Admin\Views\ContentPage\ContentPages.cshtml:45
 #: Areas\Admin\Views\ContentPage\ContentPageUpdate.cshtml:30
-#: Areas\Admin\Views\Listing\Listings.cshtml:68
 #: Areas\Admin\Views\Listing\ListingUpdate.cshtml:42
+#: Areas\Admin\Views\Listing\Listings.cshtml:68
 #: Areas\Admin\Views\Payment\Order.cshtml:99
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingGridList.cshtml:38
 #: obj\Release\Package\PackageTmp\Views\Payment\Orders.cshtml:123
@@ -4778,9 +4797,9 @@ msgstr ""
 #: Views\Manage\ToBuy.cshtml:74
 #: Views\Manage\ToBuy_OLD.cshtml:69
 #: Views\Manage\ToBuy_OLD_2.cshtml:85
+#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:74
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD.cshtml:69
 #: obj\Release\Package\PackageTmp\Views\Manage\ToBuy_OLD_2.cshtml:85
-#: obj\Release\Package\PackageTmp\Views\Manage\ToBuy.cshtml:74
 msgid "Você está prestes a excluir a oferta de compra: "
 msgstr ""
 
@@ -4789,10 +4808,14 @@ msgstr ""
 msgid "Você irá deletar todas as listagens com o tipo de listagem "
 msgstr ""
 
+#: Views\Manage\Dashboard.cshtml:91
+msgid "Você irá excluir '"
+msgstr ""
+
 #: Controllers\BestPriceController.cs:621
 #: Controllers\BestPriceController.cs:721
-#: Controllers\ListingController.cs:1618
-#: Controllers\ListingController.cs:1718
+#: Controllers\ListingController.cs:1616
+#: Controllers\ListingController.cs:1716
 #: Controllers\PurchaseController.cs:616
 #: Controllers\PurchaseController.cs:716
 msgid "Você não pode avaliar a si mesmo!"
@@ -4820,19 +4843,19 @@ msgstr ""
 msgid "You cannot delete Administrator, change the user role first."
 msgstr ""
 
-#: Controllers\ListingController.cs:1401
+#: Controllers\ListingController.cs:1400
 #: Areas\Admin\Controllers\ListingController.cs:762
 msgid "You cannot delete item with orders! You can deactivate it instead."
 msgstr ""
 
 #: Controllers\BestPriceController.cs:629
-#: Controllers\ListingController.cs:1626
+#: Controllers\ListingController.cs:1624
 #: Controllers\PurchaseController.cs:624
 msgid "You cannot review the order!"
 msgstr ""
 
 #: Controllers\BestPriceController.cs:531
-#: Controllers\ListingController.cs:1521
+#: Controllers\ListingController.cs:1519
 #: Controllers\PurchaseController.cs:526
 msgid "You cannot send message to yourself!"
 msgstr ""
@@ -4842,18 +4865,17 @@ msgid "You cannot the listing type. There should be at least one listing type."
 msgstr ""
 
 #: Controllers\BestPriceController.cs:707
-#: Controllers\ListingController.cs:1704
+#: Controllers\ListingController.cs:1702
 #: Controllers\PurchaseController.cs:702
 msgid "You have reach the review limits today!"
 msgstr ""
 
-#: Views\Manage\Dashboard.cshtml:91
 #: Views\Manage\Dashboard_OLD.cshtml:68
 #: Views\Manage\Dashboard_OLD_2.cshtml:86
 #: Areas\Admin\Views\Listing\Listings.cshtml:93
-#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:86
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard.cshtml:91
 #: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD.cshtml:68
+#: obj\Release\Package\PackageTmp\Views\Manage\Dashboard_OLD_2.cshtml:86
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\Listings.cshtml:93
 msgid "You will delete"
 msgstr ""
@@ -4868,16 +4890,134 @@ msgstr ""
 msgid "You will delete the user and its all listings from "
 msgstr ""
 
-#: Controllers\ListingController.cs:1409
-msgid "Your listing has been deleted."
-msgstr ""
-
 #: Views\Account\ResetPasswordConfirmation.cshtml:15
 #: obj\Release\Package\PackageTmp\Views\Account\ResetPasswordConfirmation.cshtml:15
 msgid "Your password has been reset."
 msgstr ""
 
+#~ msgid ""
+#~ msgstr ""
+
 #~ msgid " => ((( and  "
+#~ msgstr ""
+
+#~ msgid " e estão ação não poderá ser desfeita!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "]]]\" };\n"
+#~ "            return Json(result, JsonRequestBehavior.AllowGet);\n"
+#~ "        }\n"
+#~ "\n"
+#~ "        public async Task<ActionResult> ListingPhotoDelete(int id)\n"
+#~ "        {\n"
+#~ "            try\n"
+#~ "            {\n"
+#~ "                await _pictureService.DeleteAsync(id);\n"
+#~ "                var itemPicture = _listingPictureservice.Query(x => x.PictureID == id).Select().FirstOrDefault();\n"
+#~ "\n"
+#~ "                if (itemPicture != null)\n"
+#~ "                    await _listingPictureservice.DeleteAsync(itemPicture.ID);\n"
+#~ "\n"
+#~ "                await _unitOfWorkAsync.SaveChangesAsync();\n"
+#~ "\n"
+#~ "                var path = Path.Combine(Server.MapPath(\"~/images/listing\"), string.Format(\"{0}.{1}\", id.ToString(\"00000000\"), \"jpg\"));\n"
+#~ "\n"
+#~ "                System.IO.File.Delete(path);\n"
+#~ "\n"
+#~ "                var result = new { Success = \"true\", Message = \"\" };\n"
+#~ "                return Json(result, JsonRequestBehavior.AllowGet);\n"
+#~ "            }\n"
+#~ "            catch (Exception ex)\n"
+#~ "            {\n"
+#~ "                var result = new { Success = \"false\", Message = ex.Message };\n"
+#~ "                return Json(result, JsonRequestBehavior.AllowGet);\n"
+#~ "            }\n"
+#~ "        }\n"
+#~ "\n"
+#~ "        //=========================================================\n"
+#~ "        public async Task<ActionResult> ListingVideoDelete(int id)\n"
+#~ "        {\n"
+#~ "            try\n"
+#~ "            {\n"
+#~ "                await _pictureService.DeleteAsync(id);\n"
+#~ "                var itemPicture = _listingPictureservice.Query(x => x.PictureID == id).Select().FirstOrDefault();\n"
+#~ "\n"
+#~ "                if (itemPicture != null)\n"
+#~ "                    await _listingPictureservice.DeleteAsync(itemPicture.ID);\n"
+#~ "\n"
+#~ "                await _unitOfWorkAsync.SaveChangesAsync();\n"
+#~ "\n"
+#~ "                var path = Path.Combine(Server.MapPath(\"~/images/listing\"), string.Format(\"{0}.{1}\", id.ToString(\"00000000\"), \"jpg\"));\n"
+#~ "\n"
+#~ "                System.IO.File.Delete(path);\n"
+#~ "\n"
+#~ "                var result = new { Success = \"true\", Message = \"\" };\n"
+#~ "                return Json(result, JsonRequestBehavior.AllowGet);\n"
+#~ "            }\n"
+#~ "            catch (Exception ex)\n"
+#~ "            {\n"
+#~ "                var result = new { Success = \"false\", Message = ex.Message };\n"
+#~ "                return Json(result, JsonRequestBehavior.AllowGet);\n"
+#~ "            }\n"
+#~ "        }\n"
+#~ "        //=========================================================\n"
+#~ "\n"
+#~ "        [AllowAnonymous]\n"
+#~ "        public async new Task<ActionResult> Profile(string id, int? oqeq)\n"
+#~ "        {\n"
+#~ "            var user = await UserManager.FindByIdAsync(id);\n"
+#~ "\n"
+#~ "            if (user == null)\n"
+#~ "                return new HttpNotFoundResult();\n"
+#~ "\n"
+#~ "            var items = await _listingService.Query(x => x.UserID == id)\n"
+#~ "                .Include(x => x.ListingPictures)\n"
+#~ "                .Include(x => x.ListingType)\n"
+#~ "                .Include(x => x.AspNetUser)\n"
+#~ "                .Include(x => x.ListingReviews)\n"
+#~ "                .SelectAsync();\n"
+#~ "\n"
+#~ "            var itemsModel = new List<ListingItemModel>();\n"
+#~ "            foreach (var item in items.OrderByDescending(x => x.Created))\n"
+#~ "            {\n"
+#~ "                itemsModel.Add(new ListingItemModel()\n"
+#~ "                {\n"
+#~ "                    ListingCurrent = item,\n"
+#~ "                    UrlPicture = item.ListingPictures.Count == 0 ? ImageHelper.GetListingImagePath(0) : ImageHelper.GetListingImagePath(item.ListingPictures.OrderBy(x => x.Ordering).FirstOrDefault().PictureID)\n"
+#~ "                });\n"
+#~ "            }\n"
+#~ "\n"
+#~ "            // include reviews\n"
+#~ "            var reviews = await _listingReviewService\n"
+#~ "                .Query(x => x.UserTo == id)\n"
+#~ "                .Include(x => x.AspNetUserFrom)\n"
+#~ "                .SelectAsync();\n"
+#~ "\n"
+#~ "            var model = new ProfileModel()\n"
+#~ "            {\n"
+#~ "                Listings = itemsModel,\n"
+#~ "                User = user,\n"
+#~ "                ListingReviews = reviews.ToList()\n"
+#~ "            };\n"
+#~ "\n"
+#~ "            ViewBag.oqeq = (oqeq >= 0) ? oqeq : 0;\n"
+#~ "\n"
+#~ "            return View(\"~/Views/Listing/Profile.cshtml\", model);\n"
+#~ "        }\n"
+#~ "\n"
+#~ "        public async Task<ActionResult> ContactUser(ContactUserModel model)\n"
+#~ "        {\n"
+#~ "            var listing = await _listingService.FindAsync(model.ListingID);\n"
+#~ "\n"
+#~ "            var userIdCurrent = User.Identity.GetUserId();\n"
+#~ "            var user = userIdCurrent.User();\n"
+#~ "            \n"
+#~ "            // Check if user send message to itself, which is not allowed\n"
+#~ "            if (listing.UserID == userIdCurrent)\n"
+#~ "            {\n"
+#~ "                TempData[TempDataKeys.UserMessageAlertState] = \"bg-danger\";\n"
+#~ "                TempData[TempDataKeys.UserMessage] = \"[[[You cannot send message to yourself!"
 #~ msgstr ""
 
 #~ msgid "{0:N0} reviews"
@@ -6079,6 +6219,9 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Visualize o perfil do usuário e outras listagens"
+#~ msgstr ""
+
+#~ msgid "Você irá excluir"
 #~ msgstr ""
 
 #~ msgid "Você pagará: R$ "

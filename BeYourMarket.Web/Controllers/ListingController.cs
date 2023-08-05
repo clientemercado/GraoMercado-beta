@@ -1402,10 +1402,9 @@ namespace BeYourMarket.Web.Controllers
             }
 
             await _listingService.DeleteAsync(id);
-
             await _unitOfWorkAsync.SaveChangesAsync();
 
-            var result = new { Success = true, Message = "[[[Your listing has been deleted.]]]" };
+            var result = new { Success = true, Message = "" };
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
