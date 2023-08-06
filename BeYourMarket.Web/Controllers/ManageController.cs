@@ -32,6 +32,7 @@ namespace BeYourMarket.Web.Controllers
         private ApplicationUserManager _userManager;
 
         private readonly ISettingService _settingService;
+        private readonly IAspNetUserService _aspNetUserService;
         private readonly ISettingDictionaryService _settingDictionaryService;
         private readonly ICategoryService _categoryService;
         private readonly IUnidadesService _unidadesService;
@@ -96,6 +97,7 @@ namespace BeYourMarket.Web.Controllers
         #region Constructors
         public ManageController(
             IUnitOfWorkAsync unitOfWorkAsync,
+            IAspNetUserService aspNetUserService,
             ISettingService settingService,
             ICategoryService categoryService,
             IUnidadesService unidadesService,
@@ -133,6 +135,7 @@ namespace BeYourMarket.Web.Controllers
             SqlDbService sqlDbService)
         {
             _settingService = settingService;
+            _aspNetUserService = aspNetUserService;
             _settingDictionaryService = settingDictionaryService;
             _categoryService = categoryService;
             _unidadesService = unidadesService;
@@ -818,14 +821,22 @@ namespace BeYourMarket.Web.Controllers
             return View(model);
         }
 
-        public async Task<ActionResult> UserProfile(int? oqeq)
+        public async Task<ActionResult> UserProfile(int? oqeq) 
         {
             var userId = User.Identity.GetUserId();
-
             var user = await UserManager.FindByIdAsync(userId);
+            var dadosBancarios = CacheHelper.UserBankDetails.Where(c => (c.Id_User_UBankDetails == userId)).FirstOrDefault();
+
+            //Se não houver uma conta bancária registrada no Perfil, insere e atualiza o Perfil
+            if ((user.Id_UBankDetails == null) && (dadosBancarios != null))
+            {
+                var userData = CacheHelper.AspNetUsers.Where(x => (x.Id== userId)).FirstOrDefault();
+                userData.Id_UBankDetails = dadosBancarios.Id_UBankDetails;
+                _aspNetUserService.Update(userData);
+                await _unitOfWorkAsync.SaveChangesAsync();
+            }
 
             ViewBag.oqeq = (oqeq >= 0) ? oqeq : 0;
-
             return View(user);
         }
 
