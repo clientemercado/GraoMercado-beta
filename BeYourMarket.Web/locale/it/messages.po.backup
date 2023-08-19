@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-08-06 15:10-03:00\n"
-"PO-Revision-Date: 2023-08-06 15:10-03:00\n"
+"POT-Creation-Date: 2023-08-19 15:57-03:00\n"
+"PO-Revision-Date: 2023-08-19 15:57-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1268,8 +1268,8 @@ msgstr ""
 #: Views\Cotacoes\AgriculturalQuotes.cshtml:60
 #: Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:60
 #: Views\Cotacoes\LivestockQuotes.cshtml:60
-#: Views\Home\Index.cshtml:54
 #: Views\Home\Index_OLD.cshtml:54
+#: Views\Home\Index.cshtml:54
 #: Views\Shared\_LoginPartial.cshtml:82
 #: obj\Release\Package\PackageTmp\Views\Account\ForgotPasswordConfirmation.cshtml:21
 #: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:38
@@ -1724,8 +1724,8 @@ msgstr ""
 #: Views\Cotacoes\AgriculturalQuotes.cshtml:63
 #: Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:63
 #: Views\Cotacoes\LivestockQuotes.cshtml:63
-#: Views\Home\Index.cshtml:57
 #: Views\Home\Index_OLD.cshtml:57
+#: Views\Home\Index.cshtml:57
 #: Views\Shared\_LoginPartial.cshtml:85
 #: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:35
 #: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:118

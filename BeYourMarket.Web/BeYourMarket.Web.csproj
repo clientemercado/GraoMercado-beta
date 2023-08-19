@@ -591,6 +591,16 @@
     <Content Include="Views\Listing\BuyItemOffer.cshtml" />
     <Content Include="Views\Listing\BuyItemOffer2.cshtml" />
     <Content Include="Views\Listing\Invoicing.cshtml" />
+    <Content Include="Views\Home\Sobre.cshtml" />
+    <Content Include="Views\Home\Novidades.cshtml" />
+    <Content Include="Views\Home\TermosUso.cshtml" />
+    <Content Include="Views\Home\PoliticasPrivacidade.cshtml" />
+    <Content Include="Views\Home\TrocasDevolucoes.cshtml" />
+    <Content Include="Views\Home\TermosBureauCompartilhamento.cshtml" />
+    <Content Include="Views\Home\FaleConosco.cshtml" />
+    <Content Include="Views\Home\PerguntasFrequentes.cshtml" />
+    <Content Include="Views\Home\CadastreSuaLoja.cshtml" />
+    <Content Include="Views\Home\PlataformaDistribuidor.cshtml" />
     <None Include="Views\Listing\_ListingContactModal.cshtml" />
     <Content Include="Views\Shared\_ListingTypes.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_ListingTypes.cshtml" />
