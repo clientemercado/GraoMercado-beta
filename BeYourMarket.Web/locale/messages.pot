@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-08-19 16:09-03:00\n"
+"POT-Creation-Date: 2023-08-25 14:15-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1264,8 +1264,8 @@ msgstr ""
 #: Views\Account\Login_OLD.cshtml:38
 #: Views\Account\Register.cshtml:13
 #: Views\Account\Register_OLD.cshtml:13
-#: Views\Cotacoes\AgriculturalQuotes.cshtml:60
 #: Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:60
+#: Views\Cotacoes\AgriculturalQuotes.cshtml:60
 #: Views\Cotacoes\LivestockQuotes.cshtml:60
 #: Views\Home\Index_OLD.cshtml:54
 #: Views\Home\Index.cshtml:54
@@ -1720,8 +1720,8 @@ msgstr ""
 #: Views\Account\Login_OLD.cshtml:34
 #: Views\Account\Register.cshtml:118
 #: Views\Account\Register_OLD.cshtml:92
-#: Views\Cotacoes\AgriculturalQuotes.cshtml:63
 #: Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:63
+#: Views\Cotacoes\AgriculturalQuotes.cshtml:63
 #: Views\Cotacoes\LivestockQuotes.cshtml:63
 #: Views\Home\Index_OLD.cshtml:57
 #: Views\Home\Index.cshtml:57
@@ -2746,8 +2746,8 @@ msgstr ""
 msgid "Mensagens"
 msgstr ""
 
-#: Views\Cotacoes\AgriculturalQuotes.cshtml:9
 #: Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:9
+#: Views\Cotacoes\AgriculturalQuotes.cshtml:9
 #: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes.cshtml:9
 #: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:9
 msgid "Mercado Agrícola"

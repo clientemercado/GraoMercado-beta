@@ -1,10 +1,10 @@
 ﻿@using MoreLinq;
 @model BeYourMarket.Web.Models.SearchListingModel
 
-@*@{
+@{
         ViewBag.Title = CacheHelper.Settings.Name;
         var navBarLogoPath = ImageHelper.GetLogoImagePath("logo_sem_fundo_horizontal");
-    }*@
+}
 
 @{ ViewBag.Title = "[[[Mercado da Pecuária]]]"; }
 
@@ -30,7 +30,7 @@
             <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">
-            @*<img id="navbar-logo" alt="Logo" src='@navBarLogoPath' />*@
+            <img id="navbar-logo" alt="Logo" src='@navBarLogoPath' />
         </a>
     </div>
 
