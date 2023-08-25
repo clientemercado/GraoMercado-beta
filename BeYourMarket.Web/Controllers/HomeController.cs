@@ -116,6 +116,11 @@ namespace BeYourMarket.Web.Controllers
             return View(model);
         }
 
+        public async Task<ActionResult> Sobre(int? oqeq)
+        {
+            return View();
+        }
+
         public async Task<ActionResult> ContentPage(string id)
         {
             if (string.IsNullOrEmpty(id))
