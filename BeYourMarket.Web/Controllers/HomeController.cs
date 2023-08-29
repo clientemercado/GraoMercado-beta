@@ -116,10 +116,58 @@ namespace BeYourMarket.Web.Controllers
             return View(model);
         }
 
+        //---------------------------------------------------------------------------------------- 
+        //Implementado por Rafael
         public async Task<ActionResult> Sobre(int? oqeq)
         {
             return View();
         }
+
+        public ActionResult Novidades()
+        {
+            return View();
+        }
+
+        public ActionResult TermosUso()
+        {
+            return View();
+        }
+
+        public ActionResult PoliticasPrivacidade()
+        {
+            return View();
+        }
+
+        public ActionResult TrocasDevolucoes()
+        {
+            return View();
+        }
+
+        public ActionResult TermosBureauCompartilhamento()
+        {
+            return View();
+        }
+
+        public ActionResult FaleConosco()
+        {
+            return View();
+        }
+
+        public ActionResult PerguntasFrequentes()
+        {
+            return View();
+        }
+
+        public ActionResult CadastreSuaLoja()
+        {
+            return View();
+        }
+
+        public ActionResult PlataformaDistribuidor()
+        {
+            return View();
+        }
+        //----------------------------------------------------------------------------------------
 
         public async Task<ActionResult> ContentPage(string id)
         {

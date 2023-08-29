@@ -1,18 +1,227 @@
 ﻿
+@using MoreLinq;
+@model BeYourMarket.Web.Models.SearchListingModel
+
 @{
-    Layout = null;
+    ViewBag.Title = CacheHelper.Settings.Name;
+    var navBarLogoPath = ImageHelper.GetLogoImagePath("logo_sem_fundo_horizontal");
 }
 
-<!DOCTYPE html>
+@{ ViewBag.Title = "[[[PoliticasPrivacidade]]]"; }
 
-<html>
+@section Styles {
+    <link href="~/Content/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" />
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>PoliticasPrivacidade</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="~/Content/home.css" rel="stylesheet" />
 </head>
-<body>
-    <div>
-        PoliticasPrivacidade
+
+@* start - navbar *@
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="@Url.Action("Index", "Home", new {})">
+            <img id="navbar-logo" alt="Logo" src='@navBarLogoPath' />
+        </a>
     </div>
-</body>
-</html>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="/">Início<span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+                <a href="#services">Serviços</a>
+            </li>
+            <li>
+                <a href="@Url.Action("AgriculturalQuotes", "Cotacoes", new { oqeq = @ViewBag.oqeq })">Mercado Agrícola</a>
+            </li>
+            <li>
+                <a href="@Url.Action("LivestockQuotes", "Cotacoes", new { oqeq = @ViewBag.oqeq })">Mercado Pecuária</a>
+            </li>
+            @*<li>
+                    <a href="#products">Destaques</a>
+                </li>*@
+            <li>
+                <a href="@Url.Action("Contact", "Home", new { oqeq = @ViewBag.oqeq })">Contate-nos</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                @Html.ActionLink("[[[Criar Conta]]]", "Register", "Account", new { area = string.Empty }, htmlAttributes: new { id = "registerLink" })
+            </li>
+            <li>
+                @Html.ActionLink("[[[Entrar]]]", "Login", "Account", new { area = string.Empty, oqeq = 0 }, htmlAttributes: new { id = "loginLink" })
+            </li>
+        </ul>
+    </div>
+</nav>
+@* end - navbar *@
+
+@* start - header *@
+<div id="header">
+    <ul>
+        <li>
+            <div class="image_title">
+                <p>Frutas, Verduras e Legumes</p>
+            </div>
+            <div>
+                <a href="#">
+                    <h2>Frutas, Verduras e Legumes</h2>
+                    <p>Compre e Venda de Frutas, Verduras e Legumes</p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="image_title">
+                <p>Grãos</p>
+            </div>
+            <div>
+                <a href="#">
+                    <h2>Grãos</h2>
+                    <p>Faça sua oferta de Compra ou Venda de variados tipos de Grãos</p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="image_title">
+                <p>Orgânicos</p>
+            </div>
+            <div>
+                <a href="#">
+                    <h2>Orgânicos</h2>
+                    <p>Compra e Venda de produtos Orgânicos e de qualidade</p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="image_title">
+                <p>Animais</p>
+            </div>
+            <div>
+                <a href="#">
+                    <h2>Animais</h2>
+                    <p>Compra e Venda de Animais de variados tipos</p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="image_title">
+                <p>Insumos Agrícolas</p>
+            </div>
+            <div>
+                <a href="#">
+                    <h2>Insumos Agrícolas</h2>
+                    <p>Cotação em Grupo ou Individual, para compra de Insumos Agrícolas</p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="image_title">
+                <p>Máquinas, Ferramentas e Tecnologia</p>
+            </div>
+            <div>
+                <a href="#">
+                    <h2>Máquinas, Ferramentas e Tecnologia</h2>
+                    <p>Venda de Máquinas, Ferramentas e prestação de Serviços Tecnológicos</p>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+@* end - header *@
+
+@* start - main *@
+<div class="container-fluid">
+    <div> Privacidade </div>  <!-- AQUI ENTRA O CONTEÚDO DA TELA  -->
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<footer class="mainfooter" id="about">
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-pad">
+                        <h4>Conheça o GrãoMercado</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><a href="@Url.Action("Sobre", "Home", new { oqeq = @ViewBag.oqeq })">Sobre o GrãoMercado</a></a></li>
+                            <li><a href="@Url.Action("Novidades", "Home", new { oqeq = @ViewBag.oqeq })">Novidades</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-pad">
+                        <h4>Institucional</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="@Url.Action("TermosUso", "Home", new { oqeq = @ViewBag.oqeq })">Termos de Uso</a></li>
+                            <li><a href="@Url.Action("PoliticasPrivacidade", "Home", new { oqeq = @ViewBag.oqeq })">Políticas de Privacidade</a></li>
+                            <li><a href="@Url.Action("TrocasDevolucoes", "Home", new { oqeq = @ViewBag.oqeq })">Trocas e Devoluções</a></li>
+                            <li><a href="@Url.Action("TermosBureauCompartilhamento", "Home", new { oqeq = @ViewBag.oqeq })">Termo de Consulta a Bureaus e Compartilhamento de Dados</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-pad">
+                        <h4>Precisa de ajuda?</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="@Url.Action("FaleConosco", "Home", new { oqeq = @ViewBag.oqeq })">Fale Conosco</a></li>
+                            <li><a href="@Url.Action("PerguntasFrequentes", "Home", new { oqeq = @ViewBag.oqeq })">Perguntas Frequentes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-pad">
+                        <h4>Você é um distribuidor?</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="@Url.Action("CadastreSuaLoja", "Home", new { oqeq = @ViewBag.oqeq })">Cadastre sua loja para vender online</a></li>
+                            <li><a href="@Url.Action("PlataformaDistribuidor", "Home", new { oqeq = @ViewBag.oqeq })">Acessar a plataforma do distribuidor</a></li>
+                        </ul>
+                    </div>
+                </div>
+                @*<div class="col-md-4 col-sm-12">
+                        <div class="footer-pad social">
+                            <h4>Social</h4>
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="iconFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="iconLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#" class="iconInstagram" title="Linkedin"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>*@
+            </div>
+            <div class="row">
+                <button onclick="topFunction()" id="to-top" title="Go to top">
+                    <i class="fa fa-chevron-circle-up"></i>
+                </button>
+            </div>
+            <div class="row">
+                <div class="col-md-12 copy">
+                    <p class="text-center">&copy; @DateTime.Now.Year -  graomercado.com All rights reserve</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+@* end - about/footer *@
