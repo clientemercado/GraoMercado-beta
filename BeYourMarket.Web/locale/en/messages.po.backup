@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-08-29 12:57-03:00\n"
-"PO-Revision-Date: 2023-08-29 12:57-03:00\n"
+"POT-Creation-Date: 2023-09-03 14:32-03:00\n"
+"PO-Revision-Date: 2023-09-03 14:32-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -511,6 +511,7 @@ msgid "Banco"
 msgstr ""
 
 #: Views\Home\CadastreSuaLoja.cshtml:9
+#: obj\Release\Package\PackageTmp\Views\Home\CadastreSuaLoja.cshtml:9
 msgid "CadastreSuaLoja"
 msgstr ""
 
@@ -1294,6 +1295,15 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Cotacoes\LivestockQuotes.cshtml:60
 #: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:60
 #: obj\Release\Package\PackageTmp\Views\Home\Sobre.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\Novidades.cshtml:61
+#: obj\Release\Package\PackageTmp\Views\Home\TermosUso.cshtml:61
+#: obj\Release\Package\PackageTmp\Views\Home\PoliticasPrivacidade.cshtml:61
+#: obj\Release\Package\PackageTmp\Views\Home\TrocasDevolucoes.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\TermosBureauCompartilhamento.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\FaleConosco.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\PerguntasFrequentes.cshtml:61
+#: obj\Release\Package\PackageTmp\Views\Home\CadastreSuaLoja.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\PlataformaDistribuidor.cshtml:60
 #: obj\Release\Package\PackageTmp\Views\Home\Contact.cshtml:64
 #: obj\Release\Package\PackageTmp\Views\Home\Index.cshtml:54
 #: obj\Release\Package\PackageTmp\Views\Home\Index_OLD.cshtml:54
@@ -1765,6 +1775,15 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Cotacoes\LivestockQuotes.cshtml:63
 #: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:63
 #: obj\Release\Package\PackageTmp\Views\Home\Sobre.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\Novidades.cshtml:64
+#: obj\Release\Package\PackageTmp\Views\Home\TermosUso.cshtml:64
+#: obj\Release\Package\PackageTmp\Views\Home\PoliticasPrivacidade.cshtml:64
+#: obj\Release\Package\PackageTmp\Views\Home\TrocasDevolucoes.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\TermosBureauCompartilhamento.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\FaleConosco.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\PerguntasFrequentes.cshtml:64
+#: obj\Release\Package\PackageTmp\Views\Home\CadastreSuaLoja.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\PlataformaDistribuidor.cshtml:63
 #: obj\Release\Package\PackageTmp\Views\Home\Contact.cshtml:67
 #: obj\Release\Package\PackageTmp\Views\Home\Index.cshtml:57
 #: obj\Release\Package\PackageTmp\Views\Home\Index_OLD.cshtml:57
@@ -2074,6 +2093,7 @@ msgid "Failed!"
 msgstr ""
 
 #: Views\Home\FaleConosco.cshtml:9
+#: obj\Release\Package\PackageTmp\Views\Home\FaleConosco.cshtml:9
 msgid "FaleConosco"
 msgstr ""
 
@@ -2788,7 +2808,6 @@ msgstr ""
 #: Views\Cotacoes\AgriculturalQuotes.cshtml:9
 #: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes.cshtml:9
 #: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:9
-#: obj\Release\Package\PackageTmp\Views\Home\Sobre.cshtml:9
 msgid "Mercado Agrícola"
 msgstr ""
 
@@ -3051,6 +3070,7 @@ msgid "Novas listagens"
 msgstr ""
 
 #: Views\Home\Novidades.cshtml:10
+#: obj\Release\Package\PackageTmp\Views\Home\Novidades.cshtml:10
 msgid "Novidades"
 msgstr ""
 
@@ -3449,6 +3469,7 @@ msgid "Perguntas e respostas"
 msgstr ""
 
 #: Views\Home\PerguntasFrequentes.cshtml:10
+#: obj\Release\Package\PackageTmp\Views\Home\PerguntasFrequentes.cshtml:10
 msgid "PerguntasFrequentes"
 msgstr ""
 
@@ -3603,6 +3624,7 @@ msgid "PlaceHolder Pesquisar"
 msgstr ""
 
 #: Views\Home\PlataformaDistribuidor.cshtml:9
+#: obj\Release\Package\PackageTmp\Views\Home\PlataformaDistribuidor.cshtml:9
 msgid "PlataformaDistribuidor"
 msgstr ""
 
@@ -3632,6 +3654,7 @@ msgid "Plugins"
 msgstr ""
 
 #: Views\Home\PoliticasPrivacidade.cshtml:10
+#: obj\Release\Package\PackageTmp\Views\Home\PoliticasPrivacidade.cshtml:10
 msgid "PoliticasPrivacidade"
 msgstr ""
 
@@ -4288,6 +4311,7 @@ msgid "Slug {0} already exists"
 msgstr ""
 
 #: Views\Home\Sobre.cshtml:9
+#: obj\Release\Package\PackageTmp\Views\Home\Sobre.cshtml:9
 msgid "Sobre"
 msgstr ""
 
@@ -4418,10 +4442,12 @@ msgid "Termos e Condições"
 msgstr ""
 
 #: Views\Home\TermosBureauCompartilhamento.cshtml:9
+#: obj\Release\Package\PackageTmp\Views\Home\TermosBureauCompartilhamento.cshtml:9
 msgid "TermosBureauCompartilhamento"
 msgstr ""
 
 #: Views\Home\TermosUso.cshtml:10
+#: obj\Release\Package\PackageTmp\Views\Home\TermosUso.cshtml:10
 msgid "TermosUso"
 msgstr ""
 
@@ -4641,6 +4667,7 @@ msgid "Transaction not found"
 msgstr ""
 
 #: Views\Home\TrocasDevolucoes.cshtml:9
+#: obj\Release\Package\PackageTmp\Views\Home\TrocasDevolucoes.cshtml:9
 msgid "TrocasDevolucoes"
 msgstr ""
 
