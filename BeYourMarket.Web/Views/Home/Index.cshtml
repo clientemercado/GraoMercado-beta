@@ -445,8 +445,8 @@
 
 <script>
     Geo();
-    $('#categorias').val(3);
     const terms = !!document.cookie;
+    $('#categorias').val(3);
     $('#terms').css('visibility', terms ? 'hidden' : 'visible');
     $('#accept').click(() => {
         document.cookie = "accept-cookie-term=true";

@@ -102,8 +102,8 @@
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
                 <div class="form-group">
-                    <label>[[[Nome Usuário]]] <span class="text-red">*</span></label>
-                    <input type="text" name="Usuario" id="Usuario" class="form-control input-lg" placeholder="[[[Informe Nome Usuário...]]]" data-rule-required="true">
+                    <label>[[[Nome]]] <span class="text-red">*</span></label>
+                    <input type="text" name="Usuario" id="Usuario" class="form-control input-lg" placeholder="[[[Informe seu Nome...]]]" data-rule-required="true">
                 </div>
 
                 <div class="form-group">
@@ -129,29 +129,31 @@
                     <div class="col-lg-2">
                         <div class="form-group">
                             <label>[[[UF (Estado)]]]</label>
-                            @Html.DropDownListFor(m => m.EstadoUF, new SelectList(Model.EstadosUF, "ID", "SIGLA", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "uFs", @required = "required" })
+                            @*@Html.DropDownListFor(m => m.EstadoUF, new SelectList(Model.EstadosUF, "ID", "SIGLA", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "uFs", @required = "required" })*@
+                            @Html.DropDownListFor(m => m.EstadoUF, new SelectList(Model.EstadosUF, "SIGLA", "SIGLA", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "uFs", @required = "required" })
                         </div>
                     </div>
                     <div class="col-lg-10">
                         <div class="form-group">
                             <label>[[[Localização (Cidade)]]]</label>
-                            <select name="selectedCity" id="selectedCity" class="form-control input-lg essencial" disabled required></select>
+                            @*<select name="selectedCity" id="selectedCity" class="form-control input-lg essencial" disabled required></select>*@
+                            <select name="selectedCity" id="selectedCity" class="form-control input-lg essencial" required></select>
                             @Html.TextBoxFor(m => m.CidadeUF, new { @class = "form-control hidden", @Value = @Model.CidadeUF })
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
+                @*<div class="row">
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label>[[[Endereço]]]</label>
                             <input type="text" name="inLogradouro" id="inLogradouro" class="form-control input-lg" placeholder="[[[Informe Endereço...]]]" data-rule-required="true">
                         </div>
                     </div>
-                </div>
+                </div>*@
 
                 <div class="row">
-                    <div class="col-lg-4">
+                    @*<div class="col-lg-4">
                         <div class="form-group">
                             <label>[[[Bairro]]] <span class="text-red">*</span></label>
                             <input type="text" name="inBairro" id="inBairro" class="form-control input-lg" placeholder="[[[Informe Bairro...]]]" data-rule-required="true">
@@ -162,7 +164,7 @@
                             <label>[[[Cep]]] <span class="text-red">*</span></label>
                             <input type="text" name="inCep" id="inCep" class="form-control input-lg" placeholder="[[[Informe Cep...]]]" data-rule-required="true">
                         </div>
-                    </div>
+                    </div>*@
                     <div class="col-lg-5">
                         <div class="form-group">
                             <label>[[[Tipo Cadastro]]] <span class="text-red">*</span></label>
@@ -179,6 +181,7 @@
                     </div>
                 }
                 <button type="submit" class="btn btn-primary btn-lg">[[[Registrar]]]</button>
+                <input type="hidden" id="inUF" value="" />
             }
             <span style="margin-top:4px;">[[[Já é um membro?]]] <a href="@Url.Action("Login", "Account")">[[[Entrar]]]</a></span>
 
@@ -257,7 +260,24 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
     <script>
-        CarregaCidades();
+        /*        CarregaCidades();*/
+        Geo();
+        function Geo() {
+            debugger;
+
+            $.ajax({
+                url: "https://geolocation-db.com/jsonp",
+                jsonpCallback: "callback",
+                dataType: "jsonp",
+                success: function (location) {
+                    debugger;
+
+                    $('#inUF').val(location.state.toUpperCase());
+                    CarregaCidades(location.state.toUpperCase(), location.city.toUpperCase());
+                }
+            });
+        }
+
         $(".tipocad").change(function () {
             if ($('#tipoCads').val() == 2) {
                 $('#Empresa').val('').attr('disabled', true);
@@ -277,27 +297,27 @@
             $("#CidadeUF").val($("#selectedCity").val());
         });
 
-        function CarregaCidades() {
-            if (parseFloat($("#uFs").val()) == 28)
-                $('.essencial').val('').attr('disabled', true);
-
+        function CarregaCidades(state, city) {
+             debugger;
             $.ajax({
                 type: "GET",
-                url: "/Account/CarregaCidadesUF",
+                url: "/Home/CarregaCidadesUF_",
                 dataType: 'json',
                 async: true,
                 cache: false,
                 data: {
-                    idUf: $('#uFs').val()
+                    uf: ((state != null) ? state : $('#inUF').val())
                 },
                 success: function (data) {
+                    debugger;
+
                     var cities = "";
-                    $('.essencial').val('').attr('disabled', false);
-                    $.each(data, function (index, municipios) {
-                        cities = (cities == "") ? "<option value='" + municipios.ID + "'>" + municipios.NOME + "</option>" : (cities + "<option value='" + municipios.ID + "'>" + municipios.NOME + "</option>");
+                    $.each(data.listaCity, function (index, municipios) {
+                        cities = (cities == "") ? "<option value='" + municipios.NOME + "'>" + municipios.NOME + "</option>" : (cities + "<option value='" + municipios.NOME + "'>" + municipios.NOME + "</option>");
                     });
+                    $('#uFs').val(data.uf);
                     $('#selectedCity').empty().append(cities);
-                    $('#selectedCity').val($("#CidadeUF").val());
+                    $('#selectedCity').val(city);
                 }
             });
         }
