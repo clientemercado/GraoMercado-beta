@@ -4,8 +4,17 @@
 
 @model BeYourMarket.Web.Models.ListingItemModel
 
+@*@{
+        ViewBag.Title = Model.ListingCurrent.Title;
+    }*@
+
+<head>
+    <link href="~/Content/home.css" rel="stylesheet" />
+</head>
+
 @{
-    ViewBag.Title = Model.ListingCurrent.Title;
+    ViewBag.Title = CacheHelper.Settings.Name;
+    var navBarLogoPath = ImageHelper.GetLogoImagePath("logo_sem_fundo_horizontal");
 }
 
 @section Styles {
@@ -13,8 +22,55 @@
     <link href="~/js/timepicker/bootstrap-datepicker.min.css" rel="stylesheet" />
 }
 
-<div class="container-fluid body-content" style="margin-top:20px; margin-bottom:20px;">
+@* start - navbar *@
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="@Url.Action("Index", "Home", new {})">
+            <img id="navbar-logo" alt="Logo" src='@navBarLogoPath' />
+        </a>
+    </div>
 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="/">Início<span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+                <a href="#services">Serviços</a>
+            </li>
+            <li>
+                <a href="@Url.Action("AgriculturalQuotes", "Cotacoes", new { oqeq = @ViewBag.oqeq })">Mercado Agrícola</a>
+            </li>
+            <li>
+                <a href="@Url.Action("LivestockQuotes", "Cotacoes", new { oqeq = @ViewBag.oqeq })">Mercado Pecuária</a>
+            </li>
+            @*<li>
+                    <a href="#products">Destaques</a>
+                </li>*@
+            <li>
+                <a href="@Url.Action("Contact", "Home", new { oqeq = @ViewBag.oqeq })">Contate-nos</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                @Html.ActionLink("[[[Criar Conta]]]", "Register", "Account", new { area = string.Empty }, htmlAttributes: new { id = "registerLink" })
+            </li>
+            <li>
+                @Html.ActionLink("[[[Entrar]]]", "Login", "Account", new { area = string.Empty, oqeq = 0 }, htmlAttributes: new { id = "loginLink" })
+            </li>
+        </ul>
+    </div>
+</nav>
+@* end - navbar *@
+
+<div class="container-fluid body-content" style="margin-top:20px; margin-bottom:20px;">
     <div class="main-section">
 
         @Html.Partial("_ListingContactModal", Model)
@@ -85,8 +141,8 @@
                                 </li>
 
                                 @*<li role="presentation">
-                                    <a id="contactModal" data-toggle="modal" data-target="#contactModal"><i class="fa fa-envelope"></i>[[[Contato]]]</a>
-                                </li>*@
+                                        <a id="contactModal" data-toggle="modal" data-target="#contactModal"><i class="fa fa-envelope"></i>[[[Contato]]]</a>
+                                    </li>*@
                             </ul>
                         </div>
 
@@ -155,61 +211,61 @@
                                     </div>
                                     <!---Pictures-->
                                     @*<table class="table">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    [[[Categoria]]]
-                                                </td>
-                                                <td>
-                                                    <a href="@Url.Action("Search", "Home", new { categoryId = Model.ListingCurrent.CategoryID, oqeq = @ViewBag.oqeq })">@Model.ListingCurrent.Category.Name</a>
-                                                </td>
-                                            </tr>
+                                            <tbody>
                                                 <tr>
                                                     <td>
-                                                        [[[Preço do Lote]]]
+                                                        [[[Categoria]]]
                                                     </td>
                                                     <td>
-                                                        @Html.DisplayFor(x => Model.ListingCurrent.PriceFormatted)
+                                                        <a href="@Url.Action("Search", "Home", new { categoryId = Model.ListingCurrent.CategoryID, oqeq = @ViewBag.oqeq })">@Model.ListingCurrent.Category.Name</a>
                                                     </td>
                                                 </tr>
-                                            <tr>
-                                                <td>
-                                                    [[[Localização]]]
-                                                </td>
-                                                <td>
-                                                    @Html.DisplayFor(x => Model.ListingCurrent.Location)
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    [[[Publicado em]]]
-                                                </td>
-                                                <td>
-                                                    @Model.ListingCurrent.Created.ToShortDateString()
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    [[[Visualizações]]]
-                                                </td>
-                                                <td>
-                                                    @Model.ListingCurrent.ListingStats.FirstOrDefault().CountView
-                                                </td>
-                                            </tr>
+                                                    <tr>
+                                                        <td>
+                                                            [[[Preço do Lote]]]
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(x => Model.ListingCurrent.PriceFormatted)
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                    <td>
+                                                        [[[Localização]]]
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(x => Model.ListingCurrent.Location)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        [[[Publicado em]]]
+                                                    </td>
+                                                    <td>
+                                                        @Model.ListingCurrent.Created.ToShortDateString()
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        [[[Visualizações]]]
+                                                    </td>
+                                                    <td>
+                                                        @Model.ListingCurrent.ListingStats.FirstOrDefault().CountView
+                                                    </td>
+                                                </tr>
 
-                                            @foreach (var item in Model.ListingCurrent.ListingMetas)
-                                            {
-                                                <tr>
-                                                    <td>
-                                                        @item.MetaField.Name
-                                                    </td>
-                                                    <td>
-                                                        @item.Value
-                                                    </td>
-                                                </tr>
-                                            }
-                                        </tbody>
-                                    </table>*@
+                                                @foreach (var item in Model.ListingCurrent.ListingMetas)
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @item.MetaField.Name
+                                                        </td>
+                                                        <td>
+                                                            @item.Value
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>*@
 
                                     <table class="table">
                                         <tbody>
@@ -419,8 +475,8 @@
                                     }
 
                                     @*<div class="panel-heading">
-                                        <span>[[[Contato]]] @Model.User.FullName</span>
-                                    </div>*@
+                                            <span>[[[Contato]]] @Model.User.FullName</span>
+                                        </div>*@
 
                                     @*<a id="contactModal" data-toggle="modal" data-target="#contactModal"><i class="fa fa-envelope"></i>[[[Contato]]]</a>*@
                                 </div>
@@ -486,11 +542,11 @@
                                 <!-- AddToAny BEGIN -->
                                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
                                     @*<span class="pull-left m-r-5"><i class="fa fa-share-alt"></i> [[[Compartilhar]]]</span>
-                                    <a href="https://www.addtoany.com/share_save"></a>
-                                    <a class="a2a_button_facebook"></a>
-                                    <a class="a2a_button_twitter"></a>
-                                    <a class="a2a_button_google_plus"></a>
-                                    <a class="a2a_button_linkedin"></a>*@
+                                        <a href="https://www.addtoany.com/share_save"></a>
+                                        <a class="a2a_button_facebook"></a>
+                                        <a class="a2a_button_twitter"></a>
+                                        <a class="a2a_button_google_plus"></a>
+                                        <a class="a2a_button_linkedin"></a>*@
                                 </div>
 
                                 <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
@@ -503,8 +559,74 @@
             </div>
         </div>
     </div>
-
 </div>
+
+<footer class="mainfooter" id="about">
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-pad">
+                        <h4>Conheça o GrãoMercado</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><a href="@Url.Action("Sobre", "Home", new { oqeq = @ViewBag.oqeq })">Sobre o GrãoMercado</a></a></li>
+                            <li><a href="@Url.Action("Novidades", "Home", new { oqeq = @ViewBag.oqeq })">Novidades</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-pad">
+                        <h4>Institucional</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="@Url.Action("TermosUso", "Home", new { oqeq = @ViewBag.oqeq })">Termos de Uso</a></li>
+                            <li><a href="@Url.Action("PoliticasPrivacidade", "Home", new { oqeq = @ViewBag.oqeq })">Políticas de Privacidade</a></li>
+                            <li><a href="@Url.Action("TrocasDevolucoes", "Home", new { oqeq = @ViewBag.oqeq })">Trocas e Devoluções</a></li>
+                            <li><a href="@Url.Action("TermosBureauCompartilhamento", "Home", new { oqeq = @ViewBag.oqeq })">Termo de Consulta a Bureaus e Compartilhamento de Dados</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-pad">
+                        <h4>Precisa de ajuda?</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="@Url.Action("FaleConosco", "Home", new { oqeq = @ViewBag.oqeq })">Fale Conosco</a></li>
+                            <li><a href="@Url.Action("PerguntasFrequentes", "Home", new { oqeq = @ViewBag.oqeq })">Perguntas Frequentes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-pad">
+                        <h4>Você é um distribuidor?</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="@Url.Action("CadastreSuaLoja", "Home", new { oqeq = @ViewBag.oqeq })">Cadastre sua loja para vender online</a></li>
+                            <li><a href="@Url.Action("PlataformaDistribuidor", "Home", new { oqeq = @ViewBag.oqeq })">Acessar a plataforma do distribuidor</a></li>
+                        </ul>
+                    </div>
+                </div>
+                @*<div class="col-md-4 col-sm-12">
+                        <div class="footer-pad social">
+                            <h4>Social</h4>
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="iconFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="iconLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#" class="iconInstagram" title="Linkedin"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>*@
+            </div>
+            <div class="row">
+                <button onclick="topFunction()" id="to-top" title="Go to top">
+                    <i class="fa fa-chevron-circle-up"></i>
+                </button>
+            </div>
+            <div class="row">
+                <div class="col-md-12 copy">
+                    <p class="text-center">&copy; @DateTime.Now.Year -  graomercado.com All rights reserve</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
