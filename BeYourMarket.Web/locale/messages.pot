@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-09-04 17:18-03:00\n"
+"POT-Creation-Date: 2023-09-09 15:51-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,6 @@ msgid "' e esta ação não poderá ser desfeita!"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:85
-#: Views\Account\Register.cshtml:180
 #: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:178
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:85
 msgid " Termos e Condições"
@@ -507,6 +506,10 @@ msgstr ""
 #: Views\Settings\SettingsUpdate.cshtml:33
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:33
 msgid "Banco"
+msgstr ""
+
+#: Views\Account\Register.cshtml:183
+msgid "Cadastrar"
 msgstr ""
 
 #: Views\Home\CadastreSuaLoja.cshtml:9
@@ -4064,7 +4067,6 @@ msgid "Register"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:88
-#: Views\Account\Register.cshtml:183
 #: Views\Manage\CompanyData.cshtml:75
 #: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:181
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:88
@@ -4434,6 +4436,10 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\Settings.cshtml:81
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\Settings.cshtml:83
 msgid "Tema"
+msgstr ""
+
+#: Views\Account\Register.cshtml:180
+msgid "Termos de Consulta a Bureaus e Compartilhamento de Dados"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:26
