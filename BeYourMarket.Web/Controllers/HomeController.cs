@@ -220,17 +220,18 @@ namespace BeYourMarket.Web.Controllers
             return Json(listaCidades, JsonRequestBehavior.AllowGet);
         }
 
-        //========================================================================
         public ActionResult CarregaCidadesUF_(string uf)
         {
             var estadoUF = CacheHelper.EstadoUf.FirstOrDefault(e => (e.NOME.ToUpper() == uf.ToUpper()));
+            if (estadoUF == null)
+                estadoUF = CacheHelper.EstadoUf.FirstOrDefault(e => (e.SIGLA.ToUpper() == uf.ToUpper()));
+
             var listaCidades = CacheHelper.Cidade.Where(c => (c.FK_ESTADO == estadoUF.ID)).ToList();
 
             var resultado = new { uf = estadoUF.SIGLA, listaCity = listaCidades };
             //return Json(listaCidades, JsonRequestBehavior.AllowGet);
             return Json(resultado, JsonRequestBehavior.AllowGet);
         }
-        //========================================================================
 
         public async Task<ActionResult> Search(SearchListingModel model, int? oqeq)
         {

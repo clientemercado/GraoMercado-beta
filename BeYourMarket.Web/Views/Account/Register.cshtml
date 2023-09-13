@@ -298,7 +298,8 @@
         });
 
         function CarregaCidades(state, city) {
-             debugger;
+            debugger;
+
             $.ajax({
                 type: "GET",
                 url: "/Home/CarregaCidadesUF_",
@@ -306,7 +307,8 @@
                 async: true,
                 cache: false,
                 data: {
-                    uf: ((state != null) ? state : $('#inUF').val())
+                    /*                    uf: ((state != null) ? state : $('#inUF').val())*/
+                    uf: ((state != null) ? state : $('#uFs').val())
                 },
                 success: function (data) {
                     debugger;

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-09-13 17:03-03:00\n"
-"PO-Revision-Date: 2023-09-13 17:03-03:00\n"
+"POT-Creation-Date: 2023-09-13 17:40-03:00\n"
+"PO-Revision-Date: 2023-09-13 17:40-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -193,10 +193,10 @@ msgstr "Acceptér"
 msgid "Accept Email"
 msgstr "Acceptér email"
 
-#: Views\Account\Register.cshtml:67
-#: Views\Account\Register.cshtml:186
 #: Views\Account\Login.cshtml:70
 #: Views\Account\Login.cshtml:100
+#: Views\Account\Register.cshtml:67
+#: Views\Account\Register.cshtml:186
 #: Views\Cotacoes\LivestockQuotes.cshtml:63
 #: Views\Cotacoes\AgriculturalQuotes.cshtml:63
 #: Views\Home\TrocasDevolucoes.cshtml:63
@@ -586,11 +586,11 @@ msgstr ""
 # obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:63
 # obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml:82
 #: Views\Account\ForgotPasswordConfirmation.cshtml:21
+#: Views\Account\Login.cshtml:67
+#: Views\Account\Login.cshtml:103
 #: Views\Account\Register.cshtml:64
 #: Views\Account\Register.cshtml:78
 #: Views\Account\Register.cshtml:183
-#: Views\Account\Login.cshtml:67
-#: Views\Account\Login.cshtml:103
 #: Views\Cotacoes\LivestockQuotes.cshtml:60
 #: Views\Cotacoes\AgriculturalQuotes.cshtml:60
 #: Views\Home\TrocasDevolucoes.cshtml:60
