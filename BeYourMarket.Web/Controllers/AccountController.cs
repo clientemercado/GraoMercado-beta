@@ -29,6 +29,8 @@ namespace BeYourMarket.Web.Controllers
         private readonly IEmailTemplateService _emailTemplateService;
         private readonly IEmpresaUsuarioService _empresaUsuarioService;
         private readonly IUnitOfWorkAsync _unitOfWorkAsync;
+        private readonly ICidadesService _cidadesService;
+        private readonly IEstadoService _estadoService;
         private readonly DataCacheService _dataCacheService;
         private readonly SqlDbService _sqlDbService;
         #endregion
@@ -78,11 +80,15 @@ namespace BeYourMarket.Web.Controllers
             IUnitOfWorkAsync unitOfWorkAsync,
             IEmailTemplateService emailTemplateService,
             IEmpresaUsuarioService empresaUsuarioService,
+            ICidadesService cidadesService,
+            IEstadoService estadoService,
             DataCacheService dataCacheService,
             SqlDbService sqlDbService)
         {
             _emailTemplateService = emailTemplateService;
             _empresaUsuarioService = empresaUsuarioService;
+            _cidadesService = cidadesService;
+            _estadoService = estadoService;
             _unitOfWorkAsync = unitOfWorkAsync;
             _dataCacheService = dataCacheService;
             _sqlDbService = sqlDbService;
@@ -228,7 +234,6 @@ namespace BeYourMarket.Web.Controllers
 
                 // Add errors
                 AddErrors(result);
-
                 if (result.Succeeded)
                 {
                     if (Convert.ToInt32(model.tipoCad) == 1)
@@ -247,7 +252,11 @@ namespace BeYourMarket.Web.Controllers
         }
 
         public async Task<IdentityResult> RegisterAccount(RegisterViewModel model)
-        {                                                                                          
+        {
+            // Consultar ID do ESTADO e CIDADE
+            var cidade = CacheHelper.Cidade.FirstOrDefault(e => (e.NOME.ToUpper() == model.CidadeUF.ToUpper()));
+            var estado = CacheHelper.EstadoUf.FirstOrDefault(e => (e.SIGLA.ToUpper() == model.EstadoUF.ToUpper()));
+
             var user = new ApplicationUser
             {
                 UserName = model.Email,
@@ -259,11 +268,11 @@ namespace BeYourMarket.Web.Controllers
                 LastAccessDate = DateTime.Now,
                 LastAccessIP = System.Web.HttpContext.Current.Request.GetVisitorIP(),
                 id_TipoCadastro = Convert.ToInt32(model.tipoCad),
-                id_UF = Convert.ToInt32(model.EstadoUF),
-                id_Cidade = Convert.ToInt32(model.CidadeUF),
-                Logradouro_Cidade = model.inLogradouro,
-                Bairro_Cidade = model.inBairro,
-                Cep_Bairro_Cidade = model.inCep
+                id_UF = Convert.ToInt32(estado.ID),
+                id_Cidade = Convert.ToInt32(cidade.ID),
+                //Logradouro_Cidade = model.inLogradouro,
+                //Bairro_Cidade = model.inBairro,
+                //Cep_Bairro_Cidade = model.inCep
             };
 
             var result = await UserManager.CreateAsync(user, model.Password);
