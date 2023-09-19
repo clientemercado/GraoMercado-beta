@@ -221,18 +221,12 @@ namespace BeYourMarket.Web.Controllers
             var user = await UserManager.FindByIdAsync(userId);
             var uBank = CacheHelper.UserBankDetails.Where(u => (u.Id_User_UBankDetails == userId)).FirstOrDefault();
 
-            if ((uBank != null) && ((id == 0) || (id == null)))
-            {
-                id = uBank.Id_UBankDetails;
-            }
-            else if (id == null)
-            {
-                id = 0;
-            }
+            id = ((uBank != null) && ((id == 0) || (id == null))) ? uBank.Id_UBankDetails : 0;
 
             UserBankDetails dadosBancariosUser = new UserBankDetails();
             var model = new SettingsUpdateModel()
             {
+                id_User = userId,
                 BancosPais = CacheHelper.Banks.ToList(),
                 TpContaBancaria = CacheHelper.TiposContaBancaria,
                 TpChavesPix = CacheHelper.TiposChavePix,
@@ -255,15 +249,33 @@ namespace BeYourMarket.Web.Controllers
             }
 
             // Populate model with listing
-            if (id > 0)
-                await PopulateSettingsUpdateModel(dadosBancariosUser, model);
+            //if (id > 0)
+                await PopulateSettingsUpdateModel(id, dadosBancariosUser, model);
 
             ViewBag.oqeq = (oqeq >= 0) ? oqeq : 0;
             return View("~/Views/Settings/SettingsUpdate.cshtml", model);
         }
 
-        private async Task<SettingsUpdateModel> PopulateSettingsUpdateModel(UserBankDetails dadosBancariosUser, SettingsUpdateModel model)
+        private async Task<SettingsUpdateModel> PopulateSettingsUpdateModel(int? id, UserBankDetails dadosBancariosUser, SettingsUpdateModel model)
         {
+            var userData = CacheHelper.AspNetUsers.Where(u => (u.Id == model.id_User)).FirstOrDefault();
+
+            //Populando dados do perfil
+            model.primeiroNomeUsuario = userData.FirstName;
+            model.segundoNomeUsuario = userData.LastName;
+            model.cpfUsuario = (userData.cpf_Usuario != null) ? FormatCPF(userData.cpf_Usuario) : "";
+            model.emailUsuario = userData.Email;
+            model.dataNascimento = String.Format("{0:dd/MM/yyyy}", userData.Data_Nascimento);
+            model.idEstadoUF = userData.id_UF;
+            model.idCidadeUF = userData.id_Cidade;
+            model.EstadosUF = CacheHelper.EstadoUf.Where(e => (e.ID > 0)).ToList();
+            model.CidadesUF = CacheHelper.Cidade.Where(c => (c.FK_ESTADO == userData.id_UF)).ToList();
+
+            //CONTINUAR AQUI...
+            // 1) VER NA VIEW QUE DADOS FALTA PREENCHER;
+            // 2) VER O QUE NECESSITA PRA GRAVAÇÃO;
+
+            //Populando dados bancários do perfil
             model.id_CB = dadosBancariosUser.Id_UBankDetails;
             model.id_Banco = dadosBancariosUser.id_Bank;
             model.AgenciaBancaria = dadosBancariosUser.Cod_Agencia;
@@ -275,6 +287,33 @@ namespace BeYourMarket.Web.Controllers
 
             return model;
         }
+
+        //================================================================
+        //Formata CPF (OBS: Inclusive os iniciados com 2 zeros) 000.000.000-00
+        public string FormatCPF(string sender)
+        {
+            string response = sender.Trim();
+            if (response.Length == 11)
+            {
+                response = response.Insert(9, "-");
+                response = response.Insert(6, ".");
+                response = response.Insert(3, ".");
+            }
+            return response;
+        }
+
+        /// <summary>
+        /// Carrega a lista de Cidades Conforme descrição do Estado UF
+        /// </summary>
+        /// <param name="uf">String contendo a UF</param>
+        /// <returns></returns>
+        public ActionResult CarregaCidadesUF(string uf)
+        {
+            var estadoUF = CacheHelper.EstadoUf.FirstOrDefault(e => (e.NOME.ToUpper() == uf.ToUpper()));
+            var listaCidades = CacheHelper.Cidade.Where(c => (c.FK_ESTADO == estadoUF.ID)).ToList();
+            return Json(listaCidades, JsonRequestBehavior.AllowGet);
+        }
+        //================================================================
 
         public async Task<bool> NotMeListing(int id)
         {

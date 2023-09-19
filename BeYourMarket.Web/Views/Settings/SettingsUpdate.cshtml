@@ -27,62 +27,111 @@
                                 {
                                     @Html.Partial("_UserMessage")
                                     @Html.AntiForgeryToken()
-                                        <legend><h4><i class="fa fa-university" aria-hidden="true"></i> [[[Dados Bancários (Obs: Necessário para negociações nesta plataforma)]]]</h4></legend>
-                                        <input type="hidden" id="id_CB" name="id_CB" value="@Model.id_CB" />
+
+                                    <!-- =========================================================================================================== -->
+                                        <legend><h4><i class="fa fa-user" aria-hidden="true"></i> [[[Dados do Perfil]]]</h4></legend>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Banco]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[Primeiro Nome]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                @Html.DropDownListFor(m => m.id_Banco, new SelectList(Model.BancosPais, "id_Bank", "ShortName", ""), new { @class = "form-control input-lg m-b-10", @id = "inBancosPais", @required = "required" })
+                                                <input type="text" name="Usuario" id="Usuario" class="form-control input-lg" placeholder="[[[Informe seu Nome...]]]" value="@Model.primeiroNomeUsuario" data-rule-required="true">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Agência]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[Segundo Nome]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control input-lg" placeholder="[[[Informe a Agência]]]" id="inAgencia" name="inAgencia" value="@Model.AgenciaBancaria">
+                                                <input type="text" name="sobreNomeUsuario" id="sobreNomeUsuario" class="form-control input-lg" placeholder="[[[Informe seu Nome...]]]" value="@Model.segundoNomeUsuario" data-rule-required="true">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Tipo de Conta]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[Email]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                @Html.DropDownListFor(m => m.id_TpConta, new SelectList(Model.TpContaBancaria, "id_TipoConta", "Descricao_TipoConta", ""), new { @class = "form-control input-lg m-b-10", @id = "inTpContaBanc", @required = "required" })
+                                                <input type="text" name="Email" id="Email" class="form-control input-lg" placeholder="[[[Informe Email...]]]" data-rule-required="true" value="@Model.emailUsuario" data-rule-email="true">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Nº da Conta]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[Data Nascimento]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control input-lg" placeholder="[[[Informe o Nº da Conta]]]" id="inNumeroConta" name="inNumeroConta" value="@Model.NumeroContaBancaria" required>
+                                                <input type="text" name="DtNasc" id="DtNasc" class="form-control input-lg" placeholder="[[[__/__/__]]]" data-rule-required="true" value="@Model.dataNascimento" data-rule-email="true">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Dígito]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[UF (Estado)]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control input-lg" placeholder="[[[Informe o dígito da Conta]]]" id="inDigito" name="inDigito" value="@Model.DigContaBancaria" required>
+                                                @Html.DropDownListFor(m => m.EstadosUF, new SelectList(Model.EstadosUF, "ID", "SIGLA", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "uFs", @required = "required" })
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Sua Chave PIX (Obs: Para recebimento dos valores negociados na plataforma)]]] </label>
+                                            <label class="col-md-2 control-label">[[[Localização (Cidade)]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control input-lg" placeholder="[[[Informe sua chave PIX]]]" id="inChavePix" name="inChavePix" value="@Model.ChavePix">
+                                                @Html.DropDownListFor(m => m.CidadesUF, new SelectList(Model.CidadesUF, "ID", "NOME", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "cidades", @required = "required" })
+                                                @*<select name="selectedCity" id="selectedCity" class="form-control input-lg essencial" required></select>*@
+                                                @*@Html.TextBoxFor(m => m.CidadesUF, new { @class = "form-control hidden", @Value = @Model.CidadeUF })*@
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Tipo de Chave PIX]]] <span class="text-red">*</span></label>
-                                            <div class="col-md-10">
-                                                @Html.DropDownListFor(m => m.id_TpChavePix, new SelectList(Model.TpChavesPix, "id_TipoChavePix", "Descricao_TipoChavePix", ""), new { @class = "form-control input-lg m-b-10", @id = "inTpChavePix", @required = "required" })
+
+                                    <!-- =========================================================================================================== -->
+
+                                            <legend><h4><i class="fa fa-university" aria-hidden="true"></i> [[[Dados Bancários (Obs: Necessário para negociações nesta plataforma)]]]</h4></legend>
+                                            <input type="hidden" id="id_CB" name="id_CB" value="@Model.id_CB" />
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">[[[Banco]]] <span class="text-red">*</span></label>
+                                                <div class="col-md-10">
+                                                    @Html.DropDownListFor(m => m.id_Banco, new SelectList(Model.BancosPais, "id_Bank", "ShortName", ""), new { @class = "form-control input-lg m-b-10", @id = "inBancosPais", @required = "required" })
+                                                </div>
                                             </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">[[[Agência]]] <span class="text-red">*</span></label>
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control input-lg" placeholder="[[[Informe a Agência]]]" id="inAgencia" name="inAgencia" value="@Model.AgenciaBancaria">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">[[[Tipo de Conta]]] <span class="text-red">*</span></label>
+                                                <div class="col-md-10">
+                                                    @Html.DropDownListFor(m => m.id_TpConta, new SelectList(Model.TpContaBancaria, "id_TipoConta", "Descricao_TipoConta", ""), new { @class = "form-control input-lg m-b-10", @id = "inTpContaBanc", @required = "required" })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">[[[Nº da Conta]]] <span class="text-red">*</span></label>
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control input-lg" placeholder="[[[Informe o Nº da Conta]]]" id="inNumeroConta" name="inNumeroConta" value="@Model.NumeroContaBancaria" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">[[[Dígito]]] <span class="text-red">*</span></label>
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control input-lg" placeholder="[[[Informe o dígito da Conta]]]" id="inDigito" name="inDigito" value="@Model.DigContaBancaria" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">[[[Sua Chave PIX (Obs: Para recebimento dos valores negociados na plataforma)]]] </label>
+                                                <div class="col-md-10">
+                                                    <input type="text" class="form-control input-lg" placeholder="[[[Informe sua chave PIX]]]" id="inChavePix" name="inChavePix" value="@Model.ChavePix">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label">[[[Tipo de Chave PIX]]] <span class="text-red">*</span></label>
+                                                <div class="col-md-10">
+                                                    @Html.DropDownListFor(m => m.id_TpChavePix, new SelectList(Model.TpChavesPix, "id_TipoChavePix", "Descricao_TipoChavePix", ""), new { @class = "form-control input-lg m-b-10", @id = "inTpChavePix", @required = "required" })
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-offset-2 col-md-10">
+                                                    <input type="submit" value="[[[Salvar]]]" class="btn btn-primary" />
+                                                </div>
+                                            </div>
+                                            }
                                         </div>
-                                    <div class="form-group">
-                                        <div class="col-md-offset-2 col-md-10">
-                                            <input type="submit" value="[[[Salvar]]]" class="btn btn-primary" />
-                                        </div>
-                                    </div>
-                                }
-                            </div>
 
                         </div>
                     </div>
@@ -100,5 +149,9 @@
 
     <script>
         var $input = $("#file");
+        $('#uFs').val(@Model.idEstadoUF);
+        $('#cidades').val(@Model.idCidadeUF);
     </script>
+
+    }
 }

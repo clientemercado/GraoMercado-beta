@@ -52,6 +52,8 @@ namespace BeYourMarket.Model.Models
         public string Bairro_Cidade { get; set; }
         public string Cep_Bairro_Cidade { get; set; }
         public int? Id_UBankDetails { get; set; }
+        public string cpf_Usuario { get; set; }
+        public System.DateTime? Data_Nascimento { get; set; }
 
         [ForeignKey("Id_UBankDetails")]
         public virtual UserBankDetails UserBankDetails { get; set; }

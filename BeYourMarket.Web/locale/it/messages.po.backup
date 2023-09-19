@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-09-15 14:08-03:00\n"
-"PO-Revision-Date: 2023-09-15 14:08-03:00\n"
+"POT-Creation-Date: 2023-09-19 13:46-03:00\n"
+"PO-Revision-Date: 2023-09-19 13:46-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,6 +29,11 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\SearchPrice\SearchInGroup.cshtml:70
 #: obj\Release\Package\PackageTmp\Views\SearchPrice\ReplyQuote.cshtml:76
 msgid "(Preencha com informações relevantes para os vendedores como: qualidade, modelo, numeração do produto, etc...)"
+msgstr ""
+
+#: Views\Settings\SettingsUpdate.cshtml:57
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:57
+msgid "__/__/__"
 msgstr ""
 
 #: Views\Listing\BuyItemOffer.cshtml:450
@@ -195,8 +200,8 @@ msgstr ""
 
 #: Views\Account\Login.cshtml:70
 #: Views\Account\Login.cshtml:100
-#: Views\Account\Register.cshtml:67
-#: Views\Account\Register.cshtml:186
+#: Views\Account\Register.cshtml:66
+#: Views\Account\Register.cshtml:185
 #: Views\Cotacoes\LivestockQuotes.cshtml:63
 #: Views\Cotacoes\AgriculturalQuotes.cshtml:63
 #: Views\Home\TrocasDevolucoes.cshtml:63
@@ -213,10 +218,31 @@ msgstr ""
 #: Views\Home\TermosUso.cshtml:64
 #: Views\Listing\Listing.cshtml:66
 #: Views\Shared\_LoginPartial.cshtml:85
+#: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:70
+#: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:100
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:66
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:185
+#: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Cotacoes\LivestockQuotes.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\Sobre.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\Novidades.cshtml:64
+#: obj\Release\Package\PackageTmp\Views\Home\TermosUso.cshtml:64
+#: obj\Release\Package\PackageTmp\Views\Home\PoliticasPrivacidade.cshtml:64
+#: obj\Release\Package\PackageTmp\Views\Home\TrocasDevolucoes.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\TermosBureauCompartilhamento.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\FaleConosco.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\PerguntasFrequentes.cshtml:64
+#: obj\Release\Package\PackageTmp\Views\Home\CadastreSuaLoja.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\PlataformaDistribuidor.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Home\Contact.cshtml:67
+#: obj\Release\Package\PackageTmp\Views\Home\Index.cshtml:57
+#: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:66
+#: obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml:85
 msgid "Acessar"
 msgstr ""
 
 #: Views\Manage\BestPrice.cshtml:145
+#: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:145
 msgid "Acessar "
 msgstr ""
 
@@ -285,8 +311,8 @@ msgstr ""
 msgid "Administrator"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:40
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:40
+#: Views\Settings\SettingsUpdate.cshtml:89
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:88
 msgid "Agência"
 msgstr ""
 
@@ -515,8 +541,8 @@ msgstr ""
 msgid "Back to the Home"
 msgstr ""
 
-#: Views\Account\Register.cshtml:158
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:158
+#: Views\Account\Register.cshtml:157
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:157
 msgid "Bairro"
 msgstr ""
 
@@ -530,8 +556,8 @@ msgstr ""
 msgid "Bairro..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:33
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:33
+#: Views\Settings\SettingsUpdate.cshtml:82
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:81
 msgid "Banco"
 msgstr ""
 
@@ -588,9 +614,9 @@ msgstr ""
 #: Views\Account\ForgotPasswordConfirmation.cshtml:21
 #: Views\Account\Login.cshtml:67
 #: Views\Account\Login.cshtml:103
-#: Views\Account\Register.cshtml:64
-#: Views\Account\Register.cshtml:78
-#: Views\Account\Register.cshtml:183
+#: Views\Account\Register.cshtml:63
+#: Views\Account\Register.cshtml:77
+#: Views\Account\Register.cshtml:182
 #: Views\Cotacoes\LivestockQuotes.cshtml:60
 #: Views\Cotacoes\AgriculturalQuotes.cshtml:60
 #: Views\Home\TrocasDevolucoes.cshtml:60
@@ -607,7 +633,28 @@ msgstr ""
 #: Views\Home\TermosUso.cshtml:61
 #: Views\Listing\Listing.cshtml:63
 #: Views\Shared\_LoginPartial.cshtml:82
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:183
+#: obj\Release\Package\PackageTmp\Views\Account\ForgotPasswordConfirmation.cshtml:21
+#: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:67
+#: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:103
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:77
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:182
+#: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Cotacoes\LivestockQuotes.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\Sobre.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\Novidades.cshtml:61
+#: obj\Release\Package\PackageTmp\Views\Home\TermosUso.cshtml:61
+#: obj\Release\Package\PackageTmp\Views\Home\PoliticasPrivacidade.cshtml:61
+#: obj\Release\Package\PackageTmp\Views\Home\TrocasDevolucoes.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\TermosBureauCompartilhamento.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\FaleConosco.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\PerguntasFrequentes.cshtml:61
+#: obj\Release\Package\PackageTmp\Views\Home\CadastreSuaLoja.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\PlataformaDistribuidor.cshtml:60
+#: obj\Release\Package\PackageTmp\Views\Home\Contact.cshtml:64
+#: obj\Release\Package\PackageTmp\Views\Home\Index.cshtml:54
+#: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:63
+#: obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml:82
 #, Views\Account\ForgotPasswordConfirmation.cshtml:21
 #, Views\Account\Login_OLD.cshtml:38
 #, Views\Account\Register_OLD.cshtml:13
@@ -858,8 +905,8 @@ msgstr ""
 msgid "Category is deleted."
 msgstr ""
 
-#: Views\Account\Register.cshtml:164
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:164
+#: Views\Account\Register.cshtml:163
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:163
 msgid "Cep"
 msgstr ""
 
@@ -1184,16 +1231,16 @@ msgid "Confirmar Nova Senha"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:66
-#: Views\Account\Register.cshtml:122
+#: Views\Account\Register.cshtml:121
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:121
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:66
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:122
 msgid "Confirmar Senha"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:67
-#: Views\Account\Register.cshtml:123
+#: Views\Account\Register.cshtml:122
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:122
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:67
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:123
 msgid "Confirmar Senha..."
 msgstr ""
 
@@ -1205,11 +1252,11 @@ msgstr ""
 msgid "Connnect to stripe successfully!"
 msgstr ""
 
-#: Controllers\SettingsController.cs:354
+#: Controllers\SettingsController.cs:400
 msgid "Conta Bancária alterada com Sucesso!"
 msgstr ""
 
-#: Controllers\SettingsController.cs:354
+#: Controllers\SettingsController.cs:400
 msgid "Conta Bancária cadastrada com Sucesso!"
 msgstr ""
 
@@ -1417,29 +1464,8 @@ msgstr ""
 #: Views\Home\Index_OLD.cshtml:54
 #: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:38
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:13
-#: obj\Release\Package\PackageTmp\Views\Account\ForgotPasswordConfirmation.cshtml:21
-#: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:67
-#: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:103
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:64
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:78
-#: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes.cshtml:60
-#: obj\Release\Package\PackageTmp\Views\Cotacoes\LivestockQuotes.cshtml:60
 #: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:60
-#: obj\Release\Package\PackageTmp\Views\Home\Sobre.cshtml:60
-#: obj\Release\Package\PackageTmp\Views\Home\Novidades.cshtml:61
-#: obj\Release\Package\PackageTmp\Views\Home\TermosUso.cshtml:61
-#: obj\Release\Package\PackageTmp\Views\Home\PoliticasPrivacidade.cshtml:61
-#: obj\Release\Package\PackageTmp\Views\Home\TrocasDevolucoes.cshtml:60
-#: obj\Release\Package\PackageTmp\Views\Home\TermosBureauCompartilhamento.cshtml:60
-#: obj\Release\Package\PackageTmp\Views\Home\FaleConosco.cshtml:60
-#: obj\Release\Package\PackageTmp\Views\Home\PerguntasFrequentes.cshtml:61
-#: obj\Release\Package\PackageTmp\Views\Home\CadastreSuaLoja.cshtml:60
-#: obj\Release\Package\PackageTmp\Views\Home\PlataformaDistribuidor.cshtml:60
-#: obj\Release\Package\PackageTmp\Views\Home\Contact.cshtml:64
-#: obj\Release\Package\PackageTmp\Views\Home\Index.cshtml:54
 #: obj\Release\Package\PackageTmp\Views\Home\Index_OLD.cshtml:54
-#: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml:82
 msgid "Criar Conta"
 msgstr ""
 
@@ -1474,14 +1500,19 @@ msgstr ""
 msgid "CSS Customizado"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:30
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:30
+#: Views\Settings\SettingsUpdate.cshtml:79
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:78
 msgid "Dados Bancários (Obs: Necessário para negociações nesta plataforma)"
 msgstr ""
 
 #: Views\Manage\CompanyData.cshtml:13
 #: obj\Release\Package\PackageTmp\Views\Manage\CompanyData.cshtml:13
 msgid "Dados Cadastro Empresa"
+msgstr ""
+
+#: Views\Settings\SettingsUpdate.cshtml:32
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:32
+msgid "Dados do Perfil"
 msgstr ""
 
 #: Views\Manage\CompanyData.cshtml:4
@@ -1503,6 +1534,11 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\SearchPrice\ReplyQuote.cshtml:52
 #: obj\Release\Package\PackageTmp\Views\SearchPrice\AddMyQuote.cshtml:49
 msgid "Data Encerramento (Obs: A Cotação se encerrará automaticamente nessa data)"
+msgstr ""
+
+#: Views\Settings\SettingsUpdate.cshtml:55
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:55
+msgid "Data Nascimento"
 msgstr ""
 
 #: Areas\Admin\Views\Manage\UserUpdate.cshtml:131
@@ -1728,8 +1764,8 @@ msgstr ""
 msgid "Digite DELETE para confirmar a exclusão"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:61
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:61
+#: Views\Settings\SettingsUpdate.cshtml:110
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:109
 msgid "Dígito"
 msgstr ""
 
@@ -1760,8 +1796,8 @@ msgstr ""
 
 #: Views\Account\Login_OLD.cshtml:14
 #: Views\Account\Login.cshtml:81
-#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:14
 #: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:81
+#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:14
 msgid "Efetuar login em sua conta"
 msgstr ""
 
@@ -1771,22 +1807,24 @@ msgstr ""
 #: Models\AccountViewModels.cs:136
 #: Models\AccountViewModels.cs:157
 #: Views\Account\Register_OLD.cshtml:58
-#: Views\Account\Register.cshtml:110
+#: Views\Account\Register.cshtml:109
 #: Views\Listing\PurchaseUpdate.cshtml:125
 #: Views\Listing\ListingUpdate.cshtml:268
 #: Views\Manage\CompanyData.cshtml:67
 #: Views\Purchase\PurchaseUpdate.cshtml:125
+#: Views\Settings\SettingsUpdate.cshtml:48
 #: Areas\Admin\Views\Manage\Settings.cshtml:49
 #: Areas\Admin\Views\Manage\Settings.cshtml:51
 #: Areas\Admin\Views\Manage\SettingsEmail.cshtml:18
 #: Areas\Admin\Views\Manage\UserUpdate.cshtml:56
 #: Areas\Admin\Views\Manage\Users.cshtml:39
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:109
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:58
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:110
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:268
 #: obj\Release\Package\PackageTmp\Views\Listing\PurchaseUpdate.cshtml:125
 #: obj\Release\Package\PackageTmp\Views\Manage\CompanyData.cshtml:67
 #: obj\Release\Package\PackageTmp\Views\Purchase\PurchaseUpdate.cshtml:125
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:48
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\Users.cshtml:39
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\Settings.cshtml:49
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\Settings.cshtml:51
@@ -1814,8 +1852,8 @@ msgstr ""
 msgid "Empresa Fornecedora"
 msgstr ""
 
-#: Views\Account\Register.cshtml:149
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:149
+#: Views\Account\Register.cshtml:148
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:148
 msgid "Endereço"
 msgstr ""
 
@@ -1880,34 +1918,13 @@ msgstr ""
 #: Views\Home\Index_OLD.cshtml:57
 #: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:34
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:92
-#: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:70
-#: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:100
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:67
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:186
-#: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Cotacoes\LivestockQuotes.cshtml:63
 #: obj\Release\Package\PackageTmp\Views\Cotacoes\AgriculturalQuotes_OLD.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Home\Sobre.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Home\Novidades.cshtml:64
-#: obj\Release\Package\PackageTmp\Views\Home\TermosUso.cshtml:64
-#: obj\Release\Package\PackageTmp\Views\Home\PoliticasPrivacidade.cshtml:64
-#: obj\Release\Package\PackageTmp\Views\Home\TrocasDevolucoes.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Home\TermosBureauCompartilhamento.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Home\FaleConosco.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Home\PerguntasFrequentes.cshtml:64
-#: obj\Release\Package\PackageTmp\Views\Home\CadastreSuaLoja.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Home\PlataformaDistribuidor.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Home\Contact.cshtml:67
-#: obj\Release\Package\PackageTmp\Views\Home\Index.cshtml:57
 #: obj\Release\Package\PackageTmp\Views\Home\Index_OLD.cshtml:57
-#: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:66
-#: obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml:85
 msgid "Entrar"
 msgstr ""
 
 #: Views\Manage\BestPrice_OLD.cshtml:88
 #: Views\Manage\BestPrice_OLD_2.cshtml:127
-#: obj\Release\Package\PackageTmp\Views\Manage\BestPrice.cshtml:145
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD.cshtml:88
 #: obj\Release\Package\PackageTmp\Views\Manage\BestPrice_OLD_2.cshtml:127
 msgid "Entrar "
@@ -1928,9 +1945,9 @@ msgstr ""
 #: Views\Listing\_ListingContactModal.cshtml:28
 #: Views\Manage\Message.cshtml:79
 #: Views\Manage\_ListingContactModal.cshtml:28
-#: obj\Release\Package\PackageTmp\Views\Account\ForgotPassword_OLD.cshtml:29
 #: obj\Release\Package\PackageTmp\Views\Account\ForgotPassword.cshtml:24
 #: obj\Release\Package\PackageTmp\Views\Account\SendCode.cshtml:3
+#: obj\Release\Package\PackageTmp\Views\Account\ForgotPassword_OLD.cshtml:29
 #: obj\Release\Package\PackageTmp\Views\Home\Contact.cshtml:95
 #: obj\Release\Package\PackageTmp\Views\Home\Contact_OLD.cshtml:30
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingContactModal.cshtml:28
@@ -2002,11 +2019,11 @@ msgstr ""
 #: Views\Account\Login_OLD.cshtml:40
 #: Views\Account\ForgotPasswordConfirmation.cshtml:23
 #: Views\Account\Login.cshtml:104
-#: obj\Release\Package\PackageTmp\Views\Account\ForgotPassword_OLD.cshtml:3
-#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:40
 #: obj\Release\Package\PackageTmp\Views\Account\ForgotPassword.cshtml:3
 #: obj\Release\Package\PackageTmp\Views\Account\ForgotPasswordConfirmation.cshtml:23
 #: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:104
+#: obj\Release\Package\PackageTmp\Views\Account\ForgotPassword_OLD.cshtml:3
+#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:40
 msgid "Esqueceu sua Senha?"
 msgstr ""
 
@@ -2043,9 +2060,9 @@ msgid "Etiqueta do Acordo"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:85
-#: Views\Account\Register.cshtml:180
+#: Views\Account\Register.cshtml:179
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:179
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:85
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:180
 msgid "Eu aceito os"
 msgstr ""
 
@@ -2145,11 +2162,8 @@ msgid "External Logins"
 msgstr ""
 
 #: Views\Listing\_ListingContactModal.cshtml:37
-msgid "Faça login para Acessar em contato com o anunciante"
-msgstr ""
-
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingContactModal.cshtml:37
-msgid "Faça login para entrar em contato com o anunciante"
+msgid "Faça login para Acessar em contato com o anunciante"
 msgstr ""
 
 #: Areas\Admin\Views\Payment\Order.cshtml:158
@@ -2219,15 +2233,15 @@ msgid "Favicon"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:33
-#: Views\Account\Register.cshtml:93
+#: Views\Account\Register.cshtml:92
 #: Views\Listing\_ListingReviewModal.cshtml:29
 #: Views\Listing\_ListingReviewModal.cshtml:43
 #: Views\Listing\_ListingContactModal.cshtml:29
 #: Views\Listing\_ListingContactModal.cshtml:41
 #: Views\Manage\_ListingContactModal.cshtml:29
 #: Views\Manage\_ListingContactModal.cshtml:41
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:92
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:33
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:93
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingContactModal.cshtml:29
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingContactModal.cshtml:41
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingReviewModal.cshtml:29
@@ -2417,8 +2431,8 @@ msgstr ""
 msgid "Informações sobre o local de Retirada"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:42
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:42
+#: Views\Settings\SettingsUpdate.cshtml:91
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:90
 msgid "Informe a Agência"
 msgstr ""
 
@@ -2437,13 +2451,13 @@ msgstr ""
 msgid "Informe a referência para facilitar encontrar (Ex: Rod X ou Perto de...)"
 msgstr ""
 
-#: Views\Account\Register.cshtml:159
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:159
+#: Views\Account\Register.cshtml:158
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:158
 msgid "Informe Bairro..."
 msgstr ""
 
-#: Views\Account\Register.cshtml:165
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:165
+#: Views\Account\Register.cshtml:164
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:164
 msgid "Informe Cep..."
 msgstr ""
 
@@ -2453,18 +2467,20 @@ msgid "Informe Email Empresa..."
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:59
-#: Views\Account\Register.cshtml:111
+#: Views\Account\Register.cshtml:110
 #: Views\Home\Contact_OLD.cshtml:21
 #: Views\Home\Contact.cshtml:86
+#: Views\Settings\SettingsUpdate.cshtml:50
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:110
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:59
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:111
 #: obj\Release\Package\PackageTmp\Views\Home\Contact.cshtml:86
 #: obj\Release\Package\PackageTmp\Views\Home\Contact_OLD.cshtml:21
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:50
 msgid "Informe Email..."
 msgstr ""
 
-#: Views\Account\Register.cshtml:150
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:150
+#: Views\Account\Register.cshtml:149
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:149
 msgid "Informe Endereço..."
 msgstr ""
 
@@ -2478,8 +2494,8 @@ msgstr ""
 msgid "Informe Nome Usuário..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:63
+#: Views\Settings\SettingsUpdate.cshtml:112
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:111
 msgid "Informe o dígito da Conta"
 msgstr ""
 
@@ -2488,8 +2504,8 @@ msgstr ""
 msgid "Informe o local de retirada (Ex: nome da propriedade como é conhecida...)"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:56
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:56
+#: Views\Settings\SettingsUpdate.cshtml:105
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:104
 msgid "Informe o Nº da Conta"
 msgstr ""
 
@@ -2528,13 +2544,17 @@ msgstr ""
 msgid "Informe seu email."
 msgstr ""
 
-#: Views\Account\Register.cshtml:106
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:106
+#: Views\Account\Register.cshtml:105
+#: Views\Settings\SettingsUpdate.cshtml:36
+#: Views\Settings\SettingsUpdate.cshtml:43
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:105
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:36
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:43
 msgid "Informe seu Nome..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:70
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:70
+#: Views\Settings\SettingsUpdate.cshtml:119
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:118
 msgid "Informe sua chave PIX"
 msgstr ""
 
@@ -2663,9 +2683,9 @@ msgid "Já é membro?"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:92
-#: Views\Account\Register.cshtml:186
+#: Views\Account\Register.cshtml:185
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:185
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:92
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:186
 msgid "Já é um membro?"
 msgstr ""
 
@@ -2676,8 +2696,8 @@ msgstr ""
 
 #: Views\Account\Login_OLD.cshtml:32
 #: Views\Account\Login.cshtml:98
-#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:32
 #: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:98
+#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:32
 msgid "Lembrar-me?"
 msgstr ""
 
@@ -2792,8 +2812,10 @@ msgstr ""
 msgid "Localização"
 msgstr ""
 
-#: Views\Account\Register.cshtml:138
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:138
+#: Views\Account\Register.cshtml:137
+#: Views\Settings\SettingsUpdate.cshtml:69
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:137
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:69
 msgid "Localização (Cidade)"
 msgstr ""
 
@@ -2820,8 +2842,8 @@ msgstr ""
 #: Views\Account\Login_OLD.cshtml:4
 #: Views\Account\Login.cshtml:5
 #: Areas\Admin\Views\Install\Index.cshtml:77
-#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:4
 #: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:5
+#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:4
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Install\Index.cshtml:77
 msgid "Login"
 msgstr ""
@@ -3113,8 +3135,8 @@ msgstr ""
 msgid "Nº apólice"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:54
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:54
+#: Views\Settings\SettingsUpdate.cshtml:103
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:102
 msgid "Nº da Conta"
 msgstr ""
 
@@ -3125,14 +3147,14 @@ msgstr ""
 msgid "No!"
 msgstr ""
 
-#: Views\Account\Register.cshtml:105
+#: Views\Account\Register.cshtml:104
 #: Areas\Admin\Views\Listing\CategoryUpdate.cshtml:19
 #: Areas\Admin\Views\Listing\CustomFields.cshtml:62
 #: Areas\Admin\Views\Listing\CustomFieldUpdate.cshtml:40
 #: Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:32
 #: Areas\Admin\Views\Listing\ListingTypes.cshtml:67
 #: Areas\Admin\Views\Manage\Settings.cshtml:21
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:105
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:104
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypes.cshtml:67
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\ListingTypeUpdate.cshtml:32
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Listing\CategoryUpdate.cshtml:19
@@ -3878,8 +3900,10 @@ msgstr ""
 
 #: Models\AccountViewModels.cs:92
 #: Views\Manage\UserProfile.cshtml:43
+#: Views\Settings\SettingsUpdate.cshtml:34
 #: Areas\Admin\Views\Manage\UserUpdate.cshtml:30
 #: obj\Release\Package\PackageTmp\Views\Manage\UserProfile.cshtml:43
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:34
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Manage\UserUpdate.cshtml:30
 msgid "Primeiro Nome"
 msgstr ""
@@ -4175,8 +4199,8 @@ msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:3
 #: Views\Account\Register.cshtml:3
-#: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:3
 #: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:3
+#: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:3
 msgid "Register"
 msgstr ""
 
@@ -4284,7 +4308,7 @@ msgstr ""
 #: Views\Listing\Listing.cshtml:703
 #: Views\Listing\Listing.cshtml:704
 #: Views\Manage\UserProfile.cshtml:95
-#: Views\Settings\SettingsUpdate.cshtml:81
+#: Views\Settings\SettingsUpdate.cshtml:130
 #: Areas\Admin\Views\ContentPage\ContentPageUpdate.cshtml:76
 #: Areas\Admin\Views\Design\Appearance.cshtml:44
 #: Areas\Admin\Views\Design\CodeScript.cshtml:34
@@ -4305,7 +4329,7 @@ msgstr ""
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:703
 #: obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:704
 #: obj\Release\Package\PackageTmp\Views\Manage\UserProfile.cshtml:95
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:81
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:129
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\ContentPage\ContentPageUpdate.cshtml:76
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Design\CodeStyle.cshtml:34
 #: obj\Release\Package\PackageTmp\Areas\Admin\Views\Design\Appearance.cshtml:44
@@ -4341,6 +4365,11 @@ msgstr ""
 msgid "Se Logar aqui"
 msgstr ""
 
+#: Views\Settings\SettingsUpdate.cshtml:41
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:41
+msgid "Segundo Nome"
+msgstr ""
+
 #: Views\Listing\ListingUpdate.cshtml:179
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:179
 msgid "Seguradora"
@@ -4364,9 +4393,9 @@ msgid "Select Two-Factor Authentication Provider:"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:62
-#: Views\Account\Register.cshtml:116
+#: Views\Account\Register.cshtml:115
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:115
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:62
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:116
 msgid "Senha"
 msgstr ""
 
@@ -4393,8 +4422,8 @@ msgstr ""
 
 #: Views\Account\Login_OLD.cshtml:24
 #: Views\Account\Login.cshtml:90
-#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:24
 #: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:90
+#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:24
 msgid "Seu Email..."
 msgstr ""
 
@@ -4444,8 +4473,8 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:68
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:68
+#: Views\Settings\SettingsUpdate.cshtml:117
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:116
 msgid "Sua Chave PIX (Obs: Para recebimento dos valores negociados na plataforma)"
 msgstr ""
 
@@ -4459,16 +4488,16 @@ msgid "Sua participação não pode ser cancelada!"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:63
-#: Views\Account\Register.cshtml:117
+#: Views\Account\Register.cshtml:116
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:116
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:63
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:117
 msgid "Sua senha..."
 msgstr ""
 
 #: Views\Account\Login_OLD.cshtml:28
 #: Views\Account\Login.cshtml:94
-#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:28
 #: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:94
+#: obj\Release\Package\PackageTmp\Views\Account\Login_OLD.cshtml:28
 msgid "Sua Senha..."
 msgstr ""
 
@@ -4551,15 +4580,15 @@ msgstr ""
 msgid "Tema"
 msgstr ""
 
-#: Views\Account\Register.cshtml:180
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:180
+#: Views\Account\Register.cshtml:179
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:179
 msgid "Termos de Consulta a Bureaus e Compartilhamento de Dados"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:26
-#: Views\Account\Register.cshtml:86
+#: Views\Account\Register.cshtml:85
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:85
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:26
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:86
 msgid "Termos e Condições"
 msgstr ""
 
@@ -4661,19 +4690,19 @@ msgid "Tipo"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:45
-#: Views\Account\Register.cshtml:170
+#: Views\Account\Register.cshtml:169
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:169
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:45
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:170
 msgid "Tipo Cadastro"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:74
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:74
+#: Views\Settings\SettingsUpdate.cshtml:123
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:122
 msgid "Tipo de Chave PIX"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:47
-#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:47
+#: Views\Settings\SettingsUpdate.cshtml:96
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:95
 msgid "Tipo de Conta"
 msgstr ""
 
@@ -4794,17 +4823,19 @@ msgid "TrocasDevolucoes"
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:71
-#: Views\Account\Register.cshtml:131
+#: Views\Account\Register.cshtml:130
 #: Views\SearchPrice\AddMyQuote.cshtml:35
 #: Views\SearchPrice\ReplyQuote.cshtml:38
 #: Views\SearchPrice\SearchInGroup.cshtml:37
 #: Views\SearchPrice\SearchInIndividual.cshtml:38
+#: Views\Settings\SettingsUpdate.cshtml:62
+#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:130
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:71
-#: obj\Release\Package\PackageTmp\Views\Account\Register.cshtml:131
 #: obj\Release\Package\PackageTmp\Views\SearchPrice\SearchInIndividual.cshtml:38
 #: obj\Release\Package\PackageTmp\Views\SearchPrice\SearchInGroup.cshtml:37
 #: obj\Release\Package\PackageTmp\Views\SearchPrice\ReplyQuote.cshtml:38
 #: obj\Release\Package\PackageTmp\Views\SearchPrice\AddMyQuote.cshtml:35
+#: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:62
 msgid "UF (Estado)"
 msgstr ""
 
@@ -5579,6 +5610,9 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Esta ação é Irreversível: "
+#~ msgstr ""
+
+#~ msgid "Faça login para entrar em contato com o anunciante"
 #~ msgstr ""
 
 #~ msgid "Female"
