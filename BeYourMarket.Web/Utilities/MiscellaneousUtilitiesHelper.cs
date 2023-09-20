@@ -22,6 +22,21 @@ namespace BeYourMarket.Web.Utilities
             var f = ((parts.Length > 1) ? parts[0].ToString() + parts[1].ToString() : v);
             return f;
         }
+
+        public static string formatPhNumber(string phoneNum, string phoneFormat)
+        {
+            if (phoneFormat == "")
+            {
+                phoneFormat = "(##) #####-####";
+            }
+            Regex regex = new Regex(@"[^\d]");
+            phoneNum = regex.Replace(phoneNum, "");
+            if (phoneNum.Length > 0)
+            {
+                phoneNum = Convert.ToInt64(phoneNum).ToString(phoneFormat);
+            }
+            return phoneNum;
+        }
     }
 
- }
+}

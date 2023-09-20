@@ -45,18 +45,59 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Email]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[Data Nascimento]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="Email" id="Email" class="form-control input-lg" placeholder="[[[Informe Email...]]]" data-rule-required="true" value="@Model.emailUsuario" data-rule-email="true">
+                                                <input type="text" name="DtNasc" id="DtNasc" class="form-control input-lg data" placeholder="[[[__/__/__]]]" data-rule-required="true" value="@Model.dataNascimento">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Data Nascimento]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[Email]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="DtNasc" id="DtNasc" class="form-control input-lg" placeholder="[[[__/__/__]]]" data-rule-required="true" value="@Model.dataNascimento" data-rule-email="true">
+                                                <input type="text" name="Email" id="Email" class="form-control input-lg" placeholder="[[[Informe seu melhor Email...]]]" data-rule-required="true" value="@Model.emailUsuario" data-rule-email="true">
                                             </div>
                                         </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Telefone Comercial:]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="Telefone1" id="Telefone1" class="form-control input-lg" placeholder="[[[Informe seu Telefone comercial...]]]" value="@Model.inTelefone1">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Celular Whatsapp:]]] <i class="fa fa-whatsapp"></i><span class="text-red"> *</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="Telefone1" id="Telefone2" class="form-control input-lg" placeholder="[[[Informe seu Telefone Whatsapp...]]]" value="@Model.inTelefone2" data-rule-required="true">
+                                            </div>
+                                        </div>
+
+                                        <!-- ======================================================================================================  -->
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Cep:]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="Cep" id="Cep" class="form-control input-lg" placeholder="[[[Informe seu Cep...]]]" value="@Model.inCep" data-rule-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Rua:]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="Endereco" id="Endereco" class="form-control input-lg" placeholder="[[[Informe seu Endereço...]]]" value="@Model.inLogradouro" data-rule-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Complemento:]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="Complemento" id="Complemento" class="form-control input-lg" placeholder="[[[Complemento do Endereço...]]]" value="@Model.inComplemento">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Bairro:]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="Bairro" id="Bairro" class="form-control input-lg" placeholder="[[[Informe o Bairro...]]]" value="@Model.inBairro" data-rule-required="true">
+                                            </div>
+                                        </div>
+                                        <!-- ======================================================================================================  -->
 
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">[[[UF (Estado)]]] <span class="text-red">*</span></label>
@@ -145,10 +186,14 @@
     @Scripts.Render("~/bundles/jqueryval")
 
     <script src="~/Scripts/fileinput.min.js"></script>
+    <script src="~/Scripts/jquery.mask.js"></script>
     @Html.Partial("_LocalizationFileInput")
 
     <script>
         var $input = $("#file");
+
+        $(".data").mask('00/00/0000');
+
         $('#uFs').val(@Model.idEstadoUF);
         $('#cidades').val(@Model.idCidadeUF);
     </script>

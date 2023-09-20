@@ -24,6 +24,9 @@ namespace BeYourMarket.Web.Models
         public string inLogradouro { get; set; }
         public string inBairro { get; set; }
         public string inCep { get; set; }
+        public string inTelefone1 { get; set; }
+        public string inTelefone2 { get; set; }
+        public string inComplemento { get; set; }
         //public List<SelectListItem> listaEstados { get; set; }
         //public List<SelectListItem> listaCidades { get; set; }
 

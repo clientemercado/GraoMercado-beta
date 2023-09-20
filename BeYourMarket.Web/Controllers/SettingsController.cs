@@ -270,9 +270,15 @@ namespace BeYourMarket.Web.Controllers
             model.idCidadeUF = userData.id_Cidade;
             model.EstadosUF = CacheHelper.EstadoUf.Where(e => (e.ID > 0)).ToList();
             model.CidadesUF = CacheHelper.Cidade.Where(c => (c.FK_ESTADO == userData.id_UF)).ToList();
+            model.inCep = userData.Cep_Bairro_Cidade;
+            model.inLogradouro = userData.Logradouro_Cidade;
+            model.inComplemento = userData.Complemento_Endereco;
+            model.inBairro = userData.Bairro_Cidade;
+            model.inTelefone1 = !String.IsNullOrEmpty(userData.PhoneNumber) ? formatPhNumber(userData.PhoneNumber,"") : "";
+            model.inTelefone2 = !String.IsNullOrEmpty(userData.PhoneNumberWhats) ? formatPhNumber(userData.PhoneNumberWhats, "") : "";
 
             //CONTINUAR AQUI...
-            // 1) VER NA VIEW QUE DADOS FALTA PREENCHER;
+            // 1) VER CONSULTA DO CEP E PREENCHIMENTO AUTOM[ATICO DOS CAMPOS A PERTIR DO CEP CARREGADO DOS CORREIOS; 
             // 2) VER O QUE NECESSITA PRA GRAVAÇÃO;
 
             //Populando dados bancários do perfil
@@ -312,6 +318,21 @@ namespace BeYourMarket.Web.Controllers
             var estadoUF = CacheHelper.EstadoUf.FirstOrDefault(e => (e.NOME.ToUpper() == uf.ToUpper()));
             var listaCidades = CacheHelper.Cidade.Where(c => (c.FK_ESTADO == estadoUF.ID)).ToList();
             return Json(listaCidades, JsonRequestBehavior.AllowGet);
+        }
+
+        public static string formatPhNumber(string phoneNum, string phoneFormat)
+        {
+            if (phoneFormat == "")
+            {
+                phoneFormat = "(##) #####-####";
+            }
+            Regex regex = new Regex(@"[^\d]");
+            phoneNum = regex.Replace(phoneNum, "");
+            if (phoneNum.Length > 0)
+            {
+                phoneNum = Convert.ToInt64(phoneNum).ToString(phoneFormat);
+            }
+            return phoneNum;
         }
         //================================================================
 

@@ -55,6 +55,8 @@ namespace BeYourMarket.Model.Models.Mapping
             this.Property(t => t.Bairro_Cidade).HasColumnName("Bairro_Cidade");
             this.Property(t => t.Cep_Bairro_Cidade).HasColumnName("Cep_Bairro_Cidade");
             this.Property(t => t.Logradouro_Cidade).HasColumnName("Logradouro_Cidade");
+            this.Property(t => t.Complemento_Endereco).HasColumnName("Complemento_Endereco");
+            this.Property(t => t.PhoneNumberWhats).HasColumnName("PhoneNumberWhats");       
         }
     }
 }
