@@ -271,7 +271,7 @@ namespace BeYourMarket.Web.Controllers
             model.idCidadeUF = userData.id_Cidade;
             model.EstadosUF = CacheHelper.EstadoUf.Where(e => (e.ID > 0)).ToList();
             model.CidadesUF = CacheHelper.Cidade.Where(c => (c.FK_ESTADO == userData.id_UF)).ToList();
-            model.inCep = Convert.ToUInt64(userData.Cep_Bairro_Cidade).ToString(@"00000\-000").ToString();
+            model.inCep = !String.IsNullOrEmpty(userData.Cep_Bairro_Cidade) ? Convert.ToUInt64(userData.Cep_Bairro_Cidade.Replace("-","")).ToString(@"00000\-000").ToString() : "";
             model.inLogradouro = userData.Logradouro_Cidade;
             model.inComplemento = userData.Complemento_Endereco;
             model.inBairro = userData.Bairro_Cidade;

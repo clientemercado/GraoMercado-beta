@@ -401,6 +401,7 @@
     <Compile Include="Utilities\LanguageHelper.cs" />
     <Compile Include="Utilities\MiscellaneousUtilitiesHelper.cs" />
     <Compile Include="Utilities\RequestHelper.cs" />
+    <Compile Include="Utilities\Utilitarios.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-fileinput\css\fileinput.css" />

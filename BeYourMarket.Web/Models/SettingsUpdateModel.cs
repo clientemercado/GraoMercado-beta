@@ -38,9 +38,14 @@ namespace BeYourMarket.Web.Models
         public int id_TpConta { get; set; }
         public List<TiposContaBancaria> TpContaBancaria { get; set; }
         public string NumeroContaBancaria { get; set; }
-        public string DigContaBancaria  { get; set; }
+        public string DigContaBancaria { get; set; }
         public List<TiposChavePix> TpChavesPix { get; set; }
         public int id_TpChavePix { get; set; }
         public string ChavePix { get; set; }
+
+        //Dados Empresa
+        public string razaoSocial { get; set; }
+        public string nomeFantasia { get; set; }
+        public string cnpjEmpresa { get; set; }
     }
 }
