@@ -30,6 +30,15 @@
 
                                     <!-- =========================================================================================================== -->
                                         <legend><h4><i class="fa fa-fax"></i> [[[Dados do Perfil Empresa]]]</h4></legend>
+                                        <input type="hidden" id="id_Emp" name="id_Emp" value="@Model.id_Empresa" />
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Atividades:]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                @Html.DropDownListFor(m => m.grupoAtividadesEmpresa, new SelectList(Model.grupoAtividadesEmpresa.OrderBy(g => g.id_GrupoAtividades), "id_GrupoAtividades", "Descricao_Atividades", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "grupoAtividades", @required = "required" })
+                                            </div>
+                                        </div>
+
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">[[[Razão Social]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
@@ -38,7 +47,7 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Nome Fantasia]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[N. Fantasia]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
                                                 <input type="text" name="NomeFantasia" id="NomeFantasia" class="form-control input-lg" placeholder="[[[Informe o nome Fantasia...]]]" value="@Model.nomeFantasia" data-rule-required="true">
                                             </div>
@@ -50,6 +59,13 @@
                                                 <input type="text" name="Cnpj" id="Cnpj" class="form-control input-lg cnpj" placeholder="[[[Informe o CNPJ...]]]" data-rule-required="true" value="@Model.cnpjEmpresa">
                                             </div>
                                         </div>
+
+
+
+
+
+
+
 
                                         <legend><h4><i class="fa fa-user" aria-hidden="true"></i> [[[Dados do Perfil Usuário]]]</h4></legend>
                                         <div class="form-group">
@@ -194,8 +210,8 @@
                                                     <input type="submit" value="[[[Salvar]]]" class="btn btn-primary" />
                                                 </div>
                                             </div>
-                                            }
-                                        </div>
+                                 }
+                            </div>
 
                         </div>
                     </div>

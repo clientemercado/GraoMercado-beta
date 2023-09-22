@@ -44,8 +44,10 @@ namespace BeYourMarket.Web.Models
         public string ChavePix { get; set; }
 
         //Dados Empresa
+        public int id_Empresa { get; set; }
         public string razaoSocial { get; set; }
         public string nomeFantasia { get; set; }
         public string cnpjEmpresa { get; set; }
+        public List<GrupoAtividadesEmpresa> grupoAtividadesEmpresa { get; set; }
     }
 }

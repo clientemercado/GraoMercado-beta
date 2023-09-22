@@ -19,6 +19,16 @@ namespace BeYourMarket.Web.Utilities
         }
 
         /// <summary>
+        /// Formatar o CNPJ
+        /// </summary>
+        /// <param name="CNPJ">CNPJ a ser formatado</param>
+        /// <returns></returns>
+        public static string FormatCNPJ(string CNPJ)
+        {
+            return Convert.ToUInt64(CNPJ).ToString(@"00\.000\.000\/0000\-00");
+        }
+
+        /// <summary>
         /// Formatar número de Telefone
         /// </summary>
         /// <param name="phoneNum">Número do telefone a formatar</param>

@@ -1,19 +1,4 @@
-﻿//using BeYourMarket.Core.Web;
-//using BeYourMarket.Model.Models;
-//using BeYourMarket.Service;
-//using BeYourMarket.Web.Models;
-//using Microsoft.AspNet.Identity;
-//using Microsoft.AspNet.Identity.Owin;
-//using Repository.Pattern.UnitOfWork;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text.RegularExpressions;
-//using System.Threading.Tasks;
-//using System.Web;
-//using System.Web.Mvc;
-
-using System;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -40,7 +25,6 @@ using Microsoft.Practices.Unity;
 using BeYourMarket.Web.Extensions;
 using System.Text.RegularExpressions;
 using System.Data.Entity.Validation;
-using BeYourMarket.Web.Utilities;
 
 namespace BeYourMarket.Web.Controllers
 {
@@ -259,12 +243,22 @@ namespace BeYourMarket.Web.Controllers
 
         private async Task<SettingsUpdateModel> PopulateSettingsUpdateModel(int? id, UserBankDetails dadosBancariosUser, SettingsUpdateModel model)
         {
+            var company = CacheHelper.EmpresaUsuario.Where(c => (c.Id == model.id_User)).FirstOrDefault();
             var userData = CacheHelper.AspNetUsers.Where(u => (u.Id == model.id_User)).FirstOrDefault();
 
-            //Populando dados do perfil
+            //Populando dados do perfil da Empresa do Usuário
+            model.grupoAtividadesEmpresa = CacheHelper.GrupoAtividadesEmpresa.Where(g => (g.id_GrupoAtividades > 0)).ToList();
+            model.grupoAtividadesEmpresa.Add( new GrupoAtividadesEmpresa { id_GrupoAtividades = 0, Descricao_Atividades = ""});
+            model.id_Empresa = (company != null) ? company.Id_Empresa : 0;
+            model.razaoSocial = (company != null) ? company.Razao_Social_Empresa : "";
+            model.nomeFantasia = (company != null) ? company.Fantasia_Empresa : "";
+            if (company != null)
+                model.cnpjEmpresa = !String.IsNullOrEmpty(company.Cnpj_Empresa) ? Utilitarios.FormatCNPJ(company.Cnpj_Empresa) : "";
+
+            //Populando dados do perfil do Usuário
             model.primeiroNomeUsuario = userData.FirstName;
             model.segundoNomeUsuario = userData.LastName;
-            model.cpfUsuario = (userData.cpf_Usuario != null) ? Utilitarios.FormatCPF(userData.cpf_Usuario) : "";
+            model.cpfUsuario = !String.IsNullOrEmpty(userData.cpf_Usuario) ? Utilitarios.FormatCPF(userData.cpf_Usuario) : "";
             model.emailUsuario = userData.Email;
             model.dataNascimento = String.Format("{0:dd/MM/yyyy}", userData.Data_Nascimento);
             model.idEstadoUF = userData.id_UF;
@@ -280,7 +274,6 @@ namespace BeYourMarket.Web.Controllers
 
             //CONTINUAR AQUI...
 
-            // 1) CARREGAR DADOS DA EMPRESA PARA EXIBIÇÃO;
             // 2) VER O QUE NECESSITA PRA GRAVAÇÃO;
 
             //Populando dados bancários do perfil
@@ -292,6 +285,8 @@ namespace BeYourMarket.Web.Controllers
             model.DigContaBancaria = dadosBancariosUser.Cod_Dig_Conta;
             model.id_TpChavePix = dadosBancariosUser.id_TipoChavePix;
             model.ChavePix = dadosBancariosUser.Chave_Pix_Conta;
+
+
 
             return model;
         }
@@ -342,7 +337,7 @@ namespace BeYourMarket.Web.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateInput(false)]
-        public async Task<ActionResult> SettingsUpdate(UserBankDetails contaBancariaUsuario, FormCollection form, int? oqeq)
+        public async Task<ActionResult> SettingsUpdate(UserBankDetails contaBancariaUsuario, EmpresaUsuario dadosEmpresa, FormCollection form, int? oqeq)
         {
             var userIdCurrent = User.Identity.GetUserId();
             bool updateCount = false;
@@ -350,8 +345,32 @@ namespace BeYourMarket.Web.Controllers
 
             if (Convert.ToInt32(form.Get("id_CB")) == 0)
             {
-                //INSERIR NOVA CONTA BANCÁRIA
                 updateCount = true;
+
+                //INSERIR NOVA EMPRESA
+                if (Convert.ToInt32(form.Get("id_Emp")) == 0)
+                {
+                    var dadosEmpresaUsuario = new EmpresaUsuario()
+                    {
+                        Id = userIdCurrent,
+                        id_GrupoAtividades = 1,
+                        Cnpj_Empresa = form.Get("Cnpj"), 
+                        Razao_Social_Empresa = form.Get("RazaoSocial"),
+                        Fantasia_Empresa = form.Get("NomeFantasia"),
+                        Logradouro_Empresa = form.Get("Logradouro"),
+                        Complemento_Endereco_Empresa = form.Get("Complemento"),
+                        Bairro_Empresa = form.Get("Bairro"),
+                        Cidade_Empresa = form.Get("Cidade"),
+                        UF_Empresa = form.Get("UF_Empresa"),
+                        Cep_Endereco_Empresa = form.Get("Cep_Empresa"),
+                        Fone1_Empresa = form.Get("Fone1_Empresa"),
+                        Email1_Empresa = form.Get("Email1_Empresa"),
+                        Receber_Emails_Empresa = true,
+                        Data_Cadastro_Empresa = DateTime.Now
+                    };
+                }
+
+                //INSERIR NOVA CONTA BANCÁRIA
                 var contaBancariaDoUsuario = new UserBankDetails()
                 {
                     Id_User_UBankDetails = userIdCurrent,
