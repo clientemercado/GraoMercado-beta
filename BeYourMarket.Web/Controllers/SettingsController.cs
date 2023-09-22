@@ -40,6 +40,7 @@ using Microsoft.Practices.Unity;
 using BeYourMarket.Web.Extensions;
 using System.Text.RegularExpressions;
 using System.Data.Entity.Validation;
+using BeYourMarket.Web.Utilities;
 
 namespace BeYourMarket.Web.Controllers
 {
@@ -263,22 +264,23 @@ namespace BeYourMarket.Web.Controllers
             //Populando dados do perfil
             model.primeiroNomeUsuario = userData.FirstName;
             model.segundoNomeUsuario = userData.LastName;
-            model.cpfUsuario = (userData.cpf_Usuario != null) ? FormatCPF(userData.cpf_Usuario) : "";
+            model.cpfUsuario = (userData.cpf_Usuario != null) ? Utilitarios.FormatCPF(userData.cpf_Usuario) : "";
             model.emailUsuario = userData.Email;
             model.dataNascimento = String.Format("{0:dd/MM/yyyy}", userData.Data_Nascimento);
             model.idEstadoUF = userData.id_UF;
             model.idCidadeUF = userData.id_Cidade;
             model.EstadosUF = CacheHelper.EstadoUf.Where(e => (e.ID > 0)).ToList();
             model.CidadesUF = CacheHelper.Cidade.Where(c => (c.FK_ESTADO == userData.id_UF)).ToList();
-            model.inCep = userData.Cep_Bairro_Cidade;
+            model.inCep = Convert.ToUInt64(userData.Cep_Bairro_Cidade).ToString(@"00000\-000").ToString();
             model.inLogradouro = userData.Logradouro_Cidade;
             model.inComplemento = userData.Complemento_Endereco;
             model.inBairro = userData.Bairro_Cidade;
-            model.inTelefone1 = !String.IsNullOrEmpty(userData.PhoneNumber) ? formatPhNumber(userData.PhoneNumber,"") : "";
-            model.inTelefone2 = !String.IsNullOrEmpty(userData.PhoneNumberWhats) ? formatPhNumber(userData.PhoneNumberWhats, "") : "";
+            model.inTelefone1 = !String.IsNullOrEmpty(userData.PhoneNumber) ? Utilitarios.formatPhNumber(userData.PhoneNumber,"") : "";
+            model.inTelefone2 = !String.IsNullOrEmpty(userData.PhoneNumberWhats) ? Utilitarios.formatPhNumber(userData.PhoneNumberWhats, "") : "";
 
             //CONTINUAR AQUI...
-            // 1) VER CONSULTA DO CEP E PREENCHIMENTO AUTOM[ATICO DOS CAMPOS A PERTIR DO CEP CARREGADO DOS CORREIOS; 
+
+            // 1) CARREGAR DADOS DA EMPRESA PARA EXIBIÇÃO;
             // 2) VER O QUE NECESSITA PRA GRAVAÇÃO;
 
             //Populando dados bancários do perfil
@@ -295,19 +297,6 @@ namespace BeYourMarket.Web.Controllers
         }
 
         //================================================================
-        //Formata CPF (OBS: Inclusive os iniciados com 2 zeros) 000.000.000-00
-        public string FormatCPF(string sender)
-        {
-            string response = sender.Trim();
-            if (response.Length == 11)
-            {
-                response = response.Insert(9, "-");
-                response = response.Insert(6, ".");
-                response = response.Insert(3, ".");
-            }
-            return response;
-        }
-
         /// <summary>
         /// Carrega a lista de Cidades Conforme descrição do Estado UF
         /// </summary>
@@ -320,20 +309,20 @@ namespace BeYourMarket.Web.Controllers
             return Json(listaCidades, JsonRequestBehavior.AllowGet);
         }
 
-        public static string formatPhNumber(string phoneNum, string phoneFormat)
-        {
-            if (phoneFormat == "")
-            {
-                phoneFormat = "(##) #####-####";
-            }
-            Regex regex = new Regex(@"[^\d]");
-            phoneNum = regex.Replace(phoneNum, "");
-            if (phoneNum.Length > 0)
-            {
-                phoneNum = Convert.ToInt64(phoneNum).ToString(phoneFormat);
-            }
-            return phoneNum;
-        }
+        //public static string formatPhNumber(string phoneNum, string phoneFormat)
+        //{
+        //    if (phoneFormat == "")
+        //    {
+        //        phoneFormat = "(##) #####-####";
+        //    }
+        //    Regex regex = new Regex(@"[^\d]");
+        //    phoneNum = regex.Replace(phoneNum, "");
+        //    if (phoneNum.Length > 0)
+        //    {
+        //        phoneNum = Convert.ToInt64(phoneNum).ToString(phoneFormat);
+        //    }
+        //    return phoneNum;
+        //}
         //================================================================
 
         public async Task<bool> NotMeListing(int id)

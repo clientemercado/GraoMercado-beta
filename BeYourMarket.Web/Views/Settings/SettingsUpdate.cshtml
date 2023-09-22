@@ -29,25 +29,54 @@
                                     @Html.AntiForgeryToken()
 
                                     <!-- =========================================================================================================== -->
-                                        <legend><h4><i class="fa fa-user" aria-hidden="true"></i> [[[Dados do Perfil]]]</h4></legend>
+                                        <legend><h4><i class="fa fa-fax"></i> [[[Dados do Perfil Empresa]]]</h4></legend>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Razão Social]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="RazaoSocial" id="RazaoSocial" class="form-control input-lg" placeholder="[[[Informe a Razáo Social...]]]" value="@Model.razaoSocial" data-rule-required="true">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Nome Fantasia]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="NomeFantasia" id="NomeFantasia" class="form-control input-lg" placeholder="[[[Informe o nome Fantasia...]]]" value="@Model.nomeFantasia" data-rule-required="true">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[CNPJ]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="Cnpj" id="Cnpj" class="form-control input-lg cnpj" placeholder="[[[Informe o CNPJ...]]]" data-rule-required="true" value="@Model.cnpjEmpresa">
+                                            </div>
+                                        </div>
+
+                                        <legend><h4><i class="fa fa-user" aria-hidden="true"></i> [[[Dados do Perfil Usuário]]]</h4></legend>
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">[[[Primeiro Nome]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="Usuario" id="Usuario" class="form-control input-lg" placeholder="[[[Informe seu Nome...]]]" value="@Model.primeiroNomeUsuario" data-rule-required="true">
+                                                <input type="text" name="Usuario" id="Usuario" class="form-control input-lg" placeholder="[[[Informe seu primeiro Nome...]]]" value="@Model.primeiroNomeUsuario" data-rule-required="true">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">[[[Segundo Nome]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="sobreNomeUsuario" id="sobreNomeUsuario" class="form-control input-lg" placeholder="[[[Informe seu Nome...]]]" value="@Model.segundoNomeUsuario" data-rule-required="true">
+                                                <input type="text" name="sobreNomeUsuario" id="sobreNomeUsuario" class="form-control input-lg" placeholder="[[[Informe seu segundo Nome...]]]" value="@Model.segundoNomeUsuario" data-rule-required="true">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Data Nascimento]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[Data Nasc.]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
                                                 <input type="text" name="DtNasc" id="DtNasc" class="form-control input-lg data" placeholder="[[[__/__/__]]]" data-rule-required="true" value="@Model.dataNascimento">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[CPF]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="Cpf" id="Cpf" class="form-control input-lg cpf" placeholder="[[[Informe o CPF...]]]" data-rule-required="true" value="@Model.cpfUsuario">
                                             </div>
                                         </div>
 
@@ -59,24 +88,23 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Telefone Comercial:]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[Telefone Com.:]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="Telefone1" id="Telefone1" class="form-control input-lg" placeholder="[[[Informe seu Telefone comercial...]]]" value="@Model.inTelefone1">
+                                                <input type="text" name="Telefone1" id="Telefone1" class="form-control input-lg telefone" placeholder="[[[Informe seu Telefone comercial...]]]" value="@Model.inTelefone1">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Celular Whatsapp:]]] <i class="fa fa-whatsapp"></i><span class="text-red"> *</span></label>
+                                            <label class="col-md-2 control-label">[[[Whatsapp:]]] <i class="fa fa-whatsapp"></i><span class="text-red"> *</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="Telefone1" id="Telefone2" class="form-control input-lg" placeholder="[[[Informe seu Telefone Whatsapp...]]]" value="@Model.inTelefone2" data-rule-required="true">
+                                                <input type="text" name="Telefone1" id="Telefone2" class="form-control input-lg telefone" placeholder="[[[Informe seu Telefone Whatsapp...]]]" value="@Model.inTelefone2" data-rule-required="true">
                                             </div>
                                         </div>
 
-                                        <!-- ======================================================================================================  -->
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">[[[Cep:]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="Cep" id="Cep" class="form-control input-lg" placeholder="[[[Informe seu Cep...]]]" value="@Model.inCep" data-rule-required="true">
+                                                <input type="text" name="Cep" id="Cep" class="form-control input-lg cep" placeholder="[[[Informe seu Cep...]]]" value="@Model.inCep" data-rule-required="true">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -97,25 +125,20 @@
                                                 <input type="text" name="Bairro" id="Bairro" class="form-control input-lg" placeholder="[[[Informe o Bairro...]]]" value="@Model.inBairro" data-rule-required="true">
                                             </div>
                                         </div>
-                                        <!-- ======================================================================================================  -->
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[UF (Estado)]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[UF]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
                                                 @Html.DropDownListFor(m => m.EstadosUF, new SelectList(Model.EstadosUF, "ID", "SIGLA", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "uFs", @required = "required" })
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label">[[[Localização (Cidade)]]] <span class="text-red">*</span></label>
+                                            <label class="col-md-2 control-label">[[[Cidade]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
                                                 @Html.DropDownListFor(m => m.CidadesUF, new SelectList(Model.CidadesUF, "ID", "NOME", ""), new { @class = "form-control input-lg m-b-10 tipocad", @id = "cidades", @required = "required" })
-                                                @*<select name="selectedCity" id="selectedCity" class="form-control input-lg essencial" required></select>*@
-                                                @*@Html.TextBoxFor(m => m.CidadesUF, new { @class = "form-control hidden", @Value = @Model.CidadeUF })*@
                                             </div>
                                         </div>
-
-                                    <!-- =========================================================================================================== -->
 
                                             <legend><h4><i class="fa fa-university" aria-hidden="true"></i> [[[Dados Bancários (Obs: Necessário para negociações nesta plataforma)]]]</h4></legend>
                                             <input type="hidden" id="id_CB" name="id_CB" value="@Model.id_CB" />
@@ -155,13 +178,13 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">[[[Sua Chave PIX (Obs: Para recebimento dos valores negociados na plataforma)]]] </label>
+                                                <label class="col-md-2 control-label">[[[Sua Chave PIX (Obs: Para recebimento dos valores negociados aqui)]]] </label>
                                                 <div class="col-md-10">
                                                     <input type="text" class="form-control input-lg" placeholder="[[[Informe sua chave PIX]]]" id="inChavePix" name="inChavePix" value="@Model.ChavePix">
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-2 control-label">[[[Tipo de Chave PIX]]] <span class="text-red">*</span></label>
+                                                <label class="col-md-2 control-label">[[[Tipo Chave PIX]]] <span class="text-red">*</span></label>
                                                 <div class="col-md-10">
                                                     @Html.DropDownListFor(m => m.id_TpChavePix, new SelectList(Model.TpChavesPix, "id_TipoChavePix", "Descricao_TipoChavePix", ""), new { @class = "form-control input-lg m-b-10", @id = "inTpChavePix", @required = "required" })
                                                 </div>
@@ -193,10 +216,110 @@
         var $input = $("#file");
 
         $(".data").mask('00/00/0000');
+        $(".cpf").mask('999.999.999-99');
+        $(".cep").mask('99999-999');
+        $(".telefone").mask("(99) 99999-9999");
+        $(".cnpj").mask("99.999.999/9999-99");
 
         $('#uFs').val(@Model.idEstadoUF);
         $('#cidades').val(@Model.idCidadeUF);
-    </script>
 
+        $('#Cpf').blur(function () {
+            debugger;
+
+            var cpf = $('#Cpf').val().replace(/[^0-9]/g, '').toString();
+            if (cpf.length == 11) {
+                var v = [];
+                //Calcula o primeiro dígito de verificação.
+                v[0] = 1 * cpf[0] + 2 * cpf[1] + 3 * cpf[2];
+                v[0] += 4 * cpf[3] + 5 * cpf[4] + 6 * cpf[5];
+                v[0] += 7 * cpf[6] + 8 * cpf[7] + 9 * cpf[8];
+                v[0] = v[0] % 11;
+                v[0] = v[0] % 10;
+                //Calcula o segundo dígito de verificação.
+                v[1] = 1 * cpf[1] + 2 * cpf[2] + 3 * cpf[3];
+                v[1] += 4 * cpf[4] + 5 * cpf[5] + 6 * cpf[6];
+                v[1] += 7 * cpf[7] + 8 * cpf[8] + 9 * v[0];
+                v[1] = v[1] % 11;
+                v[1] = v[1] % 10;
+
+                //Retorna Verdadeiro se os dígitos de verificação são os esperados.
+                if ((v[0] != cpf[9]) || (v[1] != cpf[10])) {
+                    swal("[[[CPF Inválido!]]]", "", "error");
+                    $('#Cpf').val('');
+                    $('#Cpf').focus();
+                }
+            }
+            else {
+                swal("[[[CPF Inválido!]]]", "", "error");
+                $('#Cpf').val('');
+                $('#Cpf').focus();
+            }
+        });
+
+        /*        function validarCNPJ(cnpj) {*/
+        $('#Cnpj').blur(function () {
+            debugger;
+
+            cnpj = $('#Cnpj').val();
+            cnpj = cnpj.replace(/[^\d]+/g, '');
+            if (cnpj == '') return false;
+            if (cnpj.length != 14) {
+                swal("[[[CNPJ Inválido!]]]", "", "error");
+                $('#Cnpj').val('');
+                $('#Cnpj').focus();
+                return false;
+            }
+
+            // Elimina CNPJs invalidos conhecidos
+            if (cnpj == "00000000000000" ||
+                cnpj == "11111111111111" ||
+                cnpj == "22222222222222" ||
+                cnpj == "33333333333333" ||
+                cnpj == "44444444444444" ||
+                cnpj == "55555555555555" ||
+                cnpj == "66666666666666" ||
+                cnpj == "77777777777777" ||
+                cnpj == "88888888888888" ||
+                cnpj == "99999999999999")
+                return false;
+
+            // Valida DVs
+            tamanho = cnpj.length - 2
+            numeros = cnpj.substring(0, tamanho);
+            digitos = cnpj.substring(tamanho);
+            soma = 0;
+            pos = tamanho - 7;
+            for (i = tamanho; i >= 1; i--) {
+                soma += numeros.charAt(tamanho - i) * pos--;
+                if (pos < 2)
+                    pos = 9;
+            }
+            resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+
+            if (resultado != digitos.charAt(0)) {
+                swal("[[[CNPJ Inválido!]]]", "", "error");
+                $('#Cnpj').val('');
+                $('#Cnpj').focus();
+                return false;
+            }
+
+            tamanho = tamanho + 1;
+            numeros = cnpj.substring(0, tamanho);
+            soma = 0;
+            pos = tamanho - 7;
+            for (i = tamanho; i >= 1; i--) {
+                soma += numeros.charAt(tamanho - i) * pos--;
+                if (pos < 2)
+                    pos = 9;
+            }
+
+            resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+            if (resultado != digitos.charAt(1))
+                return false;
+
+            return true;
+        });
+    </script>
     }
 }
