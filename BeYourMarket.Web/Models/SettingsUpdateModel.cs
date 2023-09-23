@@ -48,6 +48,14 @@ namespace BeYourMarket.Web.Models
         public string razaoSocial { get; set; }
         public string nomeFantasia { get; set; }
         public string cnpjEmpresa { get; set; }
+        public string enderecoEmpresa { get; set; }
+        public string complementoEnderecoEmpresa { get; set; }
+        public string bairroEmpresa { get; set; }
+        public string cidadeEmpresa { get; set; }
+        public string uFEmpresa { get; set; }
+        public string cepEmpresa { get; set; }
+        public string fone1Empresa { get; set; }
+        public string email1Empresa { get; set; }
         public List<GrupoAtividadesEmpresa> grupoAtividadesEmpresa { get; set; }
     }
 }

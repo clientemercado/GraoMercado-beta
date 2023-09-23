@@ -28,7 +28,6 @@
                                     @Html.Partial("_UserMessage")
                                     @Html.AntiForgeryToken()
 
-                                    <!-- =========================================================================================================== -->
                                         <legend><h4><i class="fa fa-fax"></i> [[[Dados do Perfil Empresa]]]</h4></legend>
                                         <input type="hidden" id="id_Emp" name="id_Emp" value="@Model.id_Empresa" />
 
@@ -42,30 +41,79 @@
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">[[[Razão Social]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="RazaoSocial" id="RazaoSocial" class="form-control input-lg" placeholder="[[[Informe a Razáo Social...]]]" value="@Model.razaoSocial" data-rule-required="true">
+                                                <input type="text" name="RazaoSocial" id="RazaoSocial" class="form-control input-lg" placeholder="[[[Razáo Social...]]]" value="@Model.razaoSocial" data-rule-required="true">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">[[[N. Fantasia]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="NomeFantasia" id="NomeFantasia" class="form-control input-lg" placeholder="[[[Informe o nome Fantasia...]]]" value="@Model.nomeFantasia" data-rule-required="true">
+                                                <input type="text" name="NomeFantasia" id="NomeFantasia" class="form-control input-lg" placeholder="[[[Nome Fantasia...]]]" value="@Model.nomeFantasia" data-rule-required="true">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">[[[CNPJ]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="Cnpj" id="Cnpj" class="form-control input-lg cnpj" placeholder="[[[Informe o CNPJ...]]]" data-rule-required="true" value="@Model.cnpjEmpresa">
+                                                <input type="text" name="Cnpj" id="Cnpj" class="form-control input-lg cnpj" placeholder="[[[CNPJ...]]]" data-rule-required="true" value="@Model.cnpjEmpresa">
                                             </div>
                                         </div>
 
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Endereço]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="EnderecoEmp" id="EnderecoEmp" class="form-control input-lg" placeholder="[[[Endereço ...]]]" data-rule-required="true" value="@Model.enderecoEmpresa">
+                                            </div>
+                                        </div>
 
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Complemento]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="ComplementoEmp" id="ComplementoEmp" class="form-control input-lg" placeholder="[[[Complemento do Endereço...]]]" data-rule-required="true" value="@Model.complementoEnderecoEmpresa">
+                                            </div>
+                                        </div>
 
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Bairro]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="BairroEmp" id="BairroEmp" class="form-control input-lg" placeholder="[[[Bairro...]]]" data-rule-required="true" value="@Model.bairroEmpresa">
+                                            </div>
+                                        </div>
 
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Cidade]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="CidadeEmp" id="CidadeEmp" class="form-control input-lg" placeholder="[[[Cidade...]]]" data-rule-required="true" value="@Model.cidadeEmpresa">
+                                            </div>
+                                        </div>
 
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[UF]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="UFEmp" id="UFEmp" class="form-control input-lg" placeholder="[[[UF...]]]" data-rule-required="true" value="@Model.uFEmpresa">
+                                            </div>
+                                        </div>
 
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Cep]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="CepEmp" id="CepEmp" class="form-control input-lg cep" placeholder="[[[Cep...]]]" data-rule-required="true" value="@Model.cepEmpresa">
+                                            </div>
+                                        </div>
 
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Telefone]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="Fone1Emp" id="Fone1Emp" class="form-control input-lg telefone" placeholder="[[[Telefone...]]]" data-rule-required="true" value="@Model.fone1Empresa">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">[[[Email]]] <span class="text-red">*</span></label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="EmailEmp" id="EmailEmp" class="form-control input-lg" placeholder="[[[E-mail...]]]" data-rule-required="true" value="@Model.email1Empresa" data-rule-email="true">
+                                            </div>
+                                        </div>
 
                                         <legend><h4><i class="fa fa-user" aria-hidden="true"></i> [[[Dados do Perfil Usuário]]]</h4></legend>
                                         <div class="form-group">

@@ -252,8 +252,19 @@ namespace BeYourMarket.Web.Controllers
             model.id_Empresa = (company != null) ? company.Id_Empresa : 0;
             model.razaoSocial = (company != null) ? company.Razao_Social_Empresa : "";
             model.nomeFantasia = (company != null) ? company.Fantasia_Empresa : "";
+
             if (company != null)
+            {
                 model.cnpjEmpresa = !String.IsNullOrEmpty(company.Cnpj_Empresa) ? Utilitarios.FormatCNPJ(company.Cnpj_Empresa) : "";
+                model.enderecoEmpresa = company.Logradouro_Empresa;
+                model.complementoEnderecoEmpresa = company.Complemento_Endereco_Empresa;
+                model.bairroEmpresa = company.Bairro_Empresa;
+                model.cidadeEmpresa = company.Cidade_Empresa;
+                model.uFEmpresa = company.UF_Empresa;
+                model.cepEmpresa = company.Cep_Endereco_Empresa;
+                model.fone1Empresa = company.Fone1_Empresa;
+                model.email1Empresa = company.Email1_Empresa;
+            }
 
             //Populando dados do perfil do Usuário
             model.primeiroNomeUsuario = userData.FirstName;
@@ -272,10 +283,6 @@ namespace BeYourMarket.Web.Controllers
             model.inTelefone1 = !String.IsNullOrEmpty(userData.PhoneNumber) ? Utilitarios.formatPhNumber(userData.PhoneNumber,"") : "";
             model.inTelefone2 = !String.IsNullOrEmpty(userData.PhoneNumberWhats) ? Utilitarios.formatPhNumber(userData.PhoneNumberWhats, "") : "";
 
-            //CONTINUAR AQUI...
-
-            // 2) VER O QUE NECESSITA PRA GRAVAÇÃO;
-
             //Populando dados bancários do perfil
             model.id_CB = dadosBancariosUser.Id_UBankDetails;
             model.id_Banco = dadosBancariosUser.id_Bank;
@@ -285,8 +292,6 @@ namespace BeYourMarket.Web.Controllers
             model.DigContaBancaria = dadosBancariosUser.Cod_Dig_Conta;
             model.id_TpChavePix = dadosBancariosUser.id_TipoChavePix;
             model.ChavePix = dadosBancariosUser.Chave_Pix_Conta;
-
-
 
             return model;
         }
@@ -304,20 +309,6 @@ namespace BeYourMarket.Web.Controllers
             return Json(listaCidades, JsonRequestBehavior.AllowGet);
         }
 
-        //public static string formatPhNumber(string phoneNum, string phoneFormat)
-        //{
-        //    if (phoneFormat == "")
-        //    {
-        //        phoneFormat = "(##) #####-####";
-        //    }
-        //    Regex regex = new Regex(@"[^\d]");
-        //    phoneNum = regex.Replace(phoneNum, "");
-        //    if (phoneNum.Length > 0)
-        //    {
-        //        phoneNum = Convert.ToInt64(phoneNum).ToString(phoneFormat);
-        //    }
-        //    return phoneNum;
-        //}
         //================================================================
 
         public async Task<bool> NotMeListing(int id)
@@ -357,14 +348,14 @@ namespace BeYourMarket.Web.Controllers
                         Cnpj_Empresa = form.Get("Cnpj"), 
                         Razao_Social_Empresa = form.Get("RazaoSocial"),
                         Fantasia_Empresa = form.Get("NomeFantasia"),
-                        Logradouro_Empresa = form.Get("Logradouro"),
-                        Complemento_Endereco_Empresa = form.Get("Complemento"),
-                        Bairro_Empresa = form.Get("Bairro"),
-                        Cidade_Empresa = form.Get("Cidade"),
-                        UF_Empresa = form.Get("UF_Empresa"),
-                        Cep_Endereco_Empresa = form.Get("Cep_Empresa"),
-                        Fone1_Empresa = form.Get("Fone1_Empresa"),
-                        Email1_Empresa = form.Get("Email1_Empresa"),
+                        Logradouro_Empresa = form.Get("EnderecoEmp"),
+                        Complemento_Endereco_Empresa = form.Get("ComplementoEmp"),
+                        Bairro_Empresa = form.Get("BairroEmp"),
+                        Cidade_Empresa = form.Get("CidadeEmp"),
+                        UF_Empresa = form.Get("UFEmp"),
+                        Cep_Endereco_Empresa = form.Get("CepEmp"),
+                        Fone1_Empresa = form.Get("Fone1Emp"),
+                        Email1_Empresa = form.Get("EmailEmp"),
                         Receber_Emails_Empresa = true,
                         Data_Cadastro_Empresa = DateTime.Now
                     };
@@ -389,7 +380,18 @@ namespace BeYourMarket.Web.Controllers
             }
             else
             {
-                //EDITAR CPONTA BANCÁRIA
+                //CONTINUAR AQUI...
+
+                // 1) MONTAR EDIÇÃO DOS DADOS DA EMPRESA / USUÁRIO;
+                // 2) CONFIRMAR NA TELA DE CADASTRO (HOME) NA PRÁTICA, SE GRAVA OU NÁO OS DADOS DA EMPRESA;
+
+                //EDITAR DADOS EMPRESA
+
+
+                //EDITAR DADOS USUÁRIO
+
+
+                //EDITAR CONTA BANCÁRIA
                 if (await NotMeListing(Convert.ToInt32(form.Get("id_CB"))))
                     return new HttpUnauthorizedResult();
 
