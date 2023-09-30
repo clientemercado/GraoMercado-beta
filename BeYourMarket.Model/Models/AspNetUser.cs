@@ -56,6 +56,8 @@ namespace BeYourMarket.Model.Models
         public System.DateTime? Data_Nascimento { get; set; }
         public string Complemento_Endereco { get; set; }
         public string PhoneNumberWhats { get; set; }
+        public DateTime? DataUltimaAlteracao { get; set; }
+        public string IPEfetuouUltimaAlteracao { get; set; }
 
         [ForeignKey("Id_UBankDetails")]
         public virtual UserBankDetails UserBankDetails { get; set; }

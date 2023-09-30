@@ -328,38 +328,115 @@ namespace BeYourMarket.Web.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateInput(false)]
-        public async Task<ActionResult> SettingsUpdate(UserBankDetails contaBancariaUsuario, EmpresaUsuario dadosEmpresa, FormCollection form, int? oqeq)
+        public async Task<ActionResult> SettingsUpdate(UserBankDetails contaBancariaUsuario, AspNetUser dadosUsuario, EmpresaUsuario dadosEmpresa, FormCollection form, int? oqeq)
         {
             var userIdCurrent = User.Identity.GetUserId();
             bool updateCount = false;
             int operation = 0; // 0 - Inclusão Oferta de Compra / 1 - Edição de Oferta de Compra
 
+            //=============================================================
+            //OBS: TRECHO EM TESTES ,= CONTINUAR AQUI...
+
+            //SEÇÃO EMPRESA
+            if (Convert.ToInt32(form.Get("id_Emp")) == 0)
+            {
+                //INSERIR NOVA EMPRESA
+                var dadosEmpresaUsuario = new EmpresaUsuario()
+                {
+                    Id = userIdCurrent,
+                    id_GrupoAtividades = 1,
+                    Cnpj_Empresa = form.Get("Cnpj"),
+                    Razao_Social_Empresa = form.Get("RazaoSocial"),
+                    Fantasia_Empresa = form.Get("NomeFantasia"),
+                    Logradouro_Empresa = form.Get("EnderecoEmp"),
+                    Complemento_Endereco_Empresa = form.Get("ComplementoEmp"),
+                    Bairro_Empresa = form.Get("BairroEmp"),
+                    Cidade_Empresa = form.Get("CidadeEmp"),
+                    UF_Empresa = form.Get("UFEmp"),
+                    Cep_Endereco_Empresa = form.Get("CepEmp"),
+                    Fone1_Empresa = form.Get("Fone1Emp"),
+                    Email1_Empresa = form.Get("EmailEmp"),
+                    Receber_Emails_Empresa = true,
+                    Data_Cadastro_Empresa = DateTime.Now
+                };
+
+                dadosEmpresa = dadosEmpresaUsuario;
+                _empresaUsuarioService.Insert(dadosEmpresa);
+            }
+            else
+            {
+                //ALTERAR DADOS DA EMPRESA
+                if (await NotMeListing(Convert.ToInt32(form.Get("id_Emp"))))
+                    return new HttpUnauthorizedResult();
+
+                var empresaUsuarioExisting = await _empresaUsuarioService.FindAsync(Convert.ToInt32(form.Get("id_Emp")));
+
+                empresaUsuarioExisting.id_GrupoAtividades = 1;
+                empresaUsuarioExisting.Cnpj_Empresa = form.Get("Cnpj");
+                empresaUsuarioExisting.Razao_Social_Empresa = form.Get("RazaoSocial");
+                empresaUsuarioExisting.Fantasia_Empresa = form.Get("NomeFantasia");
+                empresaUsuarioExisting.Logradouro_Empresa = form.Get("EnderecoEmp");
+                empresaUsuarioExisting.Complemento_Endereco_Empresa = form.Get("ComplementoEmp");
+                empresaUsuarioExisting.Bairro_Empresa = form.Get("BairroEmp");
+                empresaUsuarioExisting.Cidade_Empresa = form.Get("CidadeEmp");
+                empresaUsuarioExisting.UF_Empresa = form.Get("empresaUsuarioExisting..");
+                empresaUsuarioExisting.Cep_Endereco_Empresa = form.Get("CepEmp");
+                empresaUsuarioExisting.Fone1_Empresa = form.Get("Fone1Emp");
+                empresaUsuarioExisting.Email1_Empresa = form.Get("EmailEmp");
+                empresaUsuarioExisting.Receber_Emails_Empresa = true;
+                empresaUsuarioExisting.Data_Cadastro_Empresa = DateTime.Now;
+
+                dadosEmpresa = empresaUsuarioExisting;
+                _empresaUsuarioService.Update(dadosEmpresa);
+                operation = 1;
+            }
+
+            //SEÇÃO USUÁRIO
+            if (String.IsNullOrEmpty(form.Get("id_Usuario")))
+            {
+                //INSERIR NOVO USUÁRIO
+
+                // OBS: TRECHO COMENTADO E NÃO IMPLEMENTADO (DEIXAR PRA OUTRA OCASIÃO)
+                //var dadosUsuario = new AspNetUsers()
+                //{
+
+                //};
+            }
+            else
+            {
+                // ALTERAR DADOS DO USUÁRIO
+                if (await NotMeListing(Convert.ToInt32(form.Get("id_Usuario"))))
+                    return new HttpUnauthorizedResult();
+
+                var usuarioExisting = await _aspNetUserService.FindAsync(Convert.ToInt32(form.Get("id_Usuario")));
+
+                usuarioExisting.FirstName = form.Get("Usuario");
+                usuarioExisting.LastName = form.Get("sobreNomeUsuario");
+                usuarioExisting.UserName = form.Get("Email"); 
+                usuarioExisting.Email = form.Get("Email");
+                usuarioExisting.Data_Nascimento = Convert.ToDateTime(form.Get("DtNasc"));
+                usuarioExisting.cpf_Usuario = Utilitarios.RemoverAcentosECaracteresEspeciais(form.Get("Email"));
+                usuarioExisting.PhoneNumber = Utilitarios.RemoverAcentosECaracteresEspeciais(form.Get("Telefone1"));
+                usuarioExisting.PhoneNumberWhats = Utilitarios.RemoverAcentosECaracteresEspeciais(form.Get("Telefone2"));
+                usuarioExisting.Cep_Bairro_Cidade = form.Get("Cep");
+                usuarioExisting.Logradouro_Cidade = form.Get("Endereco");
+                usuarioExisting.Complemento_Endereco = form.Get("Complemento");
+                usuarioExisting.Bairro_Cidade = form.Get("Bairro");
+                usuarioExisting.id_UF = Convert.ToInt32(form.Get("EstadosUF"));
+                usuarioExisting.id_Cidade = Convert.ToInt32(form.Get("CidadesUF"));
+                usuarioExisting.DataUltimaAlteracao = DateTime.Now;
+                usuarioExisting.IPEfetuouUltimaAlteracao = System.Web.HttpContext.Current.Request.GetVisitorIP();
+
+                dadosUsuario = usuarioExisting;
+                _aspNetUserService.Update(dadosUsuario);
+                operation = 1;
+            }
+            //=============================================================
+
+            //SEÇÃO CONTA BANCÁRIA
             if (Convert.ToInt32(form.Get("id_CB")) == 0)
             {
                 updateCount = true;
-
-                //INSERIR NOVA EMPRESA
-                if (Convert.ToInt32(form.Get("id_Emp")) == 0)
-                {
-                    var dadosEmpresaUsuario = new EmpresaUsuario()
-                    {
-                        Id = userIdCurrent,
-                        id_GrupoAtividades = 1,
-                        Cnpj_Empresa = form.Get("Cnpj"), 
-                        Razao_Social_Empresa = form.Get("RazaoSocial"),
-                        Fantasia_Empresa = form.Get("NomeFantasia"),
-                        Logradouro_Empresa = form.Get("EnderecoEmp"),
-                        Complemento_Endereco_Empresa = form.Get("ComplementoEmp"),
-                        Bairro_Empresa = form.Get("BairroEmp"),
-                        Cidade_Empresa = form.Get("CidadeEmp"),
-                        UF_Empresa = form.Get("UFEmp"),
-                        Cep_Endereco_Empresa = form.Get("CepEmp"),
-                        Fone1_Empresa = form.Get("Fone1Emp"),
-                        Email1_Empresa = form.Get("EmailEmp"),
-                        Receber_Emails_Empresa = true,
-                        Data_Cadastro_Empresa = DateTime.Now
-                    };
-                }
 
                 //INSERIR NOVA CONTA BANCÁRIA
                 var contaBancariaDoUsuario = new UserBankDetails()
@@ -380,17 +457,6 @@ namespace BeYourMarket.Web.Controllers
             }
             else
             {
-                //CONTINUAR AQUI...
-
-                // 1) MONTAR EDIÇÃO DOS DADOS DA EMPRESA / USUÁRIO;
-                // 2) CONFIRMAR NA TELA DE CADASTRO (HOME) NA PRÁTICA, SE GRAVA OU NÁO OS DADOS DA EMPRESA;
-
-                //EDITAR DADOS EMPRESA
-
-
-                //EDITAR DADOS USUÁRIO
-
-
                 //EDITAR CONTA BANCÁRIA
                 if (await NotMeListing(Convert.ToInt32(form.Get("id_CB"))))
                     return new HttpUnauthorizedResult();
@@ -421,7 +487,8 @@ namespace BeYourMarket.Web.Controllers
 
             ViewBag.oqeq = (oqeq >= 0) ? oqeq : 0;
 
-            TempData[TempDataKeys.UserMessage] = (operation == 0) ? "[[[Conta Bancária cadastrada com Sucesso!]]]" : "[[[Conta Bancária alterada com Sucesso!]]]";
+            //TempData[TempDataKeys.UserMessage] = (operation == 0) ? "[[[Conta Bancária cadastrada com Sucesso!]]]" : "[[[Conta Bancária alterada com Sucesso!]]]";
+            TempData[TempDataKeys.UserMessage] = (operation == 0) ? "[[[Dados cadastrados com Sucesso!]]]" : "[[[Dados alterados com Sucesso!]]]";
             return RedirectToAction("SettingsUpdate", new { id = contaBancariaUsuario.Id_UBankDetails, userId_ = userIdCurrent });
         }
     }

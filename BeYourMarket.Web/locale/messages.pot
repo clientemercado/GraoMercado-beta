@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-09-23 15:29-03:00\n"
+"POT-Creation-Date: 2023-09-30 16:24-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,7 +30,7 @@ msgstr ""
 msgid "(Preencha com informações relevantes para os vendedores como: qualidade, modelo, numeração do produto, etc...)"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:136
+#: Views\Settings\SettingsUpdate.cshtml:138
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:72
 msgid "__/__/__"
 msgstr ""
@@ -310,7 +310,7 @@ msgstr ""
 msgid "Administrator"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:217
+#: Views\Settings\SettingsUpdate.cshtml:219
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:153
 msgid "Agência"
 msgstr ""
@@ -561,12 +561,12 @@ msgstr ""
 msgid "Bairro..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:187
+#: Views\Settings\SettingsUpdate.cshtml:189
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:123
 msgid "Bairro:"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:210
+#: Views\Settings\SettingsUpdate.cshtml:212
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:146
 msgid "Banco"
 msgstr ""
@@ -832,7 +832,7 @@ msgstr ""
 msgid "Cep..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:169
+#: Views\Settings\SettingsUpdate.cshtml:171
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:105
 msgid "Cep:"
 msgstr ""
@@ -849,7 +849,7 @@ msgstr ""
 
 #: Views\Listing\ListingUpdate.cshtml:236
 #: Views\Settings\SettingsUpdate.cshtml:84
-#: Views\Settings\SettingsUpdate.cshtml:201
+#: Views\Settings\SettingsUpdate.cshtml:203
 #: obj\Release\Package\PackageTmp\Views\Listing\ListingUpdate.cshtml:236
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:137
 msgid "Cidade"
@@ -905,8 +905,8 @@ msgstr ""
 msgid "Cnpj Empresa..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:332
-#: Views\Settings\SettingsUpdate.cshtml:365
+#: Views\Settings\SettingsUpdate.cshtml:334
+#: Views\Settings\SettingsUpdate.cshtml:367
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:268
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:301
 msgid "CNPJ Inválido!"
@@ -950,7 +950,7 @@ msgid "COMPLEMENTO"
 msgstr ""
 
 #: Views\Settings\SettingsUpdate.cshtml:72
-#: Views\Settings\SettingsUpdate.cshtml:183
+#: Views\Settings\SettingsUpdate.cshtml:185
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:119
 msgid "Complemento do Endereço..."
 msgstr ""
@@ -960,7 +960,7 @@ msgstr ""
 msgid "Complemento Endereço..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:181
+#: Views\Settings\SettingsUpdate.cshtml:183
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:117
 msgid "Complemento:"
 msgstr ""
@@ -1201,11 +1201,11 @@ msgstr ""
 msgid "Connnect to stripe successfully!"
 msgstr ""
 
-#: Controllers\SettingsController.cs:424
+#: Controllers\SettingsController.cs:490
 msgid "Conta Bancária alterada com Sucesso!"
 msgstr ""
 
-#: Controllers\SettingsController.cs:424
+#: Controllers\SettingsController.cs:490
 msgid "Conta Bancária cadastrada com Sucesso!"
 msgstr ""
 
@@ -1375,13 +1375,13 @@ msgstr ""
 msgid "Cotações Recebidas"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:141
+#: Views\Settings\SettingsUpdate.cshtml:143
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:77
 msgid "CPF"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:312
-#: Views\Settings\SettingsUpdate.cshtml:318
+#: Views\Settings\SettingsUpdate.cshtml:314
+#: Views\Settings\SettingsUpdate.cshtml:320
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:248
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:254
 msgid "CPF Inválido!"
@@ -1461,9 +1461,17 @@ msgstr ""
 msgid "CSS Customizado"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:207
+#: Controllers\SettingsController.cs:491
+msgid "Dados alterados com Sucesso!"
+msgstr ""
+
+#: Views\Settings\SettingsUpdate.cshtml:209
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:143
 msgid "Dados Bancários (Obs: Necessário para negociações nesta plataforma)"
+msgstr ""
+
+#: Controllers\SettingsController.cs:491
+msgid "Dados cadastrados com Sucesso!"
 msgstr ""
 
 #: Views\Manage\CompanyData.cshtml:13
@@ -1502,7 +1510,7 @@ msgstr ""
 msgid "Data Encerramento (Obs: A Cotação se encerrará automaticamente nessa data)"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:134
+#: Views\Settings\SettingsUpdate.cshtml:136
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:70
 msgid "Data Nasc."
 msgstr ""
@@ -1730,7 +1738,7 @@ msgstr ""
 msgid "Digite DELETE para confirmar a exclusão"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:238
+#: Views\Settings\SettingsUpdate.cshtml:240
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:174
 msgid "Dígito"
 msgstr ""
@@ -1779,7 +1787,7 @@ msgstr ""
 #: Views\Manage\CompanyData.cshtml:67
 #: Views\Purchase\PurchaseUpdate.cshtml:125
 #: Views\Settings\SettingsUpdate.cshtml:112
-#: Views\Settings\SettingsUpdate.cshtml:148
+#: Views\Settings\SettingsUpdate.cshtml:150
 #: Areas\Admin\Views\Manage\Settings.cshtml:49
 #: Areas\Admin\Views\Manage\Settings.cshtml:51
 #: Areas\Admin\Views\Manage\SettingsEmail.cshtml:18
@@ -2407,7 +2415,7 @@ msgstr ""
 msgid "Informações sobre o local de Retirada"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:219
+#: Views\Settings\SettingsUpdate.cshtml:221
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:155
 msgid "Informe a Agência"
 msgstr ""
@@ -2472,7 +2480,7 @@ msgstr ""
 msgid "Informe Nome Usuário..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:189
+#: Views\Settings\SettingsUpdate.cshtml:191
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:125
 msgid "Informe o Bairro..."
 msgstr ""
@@ -2481,12 +2489,12 @@ msgstr ""
 msgid "Informe o CNPJ..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:143
+#: Views\Settings\SettingsUpdate.cshtml:145
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:79
 msgid "Informe o CPF..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:240
+#: Views\Settings\SettingsUpdate.cshtml:242
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:176
 msgid "Informe o dígito da Conta"
 msgstr ""
@@ -2496,7 +2504,7 @@ msgstr ""
 msgid "Informe o local de retirada (Ex: nome da propriedade como é conhecida...)"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:233
+#: Views\Settings\SettingsUpdate.cshtml:235
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:169
 msgid "Informe o Nº da Conta"
 msgstr ""
@@ -2535,7 +2543,7 @@ msgstr ""
 msgid "Informe o título da oferta"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:171
+#: Views\Settings\SettingsUpdate.cshtml:173
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:107
 msgid "Informe seu Cep..."
 msgstr ""
@@ -2545,12 +2553,12 @@ msgstr ""
 msgid "Informe seu email."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:177
+#: Views\Settings\SettingsUpdate.cshtml:179
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:113
 msgid "Informe seu Endereço..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:150
+#: Views\Settings\SettingsUpdate.cshtml:152
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:86
 msgid "Informe seu melhor Email..."
 msgstr ""
@@ -2560,27 +2568,27 @@ msgstr ""
 msgid "Informe seu Nome..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:122
+#: Views\Settings\SettingsUpdate.cshtml:124
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:58
 msgid "Informe seu primeiro Nome..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:129
+#: Views\Settings\SettingsUpdate.cshtml:131
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:65
 msgid "Informe seu segundo Nome..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:157
+#: Views\Settings\SettingsUpdate.cshtml:159
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:93
 msgid "Informe seu Telefone comercial..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:164
+#: Views\Settings\SettingsUpdate.cshtml:166
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:100
 msgid "Informe seu Telefone Whatsapp..."
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:247
+#: Views\Settings\SettingsUpdate.cshtml:249
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:183
 msgid "Informe sua chave PIX"
 msgstr ""
@@ -3164,7 +3172,7 @@ msgstr ""
 msgid "Nº apólice"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:231
+#: Views\Settings\SettingsUpdate.cshtml:233
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:167
 msgid "Nº da Conta"
 msgstr ""
@@ -3937,7 +3945,7 @@ msgstr ""
 
 #: Models\AccountViewModels.cs:92
 #: Views\Manage\UserProfile.cshtml:43
-#: Views\Settings\SettingsUpdate.cshtml:120
+#: Views\Settings\SettingsUpdate.cshtml:122
 #: Areas\Admin\Views\Manage\UserUpdate.cshtml:30
 #: obj\Release\Package\PackageTmp\Views\Manage\UserProfile.cshtml:43
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:56
@@ -4339,7 +4347,7 @@ msgstr ""
 msgid "Review"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:175
+#: Views\Settings\SettingsUpdate.cshtml:177
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:111
 msgid "Rua:"
 msgstr ""
@@ -4356,7 +4364,7 @@ msgstr ""
 #: Views\Listing\Listing.cshtml:703
 #: Views\Listing\Listing.cshtml:704
 #: Views\Manage\UserProfile.cshtml:95
-#: Views\Settings\SettingsUpdate.cshtml:258
+#: Views\Settings\SettingsUpdate.cshtml:260
 #: Areas\Admin\Views\ContentPage\ContentPageUpdate.cshtml:76
 #: Areas\Admin\Views\Design\Appearance.cshtml:44
 #: Areas\Admin\Views\Design\CodeScript.cshtml:34
@@ -4413,7 +4421,7 @@ msgstr ""
 msgid "Se Logar aqui"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:127
+#: Views\Settings\SettingsUpdate.cshtml:129
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:63
 msgid "Segundo Nome"
 msgstr ""
@@ -4521,7 +4529,7 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:245
+#: Views\Settings\SettingsUpdate.cshtml:247
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:181
 msgid "Sua Chave PIX (Obs: Para recebimento dos valores negociados aqui)"
 msgstr ""
@@ -4605,7 +4613,7 @@ msgstr ""
 msgid "TELEFONE 1"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:155
+#: Views\Settings\SettingsUpdate.cshtml:157
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:91
 msgid "Telefone Com.:"
 msgstr ""
@@ -4751,12 +4759,12 @@ msgstr ""
 msgid "Tipo Cadastro"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:251
+#: Views\Settings\SettingsUpdate.cshtml:253
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:187
 msgid "Tipo Chave PIX"
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:224
+#: Views\Settings\SettingsUpdate.cshtml:226
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:160
 msgid "Tipo de Conta"
 msgstr ""
@@ -4878,7 +4886,7 @@ msgid "TrocasDevolucoes"
 msgstr ""
 
 #: Views\Settings\SettingsUpdate.cshtml:91
-#: Views\Settings\SettingsUpdate.cshtml:194
+#: Views\Settings\SettingsUpdate.cshtml:196
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:130
 msgid "UF"
 msgstr ""
@@ -5148,7 +5156,7 @@ msgstr ""
 msgid "Você pagará: <br />R$ "
 msgstr ""
 
-#: Views\Settings\SettingsUpdate.cshtml:162
+#: Views\Settings\SettingsUpdate.cshtml:164
 #: obj\Release\Package\PackageTmp\Views\Settings\SettingsUpdate.cshtml:98
 msgid "Whatsapp:"
 msgstr ""

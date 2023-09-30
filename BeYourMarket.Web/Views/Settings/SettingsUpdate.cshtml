@@ -116,6 +116,8 @@
                                         </div>
 
                                         <legend><h4><i class="fa fa-user" aria-hidden="true"></i> [[[Dados do Perfil Usuário]]]</h4></legend>
+                                        <input type="hidden" id="id_Usuario" name="id_Usuario" value="@Model.id_User" />
+
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">[[[Primeiro Nome]]] <span class="text-red">*</span></label>
                                             <div class="col-md-10">
@@ -161,7 +163,7 @@
                                         <div class="form-group">
                                             <label class="col-md-2 control-label">[[[Whatsapp:]]] <i class="fa fa-whatsapp"></i><span class="text-red"> *</span></label>
                                             <div class="col-md-10">
-                                                <input type="text" name="Telefone1" id="Telefone2" class="form-control input-lg telefone" placeholder="[[[Informe seu Telefone Whatsapp...]]]" value="@Model.inTelefone2" data-rule-required="true">
+                                                <input type="text" name="Telefone2" id="Telefone2" class="form-control input-lg telefone" placeholder="[[[Informe seu Telefone Whatsapp...]]]" value="@Model.inTelefone2" data-rule-required="true">
                                             </div>
                                         </div>
 
