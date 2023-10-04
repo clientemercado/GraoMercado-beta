@@ -265,6 +265,7 @@ namespace BeYourMarket.Web.Controllers
                 model.cepEmpresa = company.Cep_Endereco_Empresa;
                 model.fone1Empresa = company.Fone1_Empresa;
                 model.email1Empresa = company.Email1_Empresa;
+                model.id_GrupoAtividadesEmpresa = company.id_GrupoAtividades;
             }
 
             //Populando dados do perfil do Usuário
@@ -367,13 +368,13 @@ namespace BeYourMarket.Web.Controllers
             else
             {
                 //ALTERAR DADOS DA EMPRESA
-                if (await NotMeListing(Convert.ToInt32(form.Get("id_Emp"))))
-                    return new HttpUnauthorizedResult();
+                //if (await NotMeListing(Convert.ToInt32(form.Get("id_Emp"))))
+                //    return new HttpUnauthorizedResult();
 
                 var empresaUsuarioExisting = await _empresaUsuarioService.FindAsync(Convert.ToInt32(form.Get("id_Emp")));
 
                 empresaUsuarioExisting.id_GrupoAtividades = 1;
-                empresaUsuarioExisting.Cnpj_Empresa = form.Get("Cnpj");
+                empresaUsuarioExisting.Cnpj_Empresa = Utilitarios.RemoverAcentosECaracteresEspeciais(form.Get("Cnpj"));
                 empresaUsuarioExisting.Razao_Social_Empresa = form.Get("RazaoSocial");
                 empresaUsuarioExisting.Fantasia_Empresa = form.Get("NomeFantasia");
                 empresaUsuarioExisting.Logradouro_Empresa = form.Get("EnderecoEmp");
@@ -421,11 +422,13 @@ namespace BeYourMarket.Web.Controllers
                 usuarioExisting.PhoneNumberWhats = Utilitarios.RemoverAcentosECaracteresEspeciais(form.Get("Telefone2"));
                 usuarioExisting.Cep_Bairro_Cidade = form.Get("Cep");
                 usuarioExisting.Logradouro_Cidade = form.Get("Endereco");
-                usuarioExisting.Complemento_Endereco = form.Get("Complemento");
+                usuarioExisting.Complemento_Endereco = form.Get("ComplementoUsu");
                 usuarioExisting.Bairro_Cidade = form.Get("Bairro");
                 usuarioExisting.id_UF = Convert.ToInt32(form.Get("EstadosUF"));
                 usuarioExisting.id_Cidade = Convert.ToInt32(form.Get("CidadesUF"));
                 usuarioExisting.DataUltimaAlteracao = DateTime.Now;
+                usuarioExisting.PhoneNumberConfirmed = true;
+                usuarioExisting.AcceptEmail = true;
                 usuarioExisting.IPEfetuouUltimaAlteracao = System.Web.HttpContext.Current.Request.GetVisitorIP();
 
                 dadosUsuario = usuarioExisting;

@@ -1,0 +1,320 @@
+﻿<error errorId="b8f599ee-11ce-4891-abfd-372977f6f71b" host="DESKTOP-GJ1QFNP" type="System.Data.SqlClient.SqlException" message="String or binary data would be truncated.&#xD;&#xA;The statement has been terminated." source=".Net SqlClient Data Provider" detail="System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---&gt; System.Data.SqlClient.SqlException: String or binary data would be truncated.&#xD;&#xA;The statement has been terminated.&#xD;&#xA;   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)&#xD;&#xA;   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)&#xD;&#xA;   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)&#xD;&#xA;   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, String endMethod, Boolean isInternal)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)&#xD;&#xA;   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)&#xD;&#xA;   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.&lt;ExecuteAsync&gt;d__8.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__39.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.&lt;UpdateAsync&gt;d__39.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;ExecuteInTransactionAsync&gt;d__156`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesToStoreAsync&gt;d__154.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.&lt;ExecuteAsyncImplementation&gt;d__6`1.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;SaveChangesInternalAsync&gt;d__151.MoveNext()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at Repository.Pattern.Ef6.DataContext.&lt;SaveChangesAsync&gt;d__10.MoveNext() in F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Frameworks\Repository.Pattern.Ef6\DataContext.cs:line 159&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Repository.Pattern.Ef6.DataContext.&lt;SaveChangesAsync&gt;d__9.MoveNext() in F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\Frameworks\Repository.Pattern.Ef6\DataContext.cs:line 100&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at BeYourMarket.Web.Controllers.SettingsController.&lt;SettingsUpdate&gt;d__54.MoveNext() in F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\BeYourMarket.Web\Controllers\SettingsController.cs:line 482&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass8_0.&lt;BeginInvokeAsynchronousActionMethod&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_0.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__0()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass11_2.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__2()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass7_0.&lt;BeginInvokeActionMethodWithFilters&gt;b__1(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__4()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__1(IAsyncResult asyncResult)" user="edwilsoncurtis@gmail.com" time="2023-10-04T20:06:46.0017836Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:4098&#xD;&#xA;HTTP_CONTENT_TYPE:multipart/form-data; boundary=----WebKitFormBoundaryjGhEYm4ICBWqCkSC&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;HTTP_COOKIE:__RequestVerificationToken=6VkHN5J3eoIoLGr7QppsBHl_Cy5qJW4SHt7rmdvA0AMeq1HtcyQ3enGNkqwQdHsTq9GGD6ZZvzz0O1F1MP7thF53ySHTvOS7Wt7QQVYmhXQ1; ASP.NET_SessionId=w4dfmv3ygkgfslb215sgz3pr; .AspNet.ApplicationCookie=GC9eLguXAyhGalXdiJeX0AKu6JTsk3JXEzA7GO5rgUTR44KOSL-9WmjKwO8qUdyRjsjcZe0HcBQb_HU9kwL1UL1dEL1ZmNwEUyOGGAs7MliXSLi5-Pg-RmTqm2KqsFFAs4DNUKTlOm4RyGAOs4IDZ4fTlODE6_70Joay3DVTwvwoEhiF71Z-3wTr8IzRawHCsXXrWk1skbtVyNjtJGyuvAfPpgA3lcbWQO5JPYcbTPQsYnBp5nVUWwgfV7S4RNPb6wrPF0kYV8xLZ4eeOkdppgH13F9Y7ClKkUxc5Iy6aYUhqk-CnI1TiqREbYWQrJcq5MZamYaMzNGA9A0sA2rwArbg8XxSolsgzFwa1Hlxw3kwWmOognvOfcELN-VaX6F1gLhGKhL4u4zrvKMxoMnxiV501lwmuIvjBPxEw5GnQAmiJMuWqaarzuWcaTOYZNH4aWlz_dbUdlz1x2KpzazXea6WiCb3EI5XCMo8xJ43U03YR93z0hmUhokMRl0-kdeJ&#xD;&#xA;HTTP_HOST:localhost:59674&#xD;&#xA;HTTP_REFERER:http://localhost:59674/pt/settings/settingsupdate/18?oqeq=0&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36&#xD;&#xA;HTTP_SEC_CH_UA:&quot;Google Chrome&quot;;v=&quot;117&quot;, &quot;Not;A=Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;117&quot;&#xD;&#xA;HTTP_SEC_CH_UA_MOBILE:?0&#xD;&#xA;HTTP_SEC_CH_UA_PLATFORM:&quot;Windows&quot;&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_ORIGIN:http://localhost:59674&#xD;&#xA;HTTP_SEC_FETCH_SITE:same-origin&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;HTTP_DNT:1&#xD;&#xA;HTTP_SEC_GPC:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Content-Length: 4098&#xD;&#xA;Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryjGhEYm4ICBWqCkSC&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7&#xD;&#xA;Cookie: __RequestVerificationToken=6VkHN5J3eoIoLGr7QppsBHl_Cy5qJW4SHt7rmdvA0AMeq1HtcyQ3enGNkqwQdHsTq9GGD6ZZvzz0O1F1MP7thF53ySHTvOS7Wt7QQVYmhXQ1; ASP.NET_SessionId=w4dfmv3ygkgfslb215sgz3pr; .AspNet.ApplicationCookie=GC9eLguXAyhGalXdiJeX0AKu6JTsk3JXEzA7GO5rgUTR44KOSL-9WmjKwO8qUdyRjsjcZe0HcBQb_HU9kwL1UL1dEL1ZmNwEUyOGGAs7MliXSLi5-Pg-RmTqm2KqsFFAs4DNUKTlOm4RyGAOs4IDZ4fTlODE6_70Joay3DVTwvwoEhiF71Z-3wTr8IzRawHCsXXrWk1skbtVyNjtJGyuvAfPpgA3lcbWQO5JPYcbTPQsYnBp5nVUWwgfV7S4RNPb6wrPF0kYV8xLZ4eeOkdppgH13F9Y7ClKkUxc5Iy6aYUhqk-CnI1TiqREbYWQrJcq5MZamYaMzNGA9A0sA2rwArbg8XxSolsgzFwa1Hlxw3kwWmOognvOfcELN-VaX6F1gLhGKhL4u4zrvKMxoMnxiV501lwmuIvjBPxEw5GnQAmiJMuWqaarzuWcaTOYZNH4aWlz_dbUdlz1x2KpzazXea6WiCb3EI5XCMo8xJ43U03YR93z0hmUhokMRl0-kdeJ&#xD;&#xA;Host: localhost:59674&#xD;&#xA;Referer: http://localhost:59674/pt/settings/settingsupdate/18?oqeq=0&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36&#xD;&#xA;sec-ch-ua: &quot;Google Chrome&quot;;v=&quot;117&quot;, &quot;Not;A=Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;117&quot;&#xD;&#xA;sec-ch-ua-mobile: ?0&#xD;&#xA;sec-ch-ua-platform: &quot;Windows&quot;&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Origin: http://localhost:59674&#xD;&#xA;Sec-Fetch-Site: same-origin&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;dnt: 1&#xD;&#xA;sec-gpc: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\BeYourMarket.Web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="4098" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=----WebKitFormBoundaryjGhEYm4ICBWqCkSC" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/settings/settingsupdate/18" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="F:\GRAO_MERCADO_DEPLOY\BACKUP_GIT_NEW\graomercado-master_2\BeYourMarket.Web\settings\settingsupdate\18" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="63768" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/settings/settingsupdate/18" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="59674" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/settings/settingsupdate/18" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="4098" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="multipart/form-data; boundary=----WebKitFormBoundaryjGhEYm4ICBWqCkSC" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="__RequestVerificationToken=6VkHN5J3eoIoLGr7QppsBHl_Cy5qJW4SHt7rmdvA0AMeq1HtcyQ3enGNkqwQdHsTq9GGD6ZZvzz0O1F1MP7thF53ySHTvOS7Wt7QQVYmhXQ1; ASP.NET_SessionId=w4dfmv3ygkgfslb215sgz3pr; .AspNet.ApplicationCookie=GC9eLguXAyhGalXdiJeX0AKu6JTsk3JXEzA7GO5rgUTR44KOSL-9WmjKwO8qUdyRjsjcZe0HcBQb_HU9kwL1UL1dEL1ZmNwEUyOGGAs7MliXSLi5-Pg-RmTqm2KqsFFAs4DNUKTlOm4RyGAOs4IDZ4fTlODE6_70Joay3DVTwvwoEhiF71Z-3wTr8IzRawHCsXXrWk1skbtVyNjtJGyuvAfPpgA3lcbWQO5JPYcbTPQsYnBp5nVUWwgfV7S4RNPb6wrPF0kYV8xLZ4eeOkdppgH13F9Y7ClKkUxc5Iy6aYUhqk-CnI1TiqREbYWQrJcq5MZamYaMzNGA9A0sA2rwArbg8XxSolsgzFwa1Hlxw3kwWmOognvOfcELN-VaX6F1gLhGKhL4u4zrvKMxoMnxiV501lwmuIvjBPxEw5GnQAmiJMuWqaarzuWcaTOYZNH4aWlz_dbUdlz1x2KpzazXea6WiCb3EI5XCMo8xJ43U03YR93z0hmUhokMRl0-kdeJ" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:59674" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:59674/pt/settings/settingsupdate/18?oqeq=0" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" />
+    </item>
+    <item name="HTTP_SEC_CH_UA">
+      <value string="&quot;Google Chrome&quot;;v=&quot;117&quot;, &quot;Not;A=Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;117&quot;" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_MOBILE">
+      <value string="?0" />
+    </item>
+    <item name="HTTP_SEC_CH_UA_PLATFORM">
+      <value string="&quot;Windows&quot;" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:59674" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="same-origin" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+    <item name="HTTP_DNT">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_GPC">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="__RequestVerificationToken">
+      <value string="nE_KajpWuk1UTMII0bpMvgChpYwl3ZmGsWV8ZPq9sBgz6hWL6v04jbfSU_yzwrR6sRpzJU2qYhXWpFUFmiS9PQHsPLM5gtJKEhgH0mM00Aia-MG22YJjg0ZzRCSstTtbGRkUrHPy5vGFhT9Wzlb__A2" />
+    </item>
+    <item name="id_Emp">
+      <value string="9" />
+    </item>
+    <item name="grupoAtividadesEmpresa">
+      <value string="1" />
+    </item>
+    <item name="RazaoSocial">
+      <value string="Agroed Fertilizantes EIRELI" />
+    </item>
+    <item name="NomeFantasia">
+      <value string="AgroFertil Adubos" />
+    </item>
+    <item name="Cnpj">
+      <value string="66.313.552/0001-68" />
+    </item>
+    <item name="EnderecoEmp">
+      <value string="R. Professor Carlos Mattos" />
+    </item>
+    <item name="ComplementoEmp">
+      <value string="Em cima do Supermercado Eldorado" />
+    </item>
+    <item name="BairroEmp">
+      <value string="Jucutuquara" />
+    </item>
+    <item name="CidadeEmp">
+      <value string="Vitória" />
+    </item>
+    <item name="UFEmp">
+      <value string="ES" />
+    </item>
+    <item name="CepEmp">
+      <value string="29040-694" />
+    </item>
+    <item name="Fone1Emp">
+      <value string="(27) 99636-6414" />
+    </item>
+    <item name="EmailEmp">
+      <value string="edwilson@sox.com.br" />
+    </item>
+    <item name="id_Usuario">
+      <value string="6a409244-7f59-42ee-8c8e-23ad3956469c" />
+    </item>
+    <item name="Usuario">
+      <value string="Edwilson" />
+    </item>
+    <item name="sobreNomeUsuario">
+      <value string="da Silva" />
+    </item>
+    <item name="DtNasc">
+      <value string="14/09/1970" />
+    </item>
+    <item name="Cpf">
+      <value string="564.986.675-91" />
+    </item>
+    <item name="Email">
+      <value string="edwilsoncurtis@gmail.com" />
+    </item>
+    <item name="Telefone1">
+      <value string="(27) 99735-4780" />
+    </item>
+    <item name="Telefone2">
+      <value string="(27) 99269-1260" />
+    </item>
+    <item name="Cep">
+      <value string="29040-694" />
+    </item>
+    <item name="Endereco">
+      <value string="R. Professor Carlos Mattos" />
+    </item>
+    <item name="ComplementoUsu">
+      <value string="Em cima do supermercado Eldorado" />
+    </item>
+    <item name="Bairro">
+      <value string="Jucutuquara" />
+    </item>
+    <item name="EstadosUF">
+      <value string="18" />
+    </item>
+    <item name="CidadesUF">
+      <value string="3175" />
+    </item>
+    <item name="id_CB">
+      <value string="18" />
+    </item>
+    <item name="id_Banco">
+      <value string="116" />
+    </item>
+    <item name="inAgencia">
+      <value string="1726" />
+    </item>
+    <item name="id_TpConta">
+      <value string="1" />
+    </item>
+    <item name="inNumeroConta">
+      <value string="0520605" />
+    </item>
+    <item name="inDigito">
+      <value string="7" />
+    </item>
+    <item name="inChavePix">
+      <value string="05484698650" />
+    </item>
+    <item name="id_TpChavePix">
+      <value string="2" />
+    </item>
+  </form>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="6VkHN5J3eoIoLGr7QppsBHl_Cy5qJW4SHt7rmdvA0AMeq1HtcyQ3enGNkqwQdHsTq9GGD6ZZvzz0O1F1MP7thF53ySHTvOS7Wt7QQVYmhXQ1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="w4dfmv3ygkgfslb215sgz3pr" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="GC9eLguXAyhGalXdiJeX0AKu6JTsk3JXEzA7GO5rgUTR44KOSL-9WmjKwO8qUdyRjsjcZe0HcBQb_HU9kwL1UL1dEL1ZmNwEUyOGGAs7MliXSLi5-Pg-RmTqm2KqsFFAs4DNUKTlOm4RyGAOs4IDZ4fTlODE6_70Joay3DVTwvwoEhiF71Z-3wTr8IzRawHCsXXrWk1skbtVyNjtJGyuvAfPpgA3lcbWQO5JPYcbTPQsYnBp5nVUWwgfV7S4RNPb6wrPF0kYV8xLZ4eeOkdppgH13F9Y7ClKkUxc5Iy6aYUhqk-CnI1TiqREbYWQrJcq5MZamYaMzNGA9A0sA2rwArbg8XxSolsgzFwa1Hlxw3kwWmOognvOfcELN-VaX6F1gLhGKhL4u4zrvKMxoMnxiV501lwmuIvjBPxEw5GnQAmiJMuWqaarzuWcaTOYZNH4aWlz_dbUdlz1x2KpzazXea6WiCb3EI5XCMo8xJ43U03YR93z0hmUhokMRl0-kdeJ" />
+    </item>
+  </cookies>
+</error>

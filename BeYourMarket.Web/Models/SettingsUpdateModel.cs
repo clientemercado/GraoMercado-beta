@@ -57,5 +57,6 @@ namespace BeYourMarket.Web.Models
         public string fone1Empresa { get; set; }
         public string email1Empresa { get; set; }
         public List<GrupoAtividadesEmpresa> grupoAtividadesEmpresa { get; set; }
+        public int id_GrupoAtividadesEmpresa { get; set; }
     }
 }
