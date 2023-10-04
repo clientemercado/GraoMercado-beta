@@ -206,7 +206,8 @@ namespace BeYourMarket.Web.Controllers
             var user = await UserManager.FindByIdAsync(userId);
             var uBank = CacheHelper.UserBankDetails.Where(u => (u.Id_User_UBankDetails == userId)).FirstOrDefault();
 
-            id = ((uBank != null) && ((id == 0) || (id == null))) ? uBank.Id_UBankDetails : 0;
+            //id = ((uBank != null) && ((id == 0) || (id == null))) ? uBank.Id_UBankDetails : 0;
+            id = (uBank != null) ? uBank.Id_UBankDetails : 0;
 
             UserBankDetails dadosBancariosUser = new UserBankDetails();
             var model = new SettingsUpdateModel()
@@ -345,7 +346,7 @@ namespace BeYourMarket.Web.Controllers
                 {
                     Id = userIdCurrent,
                     id_GrupoAtividades = 1,
-                    Cnpj_Empresa = form.Get("Cnpj"),
+                    Cnpj_Empresa = Utilitarios.RemoverAcentosECaracteresEspeciais(form.Get("Cnpj")),
                     Razao_Social_Empresa = form.Get("RazaoSocial"),
                     Fantasia_Empresa = form.Get("NomeFantasia"),
                     Logradouro_Empresa = form.Get("EnderecoEmp"),
@@ -405,17 +406,17 @@ namespace BeYourMarket.Web.Controllers
             else
             {
                 // ALTERAR DADOS DO USUÁRIO
-                if (await NotMeListing(Convert.ToInt32(form.Get("id_Usuario"))))
-                    return new HttpUnauthorizedResult();
+                //if (await NotMeListing(Convert.ToInt32(form.Get("id_Usuario"))))
+                //    return new HttpUnauthorizedResult();
 
-                var usuarioExisting = await _aspNetUserService.FindAsync(Convert.ToInt32(form.Get("id_Usuario")));
+                var usuarioExisting = await _aspNetUserService.FindAsync(form.Get("id_Usuario"));
 
                 usuarioExisting.FirstName = form.Get("Usuario");
                 usuarioExisting.LastName = form.Get("sobreNomeUsuario");
                 usuarioExisting.UserName = form.Get("Email"); 
                 usuarioExisting.Email = form.Get("Email");
-                usuarioExisting.Data_Nascimento = Convert.ToDateTime(form.Get("DtNasc"));
-                usuarioExisting.cpf_Usuario = Utilitarios.RemoverAcentosECaracteresEspeciais(form.Get("Email"));
+                usuarioExisting.Data_Nascimento = Convert.ToDateTime(Utilitarios.FormatarDataFormPost(form.Get("DtNasc")));
+                usuarioExisting.cpf_Usuario = Utilitarios.RemoverAcentosECaracteresEspeciais(form.Get("Cpf"));
                 usuarioExisting.PhoneNumber = Utilitarios.RemoverAcentosECaracteresEspeciais(form.Get("Telefone1"));
                 usuarioExisting.PhoneNumberWhats = Utilitarios.RemoverAcentosECaracteresEspeciais(form.Get("Telefone2"));
                 usuarioExisting.Cep_Bairro_Cidade = form.Get("Cep");

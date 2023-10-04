@@ -78,5 +78,18 @@ namespace BeYourMarket.Web.Utilities
 
             return str.Trim();
         }
+
+        /// <summary>
+        /// Coloca no formato correto uma data recebida por POST
+        /// </summary>
+        /// <param name="data">String contendo a data separada por barras / </param>
+        /// <returns></returns>
+        public static string FormatarDataFormPost(string data)
+        {
+            var dataPost = data.Split('/');
+            var dataFormat = dataPost[2] + "-" + dataPost[1] + "-" + dataPost[0];
+
+            return dataFormat;
+        }
     }
 }
