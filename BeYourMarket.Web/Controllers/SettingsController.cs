@@ -372,7 +372,7 @@ namespace BeYourMarket.Web.Controllers
                 empresaUsuarioExisting.Complemento_Endereco_Empresa = form.Get("ComplementoEmp");
                 empresaUsuarioExisting.Bairro_Empresa = form.Get("BairroEmp");
                 empresaUsuarioExisting.Cidade_Empresa = form.Get("CidadeEmp");
-                empresaUsuarioExisting.UF_Empresa = form.Get("empresaUsuarioExisting..");
+                empresaUsuarioExisting.UF_Empresa = form.Get("UFEmp");
                 empresaUsuarioExisting.Cep_Endereco_Empresa = form.Get("CepEmp");
                 empresaUsuarioExisting.Fone1_Empresa = form.Get("Fone1Emp");
                 empresaUsuarioExisting.Email1_Empresa = form.Get("EmailEmp");
