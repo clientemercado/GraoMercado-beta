@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-10-04 17:32-03:00\n"
+"POT-Creation-Date: 2023-10-06 09:42-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3234,11 +3234,11 @@ msgid "Nome Fantasia..."
 msgstr ""
 
 #: Views\Account\Register_OLD.cshtml:53
+#: Views\Manage\UserProfile.cshtml:36
 #: obj\Release\Package\PackageTmp\Views\Account\Register_OLD.cshtml:53
 msgid "Nome Usuário"
 msgstr ""
 
-#: Views\Manage\UserProfile.cshtml:36
 #: obj\Release\Package\PackageTmp\Views\Manage\UserProfile.cshtml:36
 msgid "Nome Usuáriol"
 msgstr ""

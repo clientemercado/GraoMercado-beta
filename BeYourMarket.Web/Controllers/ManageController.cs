@@ -828,7 +828,7 @@ namespace BeYourMarket.Web.Controllers
             var dadosBancarios = CacheHelper.UserBankDetails.Where(c => (c.Id_User_UBankDetails == userId)).FirstOrDefault();
 
             //Se não houver uma conta bancária registrada no Perfil, insere e atualiza o Perfil
-            if ((user.Id_UBankDetails == null) && (dadosBancarios != null))
+            if ((user.Id_UBankDetails != null) && (dadosBancarios != null))
             {
                 var userData = CacheHelper.AspNetUsers.Where(x => (x.Id== userId)).FirstOrDefault();
                 userData.Id_UBankDetails = dadosBancarios.Id_UBankDetails;

@@ -298,7 +298,6 @@ namespace BeYourMarket.Web.Controllers
             return model;
         }
 
-        //================================================================
         /// <summary>
         /// Carrega a lista de Cidades Conforme descrição do Estado UF
         /// </summary>
@@ -310,8 +309,6 @@ namespace BeYourMarket.Web.Controllers
             var listaCidades = CacheHelper.Cidade.Where(c => (c.FK_ESTADO == estadoUF.ID)).ToList();
             return Json(listaCidades, JsonRequestBehavior.AllowGet);
         }
-
-        //================================================================
 
         public async Task<bool> NotMeListing(int id)
         {
@@ -335,9 +332,6 @@ namespace BeYourMarket.Web.Controllers
             var userIdCurrent = User.Identity.GetUserId();
             bool updateCount = false;
             int operation = 0; // 0 - Inclusão Oferta de Compra / 1 - Edição de Oferta de Compra
-
-            //=============================================================
-            //OBS: TRECHO EM TESTES ,= CONTINUAR AQUI...
 
             //SEÇÃO EMPRESA
             if (Convert.ToInt32(form.Get("id_Emp")) == 0)
@@ -368,9 +362,6 @@ namespace BeYourMarket.Web.Controllers
             else
             {
                 //ALTERAR DADOS DA EMPRESA
-                //if (await NotMeListing(Convert.ToInt32(form.Get("id_Emp"))))
-                //    return new HttpUnauthorizedResult();
-
                 var empresaUsuarioExisting = await _empresaUsuarioService.FindAsync(Convert.ToInt32(form.Get("id_Emp")));
 
                 empresaUsuarioExisting.id_GrupoAtividades = 1;
@@ -407,9 +398,6 @@ namespace BeYourMarket.Web.Controllers
             else
             {
                 // ALTERAR DADOS DO USUÁRIO
-                //if (await NotMeListing(Convert.ToInt32(form.Get("id_Usuario"))))
-                //    return new HttpUnauthorizedResult();
-
                 var usuarioExisting = await _aspNetUserService.FindAsync(form.Get("id_Usuario"));
 
                 usuarioExisting.FirstName = form.Get("Usuario");
@@ -435,7 +423,6 @@ namespace BeYourMarket.Web.Controllers
                 _aspNetUserService.Update(dadosUsuario);
                 operation = 1;
             }
-            //=============================================================
 
             //SEÇÃO CONTA BANCÁRIA
             if (Convert.ToInt32(form.Get("id_CB")) == 0)
