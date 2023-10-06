@@ -400,6 +400,7 @@ namespace BeYourMarket.Web.Controllers
                 // ALTERAR DADOS DO USUÁRIO
                 var usuarioExisting = await _aspNetUserService.FindAsync(form.Get("id_Usuario"));
 
+                usuarioExisting.id_TipoCadastro = (dadosEmpresa != null) ? 1 : 2;
                 usuarioExisting.FirstName = form.Get("Usuario");
                 usuarioExisting.LastName = form.Get("sobreNomeUsuario");
                 usuarioExisting.UserName = form.Get("Email"); 
