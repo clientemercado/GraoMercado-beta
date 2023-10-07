@@ -433,6 +433,11 @@
     <Content Include="Images\Community\banner1.jpeg" />
     <Content Include="Images\Community\banner2.jpeg" />
     <Content Include="Images\Community\banner3.jpeg" />
+    <Content Include="Images\Community\Imagem_1.jpeg" />
+    <Content Include="Images\Community\Imagem_2.jpeg" />
+    <Content Include="Images\Community\Imagem_3.jpeg" />
+    <Content Include="Images\Community\Imagem_4.jpeg" />
+    <Content Include="Images\Community\Imagem_5.jpeg" />
     <Content Include="Images\Community\logo.png" />
     <Content Include="Images\Sample\Community\cover.jpg" />
     <Content Include="Images\Sample\Community\favicon.jpg" />

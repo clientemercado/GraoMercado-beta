@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-10-06 11:53-03:00\n"
-"PO-Revision-Date: 2023-10-06 11:53-03:00\n"
+"POT-Creation-Date: 2023-10-07 16:06-03:00\n"
+"PO-Revision-Date: 2023-10-07 16:06-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -198,10 +198,11 @@ msgstr ""
 msgid "Accept Email"
 msgstr ""
 
-#: Views\Account\Login.cshtml:70
-#: Views\Account\Login.cshtml:100
 #: Views\Account\Register.cshtml:66
 #: Views\Account\Register.cshtml:185
+#: Views\Account\Login.cshtml:70
+#: Views\Account\Login.cshtml:100
+#: Views\Account\ForgotPassword.cshtml:60
 #: Views\Cotacoes\LivestockQuotes.cshtml:63
 #: Views\Cotacoes\AgriculturalQuotes.cshtml:63
 #: Views\Home\TrocasDevolucoes.cshtml:63
@@ -213,9 +214,9 @@ msgstr ""
 #: Views\Home\Novidades.cshtml:64
 #: Views\Home\Index.cshtml:57
 #: Views\Home\FaleConosco.cshtml:63
-#: Views\Home\Contact.cshtml:67
 #: Views\Home\CadastreSuaLoja.cshtml:63
 #: Views\Home\TermosUso.cshtml:64
+#: Views\Home\Contact.cshtml:67
 #: Views\Listing\Listing.cshtml:66
 #: Views\Shared\_LoginPartial.cshtml:85
 #: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:70
@@ -626,11 +627,12 @@ msgstr ""
 # obj\Release\Package\PackageTmp\Views\Listing\Listing.cshtml:63
 # obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml:82
 #: Views\Account\ForgotPasswordConfirmation.cshtml:21
-#: Views\Account\Login.cshtml:67
-#: Views\Account\Login.cshtml:103
 #: Views\Account\Register.cshtml:63
 #: Views\Account\Register.cshtml:77
 #: Views\Account\Register.cshtml:182
+#: Views\Account\Login.cshtml:67
+#: Views\Account\Login.cshtml:103
+#: Views\Account\ForgotPassword.cshtml:57
 #: Views\Cotacoes\LivestockQuotes.cshtml:60
 #: Views\Cotacoes\AgriculturalQuotes.cshtml:60
 #: Views\Home\TrocasDevolucoes.cshtml:60
@@ -642,9 +644,9 @@ msgstr ""
 #: Views\Home\Novidades.cshtml:61
 #: Views\Home\Index.cshtml:54
 #: Views\Home\FaleConosco.cshtml:60
-#: Views\Home\Contact.cshtml:64
 #: Views\Home\CadastreSuaLoja.cshtml:60
 #: Views\Home\TermosUso.cshtml:61
+#: Views\Home\Contact.cshtml:64
 #: Views\Listing\Listing.cshtml:63
 #: Views\Shared\_LoginPartial.cshtml:82
 #: obj\Release\Package\PackageTmp\Views\Account\ForgotPasswordConfirmation.cshtml:21
@@ -1309,11 +1311,11 @@ msgstr ""
 msgid "Connnect to stripe successfully!"
 msgstr ""
 
-#: Controllers\SettingsController.cs:481
+#: Controllers\SettingsController.cs:482
 msgid "Conta Bancária alterada com Sucesso!"
 msgstr ""
 
-#: Controllers\SettingsController.cs:481
+#: Controllers\SettingsController.cs:482
 msgid "Conta Bancária cadastrada com Sucesso!"
 msgstr ""
 
@@ -1569,7 +1571,7 @@ msgstr ""
 msgid "CSS Customizado"
 msgstr ""
 
-#: Controllers\SettingsController.cs:482
+#: Controllers\SettingsController.cs:483
 msgid "Dados alterados com Sucesso!"
 msgstr ""
 
@@ -1578,7 +1580,7 @@ msgstr ""
 msgid "Dados Bancários (Obs: Necessário para negociações nesta plataforma)"
 msgstr ""
 
-#: Controllers\SettingsController.cs:482
+#: Controllers\SettingsController.cs:483
 msgid "Dados cadastrados com Sucesso!"
 msgstr ""
 
@@ -2031,9 +2033,9 @@ msgstr ""
 msgid "Entre com seu nome completo"
 msgstr ""
 
-#: Views\Account\ForgotPassword.cshtml:24
 #: Views\Account\ForgotPassword_OLD.cshtml:29
 #: Views\Account\SendCode.cshtml:3
+#: Views\Account\ForgotPassword.cshtml:83
 #: Views\Home\Contact_OLD.cshtml:30
 #: Views\Home\Contact.cshtml:95
 #: Views\Listing\Review.cshtml:73
@@ -2110,11 +2112,11 @@ msgstr ""
 msgid "Escreva sua pergunta ao vendedor"
 msgstr ""
 
-#: Views\Account\ForgotPassword.cshtml:3
 #: Views\Account\ForgotPassword_OLD.cshtml:3
 #: Views\Account\Login_OLD.cshtml:40
 #: Views\Account\ForgotPasswordConfirmation.cshtml:23
 #: Views\Account\Login.cshtml:104
+#: Views\Account\ForgotPassword.cshtml:4
 #: obj\Release\Package\PackageTmp\Views\Account\ForgotPassword.cshtml:3
 #: obj\Release\Package\PackageTmp\Views\Account\ForgotPasswordConfirmation.cshtml:23
 #: obj\Release\Package\PackageTmp\Views\Account\Login.cshtml:104
